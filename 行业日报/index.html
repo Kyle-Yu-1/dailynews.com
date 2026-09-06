@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="行业日报：机器人等领域每日学术与产业动态，中美前沿对比、专家争论与学习规划。">
+<title>行业日报 · 每日动态</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-logo">📚</span>
+      <span class="brand-text">行业日报</span>
+    </div>
+    <div class="menu-label">行业目录</div>
+    <nav id="industryNav"></nav>
+    <button id="addIndustryBtn" class="add-btn">＋ 添加行业</button>
+    <div id="addIndustryBox" class="add-box hidden">
+      <input id="newIndustryInput" placeholder="输入行业名称，如：人工智能">
+      <div class="add-actions">
+        <button id="confirmAdd" class="primary">添加</button>
+        <button id="cancelAdd">取消</button>
+      </div>
+    </div>
+    <div class="sidebar-foot">每日 20:00 自动更新</div>
+  </aside>
+  <main class="content">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1 id="pageTitle">机器人</h1>
+        <p id="pageSubtitle">每日学术与产业动态 · 中美前沿对比</p>
+      </div>
+      <div class="topbar-actions">
+        <input id="searchInput" class="search" placeholder="🔍 搜索标题、摘要或内容…">
+        <button id="themeToggle" class="icon-btn" title="切换深浅色模式">🌙</button>
+      </div>
+    </header>
+    <section class="stats" id="statsBar">
+      <div class="stat"><span class="stat-value" id="statReports">0</span><span class="stat-label">日报篇数</span></div>
+      <div class="stat"><span class="stat-value" id="statIndustries">1</span><span class="stat-label">行业数量</span></div>
+      <div class="stat"><span class="stat-value" id="statDays">0</span><span class="stat-label">覆盖天数</span></div>
+    </section>
+    <div id="listView">
+      <div id="reportList" class="report-list"></div>
+    </div>
+    <div id="detailView" class="detail-view hidden"></div>
+    <footer class="footer">行业日报 · 数据由每日周期任务自动生成 · 本站不收集任何个人信息</footer>
+  </main>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script src="data/reports.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
