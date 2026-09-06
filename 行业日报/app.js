@@ -2,7 +2,7 @@
   'use strict';
   var DEFAULT_INDUSTRIES = ['机器人'];
   var STORAGE_KEY = 'industry_extra_v1';
-  var THEME_KEY = 'report_site_theme_v1';
+  var THEME_KEY = 'report_site_theme_v2';
   var reports = Array.isArray(window.DAILY_REPORTS) ? window.DAILY_REPORTS : [];
 
   var nav = document.getElementById('industryNav');
@@ -56,8 +56,8 @@
     try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
   }
   (function initTheme() {
-    var saved = 'light';
-    try { saved = localStorage.getItem(THEME_KEY) || 'light'; } catch (e) {}
+    var saved = 'dark';
+    try { saved = localStorage.getItem(THEME_KEY) || 'dark'; } catch (e) {}
     applyTheme(saved);
   })();
   themeToggle.addEventListener('click', function () {

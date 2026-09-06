@@ -8,13 +8,18 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="orbs" aria-hidden="true">
+  <span class="orb orb-gold"></span>
+  <span class="orb orb-rose"></span>
+  <span class="orb orb-blue"></span>
+</div>
 <div class="app">
   <aside class="sidebar">
     <div class="brand">
-      <span class="brand-logo">📚</span>
+      <span class="brand-logo">☾</span>
       <span class="brand-text">行业日报</span>
     </div>
-    <div class="menu-label">行业目录</div>
+    <div class="menu-label">— 行业目录 —</div>
     <nav id="industryNav"></nav>
     <button id="addIndustryBtn" class="add-btn">＋ 添加行业</button>
     <div id="addIndustryBox" class="add-box hidden">
@@ -24,7 +29,7 @@
         <button id="cancelAdd">取消</button>
       </div>
     </div>
-    <div class="sidebar-foot">每日 20:00 自动更新</div>
+    <div class="sidebar-foot">每晚 20:00，梦境准时更新</div>
   </aside>
   <main class="content">
     <header class="topbar">
@@ -33,8 +38,8 @@
         <p id="pageSubtitle">每日学术与产业动态 · 中美前沿对比</p>
       </div>
       <div class="topbar-actions">
-        <input id="searchInput" class="search" placeholder="🔍 搜索标题、摘要或内容…">
-        <button id="themeToggle" class="icon-btn" title="切换深浅色模式">🌙</button>
+        <input id="searchInput" class="search" placeholder="🔍 在梦境中搜索…">
+        <button id="themeToggle" class="icon-btn" title="切换梦境明暗">🌙</button>
       </div>
     </header>
     <section class="stats" id="statsBar">
