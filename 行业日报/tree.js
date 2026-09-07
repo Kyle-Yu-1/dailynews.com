@@ -109,19 +109,34 @@
     axis.innerHTML = ticks;
   }
 
-  /* ---- 视口：固定 1:1（字体不变）；滚轮改年份间距；拖拽平移（取消鼠标跟随） ---- */
-  var view = { x: 0, y: 0 };
+  /* ---- 视口：固定 1:1（字体不变）；滚轮调年份间距；拖拽平移 + 惯性（方案 A） ---- */
+  var view = { x: 0, y: 0 }, vx = 0, vy = 0;
   function apply() { world.style.transform = 'translate(' + view.x + 'px,' + view.y + 'px)'; }
+  function bounds() {
+    var vw = viewport.clientWidth, vh = viewport.clientHeight;
+    return { x0: Math.min(0, vw - cw()), x1: Math.max(0, vw - cw()), y0: Math.min(0, vh - chh()), y1: Math.max(0, vh - chh()) };
+  }
+  function clampView() {
+    var b = bounds();
+    view.x = Math.max(b.x0, Math.min(b.x1, view.x));
+    view.y = Math.max(b.y0, Math.min(b.y1, view.y));
+  }
   function fit() {
     var vw = viewport.clientWidth, vh = viewport.clientHeight;
-    var rx = meta[TREE.root].x, ry = meta[TREE.root].y;
-    view.x = vw / 2 - rx;
-    view.y = vh * 0.05 - ry;
+    view.x = vw / 2 - meta[TREE.root].x;
+    view.y = vh * 0.05 - meta[TREE.root].y;
     apply();
+  }
+  function setGrab(on) {
+    var c = on ? 'grabbing' : '';
+    viewport.style.cursor = c;
+    world.style.cursor = c;
+    nodeLayer.style.cursor = c;
   }
 
   viewport.addEventListener('wheel', function (e) {
     e.preventDefault();
+    vx = vy = 0;
     var rect = viewport.getBoundingClientRect();
     var wx = e.clientX - rect.left - view.x;
     var wy = e.clientY - rect.top - view.y;
@@ -130,6 +145,7 @@
     rebuild();
     view.x = e.clientX - rect.left - wx;
     view.y = e.clientY - rect.top - wy;
+    clampView();
     apply();
   }, { passive: false });
 
@@ -137,25 +153,87 @@
   viewport.addEventListener('pointerdown', function (e) {
     if (e.button !== 0) return;
     if (e.target && e.target.closest && e.target.closest('.tree-node')) return;
+    e.preventDefault();
     world.style.transition = '';
-    drag = { sx: e.clientX, sy: e.clientY, vx: view.x, vy: view.y };
+    vx = vy = 0;
+    drag = { moved: false, sx: e.clientX, sy: e.clientY, ox: view.x, oy: view.y, hist: [{ x: e.clientX, y: e.clientY, t: performance.now() }] };
     try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
-    viewport.style.cursor = 'grabbing';
+    setGrab(true);
   });
   viewport.addEventListener('pointermove', function (e) {
     if (!drag) return;
-    view.x = drag.vx + (e.clientX - drag.sx);
-    view.y = drag.vy + (e.clientY - drag.sy);
+    var dx = e.clientX - drag.sx, dy = e.clientY - drag.sy;
+    if (!drag.moved) {
+      if (dx * dx + dy * dy > 16) { drag.moved = true; } else { return; }
+    }
+    var b = bounds(), nx = drag.ox + dx, ny = drag.oy + dy;
+    if (nx < b.x0) { nx = b.x0 + (nx - b.x0) * 0.35; }
+    if (nx > b.x1) { nx = b.x1 + (nx - b.x1) * 0.35; }
+    if (ny < b.y0) { ny = b.y0 + (ny - b.y0) * 0.35; }
+    if (ny > b.y1) { ny = b.y1 + (ny - b.y1) * 0.35; }
+    view.x = nx; view.y = ny;
     apply();
+    var t = performance.now();
+    drag.hist.push({ x: e.clientX, y: e.clientY, t: t });
+    while (drag.hist.length > 1 && t - drag.hist[0].t > 120) { drag.hist.shift(); }
   });
-  function endDrag() { drag = null; viewport.style.cursor = ''; }
+  function endDrag() {
+    if (!drag) return;
+    var d = drag;
+    drag = null;
+    setGrab(false);
+    if (d.moved) {
+      var h0 = d.hist[0], h1 = d.hist[d.hist.length - 1], dt = (h1.t - h0.t) / 1000;
+      if (dt > 0.01) {
+        var k = 16.667 / dt;
+        vx = (h1.x - h0.x) * k;
+        vy = (h1.y - h0.y) * k;
+      }
+    }
+  }
   viewport.addEventListener('pointerup', endDrag);
   viewport.addEventListener('pointercancel', endDrag);
 
+  var springing = false;
+  function frame() {
+    if (!drag) {
+      springing = false;
+      var b = bounds();
+      if (view.x < b.x0 || view.x > b.x1) {
+        springing = true;
+        var tx = view.x < b.x0 ? b.x0 : b.x1;
+        view.x += (tx - view.x) * 0.18;
+        if (Math.abs(tx - view.x) < 0.5) { view.x = tx; }
+        vx = 0;
+      }
+      if (view.y < b.y0 || view.y > b.y1) {
+        springing = true;
+        var ty = view.y < b.y0 ? b.y0 : b.y1;
+        view.y += (ty - view.y) * 0.18;
+        if (Math.abs(ty - view.y) < 0.5) { view.y = ty; }
+        vy = 0;
+      }
+      if (Math.abs(vx) > 0.4 || Math.abs(vy) > 0.4) {
+        view.x += vx; view.y += vy;
+        vx *= 0.92; vy *= 0.92;
+        if (view.x <= b.x0) { view.x = b.x0; vx = 0; }
+        if (view.x >= b.x1) { view.x = b.x1; vx = 0; }
+        if (view.y <= b.y0) { view.y = b.y0; vy = 0; }
+        if (view.y >= b.y1) { view.y = b.y1; vy = 0; }
+        apply();
+      } else {
+        vx = vy = 0;
+        if (springing) { apply(); }
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+
   rebuild();
   fit();
+  requestAnimationFrame(frame);
   window.addEventListener('tree-open', fit);
-  window.addEventListener('resize', fit);
+  window.addEventListener('resize', function () { clampView(); apply(); });
 
   /* ---- 详情、快速节点、聚焦 ---- */
   function getFavs() { try { return JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); } catch (e) { return []; } }
@@ -174,6 +252,7 @@
   function focusNode(id) {
     var m = meta[id];
     if (!m) return;
+    vx = vy = 0;
     var vw = viewport.clientWidth, vh = viewport.clientHeight;
     view.x = vw / 2 - m.x;
     view.y = vh / 2 - m.y;
