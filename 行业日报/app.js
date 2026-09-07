@@ -247,7 +247,7 @@
     pageTitle.textContent = currentIndustry;
     var items = filteredReports();
     if (!items.length) {
-      reportList.innerHTML = '<div class="empty">该行业暂无日报。<br>每日 20:00 自动更新后，这里会按日期逐天列出。</div>';
+      reportList.innerHTML = '<div class="empty">该行业暂无日报。<br>每天首次打开 Codex 后自动整理，并按日期逐天列出。</div>';
       return;
     }
     var groups = {};

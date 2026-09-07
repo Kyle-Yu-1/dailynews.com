@@ -1,5 +1,5 @@
 /* ============================================================
-   行业日报 · 超现实主义梦境档案室（Surrealism）
+   学习 Agent · 超现实主义梦境档案室（Surrealism）
    配色锚点：午夜蓝 #1a1a3e · 沙漠金 #d4a574 · 玫瑰粉 #c38d94 · 奶油白 #f0ece4
    时间弹性：过渡 ≥700ms，缓动 ease-in-out；悬停扭曲而非放大；玫瑰/金色漫射光晕
    ============================================================ */
@@ -250,7 +250,7 @@ mark{background:rgba(212,165,116,.4);border-radius:4px;padding:0 3px;color:inher
   padding:5px 12px;font-family:inherit;font-size:12px;font-style:italic;cursor:pointer;
   box-shadow:var(--shadow-glow-gold);transition:all 700ms ease-in-out}
 .qb-chip:hover{transform:skewX(-2deg) rotate(-.4deg);box-shadow:var(--shadow-glow-rose);border-color:var(--border-rose)}
-.tree-viewport{flex:1;overflow:hidden;position:relative;min-height:0;cursor:crosshair;
+.tree-viewport{flex:1;overflow:hidden;position:relative;min-height:0;cursor:grab;
   background:radial-gradient(900px 600px at 80% -10%, rgba(212,165,116,.16), transparent 55%),
              radial-gradient(800px 600px at -5% 110%, rgba(195,141,148,.16), transparent 55%)}
 .tree-world{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}

@@ -1,7 +1,7 @@
 {
-  "name": "行业日报",
-  "short_name": "行业日报",
-  "description": "机器人等领域每日学术与产业动态：中美前沿、专家争论、大学学习规划与技术树。",
+  "name": "学习 Agent",
+  "short_name": "学习 Agent",
+  "description": "机器人等领域每日学术与产业动态、技术树与课程学习笔记。",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -9,8 +9,23 @@
   "background_color": "#1a1a3e",
   "theme_color": "#1a1a3e",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

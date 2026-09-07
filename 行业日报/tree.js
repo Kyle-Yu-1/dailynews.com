@@ -11,29 +11,34 @@
   var quickbar = document.getElementById('treeQuickbar');
   var modal = document.getElementById('nodeModal');
   var modalBody = document.getElementById('nodeModalBody');
-  if (!viewport || !world) return;
+  if (!viewport || !world || !svg || !nodeLayer) return;
 
   var X_GAP = 244, PAD = 170, TOP = 56, BOTTOM = 150, AXIS_W = 78;
-  var Y_MIN = 2016, Y_MAX = 2026, Y_STEP = 118;
+  var yStep = 118, YSTEP_MIN = 34, YSTEP_MAX = 720;
+  var Y_MIN = 2016, Y_MAX = 2026;
+  var rm = String(TREE.range || '').match(/(\d{4})[^\d]*(\d{4})/);
+  if (rm) { Y_MIN = parseInt(rm[1], 10); Y_MAX = parseInt(rm[2], 10); }
 
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   function yearOf(n) { var m = String(n.year || '').match(/\d{4}/); return m ? parseInt(m[0], 10) : null; }
   function yearY(id) {
     if (id === TREE.root) return TOP;
     var y = yearOf(TREE.nodes[id]);
     if (y == null) return TOP;
-    return TOP + (y - Y_MIN) * Y_STEP;
+    return TOP + (y - Y_MIN) * yStep;
   }
 
-  var meta = {}, leafCount = 0;
+  /* ---- 布局（只依赖年份间距 yStep，字号不参与缩放） ---- */
+  var meta = {}, leafCount = 0, nodeEls = {};
   function dfs(id, branch) {
     var n = TREE.nodes[id];
     if (!n) return;
-    meta[id] = meta[id] || {};
-    meta[id].branch = branch || '';
-    meta[id].y = yearY(id);
+    var m = meta[id] = meta[id] || {};
+    m.branch = branch || '';
+    m.y = yearY(id);
     var ch = n.children || [];
     if (!ch.length) {
-      meta[id].x = leafCount * X_GAP + PAD;
+      m.x = leafCount * X_GAP + PAD;
       leafCount += 1;
     } else {
       var xs = [];
@@ -42,113 +47,117 @@
         dfs(c, id === TREE.root ? c : branch);
         xs.push(meta[c].x);
       });
-      meta[id].x = (Math.min.apply(null, xs) + Math.max.apply(null, xs)) / 2;
+      m.x = (Math.min.apply(null, xs) + Math.max.apply(null, xs)) / 2;
     }
   }
-  dfs(TREE.root, '');
-
-  var cw = leafCount * X_GAP + PAD + AXIS_W;
-  var chh = TOP + (Y_MAX - Y_MIN) * Y_STEP + BOTTOM;
-  world.style.width = cw + 'px';
-  world.style.height = chh + 'px';
-  svg.setAttribute('viewBox', '0 0 ' + cw + ' ' + chh);
-  svg.style.width = cw + 'px';
-  svg.style.height = chh + 'px';
-
-  var guides = [];
-  for (var yg = Y_MIN; yg <= Y_MAX; yg++) {
-    var gy = TOP + (yg - Y_MIN) * Y_STEP;
-    guides.push('<line class="year-guide" x1="' + (PAD - 70) + '" x2="' + (cw - AXIS_W - 6) + '" y1="' + gy + '" y2="' + gy + '"/>');
-  }
-  var lines = [];
-  Object.keys(TREE.nodes).forEach(function (id) {
-    var n = TREE.nodes[id];
-    (n.children || []).forEach(function (cid) {
-      var a = meta[id], b = meta[cid];
-      lines.push('<path class="tree-line" data-branch="' + (meta[cid].branch || '') + '" d="M ' + a.x + ' ' + a.y +
-        ' C ' + a.x + ' ' + ((a.y + b.y) / 2) + ', ' + b.x + ' ' + ((a.y + b.y) / 2) + ', ' + b.x + ' ' + b.y + '"/>');
-    });
-  });
-  svg.innerHTML = guides.join('') + lines.join('');
-
-  Object.keys(TREE.nodes).forEach(function (id) {
-    var n = TREE.nodes[id];
-    var m = meta[id];
-    var el = document.createElement('div');
-    el.className = 'tree-node' + (id === TREE.root ? ' tree-root' : '') + (n.children && n.children.length ? ' tree-branch' : '');
-    el.setAttribute('data-branch', m.branch || '');
-    el.style.left = m.x + 'px';
-    el.style.top = m.y + 'px';
-    el.innerHTML = '<span class="tn-dot"></span><span class="tn-name">' + esc(n.name) + '</span>' +
-      '<span class="tn-year">' + esc(n.year) + '</span>';
-    el.addEventListener('click', function () { openNode(id); });
-    nodeLayer.appendChild(el);
-  });
+  function layout() { meta = {}; leafCount = 0; dfs(TREE.root, ''); }
+  function cw() { return leafCount * X_GAP + PAD + AXIS_W; }
+  function chh() { return TOP + (Y_MAX - Y_MIN) * yStep + BOTTOM; }
 
   var axis = document.createElement('div');
   axis.className = 'tree-axis';
-  axis.style.left = (cw - AXIS_W) + 'px';
-  axis.style.top = TOP + 'px';
-  var ticks = '';
-  for (var ya = Y_MIN; ya <= Y_MAX; ya++) {
-    var ty = (ya - Y_MIN) * Y_STEP;
-    ticks += '<div class="axis-tick" style="top:' + ty + 'px"><span class="axis-dot"></span><span class="axis-label">' + ya + '</span></div>';
-  }
-  axis.innerHTML = ticks;
   world.appendChild(axis);
 
-  /* ---- 视口：中间视差、边缘滚动、节点锁定 ---- */
-  var view = { x: 0, y: 0, s: 1 }, target = { x: 0, y: 0 };
+  function rebuild() {
+    layout();
+    var w = cw(), h = chh();
+    world.style.width = w + 'px';
+    world.style.height = h + 'px';
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.style.width = w + 'px';
+    svg.style.height = h + 'px';
+
+    var guides = [];
+    for (var yg = Y_MIN; yg <= Y_MAX; yg++) {
+      var gy = TOP + (yg - Y_MIN) * yStep;
+      guides.push('<line class="year-guide" x1="' + (PAD - 70) + '" x2="' + (w - AXIS_W - 6) + '" y1="' + gy + '" y2="' + gy + '"/>');
+    }
+    var lines = [];
+    Object.keys(TREE.nodes).forEach(function (id) {
+      var n = TREE.nodes[id];
+      (n.children || []).forEach(function (cid) {
+        var a = meta[id], b = meta[cid];
+        lines.push('<path class="tree-line" data-branch="' + (meta[cid].branch || '') + '" d="M ' + a.x + ' ' + a.y +
+          ' C ' + a.x + ' ' + ((a.y + b.y) / 2) + ', ' + b.x + ' ' + ((a.y + b.y) / 2) + ', ' + b.x + ' ' + b.y + '"/>');
+      });
+    });
+    svg.innerHTML = guides.join('') + lines.join('');
+
+    Object.keys(TREE.nodes).forEach(function (id) {
+      var m = meta[id];
+      var el = nodeEls[id];
+      if (!el) {
+        var n = TREE.nodes[id];
+        el = document.createElement('div');
+        el.className = 'tree-node' + (id === TREE.root ? ' tree-root' : '') + (n.children && n.children.length ? ' tree-branch' : '');
+        el.setAttribute('data-branch', m.branch || '');
+        el.innerHTML = '<span class="tn-dot"></span><span class="tn-name">' + esc(n.name) + '</span><span class="tn-year">' + esc(n.year) + '</span>';
+        el.addEventListener('click', function () { openNode(id); });
+        nodeLayer.appendChild(el);
+        nodeEls[id] = el;
+      }
+      el.style.left = m.x + 'px';
+      el.style.top = m.y + 'px';
+    });
+
+    axis.style.left = (w - AXIS_W) + 'px';
+    var ticks = '';
+    for (var ya = Y_MIN; ya <= Y_MAX; ya++) {
+      var ty = (ya - Y_MIN) * yStep;
+      ticks += '<div class="axis-tick" style="top:' + ty + 'px"><span class="axis-dot"></span><span class="axis-label">' + ya + '</span></div>';
+    }
+    axis.innerHTML = ticks;
+  }
+
+  /* ---- 视口：固定 1:1（字体不变）；滚轮改年份间距；拖拽平移（取消鼠标跟随） ---- */
+  var view = { x: 0, y: 0 };
+  function apply() { world.style.transform = 'translate(' + view.x + 'px,' + view.y + 'px)'; }
   function fit() {
     var vw = viewport.clientWidth, vh = viewport.clientHeight;
-    view.s = Math.min(vw / cw, vh / chh) * 0.92;
-    view.s = Math.max(0.2, Math.min(view.s, 1.6));
     var rx = meta[TREE.root].x, ry = meta[TREE.root].y;
-    view.x = vw / 2 - rx * view.s;
-    view.y = vh * 0.05 - ry * view.s;
-    target.x = view.x; target.y = view.y;
+    view.x = vw / 2 - rx;
+    view.y = vh * 0.05 - ry;
     apply();
   }
-  function apply() { world.style.transform = 'translate(' + view.x + 'px,' + view.y + 'px) scale(' + view.s + ')'; }
-  viewport.addEventListener('mousemove', function (e) {
-    var t = e.target;
-    if (t && t.closest && t.closest('.tree-node')) return;
-    var r = viewport.getBoundingClientRect();
-    var vw = viewport.clientWidth, vh = viewport.clientHeight;
-    var px = (e.clientX - r.left) / vw;
-    var py = (e.clientY - r.top) / vh;
-    var edge = 0.16;
-    var cx = (vw - cw * view.s) / 2;
-    var cy = (vh - chh * view.s) / 2;
-    var tx = cx, ty = cy;
-    if (px < edge) { tx = cx + (edge - px) / edge * (cw * view.s); }
-    else if (px > 1 - edge) { tx = cx - (px - (1 - edge)) / edge * (cw * view.s); }
-    else { tx = cx; }
-    if (py < edge) { ty = cy + (edge - py) / edge * (chh * view.s); }
-    else if (py > 1 - edge) { ty = cy - (py - (1 - edge)) / edge * (chh * view.s); }
-    else { ty = cy; }
-    target.x = Math.max(vw - cw * view.s, Math.min(0, tx));
-    target.y = Math.max(vh - chh * view.s, Math.min(0, ty));
-  });
+
   viewport.addEventListener('wheel', function (e) {
     e.preventDefault();
+    var rect = viewport.getBoundingClientRect();
+    var wx = e.clientX - rect.left - view.x;
+    var wy = e.clientY - rect.top - view.y;
     var f = e.deltaY < 0 ? 1.12 : 1 / 1.12;
-    view.s = Math.max(0.2, Math.min(view.s * f, 3));
+    yStep = Math.max(YSTEP_MIN, Math.min(YSTEP_MAX, yStep * f));
+    rebuild();
+    view.x = e.clientX - rect.left - wx;
+    view.y = e.clientY - rect.top - wy;
     apply();
   }, { passive: false });
-  function loop() {
-    view.x += (target.x - view.x) * 0.038;
-    view.y += (target.y - view.y) * 0.038;
+
+  var drag = null;
+  viewport.addEventListener('pointerdown', function (e) {
+    if (e.button !== 0) return;
+    if (e.target && e.target.closest && e.target.closest('.tree-node')) return;
+    world.style.transition = '';
+    drag = { sx: e.clientX, sy: e.clientY, vx: view.x, vy: view.y };
+    try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
+    viewport.style.cursor = 'grabbing';
+  });
+  viewport.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    view.x = drag.vx + (e.clientX - drag.sx);
+    view.y = drag.vy + (e.clientY - drag.sy);
     apply();
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
+  });
+  function endDrag() { drag = null; viewport.style.cursor = ''; }
+  viewport.addEventListener('pointerup', endDrag);
+  viewport.addEventListener('pointercancel', endDrag);
+
+  rebuild();
   fit();
   window.addEventListener('tree-open', fit);
   window.addEventListener('resize', fit);
 
   /* ---- 详情、快速节点、聚焦 ---- */
-  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   function getFavs() { try { return JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); } catch (e) { return []; } }
   function setFavs(a) { localStorage.setItem(FAV_KEY, JSON.stringify(a)); }
   function renderQuickbar() {
@@ -166,12 +175,11 @@
     var m = meta[id];
     if (!m) return;
     var vw = viewport.clientWidth, vh = viewport.clientHeight;
-    view.x = vw / 2 - m.x * view.s;
-    view.y = vh / 2 - m.y * view.s;
-    target.x = view.x; target.y = view.y;
-    world.style.transition = 'transform 1000ms ease-in-out';
+    view.x = vw / 2 - m.x;
+    view.y = vh / 2 - m.y;
+    world.style.transition = 'transform 800ms ease-in-out';
     apply();
-    setTimeout(function () { world.style.transition = ''; }, 1000);
+    setTimeout(function () { world.style.transition = ''; }, 800);
   }
   function openNode(id) {
     var n = TREE.nodes[id];
