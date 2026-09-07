@@ -41,6 +41,7 @@
       </div>
       <div class="topbar-actions">
         <input id="searchInput" class="search" placeholder="🔍 在梦境中搜索…">
+        <button id="notesBtn" class="icon-btn" title="学习笔记">📚</button>
         <button id="treeBtn" class="icon-btn" title="打开技术树">🌳</button>
         <button id="themeToggle" class="icon-btn" title="切换梦境明暗">🌙</button>
       </div>
@@ -73,6 +74,14 @@
         <div id="nodeModalBody"></div>
       </div>
     </div>
+        <div id="notesView" class="notes-view hidden">
+      <div class="notes-topbar">
+        <button id="notesBack" class="back-btn">← 返回日报</button>
+        <span class="notes-title">📚 学习笔记 · EIE1005 人工智能与数据分析</span>
+      </div>
+      <div id="notesList" class="notes-list"></div>
+    </div>
+    <div id="noteReader" class="note-reader hidden"></div>
     <footer class="footer">行业日报 · 数据由每日周期任务自动生成 · 本站不收集任何个人信息</footer>
   </main>
 </div>
@@ -81,6 +90,7 @@
 <script src="data/tech_tree.js"></script>
 <script src="app.js"></script>
 <script src="tree.js"></script>
+<script src="notes.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js');});}</script>
 </body>
 </html>
