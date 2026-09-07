@@ -6,6 +6,9 @@
 <meta name="description" content="行业日报：机器人等领域每日学术与产业动态，中美前沿对比、专家争论与学习规划。">
 <title>行业日报 · 每日动态</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a1a3e">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 <body>
 <div class="orbs" aria-hidden="true">
@@ -16,7 +19,6 @@
 <div class="app">
   <aside class="sidebar">
     <div class="brand">
-      <span class="brand-logo">☾</span>
       <span class="brand-text">行业日报</span>
     </div>
     <div class="menu-label">— 行业目录 —</div>
@@ -39,6 +41,7 @@
       </div>
       <div class="topbar-actions">
         <input id="searchInput" class="search" placeholder="🔍 在梦境中搜索…">
+        <button id="treeBtn" class="icon-btn" title="打开技术树">🌳</button>
         <button id="themeToggle" class="icon-btn" title="切换梦境明暗">🌙</button>
       </div>
     </header>
@@ -51,11 +54,33 @@
       <div id="reportList" class="report-list"></div>
     </div>
     <div id="detailView" class="detail-view hidden"></div>
+    <div id="treeView" class="tree-view hidden">
+      <div class="tree-topbar">
+        <button id="treeBack" class="back-btn">← 返回日报</button>
+        <span class="tree-title">🌳 机器人技术树 · 2016–2026</span>
+        <div id="treeQuickbar" class="tree-quickbar"></div>
+      </div>
+      <div id="treeViewport" class="tree-viewport">
+        <div id="treeWorld" class="tree-world">
+          <svg id="treeSvg" class="tree-svg"></svg>
+          <div id="treeNodes" class="tree-nodes"></div>
+        </div>
+      </div>
+    </div>
+    <div id="nodeModal" class="node-modal hidden">
+      <div class="node-modal-card">
+        <button id="nodeModalClose" class="nm-close">×</button>
+        <div id="nodeModalBody"></div>
+      </div>
+    </div>
     <footer class="footer">行业日报 · 数据由每日周期任务自动生成 · 本站不收集任何个人信息</footer>
   </main>
 </div>
 <div id="toast" class="toast hidden"></div>
 <script src="data/reports.js"></script>
+<script src="data/tech_tree.js"></script>
 <script src="app.js"></script>
+<script src="tree.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js');});}</script>
 </body>
 </html>

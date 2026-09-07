@@ -62,6 +62,37 @@
   })();
   themeToggle.addEventListener('click', function () {
     var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    var orbs = document.querySelector('.orbs');
+    var app = document.querySelector('.app');
+    // 光球熔融（两态共用，2s）
+    if (orbs) { orbs.classList.add('melting'); setTimeout(function () { orbs.classList.remove('melting'); }, 2000); }
+    if (next === 'dark') {
+      // 到晚上：方案乙 · 梦境翻页（700ms 扭曲淡出）
+      if (app) { app.classList.add('dream-flip'); setTimeout(function () { app.classList.remove('dream-flip'); }, 700); }
+    } else {
+      // 到白天：方案2 · 晨雾散开（雾圈扩散 + 色彩溶解 + 卡片涟漪）
+      document.body.classList.add('theme-dissolve');
+      setTimeout(function () { document.body.classList.remove('theme-dissolve'); }, 1050);
+      var rect = themeToggle.getBoundingClientRect();
+      var ring = document.createElement('div');
+      ring.className = 'mist-ring';
+      var d = Math.max(window.innerWidth, window.innerHeight) * 1.6;
+      ring.style.left = (rect.left + rect.width / 2) + 'px';
+      ring.style.top = (rect.top + rect.height / 2) + 'px';
+      ring.style.width = d + 'px';
+      ring.style.height = d + 'px';
+      document.body.appendChild(ring);
+      setTimeout(function () { ring.remove(); }, 1250);
+      var cards = document.querySelectorAll('.report-grid .card');
+      Array.prototype.forEach.call(cards, function (c, i) {
+        c.classList.add('mist-in');
+        c.style.animationDelay = (i * 80) + 'ms';
+        setTimeout(function () { c.classList.remove('mist-in'); c.style.animationDelay = ''; }, 1200 + i * 80);
+      });
+    }
+    // 日夜图标换位（900ms 旋转）
+    themeToggle.classList.add('icon-spin');
+    setTimeout(function () { themeToggle.classList.remove('icon-spin'); }, 900);
     applyTheme(next);
   });
 
@@ -283,6 +314,19 @@
     toast('已添加行业：' + name);
   }
 
+  var treeBtn = document.getElementById('treeBtn');
+  var treeBack = document.getElementById('treeBack');
+  var treeView = document.getElementById('treeView');
+  treeBtn.addEventListener('click', function () {
+    listView.classList.add('hidden');
+    detailView.classList.add('hidden');
+    treeView.classList.remove('hidden');
+    window.dispatchEvent(new Event('tree-open'));
+  });
+  treeBack.addEventListener('click', function () {
+    treeView.classList.add('hidden');
+    if (currentReport) { openDetail(currentReport); } else { renderList(); }
+  });
   addBtn.addEventListener('click', toggleAdd);
   cancelAdd.addEventListener('click', toggleAdd);
   confirmAdd.addEventListener('click', commitAdd);
