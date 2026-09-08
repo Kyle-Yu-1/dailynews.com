@@ -25,3 +25,8 @@
 - PhET 官方仿真：https://phet.colorado.edu/
 - HyperPhysics（概念速查）：http://hyperphysics.phy-astr.gsu.edu/
 - MIT OCW 8.01：https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/
+
+
+## 评分与教材（选课表）
+- 评分：Continuous assessment 40% + Examination 60%
+- 教材：Jewett & Serway《Physics for Scientists and Engineers》第 9 版；Radi & Rasmussen《Principles of Physics》；Bauer & Westfall《University Physics with Modern Physics》

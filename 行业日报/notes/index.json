@@ -56,6 +56,13 @@
     "course": "EIE1005 · 人工智能与数据分析"
   },
   {
+    "id": "eie1005-vocabulary",
+    "title": "专业词汇 · 中英互译",
+    "desc": "L1–L4 与工作坊课件的 AI/数据术语全表",
+    "file": "eie1005-vocabulary.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
     "id": "me29004-overview",
     "title": "课程总览 · 瓶盖端执行器项目",
     "desc": "项目背景、模块索引、WS1 截止、每周行动建议",
@@ -119,6 +126,13 @@
     "course": "ME29004/IC2117 · 应用工程基础"
   },
   {
+    "id": "me29004-vocabulary",
+    "title": "专业词汇 · 中英互译",
+    "desc": "设计/3D打印/电子/胶接/表面/激光/测量术语全表",
+    "file": "me29004-vocabulary.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
     "id": "ama1110-overview",
     "title": "课程总览与学习路线",
     "desc": "讲义/练习结构、四课索引、资源",
@@ -147,6 +161,13 @@
     "course": "AMA1110 · 基础数学 I（微积分与概率统计）"
   },
   {
+    "id": "ama1110-vocabulary",
+    "title": "专业词汇 · 中英互译",
+    "desc": "微积分与概率统计术语全表",
+    "file": "ama1110-vocabulary.md",
+    "course": "AMA1110 · 基础数学 I（微积分与概率统计）"
+  },
+  {
     "id": "ap10005-overview",
     "title": "课程总览与备考策略",
     "desc": "四讲主线、历年卷、公式表、PhET 仿真",
@@ -172,6 +193,13 @@
     "title": "第 3 课 · 热学与气体",
     "desc": "气体定律、热一律、卡诺热机",
     "file": "ap10005-03-thermo.md",
+    "course": "AP10005 · 物理学 I"
+  },
+  {
+    "id": "ap10005-vocabulary",
+    "title": "专业词汇 · 中英互译",
+    "desc": "力学与后续章节物理术语全表",
+    "file": "ap10005-vocabulary.md",
     "course": "AP10005 · 物理学 I"
   },
   {
@@ -215,5 +243,40 @@
     "desc": "云服务、数据擦除、视频会议、邮件防泄露",
     "file": "itsec-05-cloud-data.md",
     "course": "IT 安全在线培训"
+  },
+  {
+    "id": "itsec-vocabulary",
+    "title": "专业词汇 · 中英互译",
+    "desc": "网络安全术语全表",
+    "file": "itsec-vocabulary.md",
+    "course": "IT 安全在线培训"
+  },
+  {
+    "id": "lei1101-overview",
+    "title": "课程总览与学习目标",
+    "desc": "课程定位、四个学习目标、每课索引",
+    "file": "lei1101-overview.md",
+    "course": "LEI1101 · AI 作为语言学习工具"
+  },
+  {
+    "id": "lei1101-01",
+    "title": "第 1 课 · 课程介绍与学习目标",
+    "desc": "8/31 课程安排、评分、自我介绍与四目标",
+    "file": "lei1101-01.md",
+    "course": "LEI1101 · AI 作为语言学习工具"
+  },
+  {
+    "id": "lei1101-02",
+    "title": "第 2 课 · AI 工具与语言学习",
+    "desc": "9/7 工具选择、语言作用、表达标准",
+    "file": "lei1101-02.md",
+    "course": "LEI1101 · AI 作为语言学习工具"
+  },
+  {
+    "id": "lei1101-vocabulary",
+    "title": "专业词汇 · 中英互译",
+    "desc": "语言学习与提示词工程术语",
+    "file": "lei1101-vocabulary.md",
+    "course": "LEI1101 · AI 作为语言学习工具"
   }
 ]

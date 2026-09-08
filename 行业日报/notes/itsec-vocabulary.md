@@ -1,0 +1,30 @@
+# IT 安全在线培训 专业词汇 · 中英互译
+
+- Phishing — 网络钓鱼
+- Spear Phishing — 鱼叉式钓鱼
+- Gift Card Scam — 礼品卡诈骗
+- Online Scam — 网上骗局
+- Password — 密码
+- Password Manager — 密码管理器
+- Two-Factor Authentication (2FA) — 双重认证
+- Data Breach — 数据泄露
+- Identity Theft — 身份盗窃
+- Ransomware — 勒索软件
+- Ransom Email — 勒索邮件
+- Malware — 恶意软件
+- Antivirus — 杀毒软件
+- Firewall — 防火墙
+- Backup — 备份
+- 3-2-1 Backup — 3-2-1 备份策略
+- Encryption — 加密
+- Public WiFi — 公共 WiFi
+- Virtual Private Network (VPN) — 虚拟专用网络
+- Removable Storage Device — 可移动存储设备
+- Secure Erasure — 安全擦除
+- Cloud Service — 云服务
+- Access Permission — 访问权限
+- Video Conferencing — 视频会议
+- Blind Carbon Copy (BCC) — 密送
+- Social Engineering — 社会工程学
+- Account — 账户
+- Update / Patch — 更新 / 补丁

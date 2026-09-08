@@ -23,3 +23,17 @@
 - MIT OCW 18.01 单变量微积分：https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
 - Khan Academy：https://www.khanacademy.org/math
 - 3Blue1Brown《微积分的本质》视频系列
+
+
+## 评分与考试（来自 OneNote 课堂笔记）
+
+- 成绩构成：平时作业 10% + 翻转课堂 6% + 期中 1（9%）+ 期中 2（15%）+ 期末 60%
+- 期中 1：9 月 27 日 10:30–11:15；期中 2：10 月 25 日 13:00–14:30
+- 工具限制：禁止图形计算器、符号计算器与 CAS 计算器
+- 求助：讲师办公室时间周五 14:00–16:00（TU826）或线上预约
+
+## 教材（选课表）
+- Chung, K.C.《A Short Course in Calculus and Matrices》McGraw Hill 2013
+- Hung, K.F. et al.《Foundation Mathematics & Statistics》McGraw Hill 2013
+- Larson & Edwards《Single Variable Calculus》Brooks/Cole 2012
+- Walpole et al.《Probability and Statistics for Engineers and Scientists》Prentice Hall 2012

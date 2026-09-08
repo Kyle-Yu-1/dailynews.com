@@ -61,3 +61,12 @@
 - L4 对话式 AI → LLM/NLP/聊天机器人（见 L4 笔记）
 - 三次 Workshop → 单独一篇「工作坊笔记」
 - AI 伦理 → 单独一篇；Mini-project → 单独一篇
+
+
+## 教材与参考（选课表）
+- J. Moreira et al.《A General Introduction to Data Analytics》Wiley 2018
+- K. Moreland《The ParaView Tutorial》Sandia 2018
+- A. Majumder《Deep Reinforcement Learning in Unity》Apress 2020
+- A.R. Freed《Conversational AI: Chatbots that work》Manning 2021
+- M. McTear《Conversational AI》Morgan & Claypool 2020
+- Vaibhav Verdhan《Computer Vision Using Deep Learning》Apress 2021
