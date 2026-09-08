@@ -25,28 +25,40 @@
       document.head.appendChild(s);
     });
   }
+  function loadScriptChain(urls) {
+    var i = 0;
+    return new Promise(function (res, rej) {
+      (function next() {
+        if (i >= urls.length) { rej(new Error('all sources failed')); return; }
+        loadScript(urls[i]).then(res, function () { i += 1; next(); });
+      })();
+    });
+  }
   function once(name, fn) {
     if (!libPromises[name]) libPromises[name] = fn();
     return libPromises[name];
   }
   function loadMarked() {
-    return once('marked', function () { return loadScript('https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js'); });
+    return once('marked', function () {
+      if (window.marked) { return Promise.resolve(); }
+      return loadScriptChain(['vendor/marked.min.js', 'https://registry.npmmirror.com/marked/12.0.2/files/marked.min.js']);
+    });
   }
   function loadKaTeX() {
     return once('katex', function () {
       if (!document.getElementById('katexCss')) {
         var l = document.createElement('link');
         l.id = 'katexCss'; l.rel = 'stylesheet';
-        l.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css';
+        l.href = 'https://registry.npmmirror.com/katex/0.16.10/files/dist/katex.min.css';
         document.head.appendChild(l);
       }
-      return loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js')
-        .then(function () { return loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js'); });
+      return loadScriptChain(['https://registry.npmmirror.com/katex/0.16.10/files/dist/katex.min.js', 'https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js'])
+        .then(function () { return loadScriptChain(['https://registry.npmmirror.com/katex/0.16.10/files/dist/contrib/auto-render.min.js', 'https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js']); });
     });
   }
   function loadMermaid() {
     return once('mermaid', function () {
-      return loadScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js');
+      return loadScriptChain(['https://registry.npmmirror.com/mermaid/10.9.1/files/dist/mermaid.min.js', 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js']);
     });
   }
 
