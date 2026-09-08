@@ -1,79 +1,219 @@
 [
   {
-    "id": "overview",
-    "title": "课程总览与学习路线",
-    "desc": "EIE1005 全部资料索引、评分构成、关键日期与复习路线",
-    "file": "overview.md",
-    "course": "EIE1005 人工智能与数据分析"
+    "id": "eie1005-overview",
+    "title": "课程总览与安排（合并版）",
+    "desc": "讲师、课表、评分构成、四讲大纲、关键日期、每课索引",
+    "file": "eie1005-overview.md",
+    "course": "EIE1005 · 人工智能与数据分析"
   },
   {
-    "id": "l1",
-    "title": "L1 · AI、机器学习与数据分析导论",
-    "desc": "AI/ML/DL/LLM/GenAI 概念关系 + 数据分析五步 + 聚类与关联规则",
-    "file": "l1.md",
-    "course": "EIE1005 人工智能与数据分析"
+    "id": "eie1005-l1",
+    "title": "L1 · AI/机器学习与数据分析导论",
+    "desc": "概念关系、数据分析五步、聚类与关联规则、答疑合并",
+    "file": "eie1005-l1.md",
+    "course": "EIE1005 · 人工智能与数据分析"
   },
   {
-    "id": "l2",
+    "id": "eie1005-l2",
     "title": "L2 · 计算机视觉的 AI 与数据分析",
-    "desc": "像素与图像表示、PR 流水线、神经网络训练、CNN 原理",
-    "file": "l2.md",
-    "course": "EIE1005 人工智能与数据分析"
+    "desc": "图像表示、PR 流水线、神经网络训练、CNN 原理、答疑合并",
+    "file": "eie1005-l2.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
+    "id": "eie1005-l3",
+    "title": "L3 · 虚拟世界中的 AI 与数据分析",
+    "desc": "数字孪生、仿真、Game AI、行为数据",
+    "file": "eie1005-l3.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
+    "id": "eie1005-l4",
+    "title": "L4 · 对话式 AI 与数据分析",
+    "desc": "NLP、Transformer、RAG、评估",
+    "file": "eie1005-l4.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
+    "id": "eie1005-workshops",
+    "title": "三次 Workshop 笔记",
+    "desc": "数据可视化、Game AI、对话式 AI 与报告高分清单",
+    "file": "eie1005-workshops.md",
+    "course": "EIE1005 · 人工智能与数据分析"
   },
   {
     "id": "ethics",
     "title": "AI 伦理阅读笔记",
-    "desc": "六大风险、七大原则、5 个 AI 偏见真实案例、LaMDA 讨论",
+    "desc": "六大风险、七原则、偏见案例、LaMDA",
     "file": "ethics.md",
-    "course": "EIE1005 人工智能与数据分析"
+    "course": "EIE1005 · 人工智能与数据分析"
   },
   {
     "id": "project",
     "title": "Mini-project 完全指南",
-    "desc": "Teachable Machine 全流程、实验表、评分细则与提交清单",
+    "desc": "组队、Teachable Machine 流程、评分与提交",
     "file": "project.md",
-    "course": "EIE1005 人工智能与数据分析"
-  },
-  {
-    "id": "qa",
-    "title": "答疑笔记(难点串联)",
-    "desc": "特征来源、监督学习、PR 两大家族、卷积与 CNN 原理",
-    "file": "qa.md",
-    "course": "EIE1005 人工智能与数据分析"
-  },
-  {
-    "id": "courseinfo",
-    "title": "课程信息与安排",
-    "desc": "讲师、课表、评分构成、AIDA e-learning 模块",
-    "file": "courseinfo.md",
-    "course": "EIE1005 人工智能与数据分析"
+    "course": "EIE1005 · 人工智能与数据分析"
   },
   {
     "id": "me29004-overview",
-    "title": "课程总览 · 资料索引与学期规划",
-    "desc": "Canvas 模块与文件索引、WS1 截止、评分与每周行动建议",
+    "title": "课程总览 · 瓶盖端执行器项目",
+    "desc": "项目背景、模块索引、WS1 截止、每周行动建议",
     "file": "me29004-overview.md",
     "course": "ME29004/IC2117 · 应用工程基础"
   },
   {
-    "id": "me29004-edp",
-    "title": "工程设计流程（EDP）笔记",
-    "desc": "流程各阶段、评分矩阵、WS1 高分思路与自测",
-    "file": "me29004-edp.md",
+    "id": "me29004-01-edp",
+    "title": "第 1 课 · 工程设计流程（EDP）",
+    "desc": "五阶段、五维检查表、瓶盖项目、WS1 高分思路",
+    "file": "me29004-01-edp.md",
     "course": "ME29004/IC2117 · 应用工程基础"
   },
   {
-    "id": "me29004-3dp",
-    "title": "3D 打印实操笔记",
-    "desc": "FDM 原理、支撑与摆放方向、Shapr3D→Bambu 完整流",
-    "file": "me29004-3dp.md",
+    "id": "me29004-02-3dp",
+    "title": "第 2 课 · 3D 打印",
+    "desc": "FDM 原理、Shapr3D 马克杯、支撑与摆放、Bambu 流程",
+    "file": "me29004-02-3dp.md",
     "course": "ME29004/IC2117 · 应用工程基础"
   },
   {
-    "id": "me29004-manufacturing",
-    "title": "制造工艺笔记（电子/胶接/表面/激光/测量装配）",
-    "desc": "电子原型、胶接、表面处理、激光加工、测量与机械连接、总装复盘",
-    "file": "me29004-manufacturing.md",
+    "id": "me29004-03-electronics",
+    "title": "第 3 课 · 电子原型",
+    "desc": "DC 电机、PWM、H 桥、伺服/步进、XY 工作台",
+    "file": "me29004-03-electronics.md",
     "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-04-adhesive",
+    "title": "第 4 课 · 胶接基础",
+    "desc": "粘附与内聚、键合原理、胶类、表面处理与接头",
+    "file": "me29004-04-adhesive.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-05-finishing",
+    "title": "第 5 课 · 表面处理",
+    "desc": "打磨、蒸气抛光、喷涂、摩擦与粗糙度测试",
+    "file": "me29004-05-finishing.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-06-laser",
+    "title": "第 6 课 · 激光加工",
+    "desc": "切割雕刻、kerf、CorelDRAW、设计规范",
+    "file": "me29004-06-laser.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-07-measure-joint",
+    "title": "第 7 课 · 测量与机械连接",
+    "desc": "游标卡尺、公差与配合、紧固件、钻孔攻丝",
+    "file": "me29004-07-measure-joint.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-08-assembly",
+    "title": "第 8 课 · 总装与复盘",
+    "desc": "装配顺序、验收清单、复盘模板",
+    "file": "me29004-08-assembly.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "ama1110-overview",
+    "title": "课程总览与学习路线",
+    "desc": "讲义/练习结构、四课索引、资源",
+    "file": "ama1110-overview.md",
+    "course": "AMA1110 · 基础数学 I（微积分与概率统计）"
+  },
+  {
+    "id": "ama1110-01-sets-functions",
+    "title": "第 1 课 · 集合、不等式与函数",
+    "desc": "集合运算、绝对值不等式、复合/反函数、奇偶性",
+    "file": "ama1110-01-sets-functions.md",
+    "course": "AMA1110 · 基础数学 I（微积分与概率统计）"
+  },
+  {
+    "id": "ama1110-02-limits-continuity",
+    "title": "第 2 课 · 极限、连续与介值定理",
+    "desc": "极限、连续性、可导与连续、IVT",
+    "file": "ama1110-02-limits-continuity.md",
+    "course": "AMA1110 · 基础数学 I（微积分与概率统计）"
+  },
+  {
+    "id": "ama1110-03-differentiation",
+    "title": "第 3 课 · 微分法则与洛必达",
+    "desc": "乘积/商/链式法则、极值、洛必达",
+    "file": "ama1110-03-differentiation.md",
+    "course": "AMA1110 · 基础数学 I（微积分与概率统计）"
+  },
+  {
+    "id": "ap10005-overview",
+    "title": "课程总览与备考策略",
+    "desc": "四讲主线、历年卷、公式表、PhET 仿真",
+    "file": "ap10005-overview.md",
+    "course": "AP10005 · 物理学 I"
+  },
+  {
+    "id": "ap10005-01-mechanics",
+    "title": "第 1 课 · 力学",
+    "desc": "运动学、动力学、能量、动量、转动",
+    "file": "ap10005-01-mechanics.md",
+    "course": "AP10005 · 物理学 I"
+  },
+  {
+    "id": "ap10005-02-waves-shm",
+    "title": "第 2 课 · 波动与简谐振动",
+    "desc": "SHM、波、叠加驻波、多普勒",
+    "file": "ap10005-02-waves-shm.md",
+    "course": "AP10005 · 物理学 I"
+  },
+  {
+    "id": "ap10005-03-thermo",
+    "title": "第 3 课 · 热学与气体",
+    "desc": "气体定律、热一律、卡诺热机",
+    "file": "ap10005-03-thermo.md",
+    "course": "AP10005 · 物理学 I"
+  },
+  {
+    "id": "itsec-overview",
+    "title": "课程总览 · 23 课地图",
+    "desc": "20 模块按主题归类、完成建议、资源",
+    "file": "itsec-overview.md",
+    "course": "IT 安全在线培训"
+  },
+  {
+    "id": "itsec-01-phishing-scams",
+    "title": "第 1 课 · 网络钓鱼与诈骗",
+    "desc": "钓鱼识别、高级钓鱼、礼品卡与网上骗局",
+    "file": "itsec-01-phishing-scams.md",
+    "course": "IT 安全在线培训"
+  },
+  {
+    "id": "itsec-02-passwords-identity",
+    "title": "第 2 课 · 密码与身份防护",
+    "desc": "强密码、勒索邮件、身份盗窃",
+    "file": "itsec-02-passwords-identity.md",
+    "course": "IT 安全在线培训"
+  },
+  {
+    "id": "itsec-03-ransomware",
+    "title": "第 3 课 · 勒索软件与电脑防护",
+    "desc": "勒索软件、3-2-1 备份、Windows 安全",
+    "file": "itsec-03-ransomware.md",
+    "course": "IT 安全在线培训"
+  },
+  {
+    "id": "itsec-04-mobile-travel-wifi",
+    "title": "第 4 课 · 移动/出行/公共 WiFi",
+    "desc": "出行、移动设备、公共 WiFi、可移动存储",
+    "file": "itsec-04-mobile-travel-wifi.md",
+    "course": "IT 安全在线培训"
+  },
+  {
+    "id": "itsec-05-cloud-data",
+    "title": "第 5 课 · 云端与数据",
+    "desc": "云服务、数据擦除、视频会议、邮件防泄露",
+    "file": "itsec-05-cloud-data.md",
+    "course": "IT 安全在线培训"
   }
 ]

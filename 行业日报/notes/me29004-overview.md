@@ -1,41 +1,31 @@
 # ME29004 / IC2117 · 应用工程基础（Applied Engineering Fundamentals）
 
-> 课程代码：ME29004 / IC2117（TRN001 · 2026/27 第一学期）
-> 性质：面向机械类（ME Scheme）的**实践工作坊型基础课**，配套编号 TM1326。
-> 一句话概括：走完「**需求 → 设计 → 建模 → 制造 → 装配 → 评估**」的完整工程链路，重点在动手和工程习惯，而不是纯理论。
+> TRN001 · 2026/27 第一学期 · 实践工作坊型课程（配套 TM1326）
+> 一句话：走完「需求 → 设计 → 建模 → 制造 → 装配 → 评估」完整链路，重点在动手与工程习惯。
 
-## 一、Canvas 模块与资料索引
+## 本学期项目（重要）
+**为「瓶盖回收（bottle lid recycling）」设计端执行器（end-effector）+ Z 轴抬升机构**：
+- 学校提供：辅助机器人系统 = **XY 工作台 + 控制系统 + 一个 gripper（夹爪）**。
+- 你要做：设计能自动 pick-and-place 瓶盖的端执行器，可用 **linkage bar 连杆机构**实现 Z 轴升降。
+- 六个工作坊全部为这个项目服务：3D 打印做夹爪/支架，激光切割做夹具/底板，电子原型做电机与控制，胶接+机械连接做装配，表面处理做抓取纹理，测量保证对齐与公差。
 
-| 模块 | 关键资料（Canvas 中） | 重点 |
-| --- | --- | --- |
-| General Information | Attendance Requirements（出席要求）、Copyright、Class Timetable.pdf | 先看考勤和课表，缺勤直接影响分数 |
-| Course Introduction | IC2117 2026 Induction Material.pdf、TM1326 Assessment Rubric.pdf、模块简介 PDF | 评分细则最重要，务必逐条读 |
-| Engineering design Fundamentals | WS1 作业（**9 月 30 日 23:59 截止，100 分**）、EDP 讲义 PDF | 第一份计分作业，尽早动手 |
-| Practical 3D printing | 3DP 讲义（类型与基础、支撑与摆放方向）、Shapr3D 建模、马克杯练习、Bambu 预处理、3DP guidelines | 从建模到切片到打印的完整流 |
-| Electronic Prototyping | 资料待发布 | 电路原型、Arduino/面包板方向 |
-| Fundamental adhesive joint | 资料待发布 | 胶接原理与接头设计 |
-| Surface Finishing | 讲义 PPTX + 选择题练习 DOCX | 打磨、表面处理与质感 |
-| Laser processing | 资料待发布 | 激光切割/雕刻与设计规范 |
-| Basic Measurement and mechanical joint | 资料待发布 | 量具使用、公差与机械连接 |
-| Final Assembly and review | 资料待发布 | 总装、配合检验与复盘 |
+## Canvas 模块与资料索引
+| 模块 | 关键资料 |
+| --- | --- |
+| General Information | Attendance Requirements、Copyright、Class Timetable.pdf |
+| Course Introduction | Induction Material.pdf、TM1326 Assessment Rubric.pdf、Attendance Requirement、模块简介 |
+| Engineering design Fundamentals | **WS1（9/30 23:59 截止，100 分）**、EDP 讲义（bottle lid） |
+| Practical 3D printing | 3DP 讲义、Shapr3D 建模、马克杯练习、Bambu 预处理、3DP guidelines |
+| Electronic Prototyping | DC/伺服/步进电机、Arduino（资料待发布） |
+| Fundamental adhesive joint | 胶接原理（资料待发布） |
+| Surface Finishing | 讲义 PPTX + 选择题练习 DOCX |
+| Laser processing | 非金属激光切割（资料待发布） |
+| Basic Measurement and mechanical joint | 游标卡尺、公差、攻丝（资料待发布） |
+| Final Assembly and review | 总装与复盘 |
 
-## 二、关键日期与规则
-
-- **WS1（Engineering design process）**：9 月 30 日 23:59 截止，100 分。
-- 评分以 **TM1326 Assessment Rubric** 为准：作品 + 过程记录 + 报告/工作表，过程分通常占大头，不是只看最终成品。
-- 出席要求：实践课缺课会直接影响成绩，务必提前看 Attendance Requirement。
-
-## 三、给这学期的行动建议
-
-1. **第一周**：读完 Induction Material 和 Assessment Rubric，把每个评分项抄进自己的任务清单。
-2. **以 WS1 为节奏锚点**：第 2–4 周集中搞定「工程流程」作业；同期间把 Shapr3D 马克杯练习做完，为 3D 打印实操预热。
-3. **每节工作坊结束当天**：写 3 行记录（做了什么、遇到什么问题、怎么解决）——这就是报告和复盘的原素材，期末不用赶工。
-4. **软硬件提前装好**：Shapr3D（建模）、Bambu Studio（切片）、Arduino IDE（电子原型）、一副游标卡尺（测量）。
-5. **安全习惯**：激光、打磨、胶水环节按指引佩戴防护；不认识的材料先查 SDS，别直接上手。
-6. 每个模块的详细学习笔记见同课程的其余几篇（设计流程 / 3D 打印 / 制造工艺）。
-
-## 四、资源入口（详见学习 Agent 聊天中的资源清单）
-
-- 官方教程：Bambu Lab Wiki / 拓竹学院、Shapr3D 官方教程、Arduino 官方文档。
-- 课程：MIT OCW 2.007 Design and Manufacturing I。
-- 书籍：Shigley《Mechanical Engineering Design》、Dieter & Schmidt《Engineering Design》、Ulrich & Eppinger《Product Design and Development》。
+## 行动建议
+1. 第一周读完 Induction Material + Assessment Rubric，把评分项抄成清单。
+2. **9/30 前交 WS1**，别拖到最后。
+3. 每节工作坊当天写 3 行记录（做什么/遇到什么问题/怎么解决）。
+4. 装好工具：Shapr3D、Bambu Studio、Arduino IDE；备游标卡尺。
+5. 每课对应一篇笔记：01 设计流程 · 02 3D打印 · 03 电子原型 · 04 胶接 · 05 表面处理 · 06 激光 · 07 测量与机械连接 · 08 总装复盘。
