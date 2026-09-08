@@ -47,5 +47,33 @@
     "desc": "讲师、课表、评分构成、AIDA e-learning 模块",
     "file": "courseinfo.md",
     "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "me29004-overview",
+    "title": "课程总览 · 资料索引与学期规划",
+    "desc": "Canvas 模块与文件索引、WS1 截止、评分与每周行动建议",
+    "file": "me29004-overview.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-edp",
+    "title": "工程设计流程（EDP）笔记",
+    "desc": "流程各阶段、评分矩阵、WS1 高分思路与自测",
+    "file": "me29004-edp.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-3dp",
+    "title": "3D 打印实操笔记",
+    "desc": "FDM 原理、支撑与摆放方向、Shapr3D→Bambu 完整流",
+    "file": "me29004-3dp.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
+  },
+  {
+    "id": "me29004-manufacturing",
+    "title": "制造工艺笔记（电子/胶接/表面/激光/测量装配）",
+    "desc": "电子原型、胶接、表面处理、激光加工、测量与机械连接、总装复盘",
+    "file": "me29004-manufacturing.md",
+    "course": "ME29004/IC2117 · 应用工程基础"
   }
 ]
