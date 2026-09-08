@@ -241,6 +241,7 @@ mark{background:rgba(212,165,116,.4);border-radius:4px;padding:0 3px;color:inher
 }
 
 /* ===== 技术树 ===== */
+.tree-viewport,.tree-world,.tree-nodes,.tree-node,.tree-axis{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .tree-view{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0}
 .tree-topbar{display:flex;align-items:center;gap:16px;padding:16px 34px 8px;flex-wrap:wrap}
 .tree-title{font-family:"Georgia","Noto Serif SC",serif;font-style:italic;font-size:17px;color:var(--gold);letter-spacing:.04em}
@@ -335,6 +336,8 @@ mark{background:rgba(212,165,116,.4);border-radius:4px;padding:0 3px;color:inher
 .notes-view{flex:1;overflow-y:auto;padding:10px 34px 48px}
 .notes-topbar{display:flex;align-items:center;gap:16px;margin-bottom:24px}
 .notes-title{font-size:20px;font-style:italic;letter-spacing:.02em;color:var(--text)}
+.notes-course{grid-column:1/-1;margin:18px 0 4px;font-family:"Georgia","Noto Serif SC",serif;font-style:italic;font-size:19px;color:var(--gold);border-bottom:1px dashed var(--gold-soft);padding-bottom:8px}
+.notes-course small{display:block;margin-top:4px;font-size:12px;color:var(--muted-ink);font-style:normal}
 .notes-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .note-card{background:var(--panel-grad);border:1px solid var(--border-gold);border-radius:18px 22px 16px 22px;
   padding:20px;cursor:pointer;box-shadow:var(--shadow-glow-gold);

@@ -57,11 +57,19 @@
   }
 
   function renderList() {
-    var html = NOTES.map(function (n) {
-      return '<div class="note-card" data-file="' + esc(n.file) + '">'
-        + '<h3 class="note-card-title">' + esc(n.title) + '</h3>'
-        + '<p class="note-card-desc">' + esc(n.desc) + '</p>'
-        + '</div>';
+    var byCourse = {};
+    NOTES.forEach(function (n) {
+      var c = (n.course || '其他笔记').trim();
+      (byCourse[c] = byCourse[c] || []).push(n);
+    });
+    var html = Object.keys(byCourse).map(function (course) {
+      var cards = byCourse[course].map(function (n) {
+        return '<div class="note-card" data-file="' + esc(n.file) + '">'
+          + '<h3 class="note-card-title">' + esc(n.title) + '</h3>'
+          + '<p class="note-card-desc">' + esc(n.desc) + '</p>'
+          + '</div>';
+      }).join('');
+      return '<div class="notes-course">' + esc(course) + '<small>' + byCourse[course].length + ' 篇笔记</small></div>' + cards;
     }).join('');
     notesList.innerHTML = html || '<div class="empty">笔记加载失败,请刷新重试。</div>';
     Array.prototype.forEach.call(notesList.querySelectorAll('.note-card'), function (card) {

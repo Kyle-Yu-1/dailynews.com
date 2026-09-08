@@ -155,6 +155,7 @@
     if (e.target && e.target.closest && e.target.closest('.tree-node')) return;
     e.preventDefault();
     world.style.transition = '';
+    try { document.getSelection().removeAllRanges(); } catch (err) {}
     vx = vy = 0;
     drag = { moved: false, sx: e.clientX, sy: e.clientY, ox: view.x, oy: view.y, hist: [{ x: e.clientX, y: e.clientY, t: performance.now() }] };
     try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
@@ -185,7 +186,7 @@
     if (d.moved) {
       var h0 = d.hist[0], h1 = d.hist[d.hist.length - 1], dt = (h1.t - h0.t) / 1000;
       if (dt > 0.01) {
-        var k = 16.667 / dt;
+        var k = 0.016667 / dt;
         vx = (h1.x - h0.x) * k;
         vy = (h1.y - h0.y) * k;
       }
@@ -213,7 +214,7 @@
         if (Math.abs(ty - view.y) < 0.5) { view.y = ty; }
         vy = 0;
       }
-      if (Math.abs(vx) > 0.4 || Math.abs(vy) > 0.4) {
+      if (Math.abs(vx) > 0.3 || Math.abs(vy) > 0.3) {
         view.x += vx; view.y += vy;
         vx *= 0.92; vy *= 0.92;
         if (view.x <= b.x0) { view.x = b.x0; vx = 0; }

@@ -1,9 +1,51 @@
 [
-  {"id":"overview","title":"课程总览与学习路线","desc":"EIE1005 全部资料索引、评分构成、关键日期与复习路线","file":"overview.md"},
-  {"id":"l1","title":"L1 · AI、机器学习与数据分析导论","desc":"AI/ML/DL/LLM/GenAI 概念关系 + 数据分析五步 + 聚类与关联规则","file":"l1.md"},
-  {"id":"l2","title":"L2 · 计算机视觉的 AI 与数据分析","desc":"像素与图像表示、PR 流水线、神经网络训练、CNN 原理","file":"l2.md"},
-  {"id":"ethics","title":"AI 伦理阅读笔记","desc":"六大风险、七大原则、5 个 AI 偏见真实案例、LaMDA 讨论","file":"ethics.md"},
-  {"id":"project","title":"Mini-project 完全指南","desc":"Teachable Machine 全流程、实验表、评分细则与提交清单","file":"project.md"},
-  {"id":"qa","title":"答疑笔记(难点串联)","desc":"特征来源、监督学习、PR 两大家族、卷积与 CNN 原理","file":"qa.md"},
-  {"id":"courseinfo","title":"课程信息与安排","desc":"讲师、课表、评分构成、AIDA e-learning 模块","file":"courseinfo.md"}
+  {
+    "id": "overview",
+    "title": "课程总览与学习路线",
+    "desc": "EIE1005 全部资料索引、评分构成、关键日期与复习路线",
+    "file": "overview.md",
+    "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "l1",
+    "title": "L1 · AI、机器学习与数据分析导论",
+    "desc": "AI/ML/DL/LLM/GenAI 概念关系 + 数据分析五步 + 聚类与关联规则",
+    "file": "l1.md",
+    "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "l2",
+    "title": "L2 · 计算机视觉的 AI 与数据分析",
+    "desc": "像素与图像表示、PR 流水线、神经网络训练、CNN 原理",
+    "file": "l2.md",
+    "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "ethics",
+    "title": "AI 伦理阅读笔记",
+    "desc": "六大风险、七大原则、5 个 AI 偏见真实案例、LaMDA 讨论",
+    "file": "ethics.md",
+    "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "project",
+    "title": "Mini-project 完全指南",
+    "desc": "Teachable Machine 全流程、实验表、评分细则与提交清单",
+    "file": "project.md",
+    "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "qa",
+    "title": "答疑笔记(难点串联)",
+    "desc": "特征来源、监督学习、PR 两大家族、卷积与 CNN 原理",
+    "file": "qa.md",
+    "course": "EIE1005 人工智能与数据分析"
+  },
+  {
+    "id": "courseinfo",
+    "title": "课程信息与安排",
+    "desc": "讲师、课表、评分构成、AIDA e-learning 模块",
+    "file": "courseinfo.md",
+    "course": "EIE1005 人工智能与数据分析"
+  }
 ]
