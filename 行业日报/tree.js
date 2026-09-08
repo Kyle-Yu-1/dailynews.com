@@ -132,6 +132,8 @@
     viewport.style.cursor = c;
     world.style.cursor = c;
     nodeLayer.style.cursor = c;
+    document.body.style.userSelect = on ? 'none' : '';
+    document.body.style.webkitUserSelect = on ? 'none' : '';
   }
 
   viewport.addEventListener('wheel', function (e) {
@@ -161,8 +163,12 @@
     try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
     setGrab(true);
   });
+  viewport.addEventListener('selectstart', function (e) {
+    if (drag) { e.preventDefault(); }
+  });
   viewport.addEventListener('pointermove', function (e) {
     if (!drag) return;
+    try { document.getSelection().removeAllRanges(); } catch (err) {}
     var dx = e.clientX - drag.sx, dy = e.clientY - drag.sy;
     if (!drag.moved) {
       if (dx * dx + dy * dy > 16) { drag.moved = true; } else { return; }
