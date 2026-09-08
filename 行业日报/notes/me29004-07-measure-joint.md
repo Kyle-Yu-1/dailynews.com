@@ -1,3 +1,6 @@
+## 📎 原始课件
+- Canvas 课件尚未发布，待老师上传后同步。
+
 # ME29004 第 7 课 · 基础测量与机械连接（Basic Measurement & Mechanical Joint）
 
 ## 工作坊内容

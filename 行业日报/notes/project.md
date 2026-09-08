@@ -1,3 +1,7 @@
+## 📎 原始课件
+- [Mini-project 项目要求（原文）](files/eie1005/project-requirements.txt)
+- [Mini-project Preparation（原文）](files/eie1005/project-preparation.txt)
+
 # EIE1005 Mini-Project 完全指南(占 20%)
 
 > 来源:Group Project and Demonstration.pdf + Mini-project Preparation.docx

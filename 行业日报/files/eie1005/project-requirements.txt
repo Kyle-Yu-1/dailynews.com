@@ -1,0 +1,539 @@
+DocViewer
+Page
+of 2
+ZOOM
+Pages
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of
+ 
+Electrical and Electronic
+ 
+Engineering
+
+
+EIE1005
+
+
+Workshop
+ 
+2
+
+
+1
+
+
+Fundamental AI and Data Analytic
+ 
+(EIE
+1005
+)
+
+
+Group
+ 
+Mini
+-
+p
+roject and
+ 
+Demonstration
+
+
+This
+ 
+group
+ 
+mini
+-
+project and demonstration
+ 
+provide students
+ 
+with
+ 
+the opportunity to get familiar with the
+
+
+training process
+ 
+for
+ 
+using neural networks to
+ 
+a
+ 
+computer vision
+ 
+problem.
+ 
+The
+ 
+open
+-
+ended
+ 
+task is to use
+
+
+Teachable Machine (
+https://teachablemachine.withgoogle.com/
+) to train an AI model to recognize objects
+
+
+that may be applied to
+ 
+your
+ 
+disciplines.
+ 
+It aims to encourage self
+-
+learning, to train logical thinking, and
+
+
+to practice
+ 
+demonstration
+ 
+skill
+s
+.
+
+
+Require
+ment
+s
+
+
+-
+ 
+Form
+ 
+group
+ 
+made up of
+ 
+five
+ 
+to
+ 
+six
+ 
+students who will
+ 
+work
+ 
+together to select a topic and develop
+
+
+an AI model to recognize objects.
+
+
+To sign up:
+
+
+o
+ 
+Please sign up to form a group of
+ 
+5
+-
+6
+ 
+students.
+
+
+o
+ 
+Go to “People” page in Canvas and choose the “Groups” tap
+
+
+o
+ 
+Click “Join” to join a group.
+
+
+-
+ 
+Create a total of 3
+-
+5 classes.
+
+
+-
+ 
+Collect samples: u
+se your camera
+ 
+to capture sample
+ 
+or download
+ 
+samples
+ 
+from the Internet
+
+
+(Reference:
+ 
+Data Preparation.mp4
+).
+
+
+-
+ 
+Use Teachable Machine (
+https://teachablemachine.withgoogle.com/
+) to train an AI model to
+
+
+recognize objects.
+
+
+-
+ 
+Test your well
+-
+trained model.
+
+
+-
+ 
+Demonstration: create a demonstration video in
+ 
+5
+-
+7
+ 
+minutes.
+
+
+Video
+ 
+Demonstration
+
+
+In the
+ 
+demonstration
+,
+ 
+Microsoft PowerPoint must be used in the presentation.
+ 
+Y
+ou must
+ 
+have
+:
+
+
+•
+ 
+Front page:
+
+
+o
+ 
+Title: provide a clear and concise title for your application, indicating the focus area
+.
+
+
+o
+ 
+Project Group:
+ 
+Include the group number, full names and student IDs of all group
+
+
+members, and specify
+ 
+the duty of each member
+.
+
+
+•
+ 
+Introduction:
+
+
+o
+ 
+Provide a brief overview of the project, including its objectives and significance.
+
+
+•
+ 
+Objective
+(s)
+:
+
+
+o
+ 
+Describe
+ 
+a description on how your designed task can be applied to your disciplines,
+ 
+and
+
+
+o
+ 
+Clearly state the objectives of the project and how it aims to improve the
+ 
+specific
+
+
+application
+.
+
+
+•
+ 
+Implementation and results:
+
+
+o
+ 
+D
+escribe how to prepare your data samples
+,
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of
+ 
+Electrical and Electronic
+ 
+Engineering
+
+
+EIE1005
+
+
+Workshop
+ 
+2
+
+
+2
+
+
+o
+ 
+Describe how to use the Teachable Machine to train the model,
+ 
+and
+
+
+o
+ 
+C
+apture the results to show the accuracy of your model.
+
+
+•
+ 
+Conclusions:
+
+
+o
+ 
+Summarize the key findings and contributions of the project.
+
+
+o
+ 
+Reflect on the project's overall success and limitations.
+
+
+o
+ 
+Discuss potential future enhancements or extensions to the application.
+
+
+High marks
+ 
+will be awarded to concise and logical presentation in clear and fluent English. Please submit
+
+
+the
+ 
+demonstration
+ 
+before
+ 
+No
+v.
+ 
+2
+8
+, 202
+6
+. Late submissions will be penalized.
+
+
+Deadlines and important dates
+
+
+Submission of the group composition
+ 
+via
+ 
+C
+anvas
+ 
+Sept
+.
+ 
+30
+, 202
+6
+
+
+*
+Students with no group will be randomly assigned to
+ 
+a
+ 
+group with less than 5 people after Sept.
+
+
+30, 2026
+
+
+Submission of the group report
+ 
+and
+ 
+video
+ 
+demonstration via
+ 
+Canvas
+ 
+Nov
+.
+ 
+2
+8
+, 202
+6
+
+
+Assessment
+
+
+Presentation skills and Organization:
+ 
+15
+%
+
+
+Technical Content:
+ 
+85%
+
+
+•
+ 
+Problem statement, and objectives (15%)
+
+
+•
+ 
+Collect samples: use your camera to capture sample or download samples from the Internet (20%)
+
+
+•
+ 
+Use Teachable
+ 
+Machine
+ 
+(
+https://teachablemachine.withgoogle.com/
+)
+ 
+to
+ 
+train
+ 
+an AI
+ 
+model
+ 
+to
+
+
+recognize objects (2
+5
+ 
+%)
+
+
+•
+ 
+Test your well
+-
+trained model (25%)
+
+
+Submission
+
+
+Submit the
+ 
+demonstration
+ 
+video to
+ 
+Canvas
+:
+
+
+•
+ 
+Submission link will be available later in
+ 
+Canvas Week 2 module
+.
+
+
+•
+ 
+One submission per group
+
+
+o
+ 
+Provide
+ 
+a
+ 
+Web
+ 
+Link
+ 
+of your demonstration video
+ 
+(OneDrive, YouTube, etc.),
+ 
+set the
+
+
+permission to anyone with link can view.
+
+
+o
+ 
+The last submission will be graded.
+
+
+-
+ 
+END
+-
+Annotations

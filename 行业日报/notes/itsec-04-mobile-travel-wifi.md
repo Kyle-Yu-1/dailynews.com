@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应模块见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/5470/modules)。
+
 # IT 安全 第 4 课 · 移动设备 / 出行 / 公共 WiFi（Module 3/4/9/16）
 
 ## 出行安全

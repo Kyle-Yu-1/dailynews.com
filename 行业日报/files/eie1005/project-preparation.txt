@@ -1,0 +1,899 @@
+DocViewer
+Page
+of 14
+ZOOM
+Pages
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+1
+
+
+Student Name: ______________________
+ 
+Student No: ______________
+
+
+Fundamental AI and Data Analytic (EIE1005)
+
+
+Mini-project Preparation: Developing Character Recognition with
+
+
+Deep Learning
+
+
+Objectives:
+
+
+By the end of this preparation workshop, students will be able to:
+
+
+•
+ 
+Explain the key concepts and workflow of training neural networks for character
+
+
+recognition.
+
+
+•
+ 
+Navigate and use the provided dataset and training pipeline for the mini-project.
+
+
+•
+ 
+Implement,
+ 
+train,
+ 
+and
+ 
+evaluate
+ 
+a
+ 
+neural
+ 
+network
+ 
+model
+ 
+for
+ 
+handwritten
+ 
+digit
+
+
+classification.
+
+
+•
+ 
+Interpret basic performance metrics and identify common issues in the trained model.
+
+
+Required tools
+
+
+Recommended Web Browser: Google Chrome
+
+
+Web-based AI model: Teachable Machine: https://teachablemachine.withgoogle.com/
+
+
+Required materials
+
+
+•
+ 
+Training and Testing Image Set:
+ 
+MNIST Dataset.zip
+
+
+•
+ 
+Additional Sample Set:
+ 
+Additional data.zip
+
+
+•
+ 
+(Required materials can be downloaded from the Canvas “Modules
+ 
+
+ 
+Week 2: Lecture
+
+
+2 – AI and Data Analytics for Computer Vision
+ 
+
+ 
+Workshop 2 - Developing Character
+
+
+Recognition with Deep Learning
+ 
+
+ 
+Mini-project Workshop”)
+
+
+Things to do
+
+
+Follow the instructions in the worksheet to train the character recognition model, and complete
+
+
+the tasks. (No submission is required)
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+2
+
+
+Part I: Introduction of Teachable Machine
+
+
+In this section, we are going to introduce and teach you how to get started with Teachable
+
+
+Machine (https://teachablemachine.withgoogle.com/). Teachable Machine is a web-based tool
+
+
+that makes creating machine learning models fast, easy, and accessible to everyone. We can use
+
+
+it to create an AI model for our own image recognition without any expertise or coding skills.
+
+
+1.
+ 
+Get started with Teachable Machine
+
+
+Open
+ 
+the
+ 
+Teachable
+ 
+Machine
+ 
+(https://teachablemachine.withgoogle.com/)
+ 
+with
+ 
+a
+ 
+web
+
+
+browser.
+
+
+Fig 1. The interface of Teachable Machine Website
+
+
+2.
+ 
+Create a new image project
+
+
+Click the “Get Started” button to create a new project.
+
+
+After clicked the “Get Started” button, three options can be chosen:
+
+
+i)
+ 
+Image Project: train an AI model to classify different images using files or your
+
+
+webcam.
+
+
+ii)
+ 
+Audio Project: train an audio-based AI classification model by sound waves
+
+
+iii)
+ 
+Pose Project: train a model to classify body positions using files or striking poses in
+
+
+your webcam.
+
+
+In this workshop, we focus on “Image Project”.
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+3
+
+
+a) Choose “Image Project”
+
+
+b) Choose “Standard image model”
+
+
+You have created a new empty project now.
+
+
+3.
+ 
+User interface of Teachable Machine
+
+
+After creating a new empty image project, you can see the user interface as below:
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+4
+
+
+a) Class Name: Name a class for our classification task.
+
+
+b) Add a Class: Add a new class for the multiclass classification task.
+
+
+c) Add Image Samples: Use the webcam to capture image samples or upload image samples
+
+
+from the file (or drag and drop there).
+
+
+d) Training Advanced Setting:
+
+
+˙
+ 
+Epochs
+: How many times was the model trained using the entire training dataset.
+
+
+˙
+ 
+Batch size
+: A batch is a set of samples used in one iteration of training.
+ 
+For
+
+
+example: if you have 100 images and you choose a batch size of 10.
+ 
+Then, 1
+
+
+epoch = 10 batches.
+ 
+Once all 10 batches have been fed through the model,
+
+
+exactly one epoch will be complete.
+
+
+˙
+ 
+Learning rate
+: The step size at each iteration while moving toward a minimum
+
+
+of a loss function.
+
+
+˙
+ 
+Under the hood
+: Show the detailed information about the training process.
+
+
+e) Preview: The trained model can be tested here with the classifaiction result.
+
+
+f) Panel: Open the panel, you can choose the option “Download the project as file” (all
+
+
+training samples will be stored but not include the well-trained model)
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+5
+
+
+Part II: Training Process of Handwritten Digit Classification Model
+
+
+In this section, we are going to build a handwritten digit classification model by using the
+
+
+Teachable Machine.
+
+
+1.
+ 
+Preparing training samples and testing sample
+
+
+a) Download the zip file “
+MNIST Dataset.zip
+” form the Blackboard.
+
+
+b) After unzipping the “
+MNIST Dataset.zip
+” file, two folders can be found as follows:
+
+
+MNIST – training
+: image samples for training
+
+
+MNIST – testing
+: image samples for testing
+
+
+c) Open the training sample folder – Ten folders can be found, named from 0 to 9.
+
+
+d) Each folder (0-9) contains 100 images of the handwritten digit, which are the same
+
+
+handwritten digit as the folder name, but in different styles.
+
+
+2.
+ 
+Upload samples for training
+
+
+a) Go back to Teachable Machine.
+
+
+b) Click the “Add a class” button to create 10 classes in total.
+
+
+c) Then, modify the class name of the first class to “Number 0”. The second class name
+
+
+should be “Number 1” and go on.
+
+
+(Note: you can delete the class by clicking “More option
+ 
+
+ 
+Delete Class” as shown in the
+
+
+below figure.)
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+6
+
+
+d) Click “Upload” under the “Add Image Samples” in each class. Then, you can drag and
+
+
+drop training samples into each class.
+
+
+e) Open folder “
+MNIST Dataset
+
+ 
+MNIST – training
+ 
+
+ 
+0
+” and randomly upload
+ 
+20 image
+
+
+samples
+ 
+into the class “Number 0”
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+7
+
+
+f) For each class, we also upload
+ 
+20 corresponding image samples
+ 
+from folder “
+MNIST –
+
+
+training”
+
+
+g) After uploading the samples for each class, the button “Train Model” under the “Training”
+
+
+is enabled. Then we can click on it to start training our handwritten digit classification
+
+
+model.
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+8
+
+
+3.
+ 
+Training model
+
+
+a) After clicking the “Train Model”, Teachable Machine will train the model based on our
+
+
+uploaded samples and its class name as its label.
+
+
+b) When the model completes the training process, the part of “Preview” will also be enabled.
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+9
+
+
+c) Before testing your trained model, open the option “Under the hood” in the part of
+
+
+“Training”
+
+
+d) In the “Under the hood”, open the “vocab”. Some definitions and training setting can be
+
+
+seen, for example,
+
+
+Training samples
+: 85% of the uploaded samples are used to train the model
+
+
+Testing samples:
+ 
+the remaining 15% of the uploaded samples are never used to train
+
+
+the model, so after the model has been trained on the training samples, they are used to
+
+
+check how well the model is performing on new, never-before-seen data, also known
+
+
+as
+ 
+validation
+)
+
+
+e) Also, more training details, such as “Accuracy per epoch” and “Loss per epoch”, are
+
+
+plotted.
+
+
+Accuracy per epoch
+: accuracy is the percentage of classifications that a model gets
+
+
+right during training.
+ 
+If you model classifies 80 samples right out of 100, the accuracy
+
+
+is 80/100 =0.8.
+ 
+If the model’s prediction is perfect, the accuracy is one; The graph
+
+
+potted here shows accuracy at each epoch. It is noted that the trained model will predict
+
+
+the class with the highest probability as output for a sample and check it match with its
+
+
+label (class name) or not.
+
+
+Loss per epoch
+: Loss is a measure for evaluating how well how well the model has
+
+
+learnt from samples to predict the right classification results. If the model’s prediction
+
+
+is perfect, the loss is zero; otherwise, the loss is greater than zero.
+ 
+When the model
+
+
+learning process is improving, the loss will decrease.
+
+
+f) Complete the following table by uploading different number of samples for each class
+
+
+(Note: Do not change the training parameter such as epochs, batch size and learning
+
+
+rate):
+
+
+Image sample size for each class
+ 
+20 samples
+ 
+100 samples
+
+
+Which epoch first achieves the
+
+
+best train accuracy?
+
+
+What is the final test accuracy?
+
+
+Test loss at 10 epoch
+
+
+Test loss at 30 epoch
+
+
+Test loss at 49 (final) epoch
+
+
+(You should select “More Option
+ 
+
+ 
+Remove All Samples” and re-upload the new set of
+
+
+samples for training.)
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+10
+
+
+g) Find differences from the above table.
+
+
+4.
+ 
+Training parameter turning
+
+
+Training the model based on the following training parameters and using
+ 
+100 handwritten
+
+
+digit image samples
+ 
+for each class.
+
+
+Epochs: (Only change the number of epochs, and keep Batch size = 16 and Learning rate =
+
+
+0.001)
+
+
+Number of epochs
+ 
+10 epochs
+ 
+50 epochs
+
+
+What is the final test accuracy?
+
+
+Loss at the final epoch
+
+
+Test loss at the final epoch
+
+
+Find differences from the above table.
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+11
+
+
+a)
+ 
+Batch Size: (Only change the number of batch size, and keep Epochs = 50 and Learning
+
+
+rate = 0.001)
+
+
+Number of batch size
+ 
+Batch size=16
+ 
+Batch size=64
+
+
+What is the final test accuracy?
+
+
+Loss at the final epoch
+
+
+Test loss at the final epoch
+
+
+Can you find any differences form the above table?
+
+
+5.
+ 
+Testing process
+
+
+After the model is well-trained (using 100 image samples for each class to train the model
+
+
+and the training parameters are: Epochs = 50, Batch size = 16, Learning rate = 0.001), we can
+
+
+try to upload a testing sample image into the “Preview” to view the prediction result.
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+12
+
+
+a)
+ 
+Teachable Machine provides two methods for us to do the testing:
+
+
+Webcam: Use a marker and write a digit in a paper. Then, we can try to show it to the
+
+
+webcam to test the model.
+
+
+File:
+ 
+Upload a handwritten digit image (never-before-used data) to test the model.
+
+
+b)
+ 
+Drag and drop an image from testing samples folder “
+MNIST – testing
+” into the “Preview”
+
+
+to view the prediction result.
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+13
+
+
+c)
+ 
+What does the “Output” for each item under “Preview” mean when we upload a testing
+
+
+image in it? If the label of the testing sample image in the above figure is “0”, is the
+
+
+above prediction result correct?
+
+
+6. Increase the diversity of training sample
+
+
+a)
+ 
+Download the zip file “
+Additional data.zip
+” form the Blackboard.
+
+
+b)
+ 
+Unzip the “
+Additional data.zip
+” file, you can find two folders:
+
+
+Folder “1” contains another handwritten style of digit 1.
+
+
+Folder “7” contains another handwritten style of digit 7.
+
+
+c)
+ 
+Upload
+ 
+some
+ 
+images
+ 
+from
+ 
+these
+ 
+two
+ 
+folders
+ 
+into
+ 
+Teachable
+ 
+Machine
+ 
+(under
+
+
+“Preview”) to predict the result using the
+ 
+above
+ 
+well-trained model.
+
+
+d)
+ 
+What is the performance of the
+ 
+above
+ 
+well-trained model?
+
+
+e)
+ 
+Remove all samples in classes “Number 1” and “Number 7” by “More Option
+ 
+
+
+
+Remove All Samples”
+
+
+f)
+ 
+Then, upload 75 training image samples from folder “
+MNIST– training”
+ 
+and 25 image
+
+
+samples from folder “
+Additional data – training
+” for classes “Number 1” and “Number
+
+
+7” again. (Others are unchanged)
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+
+Department of Electrical and Electronic Engineering
+EIE1005
+
+
+Workshop 2
+14
+
+
+g)
+ 
+Click the “Train Model” to train the model from the scratch
+
+
+h)
+ 
+Now, try to upload some images from “
+Additional data – testing
+” into Teachable
+
+
+Machine (under “Preview”) to predict the result using the new well-trained model.
+
+
+i)
+ 
+What is the performance of the well-trained model now?
+
+
+- END-
+Annotations

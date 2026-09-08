@@ -1,3 +1,6 @@
+## 📎 原始课件
+- Canvas 课件尚未发布，待老师上传后同步。
+
 # ME29004 第 4 课 · 胶接基础（Fundamental Adhesive Joint）
 
 ## 核心概念

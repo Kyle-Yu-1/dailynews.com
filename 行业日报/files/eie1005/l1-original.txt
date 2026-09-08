@@ -1,0 +1,2401 @@
+DocViewer
+Page
+of 71
+ZOOM
+Pages
+EIE1005
+
+
+Fundamental AI and Data Analytics
+Content
+
+
+Introduction to Artificial Intelligence and
+
+
+Machine Learning
+
+
+Introduction to Data Analytics
+Introduction to
+
+
+Artificial Intelligence and
+
+
+Machine Learning
+Definition
+
+
+•
+ 
+Artificial Intelligence (AI) refers to the field of
+
+
+computer science that focuses on the
+
+
+development of systems and algorithms capable of
+
+
+performing tasks that typically require human
+
+
+intelligence
+
+
+•
+ 
+These tasks include learning, reasoning, problem
+-
+
+
+solving, perception, and natural language
+
+
+understanding.
+
+
+•
+ 
+The goal of AI is to create machines that can
+
+
+mimic, assist, or surpass human cognitive abilities
+
+
+in various domains.
+Evolution of AI
+
+
+(brief historical recap)
+
+
+•
+ 
+Alan Turing:
+
+
+Movie: The Imitation Game
+
+
+Source:
+ 
+www.imdb.com
+The Turing Test
+
+
+•
+ 
+Recap: The goal of AI is to create machines that can mimic
+
+
+or even surpass human cognitive abilities in various
+
+
+domains.
+
+
+•
+ 
+Turing proposed
+ 
+to
+ 
+determine
+ 
+a
+ 
+machine's
+ 
+ability
+ 
+to
+
+
+exhibit
+ 
+intelligent
+ 
+behavior
+ 
+indistinguishable
+ 
+from
+
+
+that
+ 
+of
+ 
+a
+ 
+human.
+The Turing Test
+
+
+•
+ 
+Turing proposed that a
+
+
+computer can be said to possess
+
+
+artificial intelligence if it can
+
+
+mimic human responses under
+
+
+specific conditions.
+
+
+•
+ 
+The Turing Test is a method of
+
+
+inquiry in artificial intelligence
+
+
+(AI) for determining whether or
+
+
+not a computer is capable of
+
+
+thinking like a human being.
+
+
+https://www.techtarget.com/searchenterpriseai/definition/Turing
+-
+test
+ 
+(Not available anymore)
+
+
+Reading:
+
+
+https://www.coursera.org/articles/what
+-
+is
+-
+the
+-
+turing
+-
+test
+Strong AI (AGI)
+
+
+Artificial General Intelligence (AGI)
+
+
+Strong AI or AGI refers to a hypothetical form
+
+
+of AI that possesses human
+-
+level or
+
+
+superhuman general intelligence.
+
+
+It aims to develop systems that can match or
+
+
+surpass the cognitive capabilities of humans
+
+
+across a wide range of domains
+The Key Characteristics of AGI
+
+
+Generalized intelligence
+
+
+(general reasoning abilities across all domains)
+
+
+Adaptability and self
+-
+improvement
+
+
+Consciousness and self
+-
+awareness
+Strong AI (AGI) example?
+
+
+•
+ 
+Only in fictional characters
+
+
+•
+ 
+at this moment at least, but we are very close
+
+
+From Dragon Ball:
+
+
+Android 16 and 19
+ 
+From Marvel:
+ 
+Ultron
+ 
+was
+
+
+an artificial intelligence,
+
+
+who was originally
+
+
+designed to be part of a
+
+
+peacekeeping program
+
+
+created by both Tony
+
+
+Stark and Bruce Banner
+Weak AI
+
+
+(Narrow AI)
+
+
+Narrow AI
+
+
+Specialized AI systems designed
+
+
+for specific tasks (e.g., image
+
+
+recognition, language translation,
+
+
+playing Go).
+
+
+Achieve superhuman
+
+
+performance but limited to
+
+
+narrow domains (e.g., AlphaGo,
+
+
+spam filters).
+An Example of
+
+
+Weak AI
+
+
+•
+ 
+ALPHA GO
+
+
+Source:
+ 
+https://www.shellypalmer.com/2016/03/alphago
+-
+vs
+-
+not
+-
+fair
+-
+fight/
+
+
+AlphaGo
+ 
+-
+ 
+The Movie | Full
+
+
+award
+-
+winning documentary
+
+
+https://youtu.be/WXuK6gek
+
+
+U1Y
+ 
+1 hour 30 minutes
+Another Example of
+
+
+Weak AI
+
+
+•
+ 
+ALPHAGO ZERO
+
+
+Source:
+ 
+https://unwire.hk/2017/10/19/alphago
+-
+zero/life
+-
+tech/
+
+
+AlphaGo
+ 
+-
+ 
+How AI mastered the hardest
+
+
+boardgame in history
+
+
+https://youtu.be/MgowR4pq3e8
+Example in
+
+
+Weak AI
+
+
+•
+ 
+ALPHAGO ZERO
+
+
+Source:
+ 
+https://unwire.hk/2017/10/19/alphago
+-
+zero/life
+-
+tech/
+
+
+Reading:
+ 
+10 years after
+ 
+AlphaGO
+
+
+https://www.starnewskorea.com/en/sports/2026/07/19/2026071917210284609
+AI Today:
+
+
+From Narrow AI to Near
+-
+
+
+AGI Capabilities
+
+
+Near
+-
+AGI Capabilities:
+
+
+•
+ 
+Emerging AI systems that exhibit broad
+
+
+cognitive abilities across multiple domains.
+
+
+•
+ 
+Examples: Large language models (LLMs)
+
+
+like GPT
+-
+4/5 can understand and generate
+
+
+human
+-
+like text in diverse contexts.
+
+
+•
+ 
+Challenges remain for true human
+-
+level
+
+
+reasoning, consciousness, and adaptability.
+Machine Learning (ML)
+
+
+Source:
+ 
+http://whatis.techtarget.com/definition/machine
+-
+learning
+
+
+•
+ 
+Machine Learning (ML) is a way of achieving Weak (Narrow) AI
+
+
+•
+ 
+ML is a type of AI that allows software applications to become more accurate in predicting
+
+
+outcomes without being explicitly programmed.
+
+
+•
+ 
+Includes supervised learning, unsupervised learning, reinforcement learning.
+
+
+•
+ 
+Classic algorithms: Support Vector Machines, Decision Trees, Random Forests.
+
+
+•
+ 
+The AlphaGo and AlphaGo Zero are only capable of playing Go.
+Deep Learning
+
+
+(DL)
+
+
+•
+ 
+A subset of ML using layered neural networks
+
+
+(deep neural networks) to model complex
+
+
+patterns.
+
+
+•
+ 
+Excels in image, speech, and language tasks.
+
+
+•
+ 
+Requires large datasets and significant
+
+
+computational resources.
+Large Language Models (LLMs)
+
+
+LLMs are powerful neural network
+
+
+models trained on massive text
+
+
+corpora to generate coherent,
+
+
+context
+-
+aware human
+-
+like text.
+
+
+Examples: GPT
+-
+3, GPT
+-
+4, GPT
+-
+5,
+
+
+Google's
+ 
+PaLM
+, OpenAI’s Codex.
+
+
+These models use transformer
+
+
+architectures that excel at capturing
+
+
+long
+-
+range dependencies in data.
+
+
+Extra Material: Transformer Explainer
+
+
+https://poloclub.github.io/transformer
+-
+explainer/
+Capabilities and Use Cases of LLMs
+
+
+Text Generation:
+ 
+Writing
+
+
+articles, stories, reports,
+
+
+summaries, and poetry.
+
+
+Conversational AI:
+ 
+Chatbots
+
+
+and virtual assistants
+
+
+capable of dynamic
+
+
+interaction.
+
+
+Programming
+
+
+Assistance:
+ 
+Automatic code
+
+
+generation, debugging help.
+
+
+Translation and
+
+
+Summarization:
+ 
+High
+-
+quality
+
+
+language translation and text
+
+
+condensing.
+
+
+Creative
+
+
+Applications:
+ 
+Scriptwriting,
+
+
+music lyrics generation, game
+
+
+content creation.
+Foundational Models
+
+
+Large pre
+-
+trained models trained on massive diverse datasets.
+
+
+Can be fine
+-
+tuned for various downstream tasks.
+
+
+Examples: GPT (language), DALL·E (image generation), CLIP
+
+
+(multimodal learning).
+
+
+Represent a paradigm shift enabling few
+-
+shot and zero
+-
+shot learning
+
+
+capabilities.
+
+
+All LLMs can be considered foundational models, but not all foundational models are LLMs.
+Generative AI
+
+
+Generative AI refers to
+
+
+systems capable of
+
+
+creating new content
+—
+text,
+
+
+images, audio, video
+—
+
+
+based on learned patterns
+
+
+from large datasets.
+
+
+Unlike traditional AI that
+
+
+focuses on classification or
+
+
+prediction, generative AI
+
+
+"creates" original outputs
+
+
+resembling human
+-
+
+
+generated content.
+
+
+Applications include
+
+
+content creation, art,
+
+
+music, chatbots, code
+
+
+generation, and more.
+
+
+GenAI
+ 
+is the broader term encompassing any AI that generates content.
+
+
+LLMs
+ 
+are specific types of GenAI focused on language.
+
+
+Foundational Models
+ 
+refer to large
+-
+scale models that can be generative
+
+
+among other capabilities, covering a wider range of AI applications.
+Multimodal AI
+
+
+Systems
+
+
+•
+ 
+Modern generative AI systems are
+
+
+multimodal, meaning they can process
+
+
+and generate outputs across multiple
+
+
+data types such as text, images, and
+
+
+audio.
+
+
+•
+ 
+Example: DALL·E generates images from
+
+
+textual descriptions; CLIP understands
+
+
+connections between images and text.
+Source:
+ 
+https://developer.nvidia.com/deep
+-
+learning
+Training and Resources
+
+
+Training LLMs requires vast computational resources
+—
+large
+
+
+datasets, powerful GPUs/TPUs, and extensive training times.
+
+
+Models have billions to trillions of parameters.
+
+
+Fine
+-
+tuning allows adaptation of foundation LLMs to specific
+
+
+tasks or industries.
+Ethical Considerations and Risks
+
+
+Bias and Fairness:
+
+
+LLMs may amplify biases
+
+
+present in training data.
+
+
+Misinformation &
+
+
+Deepfakes:
+
+
+Potential misuse to create
+
+
+misleading or malicious
+
+
+content.
+
+
+Intellectual Property:
+
+
+Concerns around
+
+
+copyrighted content being
+
+
+replicated.
+
+
+Environmental Impact:
+
+
+Significant carbon footprint
+
+
+due to large
+-
+scale model
+
+
+training.
+
+
+AI Ethics Readings (Canvas Week 1 module)
+Future Directions
+
+
+Continued growth in model size and capabilities, with improved efficiency.
+
+
+Enhanced multimodal and interactive AI.
+
+
+Advances in explainability and controllability.
+
+
+Exploration of AI alignment to human values for safer deployment.
+Consider the Use Cases of Your Major
+
+
+How can AI/GenAI/DA help?
+
+
+AIIE
+
+
+Data Schema and Model Design
+
+
+Requirements and Content Generation
+
+
+Data Governance and Quality
+
+
+Information Architecture and Retrieval
+
+
+Code and Pipeline Automation
+
+
+ME
+
+
+Design and topology optimization
+
+
+Simulation, CFD, and thermal analysis
+
+
+Manufacturing process and factory optimization
+
+
+Predictive maintenance and equipment health
+
+
+Documentation, training, and collaboration
+
+
+You may compare your views to GenAI
+Consider the Use Cases of Your Major
+
+
+How can AI/GenAI/DA help?
+
+
+EE
+
+
+Predictive Maintenance
+
+
+Fault Detection and Diagnosis
+
+
+Electrical Project Management and Design
+
+
+Grid and Power Systems Optimization
+
+
+Training and Knowledge Management
+
+
+BME
+
+
+Drug Discovery and Design
+
+
+Medical Imaging Enhancement and Diagnostics
+
+
+Synthetic Data Generation and Patient Modeling
+
+
+Genomics and Personalized Medicine
+
+
+Biomedical Device Design and Optimization
+
+
+You may compare your views to GenAI
+Introduction to Data Analytics
+What is Data Analytics?
+
+
+•
+ 
+Use data to answer question.
+
+
+•
+ 
+Use AI, ML, DL, and GenAI techniques to find the solution
+
+
+or answer
+.
+
+
+Data analytics
+Data Analytics
+
+
+examples
+
+
+Netflix
+
+
+Uses data analysis to provide personalized movie
+
+
+recommendation for its subscribers.
+
+
+Facebook
+
+
+Uses it in their newsfeed ranking algorithm.
+
+
+FB has studied the ideological diversity of people’s
+
+
+political posts.
+
+
+They found that when posts appear on people’s
+
+
+newsfeeds written from a different perspective, users
+
+
+are less likely click on the those posts.
+Data Analytics examples
+
+
+Walmart
+
+
+looks through their purchase records and
+
+
+people’s posts on social media in order to figure
+
+
+out what to stock in their stores.
+
+
+Strawberry pop
+-
+tarts are more likely to sell out
+
+
+right before a hurricane.
+
+
+Sport experts
+
+
+apply data analysis to find the future top players.
+
+
+Pharmaceutical companies
+
+
+uses data analysis to predict which chemical
+
+
+compounds are likely to make effective drugs.
+
+
+Reading:
+
+
+5 Ways Walmart Uses Big Data to Help Customers
+
+
+https://corporate.walmart.com/news/2017/08/07/5
+-
+
+
+ways
+-
+walmart
+-
+uses
+-
+big
+-
+data
+-
+to
+-
+help
+-
+customers
+Data Analysis Process in 5 Steps
+
+
+1.
+ 
+Define Questions and Goals
+
+
+2.
+ 
+Collect Data
+
+
+3.
+ 
+Data Wrangling
+
+
+•
+ 
+Data Quality and Data Preprocessing
+
+
+4.
+ 
+Determine Analysis
+
+
+5.
+ 
+Interpret Results
+
+
+Our focus
+
+
+https://datadriven.works/blog/show?id=1WhxY9zIYwEfzgRJOodIQT
+1. Define Questions
+
+
+and Goals
+ 
+Define the
+ 
+Problem Statement
+
+
+•
+ 
+Objectives
+
+
+•
+ 
+coming up with a hypothesis and
+
+
+figuring how to test it
+
+
+Example
+
+
+•
+ 
+What are the characteristics of students
+
+
+who pass projects?
+
+
+•
+ 
+How/What/When to stock the store?
+
+
+•
+ 
+Why are we losing customers?
+
+
+•
+ 
+A data analyst’s job is to understand the business and its goals in
+
+
+enough depth that they can frame the problem the right way.
+2. Collect Data
+
+
+•
+ 
+Data may include sales records, monthly reports, customer demographics,
+
+
+etc.
+
+
+•
+ 
+Two types of data
+
+
+•
+ 
+Quantitative (numeric) data
+
+
+•
+ 
+Sales figures
+
+
+•
+ 
+Marks
+
+
+•
+ 
+Qualitative (descriptive) data
+
+
+•
+ 
+Interviews
+
+
+•
+ 
+Customer reviews
+2. Collect Data:
+
+
+Source of Data
+ 
+•
+ 
+Data that you, or your company, have directly
+
+
+collected from customers.
+
+
+•
+ 
+Sales data
+
+
+•
+ 
+Customer relationship management (CRM) system
+
+
+•
+ 
+Usually clean and structured
+
+
+First
+-
+party data
+
+
+•
+ 
+Second
+-
+party data is the first
+-
+party data of other
+
+
+organizations.
+
+
+•
+ 
+Directly from the company or through a private
+
+
+marketplace.
+
+
+•
+ 
+They are usually structured, and although they will
+
+
+be less relevant than first
+-
+party data, they also tend
+
+
+to be quite reliable.
+
+
+•
+ 
+Website, app or social media activity, like online
+
+
+purchase histories, or shipping data
+
+
+Second
+-
+party data
+2. Collect Data:
+
+
+Source of Data
+ 
+•
+ 
+Collected and aggregated from
+
+
+numerous sources by a third
+-
+party
+
+
+organization.
+
+
+•
+ 
+It may contain a vast amount of
+
+
+unstructured data points (big data).
+
+
+•
+ 
+Many organizations collect big data to
+
+
+create industry reports or to conduct
+
+
+market research.
+
+
+•
+ 
+Organizations collect big data and sell it
+
+
+to other companies.
+
+
+•
+ 
+Open data repositories and government
+
+
+portals are also sources of third
+-
+party
+
+
+data.
+
+
+Third
+-
+party data
+3. Data Wrangling
+
+
+•
+ 
+Also known as
+ 
+Data cleaning
+ 
+or
+ 
+Data Pre
+-
+processing
+
+
+•
+ 
+A large part of the cleansing process includes making
+
+
+sure that the data is in a usable format.
+
+
+•
+ 
+This entails searching for outliers, dealing with null
+
+
+values, and looking for data that may have been
+
+
+incorrectly input.
+
+
+•
+ 
+Often this can be a lengthy and arduous process.
+
+
+•
+ 
+Data Analysts spend approximately 27% of their
+
+
+time cleansing data
+
+
+•
+ 
+Data Quality is crucial to optimize the accuracy of your
+
+
+analysis
+3. Data Wrangling
+ 
+–
+ 
+Data Quality
+
+
+The main problems affecting data quality are associated with
+
+
+Missing values
+ 
+Redundancy
+ 
+Inconsistency
+ 
+Noise
+ 
+Outliers
+
+
+Data Quality
+
+
+The quality of the models, charts and studies in data
+
+
+analytics depends on the quality of the data being used.
+
+
+Data sets can be noisy, inconsistent, or contain duplicate
+
+
+records.
+3. Data Wrangling
+ 
+–
+ 
+Missing Values
+
+
+•
+ 
+It is common that some of predictive attribute values for some of the records
+
+
+may be missing in the data set.
+
+
+•
+ 
+Causes:
+
+
+•
+ 
+Attributes values only recorded some time after the start of data collection, so that
+
+
+early records do not have a value.
+
+
+•
+ 
+The value of an attribute being unknown at time of collection
+
+
+•
+ 
+Distraction, misunderstanding or refusal at time of collection
+
+
+•
+ 
+Attribute not required for particular objects
+
+
+•
+ 
+Non
+-
+existence of a value
+
+
+•
+ 
+Fault in the data collection device
+
+
+•
+ 
+Cost or difficulty of assigning a class label to an object in classification problems.
+3. Data Wrangling
+ 
+–
+ 
+Missing Values
+
+
+•
+ 
+Dealing with Missing Values
+
+
+•
+ 
+Ignore missing values:
+
+
+•
+ 
+Use for each object only the attributes with values, without paying attention to
+
+
+missing values. This does not require any change in the modeling algorithm used, but
+
+
+the distance function should ignore the values of attributes with at least one missing
+
+
+value;
+
+
+•
+ 
+Modify a learning algorithm to allow it to accept and work with missing values.
+
+
+•
+ 
+Remove objects:
+
+
+•
+ 
+Use only those objects with values for all attributes.
+
+
+•
+ 
+Make estimates:
+
+
+•
+ 
+Fill the missing values.
+3. Data Wrangling
+ 
+–
+ 
+Missing Values
+
+
+Fill the missing values
+
+
+29/08/2026
+42
+3. Data Wrangling
+ 
+–
+ 
+Redundancy
+
+
+•
+ 
+Redundant data is the excess of it, which that do not bring any new information
+
+
+to a data set.
+
+
+•
+ 
+Irrelevant data or duplicate data
+
+
+•
+ 
+Redundant data could be due to small mistakes or noise in the data collection,
+
+
+such as the same addresses for people whose names differ by just a single letter.
+
+
+•
+ 
+Deduplication
+ 
+is a preprocessing technique whose goal is to identify and
+
+
+remove copies of objects in a data set
+
+
+•
+ 
+The presence of duplicate objects will make the ML technique overweight such
+
+
+objects than others in the data set.
+3. Data Wrangling
+ 
+–
+ 
+Redundancy
+
+
+Removing redundant data
+
+
+29/08/2026
+44
+3. Data Wrangling
+ 
+–
+ 
+Inconsistency
+
+
+29/08/2026
+45
+
+
+•
+ 
+The presence of inconsistent values in a
+
+
+data set usually reduces the quality of the
+
+
+model induced by
+ 
+ML
+ 
+algorithms.
+
+
+•
+ 
+Some inconsistencies are easily detected.
+
+
+For example, some attribute values might
+
+
+have a known relationship to others, say
+
+
+that the value of attribute A is larger than
+
+
+the value of attribute B.
+
+
+Other attributes might only be allowed to
+
+
+have a positive value. Inconsistencies in
+
+
+these cases are easily identified.
+3. Data Wrangling
+ 
+–
+ 
+Noise
+
+
+•
+ 
+Noisy data are data that do not meet the set of standards expected for them.
+
+
+•
+ 
+Noise can be caused by incorrect or distorted measurements, human error or
+
+
+even contamination of the samples.
+
+
+It is important to observe
+
+
+that it is not usually possible
+
+
+to be sure that an object is
+
+
+noisy.
+
+
+Noisy data can be correct
+
+
+objects that do not follow
+
+
+the current standard.
+3. Data Wrangling
+ 
+–
+ 
+Outliers
+
+
+•
+ 
+In a data set,
+ 
+outliers
+ 
+are anomalous values or objects.
+
+
+•
+ 
+Values are very different from the values found in the same predictive
+
+
+attributes of other objects.
+
+
+•
+ 
+In contrast to noisy data points,
+
+
+outliers can be legitimate values.
+
+
+•
+ 
+There are several data analysis
+
+
+applications whose main goal is to
+
+
+find outliers in a data set.
+3. Data Wrangling
+ 
+-
+
+
+Converting to a Different Scale Type
+
+
+•
+ 
+Some ML algorithms can use only data of a particular scale type.
+
+
+•
+ 
+It is possible to convert data from a qualitative scale to a quantitative scale, and
+
+
+vice versa.
+
+
+•
+ 
+should be converted to relative or binary values.
+
+
+•
+ 
+A binary attribute has only two values, 0 or 1.
+3. Data Wrangling
+ 
+-
+
+
+Converting to a Different Scale Type
+
+
+Examples:
+
+
+29/08/2026
+49
+3. Data Wrangling
+ 
+-
+
+
+Converting to a Different Scale Type
+
+
+DNA Example
+
+
+29/08/2026
+50
+
+
+Any problems with this conversion?
+3. Data Wrangling
+ 
+-
+
+
+Converting to a Different Scale Type
+
+
+•
+ 
+Data sets with a large number of 0 values are referred to as “
+sparse
+” data sets.
+
+
+•
+ 
+Some analytical techniques have difficulty dealing with sparse data sets.
+3. Data Wrangling
+ 
+-
+
+
+Converting to a Different Scale Type
+
+
+•
+ 
+For ordinal values, the conversion is more intuitive, since we can convert to
+
+
+natural numbers, starting with the value 0 for the smallest value and, for each
+
+
+subsequent value, adding 1 to the previous value.
+4. Determine
+
+
+Analysis
+
+
+Choosing a method of analysis will heavily
+
+
+depend on the question or goals defined earlier
+
+
+and the type of analysis needed.
+
+
+Diagnostic analysis
+
+
+uses data to search for the cause of, and a
+
+
+solution to, an existing problem.
+
+
+Descriptive analysis
+
+
+a way to describe the data by summarizing
+
+
+key sections.
+
+
+Predictive analysis
+
+
+combines historical data and statistical
+
+
+modeling to forecast how certain metrics will
+
+
+perform in the future.
+5. Interpret Results
+
+
+Sharing insights and findings with the world, or at least your own organization
+
+
+Interpreting the outcomes and
+
+
+presenting them in a manner which is
+
+
+digestible to everyone
+
+
+Decision makers may decide to restructure, or launch
+
+
+new products, etc..
+
+
+Use reports, dashboard, or
+
+
+visualizations to support your findings.
+
+
+Present all evidence to ensure that you cover
+
+
+everything
+ 
+in a clear and concise way
+.
+
+
+Prove your conclusions are scientifically sound and
+
+
+based on facts
+
+
+Data Analysis in 5 Steps
+ 
+-
+ 
+DataDriven
+Clustering
+
+
+Clustering
+
+
+•
+ 
+Divide the data set into a
+
+
+number of groups
+
+
+•
+ 
+Objects in the same
+
+
+group are similar to each
+
+
+other
+
+
+•
+ 
+Unsupervised learning
+
+
+K
+-
+means clustering
+
+
+•
+ 
+The most popular
+
+
+clustering algorithm and
+
+
+a representative of
+
+
+partitional and prototype
+-
+
+
+based clustering
+
+
+methods
+
+
+Reading:
+
+
+Top Three Clustering Algorithms You Should Know Instead of K
+-
+means Clustering
+Clustering
+
+
+Simple Social Network
+K
+-
+means Clustering
+
+
+•
+ 
+Centroids
+
+
+•
+ 
+Represent a kind of
+ 
+centre
+ 
+of gravity for a set of instances.
+
+
+•
+ 
+The within
+-
+cluster sum of squares distance between the centroid and each data
+
+
+point is minimum.
+K
+-
+means Clustering
+
+
+https://youtu.be/_aWzGGNrcic
+
+
+https://youtu.be/4b5d3muPQmA
+K
+-
+means Clustering
+
+
+•
+ 
+Simple Social Network using K
+-
+means clustering (
+k=4
+)
+
+
+•
+ 
+Step 1: Define the initial 4 centroids
+ 
+randomly
+K
+-
+means Clustering
+
+
+•
+ 
+Simple Social Network using K
+-
+means clustering (k=4)
+
+
+•
+ 
+Step 2: Associate each instance with the closest centroid according to the
+
+
+chosen distance measured
+K
+-
+means Clustering
+
+
+•
+ 
+Simple Social Network using K
+-
+means clustering (k=4)
+
+
+•
+ 
+Step 3: Recalculate each centroid using all instances associated with it :
+K
+-
+means Clustering
+
+
+•
+ 
+Simple Social Network using K
+-
+means clustering (k=4)
+
+
+•
+ 
+Step 4: Associate each instance with the closest new centroid
+K
+-
+means Clustering
+
+
+•
+ 
+Simple Social Network using K
+-
+means clustering (k=4)
+
+
+•
+ 
+Step 5: Repeat 3 and 4 until no instances change of associated centroid
+Frequent Pattern Mining
+
+
+FREQUENT PATTERN MINING METHODS WERE
+
+
+DEVELOPED TO DEAL WITH VERY LARGE DATA SETS
+
+
+RECORDED IN HYPERMARKETS (TENS OF
+
+
+THOUSANDS OF ITEMS AND MILLIONS OF
+
+
+TRANSACTIONS) AND SOCIAL MEDIA SITES
+
+
+(MILLIONS OF USERS AND VIDEOS)
+Frequent Pattern Mining
+
+
+•
+ 
+Consider the following example:
+
+
+•
+ 
+Itemset:
+
+
+•
+ 
+A collection of one or more items
+
+
+•
+ 
+E.g., {Indian, Mediterranean}
+
+
+•
+ 
+An itemset containing k items
+
+
+is called k
+-
+itemset
+Frequent Pattern Mining
+
+
+•
+ 
+Association Rules
+
+
+•
+ 
+An association rule is an implication of the form
+ 
+A
+ 
+⇒
+ 
+C
+, where A and C are
+
+
+itemsets
+ 
+that do not share common items.
+
+
+•
+ 
+A is called the antecedent and C is the
+
+
+consequent of the rule.
+
+
+•
+ 
+The meaning of an association rule is that
+
+
+if its antecedent is present in some
+
+
+transactions then its consequent should
+
+
+also be present in these transactions.
+
+
+•
+ 
+Example:
+
+
+{Indian, Mediterranean}
+ 
+⇒
+ 
+{Oriental}
+Frequent Pattern Mining
+
+
+•
+ 
+Support
+ 
+–
+ 
+a measure of the strength of an association rule.
+
+
+•
+ 
+Percentage of transactions containing an itemset
+
+
+•
+ 
+The support of the single item “Fast food” is 2 or 0.2 or 20% since it occurs in two
+
+
+rows out of ten.
+
+
+•
+ 
+The support for the combination of Indian
+
+
+and Oriental cuisine
+
+
+–
+ 
+the itemset {Indian, Oriental} is 5 or
+
+
+0.5 or 50%
+
+
+•
+ 
+For an association rule, this is defined
+
+
+as the support of an itemset formed by
+
+
+joining the antecedent and the
+
+
+consequent of the rule.
+Frequent Pattern Mining
+
+
+•
+ 
+Example:
+
+
+•
+ 
+Support of {Indian, Mediterranean}
+ 
+⇒
+ 
+{Oriental}
+
+
+•
+ 
+Support ({Indian, Mediterranean, Oriental})
+
+
+•
+ 
+3/10 = 30%
+Frequent Pattern Mining
+
+
+•
+ 
+Confidence
+ 
+-
+ 
+the quality, or the reliability, of a rule.
+
+
+•
+ 
+defined as the ratio of the support of the rule to the support of the antecedent
+
+
+of the rule:
+
+
+•
+ 
+Confidence for
+ 
+{Indian, Mediterranean}
+ 
+⇒
+ 
+{Oriental}
+
+
+Support ({Indian, Mediterranean, Oriental}
+
+
+Support ({Indian, Mediterranean}
+
+
+3
+/10
+
+
+4
+/10
+
+
+=
+
+
+=
+ 
+=
+
+
+# ({Indian, Mediterranean, Oriental}]
+
+
+# ({Indian, Mediterranean}]
+
+
+=
+ 
+75%
+Frequent Pattern Mining
+
+
+•
+ 
+An association rule is said to be qualified if
+
+
+•
+ 
+Support s ≥
+ 
+minsup
+ 
+threshold, and
+
+
+•
+ 
+Confidence c ≥
+ 
+minconf
+ 
+threshold
+
+
+•
+ 
+If both the thresholds for
+ 
+minsup
+ 
+and
+
+
+minconf
+ 
+are 60%, does
+
+
+{Indian, Mediterranean}
+ 
+⇒
+ 
+{Oriental}
+
+
+qualify? Why?
+Reference
+
+
+J. Moreira, T. Horvath, and A. Carvalho, Chapter 4
+ 
+–
+ 
+6, A General Introduction to Data
+
+
+Analytics, Newark: John Wiley & Sons, Incorporated, 2018.
+Annotations

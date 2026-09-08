@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 讲义、公式表、历年卷与仿真在 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/4764/modules)。
+
 # AP10005 · 物理学 I（Physics I）
 
 > 2026/27 第一学期 · Canvas courses/4764

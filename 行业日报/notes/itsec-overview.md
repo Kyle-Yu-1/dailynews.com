@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 全部模块在 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/5470/modules)。
+
 # IT 安全在线培训（IT Security Online Training for PolyU Student 2026）
 
 > Canvas courses/5470 · 共 20 个模块、23 课，按主题归类为 5 篇笔记。

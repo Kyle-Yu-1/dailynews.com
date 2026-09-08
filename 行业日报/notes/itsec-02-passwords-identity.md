@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应模块见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/5470/modules)。
+
 # IT 安全 第 2 课 · 密码与身份防护（Module 2/8/14/15）
 
 ## 强密码

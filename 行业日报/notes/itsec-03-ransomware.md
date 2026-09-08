@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应模块见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/5470/modules)。
+
 # IT 安全 第 3 课 · 勒索软件与电脑防护（Module 12/13/22/23）
 
 ## 什么是勒索软件 Ransomware

@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应 Lecture set 与仿真见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/4764/modules)。
+
 # AP10005 第 1 课 · 力学（运动学、力、能量、转动）
 
 ## 运动学 Kinematics

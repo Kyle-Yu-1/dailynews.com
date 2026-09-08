@@ -1,3 +1,9 @@
+## 📎 原始课件
+- [ME29004 Class Timetable.pdf（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/174347)
+- [2026 Induction Material.pdf（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/132845)
+- [TM1326 Assessment Rubric.pdf（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/132864)
+- [模块简介（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/169390)
+
 # ME29004 / IC2117 · 应用工程基础（Applied Engineering Fundamentals）
 
 > TRN001 · 2026/27 第一学期 · 实践工作坊型课程（配套 TM1326）

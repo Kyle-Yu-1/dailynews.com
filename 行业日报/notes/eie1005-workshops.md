@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 三个工作坊课件尚未发布，待老师上传后同步。
+
 # EIE1005 三次 Workshop 笔记（各占 10%，共 30%）
 
 ## Workshop 1 · Data Visualization – From Data to Insight（Wk3&4）

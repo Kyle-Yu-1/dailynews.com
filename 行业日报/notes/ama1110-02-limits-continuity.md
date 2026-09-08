@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应讲义/练习见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/3804/modules)。
+
 # AMA1110 第 2 课 · 极限、连续与介值定理
 
 ## 极限 Limit

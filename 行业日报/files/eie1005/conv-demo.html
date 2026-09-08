@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>卷积与 CNN 原理演示</title>
+<style>
+  :root{ color-scheme: light dark; }
+  html,body{ margin:0; padding:16px; font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: light-dark(#f5f6f8, #101318); color: light-dark(#1c2430, #e8edf3); }
+  .wrap{ max-width: 980px; margin: 0 auto; display:flex; flex-wrap:wrap; gap:14px; align-items:flex-start; }
+  .card{ background: light-dark(#ffffff,#1a1f27); border:1px solid light-dark(#e2e6eb,#2a313c); border-radius:12px; padding:14px; }
+  .grid{ display:grid; gap:4px; }
+  .g5{ grid-template-columns:repeat(5,38px); }
+  .g3{ grid-template-columns:repeat(3,38px); }
+  .cell{ height:34px; display:flex; align-items:center; justify-content:center; border-radius:7px; font-size:14px; font-variant-numeric: tabular-nums; background: light-dark(#eef1f5,#222936); }
+  .win{ background: light-dark(#ffe9b3,#6b5316); outline:2px solid #e2a93b; }
+  .kcell{ background: light-dark(#dcebff,#1d3450); }
+  .out{ background: light-dark(#ddf4e4,#1d3a2a); }
+  .out.cur{ background: light-dark(#a8e6c1,#27603c); outline:2px solid #2f9e63; }
+  .row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; align-items:center; }
+  .btn{ padding:6px 12px; border-radius:8px; border:1px solid light-dark(#c9d0d9,#38414d); background: light-dark(#ffffff,#232a35); color:inherit; cursor:pointer; }
+  .btn:hover{ border-color:#e2a93b; }
+  .sel{ padding:6px; border-radius:8px; border:1px solid light-dark(#c9d0d9,#38414d); background: light-dark(#ffffff,#232a35); color:inherit; }
+  .calc{ font-family: ui-monospace, Consolas, monospace; font-size:13px; background: light-dark(#f2f4f7,#151a21); padding:10px 12px; border-radius:9px; line-height:1.7; }
+  .flow{ display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:13px; }
+  .flow .box{ padding:8px 10px; border-radius:8px; background: light-dark(#eef1f5,#222936); text-align:center; }
+  .arrow{ color:#e2a93b; }
+  .stats{ display:flex; gap:10px; flex-wrap:wrap; }
+  .stat{ flex:1 1 150px; border-radius:10px; padding:12px; background: light-dark(#f2f4f7,#151a21); }
+  .stat .num{ font-size:22px; font-weight:700; }
+  h1{ font-size:18px; margin:0 0 4px; }
+  .muted{ color: light-dark(#5b6773,#9aa7b4); font-size:13px; }
+  .sum{ font-weight:700; color:#e2a93b; }
+  label{ font-size:13px; }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none!important; } }
+</style>
+</head>
+<body>
+<div id="cnn-demo" class="wrap">
+  <div class="card" style="flex:1 1 520px;">
+    <h1>卷积在做什么?一步步看</h1>
+    <div class="row">
+      <label>卷积核:
+        <select id="kernelSel" class="sel">
+          <option value="edge">边缘检测(竖边)</option>
+          <option value="blur">模糊(平均 1/9)</option>
+          <option value="sharpen">锐化</option>
+        </select>
+      </label>
+      <button id="prev" class="btn">← 上一步</button>
+      <input id="pos" type="range" min="0" max="8" value="0" style="flex:1;">
+      <button id="next" class="btn">下一步 →</button>
+    </div>
+    <div class="row">
+      <div>
+        <div class="muted">输入图像 5×5(黄框=当前窗口)</div>
+        <div id="inputGrid" class="grid g5"></div>
+      </div>
+      <div>
+        <div class="muted">卷积核 3×3</div>
+        <div id="kernelGrid" class="grid g3"></div>
+      </div>
+      <div>
+        <div class="muted">输出特征图 3×3</div>
+        <div id="outGrid" class="grid g3"></div>
+      </div>
+    </div>
+    <div class="calc" id="calc" aria-live="polite"></div>
+    <p class="muted" id="hint">拖动滑块或点"下一步",看小窗口如何滑过图像、在每个位置做一次加权求和。</p>
+  </div>
+
+  <div style="flex:1 1 320px; display:flex; flex-direction:column; gap:14px;">
+    <div class="card">
+      <h1>CNN 的全流程</h1>
+      <div class="flow">
+        <span class="box">输入图<br><b>5×5</b></span><span class="arrow">→</span>
+        <span class="box">卷积层<br><b>3×3 核</b></span><span class="arrow">→</span>
+        <span class="box">特征图<br><b>3×3</b></span><span class="arrow">→</span>
+        <span class="box">池化 max<br><b>2×2→2×2</b></span><span class="arrow">→</span>
+        <span class="box">展平<br><b>4 个数</b></span><span class="arrow">→</span>
+        <span class="box">全连接<br><b>类别概率</b></span>
+      </div>
+      <p class="muted">卷积层 = 一堆可学习的"小窗口"各自扫图,各得到一张特征图;池化把图缩小、保留最显著值。</p>
+    </div>
+    <div class="card">
+      <h1>为什么参数少这么多?</h1>
+      <div class="stats">
+        <div class="stat"><div class="num" id="fcNum">—</div><div class="muted">全连接:25→9 需要 225 个权重</div></div>
+        <div class="stat"><div class="num" id="convNum">—</div><div class="muted">卷积:同一个 3×3 核滑遍全图,只有 9 个权重(权值共享)</div></div>
+      </div>
+      <p class="muted">同一枚"边缘检测核"在所有位置复用,所以只需记住 9 个数,而不是每个位置各一套。</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('cnn-demo');
+  var input = [[0,1,2,1,0],[1,2,4,2,1],[2,4,8,4,2],[1,2,4,2,1],[0,1,2,1,0]];
+  var kernels = {
+    edge:    {name:'边缘检测(竖边)', k:[[-1,0,1],[-2,0,2],[-1,0,1]], scale:1},
+    blur:    {name:'模糊(平均 1/9)', k:[[1,1,1],[1,1,1],[1,1,1]], scale:1/9},
+    sharpen: {name:'锐化', k:[[0,-1,0],[-1,5,-1],[0,-1,0]], scale:1}
+  };
+  var pos = 0;
+  var sel = root.querySelector('#kernelSel');
+  var range = root.querySelector('#pos');
+  var prevBtn = root.querySelector('#prev');
+  var nextBtn = root.querySelector('#next');
+  var inputGrid = root.querySelector('#inputGrid');
+  var kernelGrid = root.querySelector('#kernelGrid');
+  var outGrid = root.querySelector('#outGrid');
+  var calcEl = root.querySelector('#calc');
+  var hintEl = root.querySelector('#hint');
+
+  function fmt(n){
+    if (Math.abs(n - Math.round(n)) < 1e-9) return String(Math.round(n));
+    return n.toFixed(1);
+  }
+  function outAt(p){
+    var kr = kernels[sel.value];
+    var r = Math.floor(p/3), c = p%3, s = 0;
+    for (var i=0;i<3;i++) for (var j=0;j<3;j++) s += input[r+i][c+j] * kr.k[i][j];
+    return s * kr.scale;
+  }
+  function render(){
+    var kr = kernels[sel.value];
+    var r = Math.floor(pos/3), c = pos%3;
+    var terms = [];
+    var inHtml = '', kh = '', oh = '';
+    for (var i=0;i<5;i++){
+      for (var j=0;j<5;j++){
+        var inWin = (i>=r && i<=r+2 && j>=c && j<=c+2);
+        inHtml += '<div class="cell'+(inWin?' win':'')+'">'+input[i][j]+'</div>';
+      }
+    }
+    inputGrid.innerHTML = inHtml;
+    for (var i=0;i<3;i++){
+      for (var j=0;j<3;j++){
+        var kv = kr.k[i][j];
+        kh += '<div class="cell kcell">'+(kv===0?'0':(kr.scale!==1?'×'+fmt(kv):kv))+'</div>';
+      }
+    }
+    kernelGrid.innerHTML = kh;
+    for (var p=0;p<9;p++){
+      var val = outAt(p);
+      var cls = 'cell out' + (p===pos?' cur':'');
+      var txt = p<=pos ? fmt(val) : '·';
+      oh += '<div class="cell '+cls+'">'+txt+'</div>';
+    }
+    outGrid.innerHTML = oh;
+    var terms2 = [];
+    for (var i=0;i<3;i++){
+      for (var j=0;j<3;j++){
+        var a = input[r+i][c+j], b = kr.k[i][j];
+        if (b===0) continue;
+        terms2.push((b<0?'−':'')+ (Math.abs(b)!==1?Math.abs(b):'') +'×'+a);
+      }
+    }
+    var sum = outAt(pos);
+    calcEl.innerHTML = '窗口('+(r+1)+'行,'+(c+1)+'列) 加权求和:<br>' +
+      terms2.join(' + ') + (kr.scale!==1 ? ' <span class="muted">→ 平均 ×'+fmt(kr.scale)+'</span>' : '') +
+      ' = <span class="sum">'+fmt(sum)+'</span>';
+    root.querySelector('#fcNum').textContent = '225';
+    root.querySelector('#convNum').textContent = String(kr.k.length*kr.k[0].length);
+    if (kr.name==='edge') hintEl.textContent = '注意:中间平坦区域的输出是 0(没有边缘),左右两侧输出 ± 大值(检测到竖边)——这就是"特征图"的含义。';
+    else if (kr.name==='模糊(平均 1/9)') hintEl.textContent = '平均核把周围 9 个数混成 1 个数,画面会变"糊",数值趋于平滑。';
+    else hintEl.textContent = '锐化核放大中心、削弱四周,边缘差异被放大,画面显得更"锐"。';
+  }
+  function setPos(p){
+    pos = Math.max(0, Math.min(8, p));
+    range.value = pos;
+    render();
+  }
+  sel.addEventListener('change', render);
+  range.addEventListener('input', function(){ setPos(Number(range.value)); });
+  prevBtn.addEventListener('click', function(){ setPos(pos-1); });
+  nextBtn.addEventListener('click', function(){ setPos(pos+1); });
+  render();
+})();
+</script>
+</body>
+</html>

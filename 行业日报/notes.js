@@ -128,6 +128,7 @@
     return loadMarked().then(function () {
       var html = window.marked.parse(md);
       body.innerHTML = html;
+      Array.prototype.forEach.call(body.querySelectorAll('a'), function (a) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener'); });
       // mermaid 代码块 → 图表
       var blocks = body.querySelectorAll('pre code.language-mermaid');
       var hasMermaid = blocks.length > 0;

@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 讲义与练习均在 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/3804/modules)（浏览器已登录时可直接打开下载）。
+
 # AMA1110(C) · 基础数学 I（微积分与概率统计）
 
 > 2026/27 第一学期 · Canvas courses/3804 · Basic Mathematics I – Calculus and Probability & Statistics

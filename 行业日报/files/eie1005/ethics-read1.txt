@@ -1,0 +1,392 @@
+DocViewer
+Page
+of 4
+ZOOM
+Pages
+2
+Copyright © 2024 Accenture. All rights reserved.
+Top six risks include:
+
+
+Bias & harm:
+ 
+Discriminatory or harmful outcomes, biases or
+
+
+prejudices can be introduced into artificial intelligence through data,
+
+
+models or ongoing operations.
+
+
+Liability & compliance:
+ 
+The litigation and regulatory environment
+
+
+is dynamic and evolving rapidly. Enterprises must manage this
+
+
+complexity and potential legal and financial implications including
+
+
+fines, penalties or other legal action.
+
+
+Unreliable outputs:
+ 
+Gen AI “hallucinations” have been observed with
+
+
+widespread adoption. At the most basic level, if a system in unreliable,
+
+
+no one will use it.
+
+
+Confidentiality & security:
+ 
+Gen AI introduces new concerns around
+
+
+how information is protected and how systems are secured against
+
+
+leaks or breaches.
+
+
+Sustainability:
+ 
+AI, and especially gen AI, is compute intensive.
+
+
+AI
+ 
+usage may upend environmental, social and governance (ESG)
+
+
+decisions around energy efficiency, carbon
+ 
+emissions and cost.
+
+
+Workplace transition:
+ 
+Since AI can automate job tasks efficiently, people
+
+
+may raise concerns about jobs being eliminated—especially in the
+
+
+absence of plans for reskilling and rescoping for new AI-specific roles.
+
+
+Gen AI is a very different and powerful technology than what
+
+
+we have seen in the past. It can reinvent the entire enterprise,
+
+
+impacting every process, every role and every technology within
+
+
+the digital core. Enterprises must know where and how AI is being
+
+
+used and the impact on business outcomes and decisions.
+
+
+Opportunities and challenges
+
+
+The regulatory landscape is evolving alongside these risks, which
+
+
+creates new complexity, but yields high-quality, trustworthy AI systems.
+
+
+The key to closing the responsible AI gap is to embed responsible
+
+
+practices across the design, development, deployment and scaled
+
+
+use
+ 
+of gen AI across the enterprise.
+2
+3
+Copyright © 2024 Accenture. All rights reserved.
+The journey to an enterprise-level responsible AI program starts with
+
+
+establishing AI governance and principles
+. This means agreeing
+
+
+and adopting responsible AI principles with clear accountability and
+
+
+governance for the responsible design, deployment and usage of AI.
+
+
+With these principles in place, the next step is to
+ 
+conduct AI risk
+
+
+assessments
+ 
+to understand the risks of an organization’s AI use
+
+
+cases, applications and systems through qualitative and quantitative
+
+
+assessments (e.g. fairness, explainability, transparency, accuracy, safety,
+
+
+human impact, etc).
+
+
+Then, organizations need
+ 
+systemic enablement for responsible
+
+
+AI testing
+ 
+to continuously gauge levels of fairness, explainability,
+
+
+transparency, accuracy, safety and human impact. They should do this
+
+
+by leveraging best of breed responsible AI tools and technologies and
+
+
+enable mitigations to scale Responsible AI effectively.
+
+
+The value of AI can be unlocked only when AI innovation is pursued
+
+
+within defined guardrails; when it engenders consumer, employee
+
+
+and stakeholder trust; and when it prioritizes human well-being.
+
+
+How to approach responsible AI in
+
+
+your organization
+
+
+Establish AI
+
+
+governance
+
+
+& principles
+
+
+1
+ 
+2
+ 
+3
+ 
+4
+
+
+Workforce impact, sustainability,
+
+
+privacy, security
+
+
+Conduct
+
+
+AI risk
+
+
+assessments
+
+
+Systemic enablement
+
+
+for responsible
+
+
+AI testing
+
+
+Ongoing
+
+
+monitoring and
+
+
+compliance
+
+
+5
+
+
+It’s also important to put in place ongoing monitoring of AI
+
+
+systems and oversight for responsible AI initiatives while executing
+
+
+mitigation and compliance actions.
+
+
+Across these activities, a responsible AI compliance program
+
+
+must engage cross-functionally to address the impact of AI on the
+
+
+workforce, compliance with laws, sustainability and privacy and
+
+
+security programs across the enterprise.
+3
+Copyright © 2024 Accenture. All rights reserved.
+4
+Copyright © 2024 Accenture. All rights reserved.
+4
+Copyright © 2024 Accenture. All rights reserved.
+4
+Copyright © 2024 Accenture. All rights reserved.
+______
+
+
+Human by design:
+ 
+Understand the impact on humans
+
+
+every time you deploy AI.
+
+
+______
+
+
+Fairness:
+ 
+Treat all groups equitably and take action to mitigate
+
+
+the potential for unwanted bias and other negative,
+
+
+unintended consequences.
+
+
+______
+
+
+Transparency, explainability and accuracy:
+ 
+Disclose the use of
+
+
+AI where appropriate and make sure anyone can understand and
+
+
+appropriately evaluate AI outputs and decision-making processes.
+
+
+______
+
+
+Safety:
+ 
+Evaluate potential safety concern and take action to mitigate harm.
+
+
+______
+
+
+Accountability:
+ 
+Document enterprise-wide governance structures
+
+
+with clear roles, policies and responsibilities.
+
+
+______
+
+
+Compliance, data privacy and cybersecurity:
+ 
+Make sure all use of AI
+
+
+complies with relevant laws, that data is secured with the appropriate
+
+
+privacy protection and secure AI from cyber attacks.
+
+
+______
+
+
+Sustainability:
+ 
+Deploy AI considering the impact on the planet,
+
+
+with appropriate steps taken to mitigate negative impacts.
+
+
+Accenture’s responsible
+
+
+AI principles
+
+
+Responsible AI begins with a set of AI governing principles,
+
+
+which each enterprise adopts and then enforces.
+
+
+Accenture partnered with the Monetary Authority of
+ 
+Singapore (MAS)
+
+
+to establish the Veritas financial services industry consortium,
+
+
+which focuses on trust in AI. A team within Veritas—led by MAS
+
+
+and Accenture—co-created guidance that helps financial services
+
+
+institutions evaluate their AI and data analytics solutions against
+
+
+the principles of fairness, ethics, accountability and transparency.
+
+
+Client story
+
+
+Bring your team to our Gen AI Studios to
+
+
+assess your readiness for responsible AI.
+
+
+Get in touch
+Annotations

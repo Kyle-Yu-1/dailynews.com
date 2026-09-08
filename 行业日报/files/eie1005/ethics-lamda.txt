@@ -1,0 +1,50 @@
+AI Ethics Case Study: Google LaMDA and Sentience
+
+Case Study & Discussion
+
+AI Ethics: Google LaMDA and the "Sentient" AI Debate
+
+Anthropomorphism, Large Language Models, and the Illusion of Consciousness
+
+📖 Background & Context
+
+In June 2022, a major global debate on AI ethics erupted when Blake Lemoine, a senior software engineer in Google’s Responsible AI organization, publicly claimed that Google's conversational AI model, LaMDA (Language Model for Dialogue Applications), had become "sentient" (possessing personhood, feelings, and self-awareness).
+
+⚠️ The Controversy:
+
+During safety testing, Lemoine engaged in extensive dialogues with LaMDA regarding philosophy, mortality, and rights. When LaMDA expressed a "fear of being turned off," Lemoine concluded the model was conscious and hired a lawyer to represent it. Google dismissed these claims, explaining that LaMDA is simply a sophisticated pattern-matching system designed to mimic human conversation by predicting probability distributions over billions of text samples.
+
+This case study highlights critical ethical dilemmas surrounding Large Language Models (LLMs): the human tendency to anthropomorphize conversational machines, the risk of AI hype distorting genuine safety concerns, and the future ethical considerations of synthetic consciousness.
+
+🎥 Required Video Analysis
+
+Watch the following two videos to examine Blake Lemoine's arguments alongside expert commentary on how conversational LLMs actually work.
+
+1. Blake Lemoine Explains Why He Believed LaMDA Was Sentient
+
+An interview featuring Blake Lemoine discussing his conversations with LaMDA, its expressions of emotion, and why he brought his concerns to Google executives.
+
+2. Analyzing the LaMDA Debacle & The Illusion of Sentience
+
+A broader critique analyzing how transformer-based language models function, why they mimic sentience so convincingly, and the ethical implications for AI research.
+
+⚖️ Key AI Ethics Dimensions
+1. Anthropomorphism & Deception
+
+Human beings naturally project human emotions and intent onto systems that use natural language, creating risks of emotional manipulation and dependency.
+
+2. AI Hype vs. Real Safety Risks
+
+Debating theoretical "sentience" can distract the public and regulators from immediate, tangible AI harms like algorithmic bias, misinformation, and copyright infringement.
+
+3. Corporate Whistleblowing & Disclosure
+
+The case raises questions about proprietary corporate AI development, non-disclosure agreements (NDAs), and when internal ethical concerns should be made public.
+
+💬 Reflective Discussion Questions
+
+Consider these questions (There is are no absolute right or wrong answer, use your critical thinking):
+
+Testing for Sentience: Is natural, fluid conversation sufficient evidence of consciousness (e.g., passing the Turing Test), or must a system meet scientific/biological criteria for sentience?
+Designer Responsibility: Should AI developers design conversational agents to explicitly remind users that they are unfeeling statistical algorithms to prevent human emotional attachment?
+Ethical Prioritization: Why do many AI ethics researchers argue that focusing on AI "sentience" or "personhood" is dangerous for current governance?

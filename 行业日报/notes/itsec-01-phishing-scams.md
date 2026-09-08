@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应模块见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/5470/modules)。
+
 # IT 安全 第 1 课 · 网络钓鱼与诈骗（Module 1/7/18/19）
 
 ## 钓鱼 Phishing

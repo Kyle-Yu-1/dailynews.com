@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应 Lecture set 与仿真见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/4764/modules)。
+
 # AP10005 第 2 课 · 波动与简谐振动
 
 ## 简谐振动 SHM

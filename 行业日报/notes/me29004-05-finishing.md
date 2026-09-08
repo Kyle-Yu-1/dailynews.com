@@ -1,3 +1,7 @@
+## 📎 原始课件
+- [Surface Finishing 讲义.pptx（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/132833)
+- [SE 选择题练习.docx（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/132870)
+
 # ME29004 第 5 课 · 表面处理（Surface Finishing）
 
 ## 工作坊内容

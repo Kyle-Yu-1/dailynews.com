@@ -1,3 +1,8 @@
+## 📎 原始课件
+- [阅读 1 原文](files/eie1005/ethics-read1.txt)
+- [阅读 2 · AI 偏见原文](files/eie1005/ethics-read2.txt)
+- [LaMDA 案例原文](files/eie1005/ethics-lamda.txt)
+
 # EIE1005 · AI 伦理阅读笔记(Week 1 必读)
 
 > 对应 L1 课件"Ethical Considerations and Risks"与 AI Ethics Readings 模块

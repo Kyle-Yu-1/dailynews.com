@@ -1,3 +1,6 @@
+## 📎 原始课件
+- [00 课程信息与安排（原文）](files/eie1005/courseinfo-original.txt)
+
 # EIE1005 · 人工智能与数据分析（Fundamental AI and Data Analytics）
 
 > 2026/27 Semester 1 · Canvas courses/4018 · 本笔记由「课程总览」与「课程信息与安排」合并而成。

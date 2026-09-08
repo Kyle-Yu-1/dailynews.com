@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应模块见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/5470/modules)。
+
 # IT 安全 第 5 课 · 云端与数据（Module 5/6/10/11/17）
 
 ## 云服务安全

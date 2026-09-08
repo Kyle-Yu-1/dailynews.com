@@ -1,3 +1,6 @@
+## 📎 原始课件
+- 对应讲义/练习见 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/3804/modules)。
+
 # AMA1110 第 3 课 · 微分法则与洛必达
 
 ## 导数 Derivative
