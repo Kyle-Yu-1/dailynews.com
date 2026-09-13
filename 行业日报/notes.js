@@ -63,7 +63,7 @@
   }
 
   function hideAll() {
-    [listView, detailView, treeView, notesView, noteReader].forEach(function (v) {
+    [listView, detailView, treeView, notesView, noteReader, document.getElementById('tasksView')].forEach(function (v) {
       if (v) v.classList.add('hidden');
     });
   }
