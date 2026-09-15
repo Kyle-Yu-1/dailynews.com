@@ -387,3 +387,9 @@ mark{background:rgba(212,165,116,.4);border-radius:4px;padding:0 3px;color:inher
 .task-title{font-size:14px;color:var(--ink);flex:1;min-width:180px}
 .task-meta{font-size:11.5px;color:var(--muted-ink)}
 .task-note{font-size:11px;color:var(--muted-ink);width:100%;padding-left:27px}
+
+/* ===== 笔记人工编辑 ===== */
+.note-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.note-toolbar-spacer{flex:1}
+.note-title-inline{font-family:"Georgia","Noto Serif SC",serif;font-style:italic;font-size:15px;color:var(--gold)}
+.note-body.editing{outline:2px dashed var(--rose-soft);outline-offset:4px;border-radius:14px;padding:8px;min-height:120px}

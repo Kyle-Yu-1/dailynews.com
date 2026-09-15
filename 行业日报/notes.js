@@ -106,14 +106,63 @@
       });
   }
 
+  var currentFile = null, currentTitle = '';
   function openNote(file, title) {
     hideAll();
     noteReader.classList.remove('hidden');
-    noteReader.innerHTML = '<button id="noteBackBtn" class="back-btn">← 返回笔记列表</button>'
+    currentFile = file;
+    currentTitle = title;
+    noteReader.innerHTML = '<div class="note-toolbar">'
+      + '<button id="noteBackBtn" class="back-btn">← 返回笔记列表</button>'
+      + '<span class="note-title-inline">' + esc(title) + '</span>'
+      + '<span class="note-toolbar-spacer"></span>'
+      + '<button id="noteEditBtn" class="back-btn">✏️ 编辑</button>'
+      + '<button id="noteSaveBtn" class="back-btn hidden">💾 保存</button>'
+      + '<button id="noteResetBtn" class="back-btn hidden">↺ 还原</button>'
+      + '<button id="noteExportBtn" class="back-btn">⤓ 导出</button>'
+      + '</div>'
       + '<article class="markdown-body note-body"><div class="note-loading">正在打开笔记…</div></article>';
     document.getElementById('noteBackBtn').addEventListener('click', function () {
       hideAll();
       notesView.classList.remove('hidden');
+    });
+    var editBtn = document.getElementById('noteEditBtn');
+    var saveBtn = document.getElementById('noteSaveBtn');
+    var resetBtn = document.getElementById('noteResetBtn');
+    var body = noteReader.querySelector('.note-body');
+    editBtn.addEventListener('click', function () {
+      body.setAttribute('contenteditable', 'true');
+      body.classList.add('editing');
+      editBtn.classList.add('hidden');
+      saveBtn.classList.remove('hidden');
+      resetBtn.classList.remove('hidden');
+      body.focus();
+    });
+    saveBtn.addEventListener('click', function () {
+      try { localStorage.setItem('note_edit_' + file, body.innerHTML); } catch (e) {}
+      body.removeAttribute('contenteditable');
+      body.classList.remove('editing');
+      editBtn.classList.remove('hidden');
+      saveBtn.classList.add('hidden');
+      resetBtn.classList.add('hidden');
+      saveBtn.textContent = '已保存 ✓';
+      setTimeout(function () { saveBtn.textContent = '💾 保存'; }, 1500);
+    });
+    resetBtn.addEventListener('click', function () {
+      try { localStorage.removeItem('note_edit_' + file); } catch (e) {}
+      openNote(file, title);
+    });
+    document.getElementById('noteExportBtn').addEventListener('click', function () {
+      var html = '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>' + esc(title) + '</title></head><body style="max-width:860px;margin:24px auto;font-family:Georgia,\"Noto Serif SC\",serif;line-height:1.8">' + body.innerHTML + '</body></html>';
+      var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = (title || 'note') + '.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     });
     fetch('notes/' + file)
       .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.text(); })
@@ -129,6 +178,10 @@
       var html = window.marked.parse(md);
       body.innerHTML = html;
       Array.prototype.forEach.call(body.querySelectorAll('a'), function (a) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener'); });
+      try {
+        var saved = localStorage.getItem('note_edit_' + currentFile);
+        if (saved) { body.innerHTML = saved; }
+      } catch (e) {}
       // mermaid 代码块 → 图表
       var blocks = body.querySelectorAll('pre code.language-mermaid');
       var hasMermaid = blocks.length > 0;
