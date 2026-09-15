@@ -147,6 +147,37 @@
 - Upper / Lower Deviation — 上偏差 / 下偏差
 - Clearance / Interference / Transition Fit — 间隙 / 过盈 / 过渡配合
 
+- Die — 板牙（攻外螺纹）
+- Feeler Gauge — 塞尺
+- Micrometer — 千分尺
+- Dial Indicator — 百分表 / 千分表
+- Steel Rule — 钢尺
+- Square — 直角尺
+- Spirit Level — 水平仪
+- Least Count — 分度值
+- Reading — 读数
+- Zero Line — 零线
+- Nominal Size — 公称尺寸
+- Actual Size — 实际尺寸
+- Preload — 预紧力
+- Counterbore — 柱形沉孔
+- Countersink — 锥形沉孔
+- Major Diameter — 大径 / 外径
+- Minor Diameter — 小径
+- Chip — 切屑
+- Cutting Fluid — 切削液
+- Through Hole — 通孔
+- Tap Wrench — 丝锥扳手
+- Drill Press — 钻床
+- Drill Vice — 钻床虎钳
+- Twist Drill / Drill Bit — 麻花钻头
+- Safety Guard — 安全护罩
+- Belleville / Wave Washer — 碟形 / 波形垫圈
+- Tighten / Loosen — 拧紧 / 松开
+- Assemble / Disassemble — 装配 / 拆卸
+- Machining Accuracy — 加工精度
+- Vibration — 振动
+
 ## 总装
 - Assembly — 装配
 - Interference — 干涉
