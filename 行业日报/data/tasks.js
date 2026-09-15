@@ -17,6 +17,7 @@ window.TASKS = [
   { id:"eie-project", date:"2026-11-28", dateLabel:"11/28", time:"—", course:"EIE1005", title:"Mini-project 报告+演示视频", type:"项目", weight:"20%", note:"anyone with link 可查看" },
   { id:"ama-final", date:"2026-12-07", dateLabel:"12/7–19", time:"考试周", course:"AMA1110", title:"期末考试", type:"考试", weight:"60%", note:"以学校考试时间表为准" },
   { id:"phy-final", date:"2026-12-07", dateLabel:"12/7–19", time:"考试周", course:"AP10005", title:"期末考试", type:"考试", weight:"60%", note:"以学校考试时间表为准" },
+  { id:"eie-ws01", date:null, dateLabel:"待查", time:"—", course:"EIE1005", title:"Workshop 1 (WS01 A) 提交", type:"作业", weight:"WS 10%", note:"Canvas 模块 Week 3 (WS01 A) Submission" },
   { id:"me-3dp", date:null, dateLabel:"课后一周", time:"—", course:"ME29004", title:"3D 打印作业（TM1326 3DP Assignment）", type:"作业", weight:"100 分", note:"PDF 报告 + STL；Canvas 未设日期" },
   { id:"itsec-all", date:null, dateLabel:"学期内", time:"自定进度", course:"IT 安全", title:"23 个在线模块全部完成", type:"任务", weight:"完成要求", note:"Canvas 自定进度" },
   { id:"lei-slides", date:null, dateLabel:"单元六", time:"课前 24h", course:"LEI1101", title:"CLC 简报制作", type:"作业", weight:"10%", note:"" },

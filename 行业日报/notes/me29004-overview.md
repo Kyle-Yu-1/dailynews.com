@@ -1,37 +1,27 @@
-## 📎 原始课件
-- [ME29004 Class Timetable.pdf（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/174347)
-- [2026 Induction Material.pdf（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/132845)
-- [TM1326 Assessment Rubric.pdf（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/132864)
-- [模块简介（Canvas）](https://canvas.polyu.edu.hk/courses/3503/files/169390)
+# ME29004/IC2117 · 应用工程基础（Applied Engineering Fundamentals）
 
-# ME29004 / IC2117 · 应用工程基础（Applied Engineering Fundamentals）
+> 本文件 = 课程总纲页：课程大纲 · 考试细则 · 重要事件点 · 时间轴（每课一文件的“地图”）。
 
-> TRN001 · 2026/27 第一学期 · 实践工作坊型课程（配套 TM1326）
-> 一句话：走完「需求 → 设计 → 建模 → 制造 → 装配 → 评估」完整链路，重点在动手与工程习惯。
+> 2026/27 第一学期 · TRN001 · IC 工作坊课（配套 TM1326）。一句话：瓶盖端执行器项目的「设计→制造→装配→评估」完整链路。
 
-## 本学期项目（重要）
-**为「瓶盖回收（bottle lid recycling）」设计端执行器（end-effector）+ Z 轴抬升机构**：
-- 学校提供：辅助机器人系统 = **XY 工作台 + 控制系统 + 一个 gripper（夹爪）**。
-- 你要做：设计能自动 pick-and-place 瓶盖的端执行器，可用 **linkage bar 连杆机构**实现 Z 轴升降。
-- 六个工作坊全部为这个项目服务：3D 打印做夹爪/支架，激光切割做夹具/底板，电子原型做电机与控制，胶接+机械连接做装配，表面处理做抓取纹理，测量保证对齐与公差。
+## 📋 课程大纲
+- 项目：为瓶盖回收设计 **端执行器 + Z 轴抬升机构**；学校提供 XY 工作台 + 控制系统 + gripper。
+- 8 个 IC 任务：
+  T01 工程设计流程（EDP）｜T02 3D 打印｜T03 电子原型｜T04 激光加工｜T05 胶接基础｜T06 表面处理｜T07 测量与机械连接｜T08 总装与复盘
+- 各任务资料见「每课笔记」（01–08），原始课件在每课笔记顶部「📎 原始课件」。
 
-## Canvas 模块与资料索引
-| 模块 | 关键资料 |
-| --- | --- |
-| General Information | Attendance Requirements、Copyright、Class Timetable.pdf |
-| Course Introduction | Induction Material.pdf、TM1326 Assessment Rubric.pdf、Attendance Requirement、模块简介 |
-| Engineering design Fundamentals | **WS1（9/30 23:59 截止，100 分）**、EDP 讲义（bottle lid） |
-| Practical 3D printing | 3DP 讲义、Shapr3D 建模、马克杯练习、Bambu 预处理、3DP guidelines |
-| Electronic Prototyping | DC/伺服/步进电机、Arduino（资料待发布） |
-| Fundamental adhesive joint | 胶接原理（资料待发布） |
-| Surface Finishing | 讲义 PPTX + 选择题练习 DOCX |
-| Laser processing | 非金属激光切割（资料待发布） |
-| Basic Measurement and mechanical joint | 游标卡尺、公差、攻丝（资料待发布） |
-| Final Assembly and review | 总装与复盘 |
+## 🧾 考试细则
+- **WS1 · 工程设计流程作业 = 100 分，9/30 23:59 截止**（Canvas）
+- **3D 打印作业 = 100 分，课后一周内交**：PDF 报告 + STL 模型（Canvas 无固定日期）
+- 以 **TM1326 Assessment Rubric** 为准（过程记录占比高）
+- 出席：100% attendance 为 IC 完成标准，缺席需补做
 
-## 行动建议
-1. 第一周读完 Induction Material + Assessment Rubric，把评分项抄成清单。
-2. **9/30 前交 WS1**，别拖到最后。
-3. 每节工作坊当天写 3 行记录（做什么/遇到什么问题/怎么解决）。
-4. 装好工具：Shapr3D、Bambu Studio、Arduino IDE；备游标卡尺。
-5. 每课对应一篇笔记：01 设计流程 · 02 3D打印 · 03 电子原型 · 04 胶接 · 05 表面处理 · 06 激光 · 07 测量与机械连接 · 08 总装复盘。
+## 📌 重要事件点
+- 9/30 WS1 截止（第 1 个硬 deadline）
+- 电子原型课件已发布：TM1326 Lesson 1_270826.pdf
+- 测量与机械连接课件已发布（55 页，已逐页整理）
+- 3D 打印 8 份课件 + 表面处理 + 课表/Rubric 已归档
+- 后续：激光、胶接、总装资料待发布
+
+## 🗓 时间轴
+W1–2 课程介绍 + EDP → W3–4 3D 打印（Bambu/Shapr3D）→ 电子原型 → 激光 → 胶接 → 表面处理 → 测量与机械连接 → 总装与复盘（T08 约 W15）

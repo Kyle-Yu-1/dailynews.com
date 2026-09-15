@@ -1,32 +1,23 @@
-## 📎 原始课件
-- 讲义、公式表、历年卷与仿真在 [Canvas → Modules](https://canvas.polyu.edu.hk/courses/4764/modules)。
-
 # AP10005 · 物理学 I（Physics I）
 
-> 2026/27 第一学期 · Canvas courses/4764
+> 本文件 = 课程总纲页：课程大纲 · 考试细则 · 重要事件点 · 时间轴（每课一文件的“地图”）。
 
-## Canvas 资料
-- Lecture slides：set 1–4（预习）+ 每周课内用幻灯片
-- Important files：Teaching Plan、Demarcation table & grade descriptors、Subject Description、**Exam Equation List（考试公式表）**
-- About Final Exam：2018/19–2025/26 历年考卷 + 数值答案
-- Past Midterm tests：2023–2026 各学期 Midterm 1/2 题目与解答
-- Physics simulation：PhET 系列仿真（运动、抛体、能量、转动、波动、SHM、热学等 25 个）
+> 2026/27 第一学期 · 3 学分 · Canvas courses/4764（AP10005_26271_B）。
 
-## 四讲主线
-01 力学（运动学/力/能量/转动）→ 02 波动与振动 → 03 热学与气体 →（set 4 内容随课件）
+## 📋 课程大纲
+- Lecture set 1–4：力学（Units 2–13：矢量/运动/牛顿定律/圆周/能量/动量/转动/角动量/静平衡/引力）→ 波动振动声（Units 15–18）→ 热学（Units 19–22）
+- 教程 Tutorial 1–4 对应四个 lecture set
+- 考试公式表 Exam Equation List + 历年真题/期中卷 + PhET 仿真 25 个 + 中英物理词汇表
 
-## 学习建议
-1. 先用公式表搭框架，再逐块学；公式表允许带进考场，要会用不是背。
-2. 刷 **Midterm + 历年期末**：每套限时做，错题归到「哪块知识点」。
-3. 每个 PhET 仿真至少玩一遍：先预测再看结果，建立直觉。
-4. 简中/繁中「物理词汇对照表」建议收藏，英文题术语就靠它。
+## 🧾 考试细则
+- **平时 40%**：Midterm Test1 = 12%（**10/14**，Ch2–9）+ Midterm Test2 = 12%（**11/18**，Ch10–13,15–18）+ 作业测验与参与 16%
+- **期末 60%**（12 月考试周）
 
-## 资源
-- PhET 官方仿真：https://phet.colorado.edu/
-- HyperPhysics（概念速查）：http://hyperphysics.phy-astr.gsu.edu/
-- MIT OCW 8.01：https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/
+## 📌 重要事件点
+- 10/1 23:59：HW 1-2（Ch5–6，40分）、HW 1-3（Ch7–8，30分）；（HW 1-1 已完成 30/30）
+- 10/14 Midterm Test 1
+- 11/18 Midterm Test 2
+- 12 月考试周 期末
 
-
-## 评分与教材（选课表）
-- 评分：Continuous assessment 40% + Examination 60%
-- 教材：Jewett & Serway《Physics for Scientists and Engineers》第 9 版；Radi & Rasmussen《Principles of Physics》；Bauer & Westfall《University Physics with Modern Physics》
+## 🗓 时间轴
+W1–2 运动学 → W3–4 动力学/能量 → W5–6 动量/转动 → **W7 10/14 Test1** → W8–10 波动/振动/声 → **W12 11/18 Test2** → W13 复习 → 期末

@@ -1,5 +1,5 @@
 ## 📎 原始课件
-- Canvas 课件尚未发布，待老师上传后同步。
+- [TM1326 Lesson 1_270826.pdf（Canvas 模块内）](https://canvas.polyu.edu.hk/courses/3503/modules)
 
 # ME29004 第 3 课 · 电子原型（Electronic Prototyping）
 
