@@ -1,0 +1,80 @@
+# TM1326 Basic Measurement and Mechanical Joint（课件原文整理）
+
+来源：TM1326-Basic_Measurement_and_Mechanical_Joint.pdf（55 页，4.92MB，Canvas files/168760）
+
+## Teaching Plan（教学安排）
+- Introduction to common Fasteners, Torque Wrench, Drilling & Tapping（常用紧固件、扭矩扳手、钻孔与攻丝）
+- Drilling Practice（钻孔练习）
+- Common measuring tools: Vernier Caliper / Protractor（常用量具：游标卡尺、量角器）
+- Limits & Fits（极限与配合）
+- Quiz（课堂小测）
+
+## Common Fasteners 常用紧固件
+### Tapping and Wood Screw（自攻/木螺钉）
+- 规格：Gauge no. × Length（长度含头部）。例：no. 8 × 2″，外径 3.9mm、长 50mm。
+### Mechanical Screw（机械螺钉）
+- 规格：Outer Diameter × Pitch × Length（长度不含头）。例：M10 × 1.5 × 20 = 外径 10mm、螺距 1.5mm、长 20mm。
+### What is Screw（螺钉）
+- 螺钉一端有特殊形状的头部，可用螺丝刀 screwdriver 或扳手 wrench 转动；头部比杆大，防止拧过头并提供 bearing surface 支承面。
+- Hex Socket head cap screw M10×1.5×20：M=Metric 公制；10=外径；1.5=螺距；20=长度。
+### Screw Head（螺钉头型）
+- 一字/十字/内六角等，对应不同工具。
+### 标准螺纹规格（Diameter × Pitch）
+- M3×0.5、M4×0.7、M5×0.8、M6×1.0、M8×1.25、M10×1.5；用 Thread Gauge 螺纹规检验。
+### What is Nut（螺母）
+- 带内螺纹孔的紧固件，与螺栓 bolt 配对使用。
+- 若螺母规格 M10×1.5，则孔径 = 10 − 1.5 = Φ8.5mm。
+### Bolted joint vs Screw joint
+- 螺栓连接：两件都钻通孔（无内螺纹），螺栓 + 螺母。
+- 螺钉连接：一件钻通孔，另一件（通常较厚）攻内螺纹，螺纹代替螺母作用。
+### What is Washer（垫圈）
+- 薄板圆盘带孔，用于分散紧固件载荷；也作垫片、弹簧（碟形 Belleville、波形 wave）、耐磨垫、预紧指示、防松、减振（橡胶垫圈）。
+- 外径约为内径两倍。例：W8 垫圈：内孔 Φ8+0.5=Φ8.5，外径 8×2=16。
+### Spring Washer（弹簧垫圈）
+- 一端切开的螺旋形圆环，靠弹力把螺纹压紧，增大摩擦防松。例 W6：内孔 d1=6+0.5=Φ6.5，外径 d2=6×2=Φ12。
+
+## Use of Torque Wrench 扭矩扳手
+- Bolt grades/classes：英制 SAE（Society of Automotive Engineers）；公制 ASTM 等级。
+- 扭矩表（Imperial Grades / Metric Classes）。
+- 类型：1. Micrometer click type（预设扭矩咔哒型）2. Dial indicating（表盘指示型）。
+- 加长接杆时扭矩需按公式修正（Torque Wrench Extension Adaptors）。
+
+## Drilling and Tapping 钻孔与攻丝
+### 底孔直径（快算法）
+- 底孔 = 螺纹直径 − 螺距。例：M8×1.25 → Φ8−1.25 = Φ6.75。
+- 常用表：M3×0.5→2.5；M4×0.7→3.3；M5×0.8→4.2；M6×1.0→5.0；M8×1.25→6.75；M10×1.5→8.5。
+### 钻孔安全
+- Drill Press 要有安全护罩 Safety Guard；工件用 Drill Vice 钻床虎钳夹紧。
+### Hand Taps（手用丝锥，成套三支）
+- Taper Tap 锥形丝锥：起始用，前 6–7 牙磨出锥度。
+- Plug Tap 二锥：补充锥形丝锥，攻厚工件。
+- Bottoming Tap 底孔丝锥：无锥度，把盲孔攻到最底。
+### 攻丝手法（右旋螺纹）
+- 顺时针半圈、逆时针半圈：顺时针切螺纹，逆时针断屑排屑。
+- 手柄转 90° 交替；Turn Handle to Secure Tap。
+
+## Calipers 卡尺
+### Vernier Caliper 游标卡尺（最常用，量外径/内径/深度）
+结构：1. Outside jaws 外量爪 2. Inside jaws 内量爪 3. Depth probe 深度尺 4. Main scale 主尺 5. Vernier scale 游标尺 6. Screw clamp 锁紧螺钉。
+### 读数两步
+1. 看游标 0 线左侧主尺读数 → 主尺值（例：18mm）。
+2. 找游标上与主尺完全对齐的刻线 → 游标值（例：0.5+0.02=0.52mm）。
+3. 相加：18 + 0.52 = 18.52mm。
+### 练习
+- Activity 1：选项 A.35.14 B.35.10 C.36.10 D.36.14 E.36.15
+- Activity 2：读数 7.72mm
+### Engineer's Protractor 量角器
+- 测量/检查角度（钻头角度、刀具角度、工件划线）。
+### 使用注意事项
+1. 不要对工件施加过大压力；2. 避免视差 parallax（视线垂直于测量点）；3. 外测量时工件尽量贴近基准面；4. 内测量时内量爪尽量深入；5. 深度测量时深度尺垂直于被测面。
+
+## Dimensional Tolerance 尺寸公差
+- 标注方法：Basic 基本、Bilateral 双边（±）、Limit 极限。
+- Limits & Fits 极限与配合：制造误差要求给出极限偏差。
+- Basic size 基本尺寸（nominal size）＝公称尺寸；其极限偏差称为 limit deviations。
+- Tolerance zone 公差带：最大与最小极限之间的区域；相对零线的极限偏差为 fundamental deviations（ISO 286-1:1988）。
+- 上偏差 ES/es（孔 ES、轴 es），下偏差 EI/ei（孔 EI、轴 ei）。
+### 三种配合
+- Clearance fit 间隙配合：轴恒小于孔。
+- Interference fit 过盈配合：轴恒大于孔。
+- Transition fit 过渡配合：轴可能大也可能小于孔（同一批装配可能出现过盈或间隙）。

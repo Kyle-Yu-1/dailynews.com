@@ -125,6 +125,28 @@
 - Torque — 扭矩
 - Locking — 防松
 
+- Torque Wrench — 扭矩扳手
+- Bolt Grade / Class — 螺栓等级
+- Thread Gauge — 螺纹规
+- Pitch — 螺距
+- Washer — 垫圈
+- Spring Washer — 弹簧垫圈
+- Belleville Washer — 碟形垫圈
+- Protractor — 量角器
+- Outside / Inside Jaws — 外量爪 / 内量爪
+- Depth Probe — 深度尺
+- Main Scale / Vernier Scale — 主尺 / 游标尺
+- Parallax Error — 视差
+- Taper Tap / Plug Tap / Bottoming Tap — 锥形丝锥 / 二锥 / 底孔丝锥
+- Blind Hole — 盲孔
+- Tap Drill Size — 底孔直径
+- Bearing Surface — 支承面
+- Limits & Fits — 极限与配合
+- Fundamental Deviation — 基本偏差
+- Tolerance Zone — 公差带
+- Upper / Lower Deviation — 上偏差 / 下偏差
+- Clearance / Interference / Transition Fit — 间隙 / 过盈 / 过渡配合
+
 ## 总装
 - Assembly — 装配
 - Interference — 干涉
