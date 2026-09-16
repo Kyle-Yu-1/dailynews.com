@@ -1,0 +1,541 @@
+# EIE1005 - Data Visualization - Workshop 1 - 06 - Python Project Folder - Student
+# 逐文件原文（.py 完整代码）
+# 来源：Canvas EIE1005 模块 Week 3&4 Workshop 1 · 文件名：EIE1005 - Data Visualization - 06 - Python Project Folder - Student.zip
+# 注：Mac 元数据文件 ._*、.DS_Store、__MACOSX、.vscode 已省略。
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example01 - Simple Chart - Pandas DataFrame.py   （558 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 01 - Simple Chart - Pandas DataFrame', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+data = {'Year' : [2022, 2023, 2024, 2025],
+        'Apple Price' : [20, 25, 18, 28],
+        'Orange Price' : [16, 18, 20, 26]}
+df_price = pd.DataFrame(data)
+df_price.plot(ax=ax1, kind='line', x='Year', y='Apple Price')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example02 - Simple Chart - Read Excel File.py   （472 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 02 - Simple Chart - Read Excel File', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='line', x='Year', y='Apple Price')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example03 - Line Chart - Single Data Line.py   （482 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 03 - Line Chart - Single Data Line', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year', y='Apple Price')
+
+plt.show()
+
+================================================================================
+### 文件：EIE1005_Part01_Example04 - Line Chart - Multi Data Line.py   （557 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 04 - Line Chart - Multi Data Line', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year', y='Apple Price')
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year', y='Orange Price')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example05 - Area Chart.py   （538 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 05 - Area Chart', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='area', x='Year', y='Apple Price', alpha=0.1)
+df_price.plot(ax=ax1, kind='area', x='Year', y='Orange Price', alpha=0.1)
+
+plt.show()
+
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example06 - Bar Chart - Standard.py   （507 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 06 - Bar Chart - Standard', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+# df_price.plot(ax=ax1, kind='bar', x='Year')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example07 - Bar Chart - barh.py   （457 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 07 - Bar Chart - barh', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='barh', x='Year', y='Apple Price')
+
+plt.show()
+
+================================================================================
+### 文件：EIE1005_Part01_Example08 - Bar Chart - Stack.py   （456 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 08 - Bar Chart - Stack', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='barh', stacked=True, x='Year')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example09 - Pie Chart.py   （466 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 09 - Bar Chart', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='pie', y='Apple Price', labels=df_price['Year'])
+
+plt.show()
+
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example10 – Start and End.py   （449 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 10 - Start and End', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year')
+
+plt.show()
+
+================================================================================
+### 文件：EIE1005_Part01_Example11 - Chart Layout - 1 Chart.py   （475 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 11 - Chart Layout - 1 Chart', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year', y='Apple Price')
+
+plt.show()
+
+================================================================================
+### 文件：EIE1005_Part01_Example12 - Chart Layout - 2 Chart.py   （643 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 12 - Chart Layout - 2 Chart', fontsize=24)
+
+gs = gridspec.GridSpec(1, 2)
+ax1 = fig.add_subplot(gs[0, 0])
+ax2 = fig.add_subplot(gs[0, 1])
+
+df_price_01 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_01.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+
+df_price_02 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_02.plot(ax=ax2, kind='bar', x='Year', y='Orange Price')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example13 - Chart Layout - 4 Chart.py   （1016 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 13 - Chart Layout - 4 Chart', fontsize=24)
+
+gs = gridspec.GridSpec(2, 2)
+ax1 = fig.add_subplot(gs[0, 0])
+ax2 = fig.add_subplot(gs[0, 1])
+ax3 = fig.add_subplot(gs[1, 0])
+ax4 = fig.add_subplot(gs[1, 1])
+
+df_price_01 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_01.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+
+df_price_02 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_02.plot(ax=ax2, kind='bar', x='Year', y='Orange Price')
+
+df_price_03 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_03.plot(ax=ax3, kind='line', marker='o', x='Year', y='Apple Price')
+
+df_price_04 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_04.plot(ax=ax4, kind='line', marker='o', x='Year', y='Orange Price')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example14 - Chart Layout - 3 Chart.py   （829 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 14 - Chart Layout - 3 Chart', fontsize=24)
+
+gs = gridspec.GridSpec(2, 2)
+ax1 = fig.add_subplot(gs[:, 0])
+ax2 = fig.add_subplot(gs[0, 1])
+ax3 = fig.add_subplot(gs[1, 1])
+
+df_price_01 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_01.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+
+df_price_02 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_02.plot(ax=ax2, kind='bar', x='Year', y='Orange Price')
+
+df_price_03 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_03.plot(ax=ax3, kind='line', marker='o', x='Year', y='Apple Price')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example15 - Style - Title.py   （494 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 15 - Style - Title', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+ax1.set_title('Apple Price Over Years')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example16 - Style - X Label and Y Label.py   （521 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 16 - Style - X Label, Y Label', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+ax1.set_xlabel('Year')
+ax1.set_ylabel('Price in USD $')
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example17 - Style - Legend.py   （512 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 17 - Style - Legend', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+ax1.legend(loc='best')
+# ax1.legend().set_visible(False)
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example18 - Style - Grid Line.py   （577 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 18 - Style - Grid Line', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+ax1.grid(visible=True)
+# ax1.grid(visible=True, axis='x')
+# ax1.grid(visible=True, axis='y')
+# ax1.grid(visible=False)
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example19 - Style - Color.py   （530 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 19 – Style - Color', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+# df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price', color='g')
+df_price.plot(ax=ax1, kind='bar', x='Year', color=['g','y'])
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example20- Final  - All in One Example.py   （1087 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 20 - All in One', fontsize=24)
+
+gs = gridspec.GridSpec(2, 2)
+ax1 = fig.add_subplot(gs[:, 0])
+ax2 = fig.add_subplot(gs[0, 1])
+ax3 = fig.add_subplot(gs[1, 1])
+
+df_price_01 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_01.plot(ax=ax1, kind='bar', x='Year', color=['y','b'])
+ax1.set_title('Apple and Orange - Price Over Years')
+ax1.set_xlabel('Year')
+ax1.set_ylabel('Price in USD $')
+
+df_price_02 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_02.plot(ax=ax2, kind='line', marker='o', x='Year', y='Apple Price', color='y')
+ax2.set_title('Apple Price Over Years')
+ax2.grid(visible=True)
+
+df_price_03 = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price_03.plot(ax=ax3, kind='line', marker='o', x='Year', y='Orange Price', color='b')
+ax3.set_title('Orange Price Over Years')
+ax3.legend(loc='best')
+
+plt.show()
+
+================================================================================
+### 文件：EIE1005_Part01_Example21 - Tick Label - X - xticklabel.py   （604 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 21 - Tick Label - X - xticklabel', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=45)
+# ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=90)
+
+plt.show()
+
+
+================================================================================
+### 文件：EIE1005_Part01_Example22 - Tick Label - Y - yticklabel.py   （587 bytes）
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 22 - yticklabel', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='barh', x='Year', y='Apple Price')
+ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=45)
+# ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=90)
+
+plt.show()
+
+================================================================================
+### 文件：EIE1005_Part01_Workshop01_StudentID.py   （0 bytes）
+================================================================================
+
+
+================================================================================
+### 文件：EIE1005_Part02_Workshop02_StudentID.py   （0 bytes）
+================================================================================
+
+
+
+================================================================================
+覆盖文件清单（共 24 个 .py）：
+- EIE1005_Part01_Example01 - Simple Chart - Pandas DataFrame.py
+- EIE1005_Part01_Example02 - Simple Chart - Read Excel File.py
+- EIE1005_Part01_Example03 - Line Chart - Single Data Line.py
+- EIE1005_Part01_Example04 - Line Chart - Multi Data Line.py
+- EIE1005_Part01_Example05 - Area Chart.py
+- EIE1005_Part01_Example06 - Bar Chart - Standard.py
+- EIE1005_Part01_Example07 - Bar Chart - barh.py
+- EIE1005_Part01_Example08 - Bar Chart - Stack.py
+- EIE1005_Part01_Example09 - Pie Chart.py
+- EIE1005_Part01_Example10 – Start and End.py
+- EIE1005_Part01_Example11 - Chart Layout - 1 Chart.py
+- EIE1005_Part01_Example12 - Chart Layout - 2 Chart.py
+- EIE1005_Part01_Example13 - Chart Layout - 4 Chart.py
+- EIE1005_Part01_Example14 - Chart Layout - 3 Chart.py
+- EIE1005_Part01_Example15 - Style - Title.py
+- EIE1005_Part01_Example16 - Style - X Label and Y Label.py
+- EIE1005_Part01_Example17 - Style - Legend.py
+- EIE1005_Part01_Example18 - Style - Grid Line.py
+- EIE1005_Part01_Example19 - Style - Color.py
+- EIE1005_Part01_Example20- Final  - All in One Example.py
+- EIE1005_Part01_Example21 - Tick Label - X - xticklabel.py
+- EIE1005_Part01_Example22 - Tick Label - Y - yticklabel.py
+- EIE1005_Part01_Workshop01_StudentID.py
+- EIE1005_Part02_Workshop02_StudentID.py
+
+缺文件：无。说明：Example 01–22 全部覆盖；Workshop01/02 两个模板为空文件（内容为空，符合课件原样）。
+

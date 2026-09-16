@@ -42,6 +42,13 @@
     "course": "EIE1005 · 人工智能与数据分析"
   },
   {
+    "id": "eie1005-w1-dataviz-python",
+    "title": "Workshop 1 · 数据可视化 Python 代码逐行讲解",
+    "desc": "22 个 Matplotlib 示例：骨架、图表类型、布局、样式、刻度，逐行注释",
+    "file": "eie1005-w1-dataviz-python.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
     "id": "ethics",
     "title": "AI 伦理阅读笔记",
     "desc": "六大风险、七原则、偏见案例、LaMDA",

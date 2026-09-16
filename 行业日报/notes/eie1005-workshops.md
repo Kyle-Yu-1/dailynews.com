@@ -4,6 +4,7 @@
 # EIE1005 三次 Workshop 笔记（各占 10%，共 30%）
 
 ## Workshop 1 · Data Visualization – From Data to Insight（Wk3&4）
+- 🐍 完整代码逐行讲解见：[eie1005-w1-dataviz-python.md](eie1005-w1-dataviz-python.md)（22 个 Matplotlib 示例 + 3 个 Excel 数据）
 - 目标：把数据变成能讲故事的图表，写出见解。
 - 要点：图表类型选择（趋势用折线、占比用饼/条、分布用直方图/箱线图）；避免误导性坐标轴；颜色与标注；洞察 = 对比 + 解释原因。
 - 工具：Matplotlib / Tableau / Power BI / Excel。

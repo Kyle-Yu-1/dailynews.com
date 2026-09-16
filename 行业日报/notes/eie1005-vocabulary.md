@@ -115,3 +115,37 @@
 - citation — 引文，引用
 - slope — 斜率；斜坡
 - illustrate — 说明；加插图于
+
+## Python / 数据可视化（pandas + Matplotlib）
+- import — 导入（模块/库）
+- alias — 别名
+- pandas — Python 数据分析库
+- DataFrame — 数据框（带列名的二维表格）
+- read_excel — 读取 Excel 文件
+- sheet_name — 工作表名
+- matplotlib — Python 绘图库
+- pyplot — Matplotlib 的画图入口模块
+- gridspec — 网格规格（用于划分布局）
+- Figure — 画布 / 整张图对象
+- Axes — 坐标轴对象（画布里的一张小图）
+- figsize — 画布尺寸
+- subplots_adjust — 调整子图与画布间距
+- suptitle — 整幅总标题
+- GridSpec — 网格规格对象
+- add_subplot — 在网格中添加子图
+- marker — 数据点标记
+- line chart — 折线图
+- area chart — 面积图
+- bar chart — 柱状图
+- barh — 横向柱状图（horizontal bar）
+- stacked — 堆叠（柱状图）
+- pie chart — 饼图
+- alpha — 透明度
+- legend — 图例
+- grid — 网格线
+- color — 颜色
+- title — 图标题
+- xlabel / ylabel — 横/纵轴标签
+- xticklabels / yticklabels — 横/纵轴刻度标签
+- rotation — 旋转角度
+- plt.show() — 显示图形
