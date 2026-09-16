@@ -531,4 +531,24 @@ C. 把两条线的数据拼成一个 DataFrame 后只画一次
 ---
 
 ## 更新记录
+- 2026-09-16 答疑补充：GridSpec/add_subplot 与 subplots_adjust 详解。
 - 2026-09-16 首次整理：基于 Canvas EIE1005「Week 3 and 4: Workshop 1: Data Visualization」模块的 `EIE1005 - Data Visualization - 06 - Python Project Folder - Student.zip`，逐文件提取 22 个示例 `.py` 与 3 个 Excel 数据文件，生成逐文件原文与逐行讲解。
+
+---
+
+## 🧠 答疑补充（课后提问）
+
+> 📖 译注 · `fig.add_subplot(gs[0, 0])` 到底在干什么？
+> - `gs` 是 GridSpec 网格规划表：由 `fig.add_gridspec(行数, 列数)` 创建，只负责把画布分成几行几列，本身不是图。
+> - `gs[0, 0]` = 第 0 行、第 0 列（左上角）那个格子，下标从 0 开始。
+> - `fig.add_subplot(gs[0, 0])` = 把这个格子变成一个坐标轴 Axes，之后在这个 Axes 里画图。
+> - 任意布局来自 GridSpec 的切片写法：`gs[0, :]` 占整行、`gs[:, 0]` 占整列、`gs[0, 1:]` 跨列合并；`add_subplot` 本身只负责把格子变成坐标轴。
+
+> 📖 译注 · `subplots_adjust(...)` 到底在干什么？
+> - 它只做一件事：调整子图之间的间距 + 子图区域四周的留白（纯排版），不改数据、不改坐标范围、不改子图个数。
+> - 参数（0~1 比例）：`left / right / bottom / top` 控制子图区域距画布四边的距离；`wspace` 控制横向间距、`hspace` 控制纵向间距（以子图平均宽/高的比例计）。
+> - 默认约：left=0.125、right=0.9、bottom=0.11、top=0.88、wspace=0.2、hspace=0.2。
+> - 何时用：子图挤在一起、标签重叠 → 加大 `hspace`/`wspace`；想给大标题留位置 → 调小 `top`。
+> - 自动替代：`plt.tight_layout()`，或创建 figure 时传 `constrained_layout=True`。
+
+> 🔴 考点：`gs[行, 列]` 第一个下标是行、第二个是列；`:` 是“取整行/整列”的切片；把 `[:, 0]` 理解成“第 0 行”是常见错误。
