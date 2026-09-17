@@ -27,7 +27,7 @@
 - 10/5（Wk6 周一 16:30 Z209）**Test 1**
 - 10/23 前（By Week 8）AIDA e-module 全部完成
 - 10/26–30（Wk9 实验课）AIDA 闭卷测验
-- Week 3/4：**Workshop 1 (WS01 A) 提交**（Canvas 模块内，截止以提交页为准）
+- **9/24（四）23:59**：Workshop 1 (WS01 A) 提交（10 分，Canvas 作业 19620）
 - 11/28 Mini-project 报告 + 演示视频
 - 11/23（Wk13 周一 16:30 Z209）**Test 2**
 
