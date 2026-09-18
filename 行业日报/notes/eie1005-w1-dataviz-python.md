@@ -13,12 +13,30 @@
   - `00 - Introduction.pdf`、`01 - Part 01 - From Data.pdf`、`01 - Part 01 - Workshop 01 (A).pdf`、`02 - Part 02 - To Insight.pdf`、`02 - Part 02 - Workshop 01 (B).pdf`、`03 - Summary.pdf`、`04 - PCRoom U204C Python Setting.pdf`、`05 - Python Code Hints.pdf`
 
 ## ⏱ 30 秒速览
-- 一句话：这个文件夹用 **pandas 读 Excel 数据 + Matplotlib 画图**，用 22 个例子从「画一条线」一路练到「多图布局 / 样式 / 刻度标签」，是 Workshop 1 报告的代码底稿。
-- 三条结论：
-  1. 所有例子都是同一个「骨架」：`import` → 建 Figure → `GridSpec` 划格子 → `add_subplot` 建坐标轴 → `read_excel` 读数据 → `df.plot()` 画图 → `plt.show()` 显示。
-  2. 图表类型只改 `kind=` 一个参数：`line`（折线）、`area`（面积）、`bar`（柱状）、`barh`（横向柱状）、`pie`（饼图），叠加用 `stacked=True`。
-  3. 美观靠三招：`set_title/set_xlabel/set_ylabel`（文字）、`legend/grid`（图例/网格）、`color` 与 `rotation`（颜色/刻度旋转）。
-- 关键词：pandas、DataFrame、Matplotlib、pyplot、Figure、Axes、GridSpec、read_excel、plot、legend、grid、xticklabels。
+
+> 用「连环追问」30 秒抓住主线：**是什么 → 为什么 → 怎么做 → 有什么用**。
+
+**① 这是什么？**
+- 一句话：这是一份 **Matplotlib 数据可视化练习包**——用 **pandas 读 Excel 数据、Matplotlib 画图**，22 个例子从「画一条线」一路练到「多图布局 / 样式 / 刻度标签」，是 Workshop 1 报告的代码底稿。
+
+**② 为什么要学？**
+- 这门课的目标是「把数据变成图、把图讲成故事」；Matplotlib 是 Python 画图的事实标准，22 个例子正好覆盖你交 Workshop 报告要用的全部技能。
+
+**③ 怎么学最省力？——抓住「一个骨架 + 三个开关」**
+- 一个骨架：`import` → 建 `Figure` → `GridSpec` 划格子 → `add_subplot` 建坐标轴 → `read_excel` 读数据 → `df.plot()` 画图 → `plt.show()` 显示。
+- 开关一（类型）：只改 `kind=`，取值 `line`（折线）/ `area`（面积）/ `bar`（柱状）/ `barh`（横向柱状）/ `pie`（饼图）；堆叠加 `stacked=True`。
+- 开关二（布局）：只改 `GridSpec(行, 列)` 与 `gs[行, 列]`，`gs[:, 0]` 是整列通栏。
+- 开关三（样式）：`set_title / set_xlabel / set_ylabel`（文字）、`legend / grid`（图例/网格）、`color / rotation`（颜色/刻度旋转）。
+
+**④ 学完能干什么？**
+- 能把 Excel 数据独立画成「带标题、轴标签、图例、网格」的图，并按「Q1 几张图 → Q2 讲什么故事 → Q3 什么类型 → Q4 什么样式」的清单完成 **Workshop 01 (A)**。
+
+**三条结论（闭卷能复述才算记住）**
+1. 骨架统一：22 个例子结构完全一样，只换「读数据 + 画图」那两行。
+2. 类型看 `kind`：`line / area / bar / barh / pie`，堆叠靠 `stacked=True`。
+3. 美观三招：文字（`set_title/set_xlabel/set_ylabel`）、图例网格（`legend/grid`）、颜色刻度（`color/rotation`）。
+
+**关键词**：pandas、DataFrame、Matplotlib、pyplot、Figure、Axes、GridSpec、read_excel、plot、kind、legend、grid、xticklabels、rotation。
 
 ## 前置 / 后接
 - 前置：L1「数据分析五步、数据表示」；L2 的「数据可视化」铺垫。
@@ -40,6 +58,145 @@ EIE1005 - Data Visualization - 06 - Python Project Folder - Student/
 ```
 
 > 📖 译注：压缩包里还混有 macOS 的 `__MACOSX/`、`._*`、`.DS_Store` 文件，都是苹果系统生成的元数据，**与课程无关，直接忽略**。
+
+---
+
+## 零、环境配置（课件 1.2 Working Environment 全文整理 · P14–31）
+
+> 本节把课件「1.2 Working Environment」（P14–31）与「1.3 Files, Data and Display」里的 VS Code 部分（P33–45）**原文整理**成笔记；带 `> 🧠 拓展` / `> 📖 译注` 的是后加内容，其余为课件原文。
+
+### 0.1 为什么用 Python（P16–17）
+
+课件原文要点（P16 · Python）：
+- **High-level & General-purpose**：高层、通用，几乎任何任务都能做；
+- **Human-readable**：语法清晰、优先可读性；
+- **Focus on Logic**：自动管理内存，专注逻辑；
+- **Interpreted**：无需复杂编译即可直接运行，适合快速原型；
+- **Dynamic Typing**：无需手动声明变量类型，Python 自动推断；
+- **Power Included**：自带庞大的标准库（数学、文件 I/O、网络等）。
+
+课件原文（P17 · Python - Data Science & AI）：
+- **Data Analysis**：用 NumPy & Pandas 处理大规模数据，用 Matplotlib & Plotly 展示数据；
+- **AI & Machine Learning**：用 TensorFlow & PyTorch 构建 ChatGPT、人脸识别等；
+- 结论：**"Python is the #1 language for Data Analysis and AI"**（本课所在的位置）。
+
+> 🔴 考点：Python 的特点常考 `interpreted`（解释型）、`dynamic typing`（动态类型）、`high-level`；P17 的「四大库 NumPy/Pandas/Matplotlib/Plotly + 两大框架 TensorFlow/PyTorch」也常考。
+
+### 0.2 先分清：装什么、不装什么（后加避坑）
+
+| 要装 | 不要装 |
+|---|---|
+| **Anaconda（Python 发行版）** | `r-mass` 这类 **R 语言包**（R 是另一门统计语言，与本课无关） |
+| **VS Code + Python 扩展** | anaconda.org 上零散的「单个包」页面 |
+| 后面补 `openpyxl` | —— |
+
+> 📖 译注：很多人会在 `anaconda.org` 搜到 `r-mass` 就以为要装它——那是 R 的 MASS 包，**跳过**。要下载的是 `anaconda.com/download` 的 **Anaconda Distribution 安装包**（一个 `.exe`）。
+
+### 0.3 Anaconda 与虚拟环境（P18–21）
+
+课件原文（P18 · Anaconda Virtual Environment）：
+- **为什么用虚拟环境**：Python 项目应使用 virtual environment 来管理和隔离依赖，防止冲突与包混乱；
+- **为什么 Anaconda**：面向数据科学最流行的发行版，打包了 **Python 解释器、包管理器（conda, pip）、常用分析库（NumPy, Pandas, Matplotlib, Plotly）**。
+
+课件原文（P19 · Isolation is Key）：
+- **Conflict Prevention**：保证项目 A 的库不会弄坏项目 B；
+- **Package Clutter**：保持全局 Python 安装干净。
+
+课件原文 4 步命令（P20 · Virtual Environment Setup）：
+
+```bash
+# 1. Create Environment：创建名为 py_01 的隔离环境，带全套 anaconda
+conda create --name py_01 anaconda
+
+# 2. Activate Environment：进入环境（命令行提示符变成 (py_01)）
+conda activate py_01
+
+# 3. Verify Installation：验证，应输出 Python 3.x.x
+python --version
+
+# 4. Install Extra Packages：需要时用 conda 或 pip 补装
+pip install plotly
+```
+
+课件原文背景（P21 · Why We Need Anaconda）：Anaconda 创立于 2012 年（原 Continuum Analytics，2017 年更名 Anaconda），为解决早期「装一个库（如 NumPy）会弄坏另一个库」的 **Dependency Hell** 而生；它开发的 **conda** 包管理器能同时处理 Python 与非 Python 依赖，把复杂配置变成「一键式」；如今是全球数据科学标准，用户超 4,500 万。
+
+> 🧠 拓展：这份项目代码还要读 `.xlsx`，课件四库不含 `openpyxl`，请补装：
+> ```bash
+> pip install openpyxl
+> ```
+
+### 0.4 四大核心库（P23–31 原文）
+
+课件原文（P24）：数据科学生态 = **Process（处理）→ Analyze（分析）→ Visualize（可视化）**，本课聚焦四个库：**NumPy、Pandas、Matplotlib、Plotly**。
+
+按课件原文逐一整理（P27–30）：
+
+| 库 | 用途（原文） | 安装命令（原文） | 导入写法（原文） |
+|---|---|---|---|
+| **NumPy** | 高性能数值计算；快速多维数组操作，是多数重型数据处理库的基础 | `pip install numpy` 或 `conda install numpy` | `import numpy as np` |
+| **Pandas** | 数据分析与操作；核心组件是 DataFrame（可编程电子表格），用于清洗、重塑、探索数据 | `pip install pandas` 或 `conda install pandas` | `import pandas as pd` |
+| **Matplotlib** | 静态 2D 画图；Python 默认绘图库，可靠稳健，对静态图提供细粒度控制 | `pip install matplotlib` 或 `conda install matplotlib` | `import matplotlib.pyplot as plt` |
+| **Plotly** | 交互式网页画图；现代、基于 JavaScript，支持在浏览器中缩放、平移、悬停 | `pip install plotly` 或 `conda install plotly` | `import plotly.express as px` / `import plotly.graph_objects as go` / `import plotly.io as pio` |
+
+课件原文「选库总结」表（P31 · Choosing the Right Library）：
+
+| 库 | 类别 | 主要用途 |
+|---|---|---|
+| NumPy | Processing | 高速数学运算与数组 |
+| Pandas | Processing | 数据清洗、操作（类 Excel） |
+| Matplotlib | Visualization | 论文/报告用的静态精确图表 |
+| Plotly | Visualization | 交互式仪表盘与网页探索 |
+
+> 🔴 考点：本课代码固定 `import pandas as pd`、`import matplotlib.pyplot as plt`、`import matplotlib.gridspec as gridspec`；P25 原句「Matplotlib 是 Pandas 的默认绘图引擎」也可能考。Plotly 的三种 import（px / go / pio）只在本节出现，项目代码里未用到。
+
+### 0.5 VS Code 工作台（P22、P33–45）
+
+课件原文（P22 · The Workbench）：
+- VS Code 是强大的**开源编辑器**，用于编写和调试 Python；
+- **Integrated Terminal**：不用离开编辑器就能运行 Anaconda 命令；
+- **Python Extension**：提供 IntelliSense 与调试工具。
+
+课件原文（P33–45）整理成 5 步：
+1. **Launch IDE**：打开 VS Code；
+2. **Open Folder**：打开项目文件夹 EIE1005；
+3. 为什么用 `.py`：扩展名让编辑器把它当 Python 代码，提供语法高亮和错误检查（P35）；
+4. **Install Python Extension**：在扩展市场安装 Python 扩展（P41–42）；
+5. **Setup Python Interpreter**：右下角选择解释器（选 `py_01`），然后**右键 → Run Python File** 运行代码（P43–45）。
+
+> 📖 译注：P35 课件写「Open Folder: EIE1005」，对应你解压出的 `EIE1005 - Data Visualization - 06 - Python Project Folder - Student` 文件夹。
+
+### 0.6 路线 B · 最小化安装（后加）
+
+> 🧠 拓展（不想装 Anaconda 时）：在 python.org 装官方 Python（安装时勾选 **Add python.exe to PATH**），然后：
+> ```bash
+> pip install pandas matplotlib openpyxl
+> ```
+> 以后凡是提示缺哪个库，就 `pip install 库名`。
+
+### 0.7 常见报错排查（后加，实用）
+
+| 报错 | 原因 | 解决 |
+|---|---|---|
+| `ModuleNotFoundError: No module named 'pandas'` | 没装 pandas，或解释器选错 | `pip install pandas`，并在 VS Code 右下角切到正确解释器 |
+| `Missing optional dependency 'openpyxl'` | 缺 openpyxl | `pip install openpyxl` |
+| `FileNotFoundError: 'EIE1005_Part01_Data.xlsx'` | 运行目录不对（没打开项目文件夹） | 用 VS Code「Open Folder」打开项目根目录再运行 |
+| `'python' 不是内部或外部命令` | Python 没加入 PATH | 改用 **Anaconda Prompt** 运行，或重装时勾选 Add to PATH |
+| 图一闪就关 | 某些命令行直接跑脚本不阻塞 | 在 VS Code 里 Run，或代码结尾保留 `plt.show()` |
+
+### 0.8 一键速查命令卡（后加）
+
+> 🧠 拓展（复制即用）：
+> ```bash
+> # Anaconda 路线：建环境 → 激活 → 补 openpyxl
+> conda create --name py_01 anaconda
+> conda activate py_01
+> python --version
+> pip install openpyxl
+> 
+> # 最小化路线：直接装本课所需
+> pip install pandas matplotlib openpyxl
+> ```
+
 
 ---
 
@@ -530,7 +687,181 @@ C. 把两条线的数据拼成一个 DataFrame 后只画一次
 
 ---
 
+---
+
+## 🧠 强化练习（帮助记忆）
+
+> 建议：先独立做，再展开答案；做错的回到正文对应小节重看。
+
+> 记忆口诀（三句话）：
+> - **图表类型看 `kind`**：line / area / bar / barh / pie，堆叠加 `stacked=True`。
+> - **布局看 `GridSpec` + `add_subplot`**：`GridSpec(行, 列)` 划格子，`gs[行, 列]` 放图，`gs[:, 0]` 是整列通栏。
+> - **样式看 `set_xxx`**：title / xlabel / ylabel / legend / grid / color / rotation。
+
+**Q7（连线）** 把图表类型和要写的 `kind=` 配对：
+- 左：折线图、面积图、柱状图、横向柱状图、饼图
+- 右：`'line'`、`'area'`、`'bar'`、`'barh'`、`'pie'`
+
+<details><summary>点我看答案</summary>
+
+line=折线图，area=面积图，bar=柱状图，barh=横向柱状图，pie=饼图。易错点：`barh` 是「横向」不是「堆叠」；堆叠是另加 `stacked=True`。
+
+</details>
+
+**Q8（填空）** 写出这些「样式方法」的作用：
+1. `ax1.set_title(...)` → ______
+2. `ax1.set_xlabel(...)` / `ax1.set_ylabel(...)` → ______
+3. `ax1.legend(...)` → ______
+4. `ax1.grid(...)` → ______
+5. `color=` → ______
+6. `ax1.set_xticklabels([...], rotation=45)` → ______
+
+<details><summary>点我看答案</summary>
+
+1 图标题；2 横/纵轴标签；3 图例；4 网格线；5 颜色；6 横轴刻度文字并旋转 45°。易错点：`set_title` 是「这张小图的标题」，`suptitle` 才是「整张画布的大标题」。
+
+</details>
+
+**Q9（单选）** `plt.figure(figsize=(15, 9))` 里的 `15` 和 `9` 表示（ ）
+A. 150×90 像素
+B. 宽 15 英寸、高 9 英寸
+C. 15 列 9 行
+
+<details><summary>点我看答案</summary>
+
+B。`figsize=(宽, 高)`，单位是英寸。思路：约 16:9 宽屏比例。易错点：误以为是像素。
+
+</details>
+
+**Q10（单选）** 要画「左右并排的 2 张图」，`GridSpec` 应写（ ）
+A. `GridSpec(1, 2)`
+B. `GridSpec(2, 1)`
+C. `GridSpec(2, 2)`
+
+<details><summary>点我看答案</summary>
+
+A。`GridSpec(行, 列)`：`(1,2)` 是 1 行 2 列 = 左右并排；`(2,1)` 是上下两行；`(2,2)` 是 4 格。易错点：把行、列顺序记反。
+
+</details>
+
+**Q11（代码补全）** 补全：画「Apple Price 随 Year 变化的折线图，带圆点标记」：
+```python
+df_price.plot(ax=ax1, kind=______, marker=______, x=______, y=______)
+```
+
+<details><summary>点我看答案</summary>
+
+```python
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year', y='Apple Price')
+```
+易错点：`marker='o'` 是字母 o（circle），不是数字 0。
+
+</details>
+
+**Q12（找错）** 下面想画「饼图」，哪写错了？
+```python
+df_price.plot(ax=ax1, kind='pie', x='Year', y='Apple Price')
+```
+
+<details><summary>点我看答案</summary>
+
+饼图不用 `x=`。正确写法：
+```python
+df_price.plot(ax=ax1, kind='pie', y='Apple Price', labels=df_price['Year'])
+```
+思路：饼图 = `y`（数值决定扇区大小）+ `labels`（分类标签）。
+
+</details>
+
+**Q13（判断）** `marker='o'` 只在折线图里有效，柱状图不能用。（对 / 错）
+
+<details><summary>点我看答案</summary>
+
+错。`marker` 是「数据点标记」，折线图最常用（如 `marker='o'`）；柱状图本身用柱子表示数据，一般不需要 marker，但并非语法禁止。
+
+</details>
+
+**Q14（单选）** `alpha=0.1` 控制的是（ ）
+A. 颜色深浅
+B. 透明度
+C. 线条粗细
+
+<details><summary>点我看答案</summary>
+
+B。`alpha` 取值 0（全透明）~1（不透明）。面积图里设 0.1 是为了两条面积重叠时都能看清。易错点：别和 `color` 混淆。
+
+</details>
+
+**Q15（单选）** 把两条折线画在同一张图上，关键是（ ）
+A. 两次 `.plot()` 都写 `ax=ax1`
+B. 每次新建一个 `figure`
+C. 用两个不同的 `GridSpec`
+
+<details><summary>点我看答案</summary>
+
+A。同一个 Axes 上多次 `.plot()` 即叠加（Example 04）。易错点：忘了写 `ax=ax1` 会各画各的图。
+
+</details>
+
+**Q16（填空）** `ax1 = fig.add_subplot(gs[:, 0])` 中，`gs[:, 0]` 表示取 GridSpec 的 ______（行/列）全部、第 ______ 列，结果是一张左侧通栏大图。
+
+<details><summary>点我看答案</summary>
+
+行方向全部、第 0 列。思路：`[行, 列]`，冒号 `:` 是「全部」，写在第一位就是「所有行」。易错点：把第一个下标当成列。
+
+</details>
+
+**Q17（代码补全）** 补全：横向柱状图 + 堆叠所有数值列：
+```python
+df_price.plot(ax=ax1, kind=______, stacked=______, x='Year')
+```
+
+<details><summary>点我看答案</summary>
+
+```python
+df_price.plot(ax=ax1, kind='barh', stacked=True, x='Year')
+```
+思路：不写 `y=` 时画全部数值列；`stacked=True` 把它们堆成一根柱。
+
+</details>
+
+**Q18（找错）** 下面想给 X 轴刻度旋转 45°，哪写错了？
+```python
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=45)
+```
+
+<details><summary>点我看答案</summary>
+
+竖柱状图 `kind='bar'` 的年份在 **X 轴**，应改用 `set_xticklabels`；`set_yticklabels` 对应横向柱状图 `kind='barh'`（此时类别才在 Y 轴）。易错点：横向/纵向对应的轴记混。
+
+</details>
+
+**Q19（综合排序）** 把「画一张带标题、轴标签、网格的柱状图」的正确代码顺序排好：
+① `df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')`
+② `import pandas as pd` / `import matplotlib.pyplot as plt`
+③ `plt.show()`
+④ `ax1.set_title('Apple Price Over Years')` / `ax1.set_xlabel('Year')` / `ax1.grid(visible=True)`
+⑤ `fig = plt.figure(figsize=(15, 9))` / `gs = gridspec.GridSpec(1,1)` / `ax1 = fig.add_subplot(gs[0,0])`
+
+<details><summary>点我看答案</summary>
+
+② → ⑤ → ① → ④ → ③。思路：先导入 → 建画布和坐标轴 → 画图 → 加样式 → 显示。这就是本课所有例子的「骨架」。
+
+</details>
+
+**Q20（记忆复述）** 不看笔记，口头复述三句口诀（图表类型 / 布局 / 样式分别看什么）。
+
+<details><summary>点我看答案</summary>
+
+类型看 `kind`；布局看 `GridSpec + add_subplot`；样式看 `set_xxx + legend/grid/color/rotation`。能完整复述即代表你已掌握本课主线。
+
+</details>
+
+
 ## 更新记录
+- 2026-09-18 增补：按课件《From Data.pdf》1.2 Working Environment（P14–31）原文整理环境配置（Python 特点 / Anaconda / 四大库 / VS Code）。
+- 2026-09-18 增补：环境配置指南（零、Anaconda/VS Code/报错排查）+ 强化练习 Q7–Q20。
 - 2026-09-16 答疑补充：GridSpec/add_subplot 与 subplots_adjust 详解。
 - 2026-09-16 首次整理：基于 Canvas EIE1005「Week 3 and 4: Workshop 1: Data Visualization」模块的 `EIE1005 - Data Visualization - 06 - Python Project Folder - Student.zip`，逐文件提取 22 个示例 `.py` 与 3 个 Excel 数据文件，生成逐文件原文与逐行讲解。
 
@@ -552,3 +883,9 @@ C. 把两条线的数据拼成一个 DataFrame 后只画一次
 > - 自动替代：`plt.tight_layout()`，或创建 figure 时传 `constrained_layout=True`。
 
 > 🔴 考点：`gs[行, 列]` 第一个下标是行、第二个是列；`:` 是“取整行/整列”的切片；把 `[:, 0]` 理解成“第 0 行”是常见错误。
+
+
+
+
+
+
