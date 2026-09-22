@@ -320,6 +320,7 @@
   treeBtn.addEventListener('click', function () {
     listView.classList.add('hidden');
     detailView.classList.add('hidden');
+    [document.getElementById('notesView'), document.getElementById('noteReader'), document.getElementById('tasksView'), document.getElementById('libraryView'), document.getElementById('libraryReader')].forEach(function (v) { if (v) v.classList.add('hidden'); });
     treeView.classList.remove('hidden');
     window.dispatchEvent(new Event('tree-open'));
   });

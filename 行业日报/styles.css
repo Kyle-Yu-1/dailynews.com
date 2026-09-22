@@ -393,3 +393,62 @@ mark{background:rgba(212,165,116,.4);border-radius:4px;padding:0 3px;color:inher
 .note-toolbar-spacer{flex:1}
 .note-title-inline{font-family:"Georgia","Noto Serif SC",serif;font-style:italic;font-size:15px;color:var(--gold)}
 .note-body.editing{outline:2px dashed var(--rose-soft);outline-offset:4px;border-radius:14px;padding:8px;min-height:120px}
+
+
+/* ===== 图书馆 ===== */
+.library-view{flex:1;overflow-y:auto;padding:10px 34px 48px;animation:fadeUp 900ms ease-in-out}
+.library-topbar{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.library-title{font-size:20px;font-style:italic;letter-spacing:.02em;color:var(--text)}
+.library-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+
+.book-card{display:flex;gap:18px;background:var(--panel-grad);border:1px solid var(--border-gold);
+  border-radius:20px 24px 18px 24px;padding:20px;box-shadow:var(--shadow-glow-gold);
+  transition:transform 900ms ease-in-out,box-shadow 900ms ease-in-out}
+.book-card:hover{transform:skewX(-1deg) translateY(-3px);box-shadow:var(--shadow-glow-rose)}
+
+.book-cover{position:relative;flex:0 0 118px;height:168px;border-radius:6px 11px 11px 6px;
+  background:radial-gradient(120% 90% at 85% 8%, rgba(255,255,255,.22), transparent 55%),
+    linear-gradient(155deg, var(--accent) 0%, rgba(26,26,62,.88) 100%);
+  box-shadow:0 12px 26px rgba(26,26,62,.38), inset 0 0 0 1px rgba(255,255,255,.14);
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;
+  padding:12px 8px 10px;overflow:hidden}
+.book-spine{position:absolute;left:0;top:0;bottom:0;width:9px;
+  background:linear-gradient(180deg, rgba(255,255,255,.38), rgba(0,0,0,.22));
+  border-radius:6px 0 0 6px}
+.book-glyph{font-size:34px;line-height:1;filter:drop-shadow(0 2px 5px rgba(0,0,0,.3));margin-left:4px}
+.book-cover-title{font-size:14px;font-weight:700;color:#fff;text-align:center;
+  writing-mode:vertical-rl;letter-spacing:.12em;max-height:78px;overflow:hidden;margin-left:4px;
+  text-shadow:0 1px 3px rgba(0,0,0,.32)}
+.book-cover-edition{font-size:11px;color:rgba(255,255,255,.88);text-align:center;margin-left:4px}
+
+.book-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.book-category{font-size:11px;color:var(--rose);font-weight:700;letter-spacing:.14em}
+.book-title{font-size:18px;margin:0;color:var(--ink);font-style:italic;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;line-height:1.35}
+.book-edition{font-size:12.5px;color:var(--muted-ink);font-style:normal;font-weight:400}
+.book-author{font-size:12.5px;color:var(--muted-ink)}
+.book-desc{margin:0;font-size:13px;color:var(--muted-ink);line-height:1.65}
+.book-tags{display:flex;flex-wrap:wrap;gap:6px}
+.book-tag{font-size:11px;padding:3px 10px;border-radius:999px;background:rgba(212,165,116,.14);
+  border:1px solid var(--gold-soft);color:var(--gold)}
+.book-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.book-action{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:11px;
+  border:1px solid var(--border-gold);background:var(--panel-grad);color:var(--ink);
+  font-size:12.5px;font-family:inherit;font-style:italic;cursor:pointer;text-decoration:none;
+  box-shadow:var(--shadow-glow-gold);transition:all 700ms ease-in-out}
+.book-action:hover{transform:skewX(-2deg);box-shadow:var(--shadow-glow-rose);border-color:var(--border-rose)}
+.book-action.primary{background:linear-gradient(120deg, rgba(212,165,116,.92), rgba(195,141,148,.82));
+  color:#1a1a3e;font-weight:700;border-color:transparent}
+
+.library-reader{flex:1;display:flex;flex-direction:column;padding:10px 26px 22px;min-height:0;overflow:hidden}
+.library-reader-top{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.library-reader-title{font-size:16px;font-style:italic;color:var(--gold)}
+.library-reader-spacer{flex:1}
+.library-reader-frame{flex:1;min-height:0;border:1px solid var(--border-gold);border-radius:14px;
+  overflow:hidden;background:var(--panel-grad);box-shadow:var(--shadow-glow-gold)}
+.library-reader-frame iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+
+@media(max-width:760px){
+  .book-card{flex-direction:column}
+  .book-cover{flex:none;width:120px;height:150px}
+  .book-cover-title{writing-mode:horizontal-tb;max-height:none}
+}
