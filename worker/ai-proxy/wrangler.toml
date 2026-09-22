@@ -1,0 +1,4 @@
+# 学习 Agent · AI 转发代理
+name = "study-agent-ai-proxy"
+main = "src/index.js"
+compatibility_date = "2026-09-01"

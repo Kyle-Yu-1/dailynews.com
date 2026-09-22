@@ -110,7 +110,7 @@
   }
 
   tasksBtn.addEventListener('click', function () {
-    [listView, detailView, treeView, notesView, noteReader, document.getElementById('libraryView'), document.getElementById('libraryReader')].forEach(function (v) { if (v) v.classList.add('hidden'); });
+    [listView, detailView, treeView, notesView, noteReader, document.getElementById('libraryView'), document.getElementById('libraryReader'), document.getElementById('aiView')].forEach(function (v) { if (v) v.classList.add('hidden'); });
     tasksView.classList.remove('hidden');
     refresh();
   });

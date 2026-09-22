@@ -1,5 +1,5 @@
-var CACHE = 'studyagent-v4';
-var ASSETS = ['./','./index.html','./styles.css','./app.js','./tree.js','./notes.js','./library.js','./notes/index.json','./vendor/marked.min.js','./manifest.json','./data/reports.js','./data/tech_tree.js','./data/library.js','./icons/icon-192.png','./icons/icon-512.png'];
+var CACHE = 'studyagent-v5';
+var ASSETS = ['./','./index.html','./styles.css','./app.js','./tree.js','./notes.js','./library.js','./ai.js','./notes/index.json','./vendor/marked.min.js','./manifest.json','./data/reports.js','./data/tech_tree.js','./data/library.js','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }).then(function () { return self.skipWaiting(); }));
 });

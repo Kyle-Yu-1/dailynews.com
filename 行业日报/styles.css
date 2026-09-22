@@ -452,3 +452,57 @@ mark{background:rgba(212,165,116,.4);border-radius:4px;padding:0 3px;color:inher
   .book-cover{flex:none;width:120px;height:150px}
   .book-cover-title{writing-mode:horizontal-tb;max-height:none}
 }
+
+/* ===== 图书馆阅读器：左侧 PDF + 右侧笔记 ===== */
+.library-reader-main{flex:1;min-height:0;display:flex;gap:14px}
+.library-note-panel{flex:0 0 340px;min-width:0;display:flex;flex-direction:column;background:var(--panel-grad);
+  border:1px solid var(--border-gold);border-radius:16px 20px 14px 20px;padding:16px;box-shadow:var(--shadow-glow-gold)}
+.library-note-head{font-size:15px;font-style:italic;color:var(--gold);margin-bottom:6px}
+.library-note-hint{font-size:12px;color:var(--muted-ink);line-height:1.6;margin:0 0 10px}
+.library-note-panel textarea{flex:1;min-height:0;resize:none;border:1px solid var(--gold-soft);border-radius:12px;
+  padding:12px;background:rgba(26,26,62,.05);color:var(--ink);font-family:inherit;font-size:14px;line-height:1.7;outline:none}
+.library-note-panel textarea:focus{border-color:var(--rose-soft)}
+.library-note-status{margin-top:8px;font-size:12px;color:var(--muted-ink)}
+.library-note-status.saved{color:var(--gold)}
+@media(max-width:900px){
+  .library-reader-main{flex-direction:column}
+  .library-note-panel{flex:0 0 220px}
+}
+
+/* ===== AI 助手 ===== */
+.ai-view{flex:1;overflow-y:auto;padding:10px 34px 48px;animation:fadeUp 900ms ease-in-out;display:flex;flex-direction:column}
+.ai-topbar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.ai-title{font-size:20px;font-style:italic;letter-spacing:.02em;color:var(--text)}
+.ai-topbar-spacer{flex:1}
+.ai-config{background:var(--panel-grad);border:1px solid var(--border-gold);border-radius:18px 22px 16px 22px;
+  padding:18px;margin-bottom:16px;box-shadow:var(--shadow-glow-gold)}
+.ai-config-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.ai-field{display:flex;flex-direction:column;gap:6px}
+.ai-field label{font-size:12.5px;color:var(--muted-ink);font-style:italic}
+.ai-field input,.ai-field select{padding:10px 12px;border-radius:11px;border:1px solid var(--border-gold);
+  background:rgba(26,26,62,.05);color:var(--ink);font-family:inherit;font-size:13.5px;outline:none}
+.ai-field input:focus,.ai-field select:focus{border-color:var(--rose-soft)}
+.ai-config-foot{display:flex;align-items:center;gap:16px;margin-top:14px;flex-wrap:wrap}
+.ai-remember{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted-ink)}
+.ai-remember input{accent-color:var(--rose)}
+.ai-config-actions{display:flex;gap:10px;margin-left:auto;flex-wrap:wrap}
+.ai-safety{margin:12px 0 0;font-size:12px;color:var(--muted-ink);line-height:1.6}
+.ai-chat{flex:1;min-height:0;display:flex;flex-direction:column;background:var(--panel-grad);
+  border:1px solid var(--border-gold);border-radius:18px 22px 16px 22px;padding:16px;box-shadow:var(--shadow-glow-gold)}
+.ai-messages{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.ai-welcome{font-size:13.5px;color:var(--muted-ink);line-height:1.8;text-align:center;padding:24px 10px;font-style:italic}
+.ai-msg{display:flex}
+.ai-msg.user{justify-content:flex-end}
+.ai-msg.assistant{justify-content:flex-start}
+.ai-bubble{max-width:78%;padding:10px 14px;border-radius:14px 16px 12px 16px;font-size:14px;line-height:1.7;
+  white-space:pre-wrap;word-break:break-word}
+.ai-msg.user .ai-bubble{background:linear-gradient(120deg,rgba(212,165,116,.92),rgba(195,141,148,.82));color:#1a1a3e}
+.ai-msg.assistant .ai-bubble{background:rgba(26,26,62,.07);border:1px solid var(--gold-soft);color:var(--ink)}
+.ai-busy{font-size:13px;color:var(--muted-ink);font-style:italic;padding:2px 14px}
+.ai-input-row{display:flex;gap:10px;margin-top:12px}
+.ai-input-row textarea{flex:1;height:72px;resize:none;padding:10px 12px;border-radius:12px;border:1px solid var(--border-gold);
+  background:rgba(26,26,62,.05);color:var(--ink);font-family:inherit;font-size:14px;line-height:1.6;outline:none}
+.ai-input-row textarea:focus{border-color:var(--rose-soft)}
+.ai-send{padding:0 20px;border-radius:12px;border:none;background:linear-gradient(120deg,rgba(212,165,116,.92),rgba(195,141,148,.82));
+  color:#1a1a3e;font-weight:700;font-family:inherit;font-style:italic;font-size:14px;cursor:pointer;transition:transform 700ms ease-in-out}
+.ai-send:hover{transform:skewX(-2deg)}

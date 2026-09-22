@@ -41,6 +41,7 @@
       </div>
       <div class="topbar-actions">
         <input id="searchInput" class="search" placeholder="🔍 在梦境中搜索…">
+        <button id="aiBtn" class="icon-btn" title="AI 助手">🤖</button>
         <button id="libraryBtn" class="icon-btn" title="图书馆">📖</button>
         <button id="notesBtn" class="icon-btn" title="学习笔记">📚</button>
         <button id="treeBtn" class="icon-btn" title="打开技术树">🌳</button>
@@ -102,6 +103,7 @@
       <div id="libraryList" class="library-list"></div>
     </div>
     <div id="libraryReader" class="library-reader hidden"></div>
+    <div id="aiView" class="ai-view hidden"></div>
     <footer class="footer">学习 Agent · 数据由每日周期任务自动生成 · 本站不收集任何个人信息</footer>
   </main>
 </div>
@@ -114,6 +116,7 @@
 <script src="tasks.js"></script>
 <script src="data/library.js"></script>
 <script src="library.js"></script>
+<script src="ai.js"></script>
 <script src="notes.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js');});}</script>
 </body>
