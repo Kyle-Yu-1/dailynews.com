@@ -110,4 +110,37 @@ Line=plot()；Area=fill_between()+plot()；Bar=bar()/barh()；Pie=pie()。思路
 EIE1005_StudentID_Workshop_01_B.py。思路：按规范命名是检查清单硬指标。</details>
 
 ## 更新记录
+- 2026-09-23 补：模板逐行讲解 + 联网检索的 10 种制图效果与技巧（官方 Gallery）。
 - 2026-09-23 首次整理：Canvas 文件 130047（Workshop 01 B），逐页保留 7 页，代码讲解 + 高难度拓展。
+
+## 二点五、模板代码逐行讲解
+
+> 📖 译注 · 逐行（对应上文模板）：
+> - `import pandas as pd`：pandas 读表格数据（Excel/CSV）。
+> - `df = pd.read_excel('salary.xlsx', sheet_name=None)`：一次读入所有工作表，返回 {表名: DataFrame} 字典；`sheet_name=None` 表示“全部表”。
+> - `fig = plt.figure(figsize=(16, 9))`：新建画布 Figure，宽 16 英寸、高 9 英寸（16:9，适合演示）。
+> - `gs = gridspec.GridSpec(2, 2)`：把画布切成 2 行 2 列的网格，返回网格规划表 gs。
+> - `ax1 = fig.add_subplot(gs[0, 0])`：把第 0 行第 0 列的格子变成坐标轴对象 ax1；其余 ax2/ax3/ax4 同理。
+> - `ax1.plot(x, y, marker='o', linewidth=2)`：在 ax1 上画折线；marker 描点、linewidth 线宽。
+> - `ax2.fill_between(x, y, alpha=0.3)`：把曲线与 x 轴之间的区域填色，alpha 控制透明度（0 透明 ~1 不透明）。
+> - `ax3.barh(y=names, width=values, color='#1f77b4')`：横向柱状图；y 是类目、width 是数值，'#1f77b4' 是十六进制颜色。
+> - `ax4.pie(values, labels=names, autopct='%1.1f%%', startangle=90)`：饼图；autopct 显示百分比（保留 1 位小数）、startangle 从 90° 起画。
+> - `fig.subplots_adjust(wspace=0.35, hspace=0.4)`：横向间距 0.35、纵向间距 0.4（占子图平均宽/高比例），防止标签重叠。
+> - `fig.savefig('x.png', dpi=300, bbox_inches='tight')`：导出 PNG，300 dpi 高清，tight 裁掉多余白边。
+
+## 二点六、效果与技巧库（联网检索 · 检索于 2026-09-23）
+
+> 🧠 拓展 · 每种技巧：左=效果，右=一句话实现，细节见官方 Gallery。
+
+1. **环形图 Donut**：饼图挖空中心 → `wedgeprops=dict(width=0.4)` 或嵌套 `pie()` 两次。
+2. **水平柱状分布图**：长类目 → `ax.barh()`，类目标签完整不被裁。
+3. **堆叠面积图 / 流图 Stackplot**：多系列累计 → `ax.stackplot(x, y1, y2, labels=[...])`。
+4. **渐变柱状图 Gradient bar**：柱体填渐变 → 用 `imshow` + `clip_path` 或分段色块。
+5. **误差带**：数据不确定区间 → `ax.fill_between(x, y-err, y+err, alpha=0.2)`。
+6. **双轴 Twinx**：两个量纲同图 → `ax2 = ax1.twinx()`，右轴独立。
+7. **共享轴**：多图联动缩放 → `plt.subplots(2, 1, sharex=True)`。
+8. **Mosaic 布局**：字符串描述网格 → `plt.subplot_mosaic('AB;CC')`。
+9. **自动排版**：`constrained_layout=True` 或 `fig.tight_layout()`，连颜色条/大标题都自动避让。
+10. **统一风格**：`plt.rcParams` 预设字体/线宽/网格，或选内置风格 `plt.style.use('seaborn-v0_8')`。
+
+> 🌐 来源：Matplotlib 官方 Gallery https://matplotlib.org/stable/gallery/index.html ；环形/嵌套饼图 https://matplotlib.org/stable/gallery/pie_and_polar_charts/nested_pie.html ；水平柱状分布 https://matplotlib.org/stable/gallery/lines_bars_and_markers/horizontal_barchart_distribution.html ；堆叠图 https://matplotlib.org/stable/gallery/lines_bars_and_markers/stackplot_demo.html（检索于 2026-09-23）
