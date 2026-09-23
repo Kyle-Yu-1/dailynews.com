@@ -201,3 +201,18 @@
 - color scheme — 配色方案
 - hierarchy — 信息层级
 
+### 进阶 · 主题美化（Workshop 01 B v4 新增，2026-09-23）
+- preset style — 预设风格（如 ggplot、fivethirtyeight）
+- style.use / style.context — 全局 / 局部加载风格
+- theme — 主题（Dracula 等）
+- rcParams — 运行时配置参数（字体、网格、线条等）
+- mplstyle — Matplotlib 样式文件（.mplstyle）
+- glow — 发光（线条光效）
+- qbstyles — QuantumBlack 的 Matplotlib 样式库
+- matplotx — 主题库（Dracula、Pitaya Smoothie）
+- mplcyberpunk — 赛博朋克风格库
+- serif / sans-serif — 衬线体 / 无衬线体
+- monospace — 等宽字体
+- markerfacecolor — 标记填充色
+- titlecolor / labelcolor — 标题色 / 轴标签色
+

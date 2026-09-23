@@ -1,6 +1,6 @@
-# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v3 完美版）
+# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v4 完美版）
 
-> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版在 v2 基础上**从头到尾重排**，新增：图表选型决策、设计美学原则、数据预处理闭环、一段完整示例脚本、交互式图表拓展，并融合你提供的 5 篇参考（2 篇成功读取、3 篇无法访问，见 §参考来源）。
+> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v4）在 v2/v3 基础上从头到尾重排：图表选型决策、设计美学原则、主题美化库（内置风格 / qbstyles / matplotx / mplcyberpunk / 自定义 mplstyle）、数据预处理闭环、完整示例脚本、交互式图表拓展，并融合你提供的参考（见 §参考来源）。
 
 ## 📎 原始课件
 - 逐页原文（7 页，2026-09-23 重新逐页提取）：`行业日报/files/eie1005/eie1005-ws01b-insight-原文.txt`
@@ -20,7 +20,7 @@
 **③ 怎么做？——先选图、再画图、最后润色（三阶段）**
 - 选图（§二）：按「趋势 / 对比 / 占比 / 分布」定图表类型；Q3 只考四种（Line/Area/Bar/Pie），但思路通用。
 - 画图（§三、§四）：骨架 `import → figure → GridSpec → add_subplot → read_excel → 画图 → 保存`；五大进阶特效 = 整图背景、柱状图特效、数值渐变着色、颜色条、双轴等。
-- 润色（§二点五、§五）：配色 ≤3–5 色、信息分三层、标记异常与均值线、图下一句结论，再自查导出。
+- 润色（§2.5、§六）：配色 ≤3–5 色、信息分三层、标记异常与均值线、图下一句结论；一键换肤见 §五主题库。再自查导出。
 
 **④ 学完能干什么？**
 交出「选型正确 + 数值着色 + 颜色条 + 自定义背景 + 结论标注」的高分图，逐项过掉 P7 的四类专业检查清单。
@@ -30,7 +30,7 @@
 2. 选型四场景：趋势→折线/面积、分类对比→柱/条形、占比→饼/环形、分布关系→散点/热力。
 3. 颜色三件套：`colormap + Normalize + ScalarMappable` 是「按数值着色 + 颜色条」的通用套路；背景两层 `fig.patch` / `ax.set_facecolor`，导出要带 `facecolor`。
 
-**关键词**：Figure、Axes、GridSpec、图表选型、colormap、Normalize、ScalarMappable、colorbar、facecolor、edgecolor、hatch、bar_label、annotate、twinx、sharex、subplot_mosaic、savefig。
+**关键词**：Figure、Axes、GridSpec、图表选型、style、mplstyle、主题库、colormap、Normalize、ScalarMappable、colorbar、facecolor、edgecolor、hatch、bar_label、annotate、twinx、sharex、subplot_mosaic、savefig。
 
 ## 前置 / 后接
 - 前置：Workshop 1「数据可视化 Python 代码逐行讲解」（06 Python Project Folder，22 个示例）。
@@ -406,7 +406,135 @@ fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 
 ---
 
-## 五、数据预处理与优化闭环
+## 五、全局美化：预设风格与主题库（用户提供文章 · 2026-09-23）
+
+> 🧠 拓展（用户提供文章内容，检索于 2026-09-23）：图形的美观程度直接决定信息传递效率。美化分四层：内置风格 → 主题库（qbstyles / matplotx）→ 赛博朋克发光（mplcyberpunk）→ 自定义 .mplstyle。
+
+### 5.1 Matplotlib 内置预设风格
+
+```python
+import matplotlib.pyplot as plt
+
+print(plt.style.available)      # 查看全部可用风格
+plt.style.use('ggplot')         # R ggplot2 风格
+# plt.style.use('fivethirtyeight')     # FiveThirtyEight 网站风
+# plt.style.use('seaborn-v0_8')        # 现代感（新版旧名 'seaborn' 已改）
+
+x = range(10)
+y = [i ** 2 for i in x]
+plt.plot(x, y)
+plt.title('Sample Plot with Preset Style')
+plt.xlabel('X Axis'); plt.ylabel('Y Axis')
+plt.show()
+```
+
+> 📖 译注：`plt.style.use()` **全局**生效；`with plt.style.context('…')` 只在代码块内**临时**生效。新版本 Matplotlib 中 `'seaborn'` 系列已改名为 `'seaborn-v0_8-*'`，旧名会报警告。
+
+### 5.2 qbstyles（QuantumBlack 专业风）
+
+```python
+# pip install qbstyles
+from qbstyles import mpl_style
+
+mpl_style(dark=True)            # 深色主题；浅色用 dark=False
+plt.plot(x, y, marker='o')
+plt.title('Sample Plot with qbstyles')
+plt.show()
+```
+
+> 📖 译注：原文「dark =Fasle」是笔误，应为 `dark=False`。
+
+### 5.3 matplotx（Dracula / Pitaya Smoothie 等主题）
+
+```python
+# pip install matplotx
+import matplotlib.pyplot as plt
+import matplotx
+
+with plt.style.context(matplotx.styles.dracula):   # 只在 with 块内生效
+    x = range(10)
+    y = [i ** 2 for i in x]
+    plt.plot(x, y)
+    plt.title('Sample Plot with matplotx Dracula Theme')
+    plt.xlabel('X Axis'); plt.ylabel('Y Axis')
+    plt.show()
+```
+
+> 📖 译注：`style.context` 适合「同一个脚本里不同图用不同主题」。
+
+### 5.4 mplcyberpunk（赛博朋克发光）
+
+```python
+# pip install mplcyberpunk
+import numpy as np
+import mplcyberpunk
+import matplotlib.pyplot as plt
+
+plt.style.use('cyberpunk')
+x = np.linspace(0, 10, 20)
+y = np.sin(x)
+
+plt.figure(figsize=(8, 8))
+plt.plot(x, y, marker='o')
+mplcyberpunk.make_lines_glow()      # 关键一步：给线条加发光
+plt.xlabel('X-Axis'); plt.ylabel('Y-Axis')
+plt.title('Cyberpunk Style Plot')
+plt.show()
+```
+
+> ⚠️ 提醒：qbstyles / matplotx / mplcyberpunk 都是**第三方库**。交作业的 `.py` 在老师机器上跑时对方未必安装——作业建议用内置风格或自定义 `.mplstyle`（零依赖），主题库留着做演示 / 美化加分。
+
+### 5.5 自定义样式文件 .mplstyle（零依赖，提交最稳）
+
+常用 rcParams 参数速查：
+
+| 类别 | 参数 | 说明 |
+|---|---|---|
+| 字体 | `font.family` / `font.size` / `font.style` / `font.weight` | 字体族 / 大小 / 样式 / 粗细（light→black） |
+| 背景与边缘 | `axes.facecolor` / `axes.edgecolor` / `axes.linewidth` | 绘图区底色 / 边框色 / 边框线宽 |
+| 网格 | `grid.color` / `grid.linestyle` / `grid.linewidth` / `grid.alpha` | 颜色 / 线型（- -- -.）/ 线宽 / 透明度 |
+| 刻度与标签 | `xtick.color` `ytick.color` / `xtick.direction` `ytick.direction` / `axes.titlecolor` / `axes.labelcolor` | 刻度色 / 方向（in out inout）/ 标题色 / 轴标签色 |
+| 线条与标记 | `lines.color` / `lines.linewidth` / `lines.linestyle` / `lines.marker` / `lines.markerfacecolor` / `lines.markersize` | 线色 / 线宽 / 线型 / 标记形状 / 标记填充色 / 标记大小 |
+| 其他 | `figure.facecolor` / `figure.edgecolor` / `figure.figsize` / `savefig.dpi` | 整图底色 / 边缘色 / 尺寸（英寸）/ 导出分辨率 |
+
+示例 `my_style.mplstyle`：
+
+```text
+font.size : 14
+axes.facecolor : lightgray
+axes.edgecolor : black
+grid.color : white
+grid.alpha : 0.5
+lines.color : blue
+lines.linewidth : 2.0
+xtick.color : darkgray
+ytick.color : darkgray
+axes.titlecolor : darkred
+axes.labelcolor : darkblue
+figure.figsize : 8, 6
+savefig.dpi : 300
+```
+
+使用方式：
+
+```python
+plt.style.use('my_style.mplstyle')   # 加载自定义样式文件
+```
+
+> 📖 译注：`.mplstyle` 本质是把 rcParams 写进文本文件。提交 `.py` 时把它一起交（或把参数直接写 `plt.rcParams['lines.linewidth'] = 2`），零第三方依赖、最稳。
+
+### 5.6 选型建议
+
+| 场景 | 方案 |
+|---|---|
+| 作业 / 考试提交 | 内置风格 + 自定义 `.mplstyle` + `rcParams` |
+| 个人演示、追求好看 | qbstyles / matplotx / mplcyberpunk |
+| 同一脚本多主题 | `with plt.style.context(...)` |
+
+---
+
+## 六、数据预处理与优化闭环
+
 
 > 🧠 拓展（用户提供参考，检索于 2026-09-23）：不要拿原始数据直接作图，先预处理。
 
@@ -423,7 +551,7 @@ fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 
 ---
 
-## 六、完整示例脚本（把全部技巧串起来）
+## 七、完整示例脚本（把全部技巧串起来）
 
 > 🧠 拓展（自主整合，2026-09-23）：一个脚本串起「背景两层 → 排序 → 渐变着色 → 描边 → 柱顶标签 → 高亮极值 → 均值线 → annotate 注释 → 颜色条 → 高清导出」，可直接当 WS01(B) 的 Bar 图底稿。
 
@@ -480,7 +608,7 @@ fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300,
 
 ---
 
-## 七、交互式图表拓展（自主补充）
+## 八、交互式图表拓展（自主补充）
 
 > 🧠 拓展（自主补充，检索于 2026-09-23）：作业要求 `.py` + 静态 PNG 即可；交互只是加分项。
 
@@ -494,7 +622,7 @@ fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300,
 
 ---
 
-## 八、提交前自查清单（代码化）
+## 九、提交前自查清单（代码化）
 
 - [ ] 数据与 2023 PolyU SAO 一致
 - [ ] 每图粗体标题；XY 轴带单位；图例准确；刻度合理
@@ -532,19 +660,27 @@ colormap + Normalize + ScalarMappable：normalize 把数值压到 0–1，cmap �
 <details><summary>Q9 怎么让图「讲出结论」？</summary>
 annotate 标记异常+文字、axhline 加均值/趋势线、图下一句结论、对比拆分（双线/分组柱/分面）。</details>
 
-<details><summary>Q10 圆角柱怎么实现？</summary>
+<details><summary>Q10 `style.use` 与 `style.context` 有什么区别？</summary>
+use 全局生效；context 只在 with 块内临时生效。思路：全局 vs 局部。</details>
+
+<details><summary>Q11 自定义 .mplstyle 文件的作用与优点？</summary>
+把 rcParams（字体/背景/网格/线条/刻度/savefig.dpi）写进文本文件统一加载；零第三方依赖，交作业最稳。</details>
+
+<details><summary>Q12 圆角柱怎么实现？</summary>
 原生 bar 不支持圆角，用 `FancyBboxPatch(..., boxstyle='round,pad=0,rounding_size=0.08')` 手画，并同步设置 xlim/ylim。</details>
 
 ## 参考来源（本次新增）
 > 🌐 你提供的 5 篇参考，2026-09-23 读取状态：
 > - ✅ [15 个可视化图表（cnblogs）](https://www.cnblogs.com/fanruan/p/19955941)：已读取，用于 §二选型速查与误区。
 > - ✅ [可视化设计与图表配置技巧（FineBI）](https://www.finebi.com/blog/article/68d52cf428946ecca8ed5264)：已读取（含商业推广，仅取设计原则，用于 §二点四/二点五/五）。
+- ✅ 用户粘贴文章《Matplotlib 图表美化：内置样式 / qbstyles / matplotx / mplcyberpunk / 自定义 .mplstyle》（2026-09-23 由你提供全文）：已并入 §五主题美化（并修复原文格式错乱与 `dark =Fasle` 笔误）。
 > - ⚠️ https://blog.51cto.com/aiweker/13318911：无法访问（页面解析失败），内容未纳入；推测为 pyecharts 指南，等你能访问时补。
 > - ⚠️ https://zhuanlan.zhihu.com/p/346416675：403 无法访问，内容未纳入。
 > - ⚠️ https://blog.csdn.net/fuhanghang/article/details/128016831：521 无法访问，内容未纳入。
 > 🌐 官方来源：Matplotlib Gallery https://matplotlib.org/stable/gallery/index.html ；渐变柱 https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html ；颜色条放置 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html ；Plotly https://plotly.com/python/ ；pyecharts https://pyecharts.org/ 。
 
 ## 更新记录
+- 2026-09-23 v4：新增 §五 全局美化（内置风格 / qbstyles / matplotx / mplcyberpunk / 自定义 mplstyle），自测增至 12 题；来源并入用户粘贴文章。
 - 2026-09-23 v3（完美版）：新增图表选型决策（§二）、设计美学与结论标注、数据预处理闭环（§五）、完整示例脚本（§六）、交互式图表（§七）、自测扩至 10 题；融合 5 篇用户参考（2 篇成功、3 篇无法访问并标注）。
 - 2026-09-23 v2：新增五大主题（整图背景 / 柱状图七种特效 / 数值渐变着色 / 颜色条 / 双轴共享轴等）；P1–P7 原文重新逐页提取回填；避雷清单。
 - 2026-09-23 v1：首次整理 + 骨架逐行讲解 + 10 种制图技巧库。
