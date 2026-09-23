@@ -149,3 +149,32 @@
 - xticklabels / yticklabels — 横/纵轴刻度标签
 - rotation — 旋转角度
 - plt.show() — 显示图形
+
+### 进阶 · 颜色与背景（Workshop 01 B 新增，检索于 2026-09-23）
+- figure — 画布（整张图对象）
+- patch — 补丁对象（画布 / 坐标区的底片矩形）
+- facecolor — 背景色 / 表面颜色
+- edgecolor — 描边颜色
+- alpha — 透明度
+- colormap (cmap) — 色带 / 颜色映射表
+- Normalize — 归一化（把数值映射到 0–1）
+- TwoSlopeNorm — 双斜率归一化（正负发散用）
+- ScalarMappable — 标量可映射对象（colorbar 的桥）
+- colorbar — 颜色条（渐变色示意图 + 数值标尺）
+- gradient — 渐变
+- hatch — 填充纹理（斜线、点等）
+- bar_label — 柱顶数值标签
+- yerr — 误差棒长度
+- capsize — 误差棒端帽大小
+- annotate — 注释标注（箭头指向关键点）
+- spines — 坐标轴边框线
+- bbox_inches — 导出时的裁剪边界
+- dpi — 每英寸点数（图像分辨率）
+- interpolation — 插值（bicubic 双三次插值）
+- transAxes — 轴坐标变换（0..1 相对坐标）
+- viridis — 感知均匀色带（蓝紫→黄）
+- RdYlGn — 红黄绿发散色带
+- FancyBboxPatch — 圆角矩形补丁
+- constrained_layout — 受约束自动布局
+- tight_layout — 紧凑布局
+

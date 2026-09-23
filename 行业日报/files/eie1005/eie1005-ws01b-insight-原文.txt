@@ -1,24 +1,50 @@
-# EIE1005 Workshop 01 (B) · To Insight（逐页原文，7页完整保留）
+# EIE1005 Workshop 01 (B) · To Insight（逐页原文，7 页完整保留）
 
-来源：EIE1005 - Data Visualization - Workshop 01 - 02 - Part 02 - Workshop 01 (B).pdf（Canvas files/130047，1.98MB）
+来源：EIE1005 - Data Visualization - Workshop 01 - 02 - Part 02 - Workshop 01 (B).pdf（Canvas files/130047，2.08 MB，2026-09-23 用 pypdf 重新逐页提取）
 
 ### 第 1 页
-数据可视化 Part 02 – To Insight · Workshop 01 (B)（封面）
+Data Visualization ｜ Part 02 - To Insight ｜ 2.4 Workshop 01 (B)
 
 ### 第 2 页
-主题：I want to Understand —— USA College Graduate Salary: 2025 Projection · Are You Ready?
+主题页：I want to Understand —— USA College Graduate Salary: 2025 Projection —— Are You Ready?
 
 ### 第 3 页
-从数据到洞察：Table 01, 02, 03, 04
+From Data（Table 01, 02, 03, 04）→ To Insight。
+（本页数据表为图片，无文字层；表格数值以提供的 Excel 为准）
 
 ### 第 4 页
-数据表概览（Table 01–04）
+USA College Graduate Salary: 2025 Projection ｜ From Data（Table 01–04）→ To Insight。
+（本页数据表为图片，无文字层）
 
 ### 第 5 页
-已提供 Excel 文件供练习
+Already Provided Excel File for You.（练习数据为已提供的 Excel 文件）
 
 ### 第 6 页
-任务：60 分钟内设计你的 Workshop 01 (B)；提交到 PolyU Blackboard
+Please Design Your Workshop 01 (B)（60 Mins）｜ Submit Your Work by PolyU Blackboard ｜ Table 01, 02, 03, 04。
 
 ### 第 7 页
-提交前检查清单：Chart Layout（Q1 几张图 1/2/3/4；Q2 数据讲什么故事；Q3 图表类型 Line/Area/Bar/Pie；Q4 样式 Title/Label/Legend/Grid/Color）＋专业标准四类清单（数据准确性、图表格式与标签、视觉呈现与布局、最终核验）＋文件命名 EIE1005_StudentID_Workshop_01_B.py
+1.4 - Workshop 01 (B) - Pre-submission Checklist：
+
+Chart Layout：
+(Q1) How Many Chart that you want to display? 1 Chart, 2 Chart, 3 Chart, 4 Chart（Sub Chart）
+(Q2) What story does this data set tell?
+(Q3) What Type of Chart?（Line, Area, Bar, Pie）
+(Q4) What Kind of Style?（Title, Label, Legend, Grid Line, Color）
+
+1. Data Accuracy & Integrity
+ [ ] Source Consistency: Does your data match the 2023 PolyU SAO dataset?
+2. Chart Formatting & Labels
+ [ ] Descriptive Titles: Does every chart have a clear, bold title at the top?
+ [ ] Axis Labels: Are both X and Y axes labeled with units?
+ [ ] Legend Clarity: Is the legend visible and accurate?
+ [ ] Scale & Intervals: Are the axis scales logical and easy to read?
+3. Visual Presentation & Layout
+ [ ] Consistency: Are the same colors used for the same categories across different charts?
+ [ ] Readability: Are the Department names (left axis of the bar chart) fully visible and not cut off?
+ [ ] Alignment: Are the three charts aligned neatly on the page with balanced white space?
+ [ ] No Overlaps: Ensure data labels or text boxes are not overlapping with chart lines or bars.
+4. Final Verification
+ [ ] File Naming: EIE1005_StudentID_Workshop_01_B.py（Is your file saved in the format requested by the instructor?）
+Workshop 01 (B) – Guiding Question
+
+覆盖页清单：第 1..7 页，缺页：无。
