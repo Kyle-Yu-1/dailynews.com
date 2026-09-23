@@ -1,6 +1,6 @@
-# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v5 完美版）
+# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v6 全量详解版）
 
-> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v5）在 v4 基础上把「主题美化库」改为逐条详解、把「整图背景」扩成五招个性化背景，并融合你提供的参考（见 §参考来源）。
+> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v6）应「所有章节逐条详解 + 尽可能拓展」：全篇改为「逐行 + 坑」格式，整图背景扩到**八招**，新增 Normalize 家族、colorbar 参数速查、pandas 预处理代码、交互库迷你代码，并附综合示例图。融合你提供的参考（见 §参考来源）。
 
 ## 📎 原始课件
 - 逐页原文（7 页，2026-09-23 重新逐页提取）：`行业日报/files/eie1005/eie1005-ws01b-insight-原文.txt`
@@ -30,7 +30,7 @@
 2. 选型四场景：趋势→折线/面积、分类对比→柱/条形、占比→饼/环形、分布关系→散点/热力。
 3. 颜色三件套：`colormap + Normalize + ScalarMappable` 是「按数值着色 + 颜色条」的通用套路；背景两层 `fig.patch` / `ax.set_facecolor`，导出要带 `facecolor`。
 
-**关键词**：Figure、Axes、GridSpec、图表选型、style、mplstyle、主题库、colormap、Normalize、ScalarMappable、colorbar、facecolor、edgecolor、hatch、bar_label、annotate、twinx、sharex、subplot_mosaic、savefig。
+**关键词**：Figure、Axes、GridSpec、图表选型、style、mplstyle、主题库、Normalize、polar、水印、圆角画布、colormap、Normalize、ScalarMappable、colorbar、facecolor、edgecolor、hatch、bar_label、annotate、twinx、sharex、subplot_mosaic、savefig。
 
 ## 前置 / 后接
 - 前置：Workshop 1「数据可视化 Python 代码逐行讲解」（06 Python Project Folder，22 个示例）。
@@ -86,6 +86,25 @@
 | Q2 什么故事 | 选哪些列 / 表 | `df['表名']['列名']` |
 | Q3 什么类型 | 画图 API | `plot / fill_between / bar、barh / pie` |
 | Q4 什么样式 | 装饰 | `set_title… / legend / grid / color / facecolor` |
+
+---
+
+### 1.4 检查清单逐条拆解（怎么满足 + 坑）
+
+| 条目 | 含义 | 代码实现 | 常见坑 |
+|---|---|---|---|
+| Source Consistency | 数值与 2023 PolyU SAO 数据一致 | 只用提供的 Excel，不手输、不换源 | 另找网图数据，数值对不上 |
+| Descriptive Titles | 每图顶部清晰**加粗**标题 | `ax.set_title(..., fontweight='bold')` | 忘 bold，标题太淡 |
+| Axis Labels | X / Y 轴都带单位 | `set_xlabel('Year')`、`set_ylabel('Salary (USD)')` | 只写名称不写单位 |
+| Legend Clarity | 图例可见且准确 | `ax.legend(loc='best')`，多线必须设 `label` | 多线无图例分不清 |
+| Scale & Intervals | 刻度合理易读 | `set_ylim` / `set_xticks` 控制跨度 | 不从 0 开始被质疑夸大（见译注） |
+| Consistency 同类同色 | 跨图同类目同一颜色 | 预定义 `color_map = {'Engineering': '#1f77b4', ...}` | 每张图随手换色 |
+| Readability 系名不裁 | 柱状图左轴系名完整 | `barh()` 或 `tight_layout()` | 竖柱长名被裁 |
+| Alignment 三图对齐 | 三图整齐、留白均匀 | `GridSpec` + `subplots_adjust(wspace, hspace)` | 手工摆放导致漂移 |
+| No Overlaps | 标签不压线 / 柱 | `bar_label(padding=)` + 放大 `ylim` | annotate 文字压线 |
+| File Naming | 命名规范 | `EIE1005_StudentID_Workshop_01_B.py` | 大小写 / 下划线写错 |
+
+> 📖 译注（Scale 两难）：柱状图的高度代表量，**应从 0 开始**才不误导；但差距小时从 0 又看不出区别。考试按「合理易读」处理——柱状图保留 0 基线，折线图可放大局部但需注明截断。
 
 ---
 
@@ -172,48 +191,114 @@
 
 ---
 
-## 三、通用骨架逐行讲解
+### 2.6 每种图再补一条「坑」（逐条）
+
+> 🧠 拓展（用户提供参考 + 官方文档，检索于 2026-09-24）：
+
+| 图 | 再提醒一条 | 坑 |
+|---|---|---|
+| 折线 | 时间点 >20 时缩小 marker、加粗线 | 点密成「蜘蛛网」 |
+| 面积 | 每层加 `alpha` 且顺序合理 | 上层盖下层 |
+| 柱状 | 5–12 条最佳、柱宽适中 | 条多挤成梳子 |
+| 条形 | 先排序再画 | 不排序难找最大 |
+| 饼图 | 5–9 类，小类合并成 Other | 3D 饼图误判面积 |
+| 环形 | 空心处放标题 | 与饼图混用无意义 |
+| 堆叠面积 | ≤5 层，最重要放底层 | 层多分不清 |
+| 堆叠柱 | 离散分类才用 | 连续时间误用 |
+| 玫瑰 | 差距小时放大差异 | 差距大时小值被压没 |
+| 双向条形 | 中心轴分正负 | 正负轴刻度不对称 |
+| 雷达 | ≤8 维 | 维度多图形乱 |
+| 散点 | 加均值线分四象限 | 点数多糊成团 |
+| 气泡 | 第三变量 = 气泡大小 | 缺尺寸图例 |
+| 热力 | 蓝→红单色渐变 | 彩虹色刺眼 |
+| 箱线 | 看中位数 / 四分位 / 离群点 | 与均值混淆 |
+
+---
+
+## 三、通用骨架逐行讲解（逐行 + 坑）
+
+> 本骨架是 22 个示例与 WS01(B) 共用的「一图一 ax」写法：先建画布 → 划格子 → 建坐标轴 → 读数据 → 画图 → 保存。每一行都给「作用 / 参数 / 坑」。
+
+### 3.1 三行 import（逐条）
 
 ```python
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-
-df = pd.read_excel('salary.xlsx', sheet_name=None)   # 一次读全部工作表 -> {表名: DataFrame}
-fig = plt.figure(figsize=(16, 9))                    # 整张画布，16:9（英寸）
-gs = gridspec.GridSpec(2, 2)                         # 2x2 网格规划表（只规划、不画）
-ax1 = fig.add_subplot(gs[0, 0]); ax2 = fig.add_subplot(gs[0, 1])
-ax3 = fig.add_subplot(gs[1, 0]); ax4 = fig.add_subplot(gs[1, 1])
-
-ax1.plot(x, y, marker='o', linewidth=2)              # Line：折线 + 数据点 + 线宽
-ax2.fill_between(x, y, alpha=0.3); ax2.plot(x, y, color='g')   # Area：填色 + 描线
-ax3.barh(y=names, width=values, color='#1f77b4')     # Bar：长系名用横向避免裁字
-ax4.pie(values, labels=names, autopct='%1.1f%%', startangle=90)  # Pie：百分比标签
+import pandas as pd                       # 数据分析：读 Excel/CSV；别名 pd 是社区约定
+import matplotlib.pyplot as plt           # 绘图入口：figure/plot/show/savefig；别名 plt
+import matplotlib.gridspec as gridspec    # 网格布局：把画布切成 rows x cols
 ```
 
-> 📖 译注 · 逐行：
-> - `import pandas as pd`：pandas 读表格（Excel/CSV）。
-> - `read_excel(..., sheet_name=None)`：`None` 表示读全部工作表，返回 `{表名: DataFrame}` 字典。
-> - `plt.figure(figsize=(16, 9))`：新建画布 Figure，宽 16、高 9 英寸。
-> - `gridspec.GridSpec(2, 2)`：把画布切成 2 行 2 列，返回网格规划表 `gs`。
-> - `fig.add_subplot(gs[r, c])`：把第 r 行第 c 列的格子变成坐标轴对象；ax1–ax4 同理。
-> - `plot(marker='o', linewidth=2)`：marker 描点、linewidth 线宽。
-> - `fill_between(..., alpha=0.3)`：把曲线与 x 轴之间填色，alpha 0=全透明、1=不透明。
-> - `barh(y=names, width=values)`：横向柱状图，y 是类目、width 是数值；`'#1f77b4'` 是十六进制颜色。
-> - `pie(autopct='%1.1f%%', startangle=90)`：百分比保留 1 位小数、从 90° 起画。
+> 📖 译注 · 逐条：
+> - `pandas`：读表（`read_excel`）、清洗（`dropna`）、聚合（`groupby`）全靠它。
+> - `pyplot`：命令式 API（`plt.plot / plt.show`）；下面用 `figure/add_subplot` 的**对象式 API** 管理多图。
+> - `gridspec`：只管「规划格子」，真正画图交给各 ax。
+> - 坑：`pd / plt / gridspec` 三个别名是社区约定，别乱起名；对象式与状态机式别混用。
 
-**Q4 样式清单 → 代码**
+### 3.2 读数据（逐条）
+
+```python
+df = pd.read_excel('salary.xlsx', sheet_name=None)              # None=读全部表 → {表名: DataFrame}
+# df1 = pd.read_excel('salary.xlsx', sheet_name='Table 01')     # 只读一张表 → DataFrame
+```
+
+> 📖 译注 · 逐条：
+> - `sheet_name=None` → 返回**字典**：`df['Table 01']` 取表、`df.keys()` 看表名。
+> - `sheet_name='Table 01'` → 返回**单个 DataFrame**，指定表时更直接。
+> - 常用参数：`header=0`（第 0 行作列名）、`index_col=0`（第 0 列作行索引）、`usecols='A:D'`（只读几列）。
+> - 坑：读 Excel 依赖 `openpyxl`（Anaconda 自带）；路径含中文/空格用原始字符串 `r'...'`；`sheet_name=None` 后忘 `['表名']` 会拿到整个字典报错。
+
+### 3.3 建画布 + 划格子 + 建坐标轴（逐条）
+
+```python
+fig = plt.figure(figsize=(16, 9))    # 画布 16x9 英寸；还可 dpi=100、facecolor=
+gs = gridspec.GridSpec(2, 2)         # 规划 2 行 2 列；wspace/hspace 可在此统一设
+ax1 = fig.add_subplot(gs[0, 0])      # 左上格
+ax2 = fig.add_subplot(gs[0, 1])      # 右上格
+ax3 = fig.add_subplot(gs[1, 0])      # 左下格
+ax4 = fig.add_subplot(gs[1, 1])      # 右下格
+```
+
+> 📖 译注 · 逐条：
+> - `figsize=(宽, 高)` 单位英寸；`dpi` 决定像素密度。
+> - `GridSpec(2,2)` 只规划不画；`gs[r,c]` 支持切片：`gs[0, :]` 第一行整条、`gs[:, 0]` 第一列整条。
+> - `fig.add_subplot(gs[r,c])` 把格子变成坐标轴对象；后续 `plot / bar / set_title` 都作用在 ax 上。
+> - 等价写法：`fig, axes = plt.subplots(2, 2)`，用 `axes[0,0]` 取值——更简洁。
+> - 坑：`gs[0,0]` 从 0 数起；同一格子重复 `add_subplot` 会重叠；混用 `plt.plot` 与 `ax.plot` 容易画错图，选一种坚持到底。
+
+### 3.4 四种图的 API（逐条 + 坑）
+
+```python
+ax1.plot(x, y, marker='o', linewidth=2)                    # Line
+ax2.fill_between(x, y, alpha=0.3); ax2.plot(x, y, color='g')  # Area
+ax3.barh(y=names, width=values, color='#1f77b4')           # Bar（横向）
+ax4.pie(values, labels=names, autopct='%1.1f%%', startangle=90)  # Pie
+```
+
+> 📖 译注 · 逐条：
+> - `plot`：`marker` 数据点形状、`linewidth` 线宽、`color` 线色、`label` 图例名。
+> - `fill_between`：填「曲线与 x 轴之间」；`alpha=0.3` 半透明。先填色再 `plot` 描边，边线才不被盖。
+> - `barh`：`y=` 类目、`width=` 数值、`height=` 柱粗（横向柱的「高」）；长系名用横柱。
+> - `pie`：`autopct='%1.1f%%'` 百分比 1 位小数、`startangle=90` 从 12 点起画、`wedgeprops` 可挖环形。
+> - 坑：竖向 `bar` 的长类目名在 x 轴必被裁，WS01(B) 检查清单点名用 `barh`；饼图类别 >9 会糊。
+
+### 3.5 Q4 样式清单（逐条 + 坑）
 
 ```python
 ax.set_title('USA Graduate Salary 2025', fontweight='bold', fontsize=13)
 ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
 ax.legend(loc='best', frameon=False)
 ax.grid(True, linestyle='--', alpha=0.5)
-fig.subplots_adjust(wspace=0.35, hspace=0.4)   # 子图横/纵向间距，防标签重叠
+fig.subplots_adjust(wspace=0.35, hspace=0.4)
 fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300, bbox_inches='tight')
 ```
 
-> 📖 译注：`subplots_adjust(wspace,hspace)` 的数值是「占子图平均宽/高的比例」；`bbox_inches='tight'` 裁掉多余白边、防标签被切；`dpi=300` 高清。
+> 📖 译注 · 逐条：
+> - `set_title`：`fontweight='bold'` 满足「Descriptive Titles」；`pad=` 调标题与图间距。
+> - `set_xlabel / set_ylabel`：文字里直接写单位。
+> - `legend(loc='best')`：自动找遮挡最少的位置；`frameon=False` 去图例框。
+> - `grid(True, linestyle='--', alpha=0.5)`：`axis='x'/'y'` 可只画一个方向。
+> - `subplots_adjust(wspace, hspace)`：数值是「占子图平均宽/高比例」——0.35 = 左右间距为子图宽的 35%。
+> - `savefig(dpi=300, bbox_inches='tight')`：300 dpi 高清；tight 裁白边防标签被切。
+> - 坑：`bbox_inches='tight'` 会轻微缩放内容；文件名写错不报错、默默存到别处。
 
 ---
 
@@ -263,7 +348,7 @@ gradient_image(ax, direction=1, extent=(0, 1, 0, 1),
 > 🌐 来源：Matplotlib 官方 Gallery「Bar chart with gradients」https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html（检索于 2026-09-23）
 > 📖 译注 · 逐条：`direction` 控制渐变方向；`cmap_range=(0.2, 0.8)` 只取色带中间一段、避开两端太艳；`alpha=0.5` 半透明别盖住图线。
 
-#### 4.1.1 个性化背景进阶（五招，逐条）
+#### 4.1.1 个性化背景进阶（八招，逐条）
 
 **① 双色分区背景**（画布与绘图区两个颜色，层次分明）
 
@@ -323,6 +408,61 @@ ax.text(0.99, 0.01, 'EIE1005 · StudentID', transform=ax.transAxes,
 
 > 📖 译注 · 逐条：`transform=ax.transAxes` 让坐标 (0.99, 0.01) 按绘图区比例定位 → 右下角；`ha/va` 右对齐+底对齐，字号加大也不越界。
 
+**⑥ 对角条纹纹理背景**
+
+```python
+def stripes(ax, color1='#ffffff', color2='#e2e8f0', width=0.02):
+    yy, xx = np.mgrid[0:256, 0:256]                       # 256x256 网格坐标
+    X = ((xx + yy) // (256 * width) % 2).astype(float)    # (x+y) 对角方向分 0/1
+    cmap = LinearSegmentedColormap.from_list('st', [color1, color2])
+    ax.imshow(X, extent=(0, 1, 0, 1), transform=ax.transAxes,
+              cmap=cmap, aspect='auto', zorder=0, alpha=0.6)
+
+stripes(ax, width=0.03)
+```
+
+> 📖 译注 · 逐条：`xx + yy` 的值沿「↘ 对角方向」相同，`// (256*width)` 再 `%2` 就把画面切成等宽斜条（0/1 两色）；`width` 越小条纹越密；`alpha` 调淡后垫底。
+
+**⑦ 极坐标背景（玫瑰图底）**
+
+```python
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(111, projection='polar')   # 极坐标系（角度 + 半径）
+ax.set_facecolor('#0b1026')                     # 深色底
+ax.set_theta_zero_location('N')                 # 0° 指向正北（默认是东）
+ax.set_thetagrids(range(0, 360, 45))            # 每 45° 一条辐射网格
+ax.set_rgrids([20, 40, 60], angle=30)           # 半径网格 + 标签角度
+
+angles = np.linspace(0, 2 * np.pi, 12, endpoint=False)   # 12 个角，弧度制
+ax.bar(angles, radii, width=0.3, color='#22d3ee',
+       edgecolor='white', alpha=0.8)                     # 每个角度一根「花瓣」
+```
+
+> 📖 译注 · 逐条：`projection='polar'` 建极坐标轴；`set_theta_zero_location('N')` 让 0° 朝正北；`thetagrids/rgrids` 分别控制角度与半径网格；`bar(angles, radii)` 的 width 是扇形角宽。坑：角度用**弧度**；width 别超过 `2π/n`，否则花瓣重叠。
+
+**⑧ 圆角画布**
+
+```python
+from matplotlib.patches import FancyBboxPatch
+
+fig.patch.set_facecolor('none')                       # 画布透明，露出圆角外的区域
+fig.patches.append(FancyBboxPatch(
+    (0, 0), 1, 1, transform=fig.transFigure,          # 画布坐标 0~1
+    boxstyle='round,pad=0.01,rounding_size=0.03',     # 四角圆滑程度
+    facecolor='#f8fafc', edgecolor='#cbd5e1',
+    linewidth=1.5, zorder=0))                         # 垫在最底层
+ax.set_zorder(1)                                      # 绘图区盖在圆角底片上
+fig.savefig('rounded.png', facecolor='none', transparent=True)
+```
+
+> 📖 译注 · 逐条：`transform=fig.transFigure` 用画布坐标（0~1）画满整幅；`rounding_size` 越大角越圆；`zorder=0` 垫底、`ax.set_zorder(1)` 让图盖上来；`transparent=True` 导出保留透明。坑：PNG 支持透明、JPG 不支持；透明背景在深色网页里可能看不清字。
+
+**综合示例（示意预览）**
+
+![个性化背景综合示例（AI 示意图，非真实数据）](files/eie1005/img/demo-background.png)
+
+> 📖 译注：上图为「三色渐变背景 + 水印 + 数值渐变着色 + 颜色条 + 圆角外框」的合成示意，代码见本小节 ②③④⑧。
+
 ### 4.2 柱状图特殊效果（七种）
 
 ```python
@@ -380,6 +520,35 @@ bars = ax.bar(x, values, color=colors)
 - 单色由浅到深：`cmap = plt.get_cmap('Blues')`，数值越大越深。
 - 正负发散色带：`norm = mcolors.TwoSlopeNorm(vmin=-10, vcenter=0, vmax=10)` + `cmap='RdYlGn'`，负红、0 黄、正绿。
 
+### 4.3.1 归一化家族与色带选择（逐条）
+
+**Normalize 家族**（数值 → 0..1 的不同压缩方式）：
+
+```python
+from matplotlib import colors as mcolors
+
+norm = mcolors.Normalize(vmin=0, vmax=100)            # ① 线性：最常用
+norm = mcolors.LogNorm(vmin=1, vmax=1e5)              # ② 对数：跨数量级（1→10万）用
+norm = mcolors.TwoSlopeNorm(vmin=-10, vcenter=0, vmax=10)  # ③ 正负发散：0 钉中点
+norm = mcolors.BoundaryNorm([0, 40, 60, 80, 100], ncolors=4)  # ④ 离散分段：分档着色
+```
+
+> 📖 译注 · 逐条：
+> - `Normalize`：线性映射，差距均匀体现。
+> - `LogNorm`：数值跨好几个数量级（如 1、100、10000）时，小值才不会被压成同一个颜色；`vmin` 必须 >0。
+> - `TwoSlopeNorm(vcenter=0)`：0 落在色带中点（黄），正负两侧对称，适合增长率。
+> - `BoundaryNorm(boundaries, ncolors)`：把连续值切成几档，配合 `ListedColormap` 做「红黄绿」分档。
+
+**色带三类怎么选**：
+
+| 类型 | 例子 | 何时用 |
+|---|---|---|
+| sequential 顺序型 | `viridis`、`Blues` | 数值只有大小方向（0→大） |
+| diverging 发散型 | `RdYlGn`、`coolwarm` | 有正有负、以某点为界 |
+| qualitative 定性型 | `tab10`、`Set2` | 类目之间无大小关系 |
+
+> 📖 译注：定类数据（工程/商科/理科）用 qualitative 色带；有量级的数值用 sequential；有正负用 diverging——**类别别用渐变，数值别用定性色**。
+
 ### 4.4 添加渐变色示意图（颜色条 colorbar）
 
 > 🧠 拓展（外部资料，检索于 2026-09-23）：柱状图本身没有图像 mappable，用 `ScalarMappable` 造一座「同 cmap + 同 norm」的桥，再喂给 `fig.colorbar`。
@@ -395,6 +564,33 @@ fig.colorbar(sm, ax=ax, orientation='horizontal',        # 顶部横条
 ```
 
 > 📖 译注：`shrink` 缩短长度、`aspect` 控制粗细、`location` 放上/下/左/右。颜色条 = 「渐变色示意图 + 数值标尺」。旧版 Matplotlib（<3.6）若报错可改用 `sm.set_array([])`。
+
+**colorbar 参数逐条速查**：
+
+| 参数 | 作用 | 示例 |
+|---|---|---|
+| `label` | 颜色条标题（单位） | `label='Salary (USD)'` |
+| `orientation` | 竖条 / 横条 | `'vertical'` / `'horizontal'` |
+| `location` | 放哪一侧 | `'right' / 'left' / 'top' / 'bottom'` |
+| `shrink` | 长度缩放 | `0.7` = 原长的 70% |
+| `aspect` | 粗细（越大越细） | `25` |
+| `pad` | 与图的间距 | `0.05` |
+| `extend` | 两端加「越界三角」 | `'both' / 'max' / 'neither'` |
+| `ticks` | 自定义刻度位置 | `ticks=[0, 0.5, 1]` |
+
+**离散颜色条（分档 + 自定义刻度）**：
+
+```python
+cmap = mcolors.ListedColormap(['#e74c3c', '#f1c40f', '#2ecc71'])   # 红/黄/绿 三档
+norm = mcolors.BoundaryNorm([0, 40, 70, 100], ncolors=3)
+sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+sm.set_array(values)
+cb = fig.colorbar(sm, ax=ax)
+cb.set_ticks([20, 55, 85])               # 刻度放每档中点
+cb.set_ticklabels(['Low', 'Mid', 'High'])
+```
+
+> 📖 译注 · 逐条：`ListedColormap` 只给有限几种颜色；`BoundaryNorm` 把数值按边界分档；`set_ticks/set_ticklabels` 自定义刻度与文字。坑：`ncolors` 与 `len(cmap.colors)` 要一致；`sm.set_array(values)` 别忘，否则 colorbar 报错。
 
 **替代方案 · 离散图例**（颜色档位少时更清晰）
 
@@ -655,25 +851,47 @@ with plt.rc_context({'grid.alpha': 0.3}):       # ③ 临时块内覆盖（局�
 | 作业 / 考试提交 | 内置风格 + 自定义 `.mplstyle` + `rcParams` |
 | 个人演示、追求好看 | qbstyles / matplotx / mplcyberpunk |
 | 同一脚本多主题 | `with plt.style.context(...)` |
-| 需要个性化背景 | 见 §4.1.1 五招（渐变 / 图片 / 水印 / 角标） |
+| 需要个性化背景 | 见 §4.1.1 八招（渐变 / 图片 / 水印 / 角标 / 条纹 / 极坐标 / 圆角） |
 
 ---
 
-## 六、数据预处理与优化闭环
+## 六、数据预处理与优化闭环（逐条 + pandas 代码）
 
+> 🧠 拓展（用户提供参考，检索于 2026-09-23）：不要拿原始数据直接作图，先预处理——「垃圾进，垃圾出」。
 
-> 🧠 拓展（用户提供参考，检索于 2026-09-23）：不要拿原始数据直接作图，先预处理。
+### 6.1 四步预处理（逐条 + 代码）
 
-| 步骤 | 操作 | 工具 |
-|---|---|---|
-| 清洗 | 去异常值 / 重复值、补缺失值 | pandas |
-| 结构调整 | 统一字段名、格式、时间维度 | pandas |
-| 聚合 | 按月 / 季度 / 部门汇总 | `groupby()` |
-| 分组 | 区分维度（横轴）与度量（纵轴） | DataFrame 取列 |
+```python
+import pandas as pd
 
-**优化闭环六步**：① 二次检查数据与公式 → ② 视觉增量（色彩/布局/标签）→ ③ 信息补充（趋势线、均值线、同比/环比）→ ④ 交互（筛选、联动，可选）→ ⑤ 收反馈迭代 → ⑥ 定稿导出。
+df = pd.read_excel('salary.xlsx', sheet_name='Table 01')
 
-> 🌐 来源：用户提供的参考 5，检索于 2026-09-23（商业博客，概念参考，代码以官方文档为准）。
+df = df.dropna()                            # ① 清洗：删缺失值所在行
+df = df.drop_duplicates()                   # ② 去重：删完全相同的行
+df = df[df['salary'] > 0]                   # ③ 去异常：只留正工资
+df['year'] = pd.to_datetime(df['year'])     # ④ 结构：统一时间字段格式
+
+monthly = (df.groupby('major')['salary']      # ⑤ 聚合：按专业求平均
+             .mean()
+             .sort_values(ascending=False))   # ⑥ 排序：降序，好画条形图
+```
+
+> 📖 译注 · 逐条：
+> - `dropna()`：默认删「任一列有缺失」的行；`subset=['salary']` 可只按某列删。
+> - `drop_duplicates()`：默认保留第一次出现；`subset='id'` 按主键去重。
+> - `df[df['salary'] > 0]`：布尔筛选，等价 `query('salary > 0')`。
+> - `to_datetime()`：字符串统一成日期类型；格式不合会报错，`format='%Y'` 可指定。
+> - `groupby('major')['salary'].mean()`：按维度分组、对度量求均值；`agg(['mean','max'])` 可一次多指标。
+> - 坑：`dropna` 会删整行、数据少时慎用；`groupby` 后忘记 `.mean()` 只得到一个分组对象。
+
+### 6.2 优化闭环六步（逐条）
+
+1. **数据检查**：二次核对源数据与公式，防「乌龙结论」。
+2. **视觉增量**：调整色彩 / 布局 / 标签，突出核心信息（见 §2.4）。
+3. **信息补充**：加趋势线、均值线、同比 / 环比指标（见 §2.5）。
+4. **交互（可选）**：筛选、联动、下钻（见 §八）。
+5. **反馈迭代**：找同学 / 助教试用，按意见改。
+6. **定稿导出**：`dpi=300 + bbox_inches='tight' + facecolor`（见 §3.5）。
 
 ---
 
@@ -734,15 +952,61 @@ fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300,
 
 ---
 
-## 八、交互式图表拓展（自主补充）
+**逐行 walkthrough（①②③…对应脚本里的注释）**：
+
+> 📖 译注 · 逐条：
+> - ①② `fig.patch` + `ax.set_facecolor`：两层背景，导出时还要 `facecolor=fig.get_facecolor()`。
+> - ③④ `argsort` 排序 + `cmap/norm/colors`：数值越大颜色越亮（见 §4.3）。
+> - ⑤ `edgecolor='white'`：柱间白色描边，深色背景也不糊。
+> - ⑥⑦ `ax.text` 柱顶标签 + 最大柱标红：直接满足「No Overlaps」与「讲结论」。
+> - ⑧ `axhline(mean)`：均值参考线；`annotate` 用箭头把「Mean」文字指过去。
+> - ⑨ `ScalarMappable + colorbar`：颜色条图例（见 §4.4）。
+> - ⑩ `set_ylim(0, max*1.25)`：顶部留 25% 空间放标签；从 0 开始避免误导。
+> - ⑪ `savefig(dpi=300, bbox_inches='tight', facecolor=...)`：高清、裁边、不丢背景。
+
+---
+
+## 八、交互式图表拓展（逐条 + 迷你代码）
 
 > 🧠 拓展（自主补充，检索于 2026-09-23）：作业要求 `.py` + 静态 PNG 即可；交互只是加分项。
+
+**Matplotlib**（静态、出版级、完全可控）
+
+```python
+import matplotlib.pyplot as plt
+plt.plot(x, y)          # 画完是死图；plt.show() 弹窗可缩放但不可导出交互
+```
+
+**Plotly**（悬停 / 缩放 / 下钻 / 旭日 / 瀑布原生）
+
+```python
+import plotly.express as px
+
+fig = px.bar(x=depts, y=salary, color=salary,   # ① color=数值 → 自动渐变+颜色条
+             title='USA College Graduate Salary 2025')
+fig.show()        # ② 打开交互页面：悬停看值、框选缩放、右上角导出
+```
+
+> 📖 译注 · 逐条：`px.bar` 一行完成「数值渐变着色 + 颜色条」，比 Matplotlib 的 Normalize 三件套省事；`fig.show()` 在浏览器打开。坑：需要 `pip install plotly`；导出静态图用 `fig.write_image(...)` 还需装 kaleido。
+
+**pyecharts**（ECharts 的 Python 封装，中文生态）
+
+```python
+from pyecharts.charts import Bar
+
+bar = (Bar()
+       .add_xaxis(depts)                # ① 横轴类目
+       .add_yaxis('Salary', salary))    # ② 数值系列
+bar.render('salary.html')               # ③ 生成可交互网页，浏览器打开
+```
+
+> 📖 译注 · 逐条：`add_xaxis / add_yaxis` 是链式写法；`render` 输出 HTML。坑：需要 `pip install pyecharts`；交作业仍是 `.py`+PNG，HTML 只作演示。
 
 | 库 | 特点 | 何时用 |
 |---|---|---|
 | Matplotlib | 静态、出版级、完全可控 | 本次作业、论文图 |
 | Plotly | 悬停 / 缩放 / 下钻 / 旭日 / 瀑布原生 | 演示、看板 |
-| pyecharts | ECharts 的 Python 封装，中文生态，30+ 图表 | 中文报告、网页嵌入 |
+| pyecharts | ECharts 封装，中文生态，30+ 图表 | 中文报告、网页嵌入 |
 
 > 🌐 来源：https://plotly.com/python/ ；https://pyecharts.org/（检索于 2026-09-23）
 
@@ -801,6 +1065,15 @@ fig.text 用画布坐标 0~1，(0.5,0.5)=整幅图正中心，与子图数据坐
 <details><summary>Q14 圆角柱怎么实现？</summary>
 原生 bar 不支持圆角，用 `FancyBboxPatch(..., boxstyle='round,pad=0,rounding_size=0.08')` 手画，并同步设置 xlim/ylim。</details>
 
+<details><summary>Q15 Normalize / LogNorm / TwoSlopeNorm / BoundaryNorm 各自什么时候用？</summary>
+线性值→Normalize；跨数量级（1→10万）→LogNorm；有正负且以 0 为界→TwoSlopeNorm(vcenter=0)；把值切几档→BoundaryNorm+ListedColormap。</details>
+
+<details><summary>Q16 极坐标背景的三个关键设置？</summary>
+`projection='polar'` 建轴、`set_theta_zero_location('N')` 让 0° 朝北、`set_thetagrids/set_rgrids` 设角度与半径网格；`bar(angles, radii, width=)` 画扇形，角度用弧度。</details>
+
+<details><summary>Q17 圆角画布的关键步骤？</summary>
+`fig.patch.set_facecolor('none')` 透明底 + `FancyBboxPatch(boxstyle='round,...,rounding_size=...', transform=fig.transFigure, zorder=0)` 圆角底片 + `ax.set_zorder(1)`，导出 `transparent=True`。</details>
+
 ## 参考来源（本次新增）
 > 🌐 你提供的 5 篇参考，2026-09-23 读取状态：
 > - ✅ [15 个可视化图表（cnblogs）](https://www.cnblogs.com/fanruan/p/19955941)：已读取，用于 §二选型速查与误区。
@@ -812,6 +1085,7 @@ fig.text 用画布坐标 0~1，(0.5,0.5)=整幅图正中心，与子图数据坐
 > 🌐 官方来源：Matplotlib Gallery https://matplotlib.org/stable/gallery/index.html ；渐变柱 https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html ；颜色条放置 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html ；Plotly https://plotly.com/python/ ；pyecharts https://pyecharts.org/ 。
 
 ## 更新记录
+- 2026-09-24 v6：应「全部逐条详解 + 尽可能拓展」——§1 新增检查清单逐条拆解、§2 新增每图一条坑、§3 全段重写为逐行+坑、§4.1.1 背景扩到八招（新增对角条纹/极坐标/圆角画布）+示例图、§4.3 新增 Normalize 家族与色带选择、§4.4 新增 colorbar 参数速查与离散色条、§6 重写为 pandas 代码逐条、§7 新增逐行 walkthrough、§8 重写为三库迷你代码；自测增至 17 题。
 - 2026-09-23 v5：§五主题美化改为逐条详解（每库按「是什么→逐行→坑」）；§4.1 新增五招个性化背景（双色/三色渐变/图片/水印/角标）；自测增至 14 题。
 - 2026-09-23 v4：新增 §五 全局美化（内置风格 / qbstyles / matplotx / mplcyberpunk / 自定义 mplstyle），自测增至 12 题；来源并入用户粘贴文章。
 - 2026-09-23 v3（完美版）：新增图表选型决策（§二）、设计美学与结论标注、数据预处理闭环（§五）、完整示例脚本（§六）、交互式图表（§七）、自测扩至 10 题；融合 5 篇用户参考（2 篇成功、3 篇无法访问并标注）。

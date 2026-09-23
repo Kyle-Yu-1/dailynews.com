@@ -226,3 +226,16 @@
 - default style — 默认风格（恢复用）
 - brand / logo corner — 品牌角标
 
+### 进阶 · 背景与归一化（Workshop 01 B v6 新增，2026-09-24）
+- polar coordinates — 极坐标
+- thetagrid / rgrid — 角度网格 / 半径网格
+- LogNorm — 对数归一化
+- BoundaryNorm — 边界（分档）归一化
+- ListedColormap — 离散色带
+- sequential colormap — 顺序型色带
+- diverging colormap — 发散型色带
+- qualitative colormap — 定性（分类）色带
+- stripes texture — 条纹纹理
+- rounded canvas — 圆角画布
+- transparent — 透明背景
+

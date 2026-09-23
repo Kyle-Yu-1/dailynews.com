@@ -289,7 +289,7 @@
   {
     "id": "eie1005-ws01b-insight",
     "title": "Workshop 1 (B) · To Insight 可视化进阶代码",
-    "desc": "v5完美版：图表选型+骨架逐行+个性化背景五招+柱状图特效+渐变着色+颜色条+主题美化逐条详解+完整示例",
+    "desc": "v6全量详解版：全部章节逐行+坑，背景八招，Normalize家族，colorbar速查，pandas预处理，三库交互，17题自测",
     "file": "eie1005-ws01b-insight.md",
     "course": "EIE1005 · 人工智能与数据分析"
   }
