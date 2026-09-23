@@ -1,6 +1,6 @@
-# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v4 完美版）
+# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v5 完美版）
 
-> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v4）在 v2/v3 基础上从头到尾重排：图表选型决策、设计美学原则、主题美化库（内置风格 / qbstyles / matplotx / mplcyberpunk / 自定义 mplstyle）、数据预处理闭环、完整示例脚本、交互式图表拓展，并融合你提供的参考（见 §参考来源）。
+> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v5）在 v4 基础上把「主题美化库」改为逐条详解、把「整图背景」扩成五招个性化背景，并融合你提供的参考（见 §参考来源）。
 
 ## 📎 原始课件
 - 逐页原文（7 页，2026-09-23 重新逐页提取）：`行业日报/files/eie1005/eie1005-ws01b-insight-原文.txt`
@@ -219,21 +219,25 @@ fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300, bbox_inches='tight')
 
 ## 四、五大进阶主题（重点新增）
 
-### 4.1 给整张图加背景
+### 4.1 给整张图加背景（逐条讲解）
 
-> 🧠 拓展（外部资料，检索于 2026-09-23）：Matplotlib 背景分两层——**figure**（整张画布）和 **axes**（每张子图的绘图区）。
+> 🧠 拓展（外部资料，检索于 2026-09-23）：Matplotlib 背景分**三层**，互不隶属：① `fig.patch` 画布底（含子图之间与四周留白）② `ax.patch` 绘图区底（坐标轴围起来的区域）③ `savefig` 导出底（默认白色，会盖掉前两层）。
 
 ```python
 fig = plt.figure(figsize=(16, 9))
-fig.patch.set_facecolor('#f2f2f7')      # ① 整张画布底色
+fig.patch.set_facecolor('#f2f2f7')          # ① 画布底色：子图之间 + 四周留白都变灰
 ax = fig.add_subplot(111)
-ax.set_facecolor('#fffdf5')             # ② 单个坐标区底色（只盖绘图区）
+ax.set_facecolor('#fffdf5')                 # ② 绘图区底色：只有坐标轴围住的区域变米白
 
 # ③ 导出坑：savefig 默认把背景盖成白色，必须显式带上 facecolor：
 fig.savefig('out.png', dpi=300, facecolor=fig.get_facecolor())
 ```
 
-> 📖 译注：只想「全图统一底色」时，`fig.patch.set_facecolor` 与 `savefig(facecolor=…)` 必须成对；也可全局写 `plt.rcParams['savefig.facecolor'] = '#f2f2f7'`。
+> 📖 译注 · 逐条：
+> - `fig.patch`：Figure 自带的矩形「底片」，`set_facecolor` 改整张画布底色。
+> - `ax.set_facecolor`：改单个坐标区底色；**每个子图可不同色**，实现「分块配色」。
+> - `facecolor=fig.get_facecolor()`：让导出文件沿用画布底色；不写则 savefig 默认白底，前两步白做。
+> - 全局写法：`plt.rcParams['savefig.facecolor'] = '#f2f2f7'`，一次设置、以后每次导出都生效。
 
 **进阶 · 整图渐变背景**（官方 Gallery 同款思路）
 
@@ -257,7 +261,67 @@ gradient_image(ax, direction=1, extent=(0, 1, 0, 1),
 ```
 
 > 🌐 来源：Matplotlib 官方 Gallery「Bar chart with gradients」https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html（检索于 2026-09-23）
-> 📖 译注：`cmap_range=(0.2, 0.8)` 只取色带中间一段；`alpha=0.5` 半透明，别盖住图线。
+> 📖 译注 · 逐条：`direction` 控制渐变方向；`cmap_range=(0.2, 0.8)` 只取色带中间一段、避开两端太艳；`alpha=0.5` 半透明别盖住图线。
+
+#### 4.1.1 个性化背景进阶（五招，逐条）
+
+**① 双色分区背景**（画布与绘图区两个颜色，层次分明）
+
+```python
+fig.patch.set_facecolor('#0f172a')   # 外层深蓝灰（画布）
+ax.set_facecolor('#1e293b')          # 内层稍浅（绘图区），形成「嵌板」观感
+# 线/文字换亮色：ax.plot(..., color='#38bdf8'); 轴标签 ax.tick_params(colors='white')
+```
+
+**② 三色渐变背景**（任意「停靠点」自定义渐变）
+
+```python
+from matplotlib.colors import LinearSegmentedColormap
+
+def gradient_3stop(ax, stops=((0, '#e8f0fe'), (0.5, '#ffffff'), (1, '#fdeaea'))):
+    # stops：[(位置 0~1, 颜色), ...]；位置在中间=颜色分界处
+    cmap = LinearSegmentedColormap.from_list('bg', [c for _, c in stops])
+    X = np.tile(np.linspace(0, 1, 256), (256, 1))   # 每行相同 → 横向渐变（竖向转置即可）
+    ax.imshow(X, extent=(0, 1, 0, 1), transform=ax.transAxes,
+              cmap=cmap, aspect='auto', zorder=0, alpha=0.9)
+
+gradient_3stop(ax)   # 左蓝 → 中白 → 右粉
+```
+
+> 📖 译注 · 逐条：`LinearSegmentedColormap.from_list` 用「位置+颜色」造一条自定义色带；`np.tile` 造 256×256 的渐变矩阵；`zorder=0` 垫在最底层。想要竖向渐变，把矩阵转置（`X.T`）即可。
+
+**③ 图片背景**（贴一张照片/纹理图，做淡淡底纹）
+
+```python
+import matplotlib.image as mpimg
+
+bg = mpimg.imread('bg.png')          # 读入任意 PNG/JPG（得到 高×宽×3 的数组）
+ax.imshow(bg, extent=(0, 1, 0, 1), transform=ax.transAxes,
+          aspect='auto', zorder=0, alpha=0.12)   # 铺满绘图区、垫底、12% 透明度
+ax.patch.set_alpha(0)                # 关键：关闭绘图区自身底色，否则挡住图片
+
+ax.plot(x, y, zorder=3)              # 图线 zorder=3，保证盖在背景之上
+```
+
+> 📖 译注 · 逐条：`extent=(0,1,0,1)+transform=ax.transAxes` 让图片按「绘图区比例」铺满、与数据坐标无关；`zorder` 数值越大越靠上（背景 0 < 图线 3）；`ax.patch.set_alpha(0)` 把 axes 底色变透明，图片才露得出来。`aspect='auto'` 允许图片被拉伸铺满。
+
+**④ 水印 / 署名**（画布正中的淡色斜字）
+
+```python
+fig.text(0.5, 0.5, 'POLYU', fontsize=90, color='gray',
+         alpha=0.06, rotation=30, ha='center', va='center', zorder=0)
+```
+
+> 📖 译注 · 逐条：`fig.text` 用的是**画布坐标（0~1）**，(0.5,0.5)=正中心，与子图数据无关；`alpha=0.06` 几乎透明、`rotation=30` 斜放；导出时随图一起保存。
+
+**⑤ 角标 / 署名条**（右下角小字）
+
+```python
+ax.text(0.99, 0.01, 'EIE1005 · StudentID', transform=ax.transAxes,
+        ha='right', va='bottom', fontsize=9, color='#888888')
+```
+
+> 📖 译注 · 逐条：`transform=ax.transAxes` 让坐标 (0.99, 0.01) 按绘图区比例定位 → 右下角；`ha/va` 右对齐+底对齐，字号加大也不越界。
 
 ### 4.2 柱状图特殊效果（七种）
 
@@ -406,63 +470,91 @@ fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 
 ---
 
-## 五、全局美化：预设风格与主题库（用户提供文章 · 2026-09-23）
+## 五、全局美化：预设风格与主题库（用户提供文章 · 逐条详解）
 
-> 🧠 拓展（用户提供文章内容，检索于 2026-09-23）：图形的美观程度直接决定信息传递效率。美化分四层：内置风格 → 主题库（qbstyles / matplotx）→ 赛博朋克发光（mplcyberpunk）→ 自定义 .mplstyle。
+> 🧠 拓展（用户提供文章内容，检索于 2026-09-23）：图形美观度直接决定信息传递效率。美化分四层：**内置风格 → 主题库（qbstyles / matplotx）→ 发光特效（mplcyberpunk）→ 自定义 .mplstyle**。每节按「是什么 → 逐行讲解 → 坑」展开。
 
-### 5.1 Matplotlib 内置预设风格
+### 5.1 Matplotlib 内置预设风格（逐条）
+
+**是什么**：`plt.style.available` 里列出的整套预设，一键换掉底色、网格、字体、配色，绘图代码一行都不用改。
 
 ```python
 import matplotlib.pyplot as plt
 
-print(plt.style.available)      # 查看全部可用风格
-plt.style.use('ggplot')         # R ggplot2 风格
-# plt.style.use('fivethirtyeight')     # FiveThirtyEight 网站风
-# plt.style.use('seaborn-v0_8')        # 现代感（新版旧名 'seaborn' 已改）
+print(plt.style.available)           # ① 打印全部可用风格名（版本不同略有差异）
+plt.style.use('ggplot')              # ② 全局加载：灰底+白网格，R 语言 ggplot2 风
+# plt.style.use('fivethirtyeight')   # ③ 数据新闻风：粗线、大标题、无竖网格
+# plt.style.use('seaborn-v0_8')      # ④ 现代浅色风（新版旧名 'seaborn' 已改名）
+# plt.style.use('dark_background')   # ⑤ 黑底亮线：深色演示最出片
+# plt.style.use('grayscale')         # ⑥ 灰阶：黑白打印友好
 
 x = range(10)
 y = [i ** 2 for i in x]
-plt.plot(x, y)
+plt.plot(x, y)                       # 绘图代码完全不用改，外观自动换
 plt.title('Sample Plot with Preset Style')
-plt.xlabel('X Axis'); plt.ylabel('Y Axis')
 plt.show()
 ```
 
-> 📖 译注：`plt.style.use()` **全局**生效；`with plt.style.context('…')` 只在代码块内**临时**生效。新版本 Matplotlib 中 `'seaborn'` 系列已改名为 `'seaborn-v0_8-*'`，旧名会报警告。
+**常用风格速查**：
 
-### 5.2 qbstyles（QuantumBlack 专业风）
+| 风格 | 观感 | 适合场景 |
+|---|---|---|
+| `ggplot` | 灰底、白网格 | 通用报告 |
+| `fivethirtyeight` | 粗线、大标题 | 数据新闻、洞察展示 |
+| `seaborn-v0_8` | 现代浅色 | 日常分析 |
+| `dark_background` | 黑底亮线 | 演示 / 答辩 |
+| `grayscale` | 灰阶 | 黑白打印 |
+| `bmh` | 暖灰贝叶斯风 | 金融序列 |
+| `tableau-colorblind10` | 色盲友好配色 | 论文、多人阅读 |
+
+> 📖 译注 · 逐条：
+> - `style.use('x')` 是**全局一次性**：改完所有后续图都是它；想恢复默认用 `plt.style.use('default')`。
+> - `with plt.style.context('x'):` 是**局部临时**：只在 with 块内生效，出块自动还原——多图混用主题时推荐它。
+
+### 5.2 qbstyles（QuantumBlack 专业风，逐条）
+
+**是什么**：QuantumBlack（麦肯锡旗下 AI 咨询）发布的样式库，深色模式自带「咨询公司报告」质感。
 
 ```python
-# pip install qbstyles
-from qbstyles import mpl_style
+# pip install qbstyles                       # ① 安装（只需一次）
+from qbstyles import mpl_style              # ② 导入样式入口函数
 
-mpl_style(dark=True)            # 深色主题；浅色用 dark=False
-plt.plot(x, y, marker='o')
+mpl_style(dark=True)                        # ③ 加载主题：True=深色专业风；False=浅色
+plt.plot(x, y, marker='o')                  # ④ 之后正常画图，自动套用
 plt.title('Sample Plot with qbstyles')
 plt.show()
 ```
 
-> 📖 译注：原文「dark =Fasle」是笔误，应为 `dark=False`。
+> 📖 译注 · 逐条：
+> - `dark=True`：深色主题；`dark=False`：浅色主题（原文「dark =Fasle」是笔误，应为 `dark=False`）。
+> - 它同时重设了 rcParams（背景/字体/配色/网格），和 `style.use` 属于同一类「整套换肤」。
+> - ⚠️ 坑：第三方库，交作业的 `.py` 在老师机器上未必安装 → 提交版别用，演示可加分。
 
-### 5.3 matplotx（Dracula / Pitaya Smoothie 等主题）
+### 5.3 matplotx（Dracula / Pitaya Smoothie 等主题，逐条）
+
+**是什么**：一个「主题集合」库，内置 Dracula（紫黑程序员风）、Pitaya Smoothie 等多个主题；用 context 临时套用，不污染全局。
 
 ```python
 # pip install matplotx
 import matplotlib.pyplot as plt
 import matplotx
 
-with plt.style.context(matplotx.styles.dracula):   # 只在 with 块内生效
+with plt.style.context(matplotx.styles.dracula):   # ① 只在 with 块内启用 Dracula
     x = range(10)
     y = [i ** 2 for i in x]
-    plt.plot(x, y)
+    plt.plot(x, y)                                 # ② 块内所有图共用该主题
     plt.title('Sample Plot with matplotx Dracula Theme')
-    plt.xlabel('X Axis'); plt.ylabel('Y Axis')
-    plt.show()
+    plt.show()                                     # ③ 出块后自动还原默认样式
 ```
 
-> 📖 译注：`style.context` 适合「同一个脚本里不同图用不同主题」。
+> 📖 译注 · 逐条：
+> - `matplotx.styles.<主题名>` 是库注册好的 rcParams 字典；`style.context(字典)` 临时应用。
+> - 想看全部主题名：`print([s for s in dir(matplotx.styles) if not s.startswith('_')])`。
+> - 适合「同一脚本里不同图用不同主题」；用 `context` 而非 `use`，避免全局被改乱。
 
-### 5.4 mplcyberpunk（赛博朋克发光）
+### 5.4 mplcyberpunk（赛博朋克发光，逐条）
+
+**是什么**：未来感「黑底霓虹 + 线条发光」风格库；适合酷炫演示、博客头图，不适合正式报告。
 
 ```python
 # pip install mplcyberpunk
@@ -470,34 +562,64 @@ import numpy as np
 import mplcyberpunk
 import matplotlib.pyplot as plt
 
-plt.style.use('cyberpunk')
+plt.style.use('cyberpunk')              # ① 加载库注册好的 cyberpunk 风格（黑底霓虹）
 x = np.linspace(0, 10, 20)
 y = np.sin(x)
 
-plt.figure(figsize=(8, 8))
-plt.plot(x, y, marker='o')
-mplcyberpunk.make_lines_glow()      # 关键一步：给线条加发光
-plt.xlabel('X-Axis'); plt.ylabel('Y-Axis')
+plt.plot(x, y, marker='o')              # ② 正常画图
+mplcyberpunk.make_lines_glow()          # ③ 关键一步：给「已有线条」叠一圈辉光
+# mplcyberpunk.add_glow_effects()       # ④ 一键给图内所有对象（线/柱/散点）加发光
+
 plt.title('Cyberpunk Style Plot')
 plt.show()
 ```
 
-> ⚠️ 提醒：qbstyles / matplotx / mplcyberpunk 都是**第三方库**。交作业的 `.py` 在老师机器上跑时对方未必安装——作业建议用内置风格或自定义 `.mplstyle`（零依赖），主题库留着做演示 / 美化加分。
+> 📖 译注 · 逐条：
+> - `make_lines_glow()` 只处理 `plot` 画的线；`add_glow_effects()` 会扫一遍图内所有可发光对象，覆盖面更广。
+> - 发光本质是「在原线周围叠几圈越来越淡的同色线」，所以**线越多越费时间**。
+> - ⚠️ 坑：黑底风格导出后背景是深色，打印 / PDF 阅读费墨，考试报告慎用。
 
-### 5.5 自定义样式文件 .mplstyle（零依赖，提交最稳）
+### 5.5 自定义样式文件 .mplstyle（逐参数详解）
 
-常用 rcParams 参数速查：
+**是什么**：把 rcParams 写进一个文本文件，一次定义、处处复用；**零第三方依赖**，提交作业最稳。
 
-| 类别 | 参数 | 说明 |
-|---|---|---|
-| 字体 | `font.family` / `font.size` / `font.style` / `font.weight` | 字体族 / 大小 / 样式 / 粗细（light→black） |
-| 背景与边缘 | `axes.facecolor` / `axes.edgecolor` / `axes.linewidth` | 绘图区底色 / 边框色 / 边框线宽 |
-| 网格 | `grid.color` / `grid.linestyle` / `grid.linewidth` / `grid.alpha` | 颜色 / 线型（- -- -.）/ 线宽 / 透明度 |
-| 刻度与标签 | `xtick.color` `ytick.color` / `xtick.direction` `ytick.direction` / `axes.titlecolor` / `axes.labelcolor` | 刻度色 / 方向（in out inout）/ 标题色 / 轴标签色 |
-| 线条与标记 | `lines.color` / `lines.linewidth` / `lines.linestyle` / `lines.marker` / `lines.markerfacecolor` / `lines.markersize` | 线色 / 线宽 / 线型 / 标记形状 / 标记填充色 / 标记大小 |
-| 其他 | `figure.facecolor` / `figure.edgecolor` / `figure.figsize` / `savefig.dpi` | 整图底色 / 边缘色 / 尺寸（英寸）/ 导出分辨率 |
+**语法规则（逐条）**：
+- 每行 `key : value`，冒号前后空格无所谓；
+- `#` 开头整行是注释；
+- 布尔写 `True / False`；多个值写 `[a, b]`（如 `figure.figsize : 8, 6`）；
+- 颜色可用名字（`lightgray`）或 hex（`#f2f2f7`）。
 
-示例 `my_style.mplstyle`：
+**参数逐条速查表**：
+
+| 参数 | 作用 | 示例值 | 生效效果 |
+|---|---|---|---|
+| `font.family` | 字体族 | `sans-serif` | 全部文字换无衬线体 |
+| `font.size` | 全局字号 | `14` | 刻度、标签、标题基准字号 |
+| `font.style` | 字形 | `normal / italic` | 斜体等 |
+| `font.weight` | 字重 | `normal / bold` | 加粗 |
+| `axes.facecolor` | 绘图区底色 | `lightgray` | 坐标轴围住的区域变灰 |
+| `axes.edgecolor` | 坐标轴边框色 | `black` | 四条边线颜色 |
+| `axes.linewidth` | 边框线宽 | `1.5` | 边框粗细 |
+| `grid.color` | 网格线颜色 | `white` | 网格线颜色 |
+| `grid.linestyle` | 网格线型 | `--` / `-.` / `-` | 虚线 / 点划线 / 实线 |
+| `grid.linewidth` | 网格线宽 | `0.8` | 网格粗细 |
+| `grid.alpha` | 网格透明度 | `0.5` | 0 全透、1 全实 |
+| `xtick.color` / `ytick.color` | 刻度文字颜色 | `darkgray` | 刻度数字变灰 |
+| `xtick.direction` / `ytick.direction` | 刻度方向 | `in` / `out` / `inout` | 刻度朝内/外/双向 |
+| `axes.titlecolor` | 标题颜色 | `darkred` | 标题变深红 |
+| `axes.labelcolor` | 轴标签颜色 | `darkblue` | X/Y 轴名称变深蓝 |
+| `lines.color` | 线条颜色 | `blue` | 默认线色 |
+| `lines.linewidth` | 线条宽度 | `2.0` | 默认线宽 |
+| `lines.linestyle` | 线型 | `--` | 默认虚线 |
+| `lines.marker` | 标记形状 | `o` / `*` / `s` | 数据点形状 |
+| `lines.markerfacecolor` | 标记填充色 | `red` | 数据点内部颜色 |
+| `lines.markersize` | 标记大小 | `6` | 数据点尺寸 |
+| `figure.facecolor` | 整图底色 | `white` | 画布（含四周留白）颜色 |
+| `figure.edgecolor` | 整图边缘色 | `black` | 画布边框颜色 |
+| `figure.figsize` | 画布尺寸（英寸） | `8, 6` | 宽 8、高 6 |
+| `savefig.dpi` | 导出分辨率 | `300` | 保存 PNG 的清晰度 |
+
+**示例 `my_style.mplstyle`**：
 
 ```text
 font.size : 14
@@ -515,13 +637,16 @@ figure.figsize : 8, 6
 savefig.dpi : 300
 ```
 
-使用方式：
+**三种使用方式（逐条）**：
 
 ```python
-plt.style.use('my_style.mplstyle')   # 加载自定义样式文件
+plt.style.use('my_style.mplstyle')              # ① 加载整个样式文件（全局）
+plt.rcParams['lines.linewidth'] = 2.0           # ② 代码里直接改单项（全局）
+with plt.rc_context({'grid.alpha': 0.3}):       # ③ 临时块内覆盖（局部，推荐用于微调）
+    plt.plot(x, y)
 ```
 
-> 📖 译注：`.mplstyle` 本质是把 rcParams 写进文本文件。提交 `.py` 时把它一起交（或把参数直接写 `plt.rcParams['lines.linewidth'] = 2`），零第三方依赖、最稳。
+> 📖 译注：`.mplstyle` 本质就是把 rcParams 写进文本文件。提交 `.py` 时把 `.mplstyle` 一起交（或把参数写成 ② 的形式），**零第三方依赖、最稳**。
 
 ### 5.6 选型建议
 
@@ -530,6 +655,7 @@ plt.style.use('my_style.mplstyle')   # 加载自定义样式文件
 | 作业 / 考试提交 | 内置风格 + 自定义 `.mplstyle` + `rcParams` |
 | 个人演示、追求好看 | qbstyles / matplotx / mplcyberpunk |
 | 同一脚本多主题 | `with plt.style.context(...)` |
+| 需要个性化背景 | 见 §4.1.1 五招（渐变 / 图片 / 水印 / 角标） |
 
 ---
 
@@ -666,7 +792,13 @@ use 全局生效；context 只在 with 块内临时生效。思路：全局 vs �
 <details><summary>Q11 自定义 .mplstyle 文件的作用与优点？</summary>
 把 rcParams（字体/背景/网格/线条/刻度/savefig.dpi）写进文本文件统一加载；零第三方依赖，交作业最稳。</details>
 
-<details><summary>Q12 圆角柱怎么实现？</summary>
+<details><summary>Q12 图片背景的关键参数是什么？</summary>
+`ax.imshow(bg, extent=(0,1,0,1), transform=ax.transAxes, aspect='auto', zorder=0, alpha=0.12)`，并且 `ax.patch.set_alpha(0)` 让绘图区底透明、图线 `zorder=3` 盖在上面。</details>
+
+<details><summary>Q13 水印 `fig.text(0.5, 0.5, ...)` 的坐标是什么意思？</summary>
+fig.text 用画布坐标 0~1，(0.5,0.5)=整幅图正中心，与子图数据坐标无关；alpha 调淡、rotation 斜放。</details>
+
+<details><summary>Q14 圆角柱怎么实现？</summary>
 原生 bar 不支持圆角，用 `FancyBboxPatch(..., boxstyle='round,pad=0,rounding_size=0.08')` 手画，并同步设置 xlim/ylim。</details>
 
 ## 参考来源（本次新增）
@@ -680,6 +812,7 @@ use 全局生效；context 只在 with 块内临时生效。思路：全局 vs �
 > 🌐 官方来源：Matplotlib Gallery https://matplotlib.org/stable/gallery/index.html ；渐变柱 https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html ；颜色条放置 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html ；Plotly https://plotly.com/python/ ；pyecharts https://pyecharts.org/ 。
 
 ## 更新记录
+- 2026-09-23 v5：§五主题美化改为逐条详解（每库按「是什么→逐行→坑」）；§4.1 新增五招个性化背景（双色/三色渐变/图片/水印/角标）；自测增至 14 题。
 - 2026-09-23 v4：新增 §五 全局美化（内置风格 / qbstyles / matplotx / mplcyberpunk / 自定义 mplstyle），自测增至 12 题；来源并入用户粘贴文章。
 - 2026-09-23 v3（完美版）：新增图表选型决策（§二）、设计美学与结论标注、数据预处理闭环（§五）、完整示例脚本（§六）、交互式图表（§七）、自测扩至 10 题；融合 5 篇用户参考（2 篇成功、3 篇无法访问并标注）。
 - 2026-09-23 v2：新增五大主题（整图背景 / 柱状图七种特效 / 数值渐变着色 / 颜色条 / 双轴共享轴等）；P1–P7 原文重新逐页提取回填；避雷清单。

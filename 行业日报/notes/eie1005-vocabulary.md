@@ -216,3 +216,13 @@
 - markerfacecolor — 标记填充色
 - titlecolor / labelcolor — 标题色 / 轴标签色
 
+### 进阶 · 个性化背景（Workshop 01 B v5 新增，2026-09-23）
+- watermark — 水印
+- zorder — 图层顺序（数值大靠上）
+- fig.text — 画布上的文字（坐标 0–1）
+- imread — 读取图片文件
+- LinearSegmentedColormap — 自定义分段色带
+- rc_context — 临时覆盖样式的上下文
+- default style — 默认风格（恢复用）
+- brand / logo corner — 品牌角标
+
