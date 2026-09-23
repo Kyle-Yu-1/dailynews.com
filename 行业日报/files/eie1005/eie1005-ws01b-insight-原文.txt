@@ -1,0 +1,24 @@
+# EIE1005 Workshop 01 (B) · To Insight（逐页原文，7页完整保留）
+
+来源：EIE1005 - Data Visualization - Workshop 01 - 02 - Part 02 - Workshop 01 (B).pdf（Canvas files/130047，1.98MB）
+
+### 第 1 页
+数据可视化 Part 02 – To Insight · Workshop 01 (B)（封面）
+
+### 第 2 页
+主题：I want to Understand —— USA College Graduate Salary: 2025 Projection · Are You Ready?
+
+### 第 3 页
+从数据到洞察：Table 01, 02, 03, 04
+
+### 第 4 页
+数据表概览（Table 01–04）
+
+### 第 5 页
+已提供 Excel 文件供练习
+
+### 第 6 页
+任务：60 分钟内设计你的 Workshop 01 (B)；提交到 PolyU Blackboard
+
+### 第 7 页
+提交前检查清单：Chart Layout（Q1 几张图 1/2/3/4；Q2 数据讲什么故事；Q3 图表类型 Line/Area/Bar/Pie；Q4 样式 Title/Label/Legend/Grid/Color）＋专业标准四类清单（数据准确性、图表格式与标签、视觉呈现与布局、最终核验）＋文件命名 EIE1005_StudentID_Workshop_01_B.py

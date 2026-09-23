@@ -285,5 +285,12 @@
     "desc": "语言学习与提示词工程术语",
     "file": "lei1101-vocabulary.md",
     "course": "LEI1101 · AI 作为语言学习工具"
+  },
+  {
+    "id": "eie1005-ws01b-insight",
+    "title": "Workshop 1 (B) · To Insight 可视化进阶代码",
+    "desc": "7页原文+四种图表模板+高难度拓展（双轴/共享轴/误差棒/mosaic）",
+    "file": "eie1005-ws01b-insight.md",
+    "course": "EIE1005 · 人工智能与数据分析"
   }
 ]

@@ -21,6 +21,8 @@ window.TASKS = [
   { id:"me-quiz7", date:"2026-09-15", dateLabel:"9/15", time:"课堂随测", course:"ME29004", title:"课堂测验 · 测量与机械连接（100分）", type:"测验", weight:"Quiz 20%", note:"PDF 以学号命名提交（已提交 15:23）" },
   { id:"phy-hw14", date:"2026-10-01", dateLabel:"10/1", time:"23:59", course:"AP10005", title:"作业测验 1-4（Ch9）", type:"测验", weight:"20 分", note:"Canvas Quiz" },
   { id:"ama-asg", date:null, dateLabel:"Week5/9/12", time:"—", course:"AMA1110", title:"作业 1 / 2 / 3（WeBWork+书面）", type:"作业", weight:"平时 40%", note:"A1 仅 WeBWork；A2/A3 各 50% WeBWork" },
+  { id:"eie-ws01b", date:"2026-10-02", dateLabel:"10/2", time:"23:59", course:"EIE1005", title:"Workshop 1 (B) 提交", type:"作业", weight:"10 分", note:"文件命名 EIE1005_StudentID_Workshop_01_B.py" },
+  { id:"ama-asg1", date:"2026-10-02", dateLabel:"10/2", time:"18:00", course:"AMA1110", title:"Assignment 1（WeBWork）", type:"作业", weight:"100 分", note:"Canvas 作业 25444" },
   { id:"me-3dp", date:null, dateLabel:"课后一周", time:"—", course:"ME29004", title:"3D 打印作业（TM1326 3DP Assignment）", type:"作业", weight:"100 分", note:"PDF 报告 + STL；Canvas 未设日期" },
   { id:"itsec-all", date:null, dateLabel:"学期内", time:"自定进度", course:"IT 安全", title:"23 个在线模块全部完成", type:"任务", weight:"完成要求", note:"Canvas 自定进度" },
   { id:"lei-slides", date:null, dateLabel:"单元六", time:"课前 24h", course:"LEI1101", title:"CLC 简报制作", type:"作业", weight:"10%", note:"" },
