@@ -178,3 +178,26 @@
 - constrained_layout — 受约束自动布局
 - tight_layout — 紧凑布局
 
+### 进阶 · 图表选型与设计（Workshop 01 B v3 新增，检索于 2026-09-23）
+- scatter plot — 散点图
+- bubble chart — 气泡图
+- heatmap — 热力图
+- boxplot — 箱线图
+- radar chart — 雷达图
+- rose chart / Nightingale rose — 南丁格尔玫瑰图
+- bullet chart — 子弹图
+- waterfall chart — 瀑布图
+- sunburst chart — 旭日图
+- stacked bar / stacked area — 堆叠柱状图 / 堆叠面积图
+- diverging bar — 双向条形图
+- dimension — 维度（分类字段）
+- measure — 度量（数值指标）
+- data cleaning — 数据清洗
+- data aggregation — 数据聚合
+- trend line — 趋势线
+- mean line — 均值线
+- annotation — 注释标注
+- chart type selection — 图表选型
+- color scheme — 配色方案
+- hierarchy — 信息层级
+

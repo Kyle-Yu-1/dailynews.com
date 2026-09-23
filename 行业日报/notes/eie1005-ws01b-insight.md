@@ -1,6 +1,6 @@
-# EIE1005 · Workshop 01 (B)「To Insight」数据可视化进阶笔记（重写版）
+# EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v3 完美版）
 
-> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版参考 Workshop 1「Python 项目文件夹」笔记的结构全量重写：30 秒速览 → 任务与检查清单 → 骨架逐行讲解 → 五大进阶主题（整图背景 / 柱状图特效 / 数值渐变着色 / 颜色条 / 双轴等）→ 自测。
+> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版在 v2 基础上**从头到尾重排**，新增：图表选型决策、设计美学原则、数据预处理闭环、一段完整示例脚本、交互式图表拓展，并融合你提供的 5 篇参考（2 篇成功读取、3 篇无法访问，见 §参考来源）。
 
 ## 📎 原始课件
 - 逐页原文（7 页，2026-09-23 重新逐页提取）：`行业日报/files/eie1005/eie1005-ws01b-insight-原文.txt`
@@ -17,23 +17,20 @@
 **② 为什么学？**
 这是 Workshop 1 的第二份作业，重点不在「会画」，而在「按专业标准自查」：数据一致、标签齐全、颜色一致、对齐无重叠。
 
-**③ 怎么做？——一个骨架 + 四个开关 + 五大进阶特效**
-- 骨架：`import` → `figure` → `GridSpec` → `add_subplot` → `read_excel` → 画图 → 保存。
-- 开关一 · 类型：Q3 的 Line / Area / Bar / Pie = `plot` / `fill_between+plot` / `bar`+`barh` / `pie`。
-- 开关二 · 布局：Q1 的 1–4 张图 = `GridSpec(行,列)` + `gs[行,列]`。
-- 开关三 · 样式：Q4 = `set_title / set_xlabel / set_ylabel / legend / grid / color`。
-- 开关四 · 背景：`fig.patch.set_facecolor`（整张画布）/ `ax.set_facecolor`（单图区）/ `savefig(facecolor=…)`（导出不丢底色）。
-- 五大进阶特效：① 整图背景（含渐变）② 柱状图特效 ③ 按数值渐变着色 ④ 颜色条图例 ⑤ 双轴 / 共享轴 / 误差带等。
+**③ 怎么做？——先选图、再画图、最后润色（三阶段）**
+- 选图（§二）：按「趋势 / 对比 / 占比 / 分布」定图表类型；Q3 只考四种（Line/Area/Bar/Pie），但思路通用。
+- 画图（§三、§四）：骨架 `import → figure → GridSpec → add_subplot → read_excel → 画图 → 保存`；五大进阶特效 = 整图背景、柱状图特效、数值渐变着色、颜色条、双轴等。
+- 润色（§二点五、§五）：配色 ≤3–5 色、信息分三层、标记异常与均值线、图下一句结论，再自查导出。
 
 **④ 学完能干什么？**
-交出「带标题轴标图例网格 + 数值渐变着色 + 颜色条 + 自定义背景」的高分图，并逐项过掉 P7 的四类专业检查清单。
+交出「选型正确 + 数值着色 + 颜色条 + 自定义背景 + 结论标注」的高分图，逐项过掉 P7 的四类专业检查清单。
 
 **三条结论（闭卷能复述才算记住）**
-1. 四问定框架：Q1 决定图数、Q2 决定讲什么故事、Q3 决定 API、Q4 决定样式。
-2. 颜色三件套：`colormap`（色带）+ `Normalize`（数值归一化）+ `ScalarMappable`（喂给 colorbar 的桥），是「按数值着色 + 颜色条」的通用套路。
-3. 背景有两层：`fig.patch` 管整张画布底、`ax.set_facecolor` 管每个子图底；**导出 PNG 还要 `facecolor` 参数，否则背景又变白**。
+1. 四问定框架：Q1 图数、Q2 故事、Q3 类型、Q4 样式。
+2. 选型四场景：趋势→折线/面积、分类对比→柱/条形、占比→饼/环形、分布关系→散点/热力。
+3. 颜色三件套：`colormap + Normalize + ScalarMappable` 是「按数值着色 + 颜色条」的通用套路；背景两层 `fig.patch` / `ax.set_facecolor`，导出要带 `facecolor`。
 
-**关键词**：Figure、Axes、GridSpec、colormap、Normalize、TwoSlopeNorm、ScalarMappable、colorbar、facecolor、edgecolor、hatch、bar_label、gradient、twinx、sharex、subplot_mosaic、savefig。
+**关键词**：Figure、Axes、GridSpec、图表选型、colormap、Normalize、ScalarMappable、colorbar、facecolor、edgecolor、hatch、bar_label、annotate、twinx、sharex、subplot_mosaic、savefig。
 
 ## 前置 / 后接
 - 前置：Workshop 1「数据可视化 Python 代码逐行讲解」（06 Python Project Folder，22 个示例）。
@@ -79,7 +76,7 @@
 **4. Final Verification（最终核验）**
 - [ ] File Naming：`EIE1005_StudentID_Workshop_01_B.py`
 
-> 🔴 考点（源自第 7 页）：四类清单 = 四个评分维度。Q3 的四种类型与 Matplotlib API 一一对应（见 §二）；「同类目同色」「系名不被裁」「标签不重叠」三条最容易丢分。
+> 🔴 考点（源自第 7 页）：四类清单 = 四个评分维度。「同类目同色」「系名不被裁」「标签不重叠」三条最容易丢分。
 
 ### 1.3 四问 → 代码映射表
 
@@ -92,7 +89,90 @@
 
 ---
 
-## 二、通用骨架逐行讲解
+## 二、先选对图，再画好图（图表选型决策 · 综合参考）
+
+> 🧠 拓展（用户提供参考，检索于 2026-09-23）：课件 Q3 只给四种类型（Line/Area/Bar/Pie），但真正的选型按「**比较 / 构成 / 分布与联系**」四类场景走。原则是「场景驱动」而非「工具驱动」。
+
+### 2.1 四步选型流程
+
+| 步骤 | 操作 | 关键问题 |
+|---|---|---|
+| 1 | 明确分析目标 | 看趋势 / 对比 / 占比 / 分布 / 关联？ |
+| 2 | 梳理数据结构 | 有多少类别？连续时间还是离散分类？ |
+| 3 | 匹配图表形式 | 哪种形式最直观？ |
+| 4 | 检查量级与空间 | 条目太多 / 页面放不下时换横向或分组 |
+
+### 2.2 高频图表速查表（15+ 种）
+
+**比较类（比大小、比多少）**
+
+| 图 | 适用场景 | 要点 | Matplotlib 实现 |
+|---|---|---|---|
+| 柱状图 | 5–12 个条目对比 | 柱宽适中、间距别太空；数值标柱顶 | `ax.bar(x, y)` + `bar_label` |
+| 条形图 | 条目 >12 | 横过来不挤 | `ax.barh(y, width)` |
+| 折线图 | 看趋势 | >20 个点时缩小 marker、加粗线 | `ax.plot(..., marker='o', linewidth=2)` |
+| 南丁格尔玫瑰图 | 数值差距小时放大差异 | 扇形面积 ∝ 半径² | 极坐标：`ax=plt.subplot(projection='polar'); ax.bar(theta, r)` |
+| 双向条形图 | 正反 / 收支对比 | 以中心轴为界分左右 | 两组 `barh`，一组取负值 |
+| 子弹图 | 实际 vs 目标 vs 预警区间 | 一眼看达标情况 | 无原生，用堆积 `barh` + 标线模拟 |
+| 雷达图 | 多维评估（≤8 维） | 面积越大综合越强 | `plt.subplot(projection='polar')` 多边形 |
+
+**构成类（部分与整体）**
+
+| 图 | 适用场景 | 要点 | Matplotlib 实现 |
+|---|---|---|---|
+| 饼图 | 5–9 类占比 | >9 类把小的合并成 Other；**别加 3D** | `ax.pie(..., autopct=)` |
+| 环形图 | 占比 + 中心放标题 | 空间利用率高 | `wedgeprops=dict(width=0.4)` |
+| 旭日图 | 大区→城市→门店多层构成 | 层层下钻 | 无原生，Plotly `sunburst` 或嵌套 `pie` |
+| 堆叠面积图 | 连续时间的构成变化 | ≤5 层；最重要的放最底层 | `ax.stackplot(x, y1, y2)` |
+| 堆叠柱状图 | 离散分类的构成 | 每柱=一年，内部堆叠 | `ax.bar(..., bottom=)` |
+| 瀑布图 | 增减过程（净利 100→70） | 正负用不同颜色 | 无原生，手动 `bottom=cumsum` 或 Plotly `waterfall` |
+
+**分布与联系类（找规律、找关系）**
+
+| 图 | 适用场景 | 要点 | Matplotlib 实现 |
+|---|---|---|---|
+| 散点图 | 两个变量的关系 | 加两条均值线分四象限 | `ax.scatter(x, y)` |
+| 气泡图 | 三个变量（第三维=大小） | 气泡大=体量大 | `ax.scatter(x, y, s=size)` |
+| 热力图 | 区域密度分布 | 用蓝→红单色渐变，别用彩虹 | `ax.imshow(z, cmap=)` |
+| 箱线图 | 分布与离群点 | 中位数 / 四分位 / 异常值 | `ax.boxplot(data)` |
+
+### 2.3 常见选型误区（避雷）
+
+| 误区 | 正确做法 |
+|---|---|
+| 趋势用饼图 | 折线 / 面积图 |
+| 类别太多仍用饼图 | 条形图，或小类合并成 Other |
+| 3D 饼图（倾斜误判面积） | 平面饼图 / 环形图 |
+| 彩虹配色 | ≤3–5 色，同类用深浅区分 |
+| 一页堆满图 | 一页 ≤3 张主图，核心信息放大 |
+
+### 2.4 配色与信息层次原则
+
+> 🧠 拓展（用户提供参考，检索于 2026-09-23）：美感 70% 靠规范、30% 靠审美。
+
+- **配色 ≤3–5 色**：主色（正常数据，蓝/绿）+ 辅助色（灰/浅蓝）+ 警示色（红/橙，只给异常）。
+- **同类深浅**：同一色系的深浅变化区分层次，比多色更易读（如 `cmap='Blues'`）。
+- **色盲友好**：避免纯红 vs 纯绿强对比，可换蓝 vs 橙。
+- **信息分三层**：
+  | 层级 | 内容 | 视觉处理 |
+  |---|---|---|
+  | 核心信息 | 关键结论/指标 | 高对比色 + 加粗 + 居中 |
+  | 支撑数据 | 趋势、分布、细节 | 灰色系、弱化 |
+  | 辅助元素 | 标题、图例、单位、来源 | 角落、小字 |
+- **排版**：倒金字塔（最重要在上方/中心）；对齐 + 均匀留白；标签简明；字体字号统一（标题 16、正文 12–14）。
+
+### 2.5 让图「讲出结论」（洞察力）
+
+- 用 `annotate` 标记异常点 / 转折点 + 一句文字（如「3 月新品上线，销量暴涨」）。
+- 加趋势线 / 均值线：`ax.axhline(mean, linestyle='--')`。
+- 图下加一句结论：「本月同比增长 30%，主要受新品拉动」——老板不用猜。
+- 对比拆分：今年 vs 去年用双折线或分组柱；分面 `subplots` 看各部门贡献。
+
+> 🌐 来源：用户提供的参考 4（[15 个可视化图表](https://www.cnblogs.com/fanruan/p/19955941)）与参考 5（[可视化设计与配置技巧](https://www.finebi.com/blog/article/68d52cf428946ecca8ed5264)，含商业推广内容），检索于 2026-09-23；代码实现以 Matplotlib 官方文档为准。
+
+---
+
+## 三、通用骨架逐行讲解
 
 ```python
 import pandas as pd
@@ -137,9 +217,11 @@ fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300, bbox_inches='tight')
 
 ---
 
-## 三、主题一 · 给整张图加背景（重点新增）
+## 四、五大进阶主题（重点新增）
 
-> 🧠 拓展（外部资料，检索于 2026-09-23）：Matplotlib 背景分两层——**figure**（整张画布，含子图之间与四周）和 **axes**（每张子图的绘图区）。两层各设各的。
+### 4.1 给整张图加背景
+
+> 🧠 拓展（外部资料，检索于 2026-09-23）：Matplotlib 背景分两层——**figure**（整张画布）和 **axes**（每张子图的绘图区）。
 
 ```python
 fig = plt.figure(figsize=(16, 9))
@@ -175,13 +257,9 @@ gradient_image(ax, direction=1, extent=(0, 1, 0, 1),
 ```
 
 > 🌐 来源：Matplotlib 官方 Gallery「Bar chart with gradients」https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html（检索于 2026-09-23）
-> 📖 译注：`cmap_range=(0.2, 0.8)` 只取色带中间一段、避开两端太艳；`alpha=0.5` 是半透明，别盖住图线。要点：背景渐变用「imshow 铺图 + transAxes 坐标」，不是给 figure 填色。
+> 📖 译注：`cmap_range=(0.2, 0.8)` 只取色带中间一段；`alpha=0.5` 半透明，别盖住图线。
 
----
-
-## 四、主题二 · 柱状图特殊效果（重点新增）
-
-基础命令与七种特效：
+### 4.2 柱状图特殊效果（七种）
 
 ```python
 bars = ax.bar(x, values, width=0.6)
@@ -207,17 +285,10 @@ for xi, vi in zip(x, values):
                  mutation_scale=1, facecolor='#1f77b4'))
 ```
 
-> 📖 译注：
-> - 排序降序：先 `df.sort_values('salary', ascending=False)` 再画，视觉从高到低更「讲得出故事」。
-> - `bar_label` 直接对应检查清单的「No Overlaps / 标签齐全」；标签顶到柱顶时把 `ylim` 上限放宽留白。
-> - `FancyBboxPatch` 是手动画矩形，记得同步设置 `xlim/ylim`，否则圆角柱显示不全。
-> - `hatch`、`edgecolor` 对黑白打印 / 色弱友好，是「Visual Presentation」加分项。
+> 📖 译注：排序降序先 `df.sort_values('salary', ascending=False)`；`bar_label` 对应检查清单「No Overlaps」；`FancyBboxPatch` 要同步设置 `xlim/ylim`。
+> 🔴 考点：`bar_label`、`yerr+capsize`、`edgecolor` 三组参数名要能默写。
 
-> 🔴 考点：`bar_label`（标签）、`yerr+capsize`（误差）、`edgecolor`（描边）三组参数名要能默写。
-
----
-
-## 五、主题三 · 每个柱子按数值大小映射渐变色（重点新增）
+### 4.3 每个柱子按数值大小映射渐变色
 
 核心三件套：**colormap（色带）+ Normalize（数值→0..1）+ 取色**。
 
@@ -239,25 +310,15 @@ colors = [cmap(norm(v)) for v in values]                  # 每根柱一个 RGBA
 bars = ax.bar(x, values, color=colors)
 ```
 
-> 📖 译注：`norm(v)` 把 v 压缩到 0–1，`cmap(0..1)` 返回该位置的 RGBA 颜色。`vmin/vmax` 用数据 min/max 时「最小柱最紫、最大柱最黄」对比最强；想反映绝对量级就固定 `vmin=0`。
+> 📖 译注：`norm(v)` 把 v 压到 0–1，`cmap(0..1)` 返回该位置的 RGBA。`vmin/vmax` 用数据 min/max 对比最强；想反映绝对量级就固定 `vmin=0`。
 
 **两种常用变化**
-- 单色由浅到深：`cmap = plt.get_cmap('Blues')`，数值越大越深，风格克制、适合正式报告。
-- 正负发散色带（增长/下降一眼看出）：
+- 单色由浅到深：`cmap = plt.get_cmap('Blues')`，数值越大越深。
+- 正负发散色带：`norm = mcolors.TwoSlopeNorm(vmin=-10, vcenter=0, vmax=10)` + `cmap='RdYlGn'`，负红、0 黄、正绿。
 
-```python
-cmap = plt.get_cmap('RdYlGn')                 # 红→黄→绿
-norm = mcolors.TwoSlopeNorm(vmin=-10, vcenter=0, vmax=10)
-colors = [cmap(norm(v)) for v in growth]      # 负值红、0 黄、正值绿
-```
+### 4.4 添加渐变色示意图（颜色条 colorbar）
 
-> 🧠 拓展：`TwoSlopeNorm(vcenter=0)` 把 0 钉在色带中点（黄色），正负两侧颜色对称，是「增长率」图的标配。
-
----
-
-## 六、主题四 · 添加渐变色示意图（颜色条 colorbar）
-
-> 🧠 拓展（外部资料，检索于 2026-09-23）：柱状图本身没有图像 mappable，需用 `ScalarMappable` 造一座「同 cmap + 同 norm」的桥，再喂给 `fig.colorbar`。
+> 🧠 拓展（外部资料，检索于 2026-09-23）：柱状图本身没有图像 mappable，用 `ScalarMappable` 造一座「同 cmap + 同 norm」的桥，再喂给 `fig.colorbar`。
 
 ```python
 sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
@@ -269,7 +330,7 @@ fig.colorbar(sm, ax=ax, orientation='horizontal',        # 顶部横条
              label='Salary (USD)')
 ```
 
-> 📖 译注：`shrink` 缩短长度、`aspect` 控制粗细、`location` 放上/下/左/右。颜色条就是「渐变色示意图 + 数值标尺」，让读图者知道「颜色 = 数值」的对应关系。旧版 Matplotlib（<3.6）若报 `set_array` 相关错误，可改用 `sm.set_array([])`。
+> 📖 译注：`shrink` 缩短长度、`aspect` 控制粗细、`location` 放上/下/左/右。颜色条 = 「渐变色示意图 + 数值标尺」。旧版 Matplotlib（<3.6）若报错可改用 `sm.set_array([])`。
 
 **替代方案 · 离散图例**（颜色档位少时更清晰）
 
@@ -293,13 +354,9 @@ gradient_bar(ax, x, y, width=0.7)
 ```
 
 > 🌐 来源：https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html（检索于 2026-09-23）
-> 📖 译注 · 别混：**主题三 = 每根柱一个颜色（颜色随数值变）；本实现 = 每根柱内部从底到顶渐变**。两种都是「渐变色」，但实现与用途不同。
+> 📖 译注 · 别混：**4.3 = 每根柱一个颜色（颜色随数值变）；本实现 = 每根柱内部从底到顶渐变**。
 
----
-
-## 七、主题五 · 自主补充更多（高难度拓展 + 技巧库）
-
-### 7.1 高难度组合
+### 4.5 高难度拓展 + 技巧库 + 避雷
 
 ```python
 # 双轴：薪资 + 增长率
@@ -321,16 +378,14 @@ ax.fill_between(x, y - err, y + err, alpha=0.2)
 fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 ```
 
-> 🧠 拓展：`twinx` 两套 y 轴必须用颜色/图例把线与轴对应起来；`sharex` 多图缩放联动；`subplot_mosaic` 用字符串描述布局（A/B/C 是格名），比 GridSpec 更直观。
-
-### 7.2 效果与技巧库（联网检索 · 检索于 2026-09-23）
+**效果与技巧库（联网检索 · 检索于 2026-09-23）**
 
 | # | 效果 | 一句话实现 |
 |---|---|---|
 | 1 | 环形图 Donut | `wedgeprops=dict(width=0.4)` |
 | 2 | 水平柱状分布图 | `ax.barh()` |
 | 3 | 堆叠面积 / 流图 | `ax.stackplot(x, y1, y2)` |
-| 4 | 渐变柱 | `imshow` + 双三次插值（见 §六） |
+| 4 | 渐变柱 | `imshow` + 双三次插值（见 4.4） |
 | 5 | 误差带 | `fill_between(..., alpha=0.2)` |
 | 6 | 双轴 | `ax.twinx()` |
 | 7 | 共享轴 | `subplots(2, 1, sharex=True)` |
@@ -338,9 +393,7 @@ fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 | 9 | 自动排版 | `constrained_layout=True` / `tight_layout()` |
 | 10 | 统一风格 | `plt.rcParams` / `plt.style.use('seaborn-v0_8')` |
 
-> 🌐 来源：Matplotlib 官方 Gallery https://matplotlib.org/stable/gallery/index.html ；颜色条放置说明 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html（检索于 2026-09-23）
-
-### 7.3 常见坑（避雷清单）
+**常见坑（避雷清单）**
 
 | 症状 | 原因与解法 |
 |---|---|
@@ -349,6 +402,96 @@ fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 | colorbar 报 `No mappable was found` | 先建 `ScalarMappable(cmap=…, norm=…)` |
 | 标签与柱重叠 | `bar_label` 的 `padding` + 放大 `ylim` 上限 |
 
+> 🌐 来源：Matplotlib 官方 Gallery https://matplotlib.org/stable/gallery/index.html ；颜色条放置说明 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html（检索于 2026-09-23）
+
+---
+
+## 五、数据预处理与优化闭环
+
+> 🧠 拓展（用户提供参考，检索于 2026-09-23）：不要拿原始数据直接作图，先预处理。
+
+| 步骤 | 操作 | 工具 |
+|---|---|---|
+| 清洗 | 去异常值 / 重复值、补缺失值 | pandas |
+| 结构调整 | 统一字段名、格式、时间维度 | pandas |
+| 聚合 | 按月 / 季度 / 部门汇总 | `groupby()` |
+| 分组 | 区分维度（横轴）与度量（纵轴） | DataFrame 取列 |
+
+**优化闭环六步**：① 二次检查数据与公式 → ② 视觉增量（色彩/布局/标签）→ ③ 信息补充（趋势线、均值线、同比/环比）→ ④ 交互（筛选、联动，可选）→ ⑤ 收反馈迭代 → ⑥ 定稿导出。
+
+> 🌐 来源：用户提供的参考 5，检索于 2026-09-23（商业博客，概念参考，代码以官方文档为准）。
+
+---
+
+## 六、完整示例脚本（把全部技巧串起来）
+
+> 🧠 拓展（自主整合，2026-09-23）：一个脚本串起「背景两层 → 排序 → 渐变着色 → 描边 → 柱顶标签 → 高亮极值 → 均值线 → annotate 注释 → 颜色条 → 高清导出」，可直接当 WS01(B) 的 Bar 图底稿。
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+# 数据（示例薪资）
+depts = ['Engineering', 'Business', 'Sciences', 'Arts', 'Medicine']
+salary = np.array([52000, 48000, 61000, 44000, 59000])
+
+# 画布与背景两层
+fig, ax = plt.subplots(figsize=(12, 7))
+fig.patch.set_facecolor('#f4f4f8')
+ax.set_facecolor('#fffdf8')
+
+# 排序 + 按数值渐变着色
+order = np.argsort(salary)
+salary_sorted = salary[order]
+depts_sorted = [depts[i] for i in order]
+cmap = plt.get_cmap('viridis')
+norm = mcolors.Normalize(vmin=salary_sorted.min(), vmax=salary_sorted.max())
+colors = [cmap(norm(v)) for v in salary_sorted]
+
+bars = ax.bar(depts_sorted, salary_sorted, color=colors,
+              edgecolor='white', linewidth=1.2)
+
+# 柱顶标签 + 高亮最大值
+for i, v in enumerate(salary_sorted):
+    color = '#c0392b' if v == salary_sorted.max() else 'black'
+    ax.text(i, v + 800, f'${v:,}', ha='center', va='bottom',
+            color=color, fontweight='bold')
+
+# 均值线 + 结论注释
+mean_s = salary_sorted.mean()
+ax.axhline(mean_s, color='grey', linestyle='--', alpha=0.7)
+ax.annotate(f'Mean ${mean_s:,.0f}', xy=(2, mean_s),
+            xytext=(2.6, mean_s + 7000), arrowprops=dict(arrowstyle='->'))
+
+# 颜色条 + 轴标签 + 标题
+sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+sm.set_array(salary_sorted)
+fig.colorbar(sm, ax=ax, label='Salary (USD)')
+ax.set_title('USA College Graduate Salary 2025', fontweight='bold', fontsize=14)
+ax.set_ylabel('Salary (USD)')
+ax.set_ylim(0, salary_sorted.max() * 1.25)
+ax.grid(True, axis='y', linestyle='--', alpha=0.4)
+
+# 高清导出且不丢背景
+fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300,
+            bbox_inches='tight', facecolor=fig.get_facecolor())
+```
+
+---
+
+## 七、交互式图表拓展（自主补充）
+
+> 🧠 拓展（自主补充，检索于 2026-09-23）：作业要求 `.py` + 静态 PNG 即可；交互只是加分项。
+
+| 库 | 特点 | 何时用 |
+|---|---|---|
+| Matplotlib | 静态、出版级、完全可控 | 本次作业、论文图 |
+| Plotly | 悬停 / 缩放 / 下钻 / 旭日 / 瀑布原生 | 演示、看板 |
+| pyecharts | ECharts 的 Python 封装，中文生态，30+ 图表 | 中文报告、网页嵌入 |
+
+> 🌐 来源：https://plotly.com/python/ ；https://pyecharts.org/（检索于 2026-09-23）
+
 ---
 
 ## 八、提交前自查清单（代码化）
@@ -356,34 +499,52 @@ fig3, axd = plt.subplot_mosaic('AB;CC', figsize=(14, 8))
 - [ ] 数据与 2023 PolyU SAO 一致
 - [ ] 每图粗体标题；XY 轴带单位；图例准确；刻度合理
 - [ ] 同类目同色；系名完整；三图对齐；无重叠
+- [ ] 选型正确（趋势=折线、对比=柱、占比=饼）
+- [ ] 配色 ≤3–5 色；异常点已标注；图下有结论
 - [ ] 文件名 `EIE1005_StudentID_Workshop_01_B.py`；提交 PolyU Blackboard
 
 ## 自测（答案折叠）
 
 <details><summary>Q1 四问分别决定什么？</summary>
-Q1 图数→GridSpec 布局；Q2 故事→选哪列数据；Q3 类型→API（plot/fill_between/bar、barh/pie）；Q4 样式→标题轴标图例网格颜色。思路：四问=布局/数据/API/装饰。</details>
+Q1 图数→GridSpec 布局；Q2 故事→选哪列数据；Q3 类型→API（plot/fill_between/bar、barh/pie）；Q4 样式→标题轴标图例网格颜色。</details>
 
-<details><summary>Q2 给整图加了背景色，导出 PNG 又变白，为什么？</summary>
-savefig 默认把画布盖成白色。解法：`fig.savefig(..., facecolor=fig.get_facecolor())`。易错：只改 fig 不改 savefig。</details>
+<details><summary>Q2 看趋势、分类对比、占比、两变量关系各选什么图？</summary>
+趋势→折线/面积；分类对比→柱状（≤12）/条形（>12）；占比→饼图（5–9 类）/环形；关系→散点。思路：先定场景再选图。</details>
 
-<details><summary>Q3 「按数值着色」的三件套是什么？</summary>
-colormap + Normalize + ScalarMappable。normalize 把数值压到 0–1，cmap 映射成 RGBA，ScalarMappable 是给 colorbar 用的桥。</details>
+<details><summary>Q3 给整图加了背景色，导出 PNG 又变白，为什么？</summary>
+savefig 默认把画布盖成白色。解法：`fig.savefig(..., facecolor=fig.get_facecolor())`。</details>
 
-<details><summary>Q4 colorbar 报「No mappable was found」怎么修？</summary>
-柱状图没有自带 mappable，先 `sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)`，再 `fig.colorbar(sm, ax=ax)`。</details>
+<details><summary>Q4 「按数值着色」的三件套是什么？</summary>
+colormap + Normalize + ScalarMappable：normalize 把数值压到 0–1，cmap 映射成 RGBA，ScalarMappable 是给 colorbar 用的桥。</details>
 
-<details><summary>Q5 「渐变柱」和「按数值着色」有什么区别？</summary>
-渐变柱=每根柱内部从底到顶渐变（imshow+extent）；按数值着色=每根柱一个颜色、颜色随数值大小变（Normalize+cmap）。思路：一根一个色 vs 一根内部渐变色。</details>
+<details><summary>Q5 colorbar 报「No mappable was found」怎么修？</summary>
+先 `sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)`，再 `fig.colorbar(sm, ax=ax)`。</details>
 
-<details><summary>Q6 为什么长系名建议 barh？</summary>
-横向柱状图把类目标签放在宽的方向，避免旋转/裁字。思路：标签长度决定柱的方向。</details>
+<details><summary>Q6 「渐变柱」和「按数值着色」有什么区别？</summary>
+渐变柱=每根柱内部从底到顶渐变（imshow+extent）；按数值着色=每根柱一个颜色、颜色随数值大小变。</details>
 
-<details><summary>Q7 TwoSlopeNorm 用来干什么？</summary>
-把 vcenter 钉在色带中点（如 0=黄色），正负两侧颜色对称，适合增长率这类有正有负的数据。</details>
+<details><summary>Q7 为什么长系名建议 barh？</summary>
+横向柱状图把类目标签放在宽的方向，避免旋转/裁字。</details>
 
-<details><summary>Q8 圆角柱怎么实现？</summary>
+<details><summary>Q8 配色和信息层次有哪些原则？</summary>
+≤3–5 色（主色+辅助色+警示色）；同类用深浅；避免红绿强对比；信息分核心（高对比加粗）/支撑（灰）/辅助（小字角落）。</details>
+
+<details><summary>Q9 怎么让图「讲出结论」？</summary>
+annotate 标记异常+文字、axhline 加均值/趋势线、图下一句结论、对比拆分（双线/分组柱/分面）。</details>
+
+<details><summary>Q10 圆角柱怎么实现？</summary>
 原生 bar 不支持圆角，用 `FancyBboxPatch(..., boxstyle='round,pad=0,rounding_size=0.08')` 手画，并同步设置 xlim/ylim。</details>
 
+## 参考来源（本次新增）
+> 🌐 你提供的 5 篇参考，2026-09-23 读取状态：
+> - ✅ [15 个可视化图表（cnblogs）](https://www.cnblogs.com/fanruan/p/19955941)：已读取，用于 §二选型速查与误区。
+> - ✅ [可视化设计与图表配置技巧（FineBI）](https://www.finebi.com/blog/article/68d52cf428946ecca8ed5264)：已读取（含商业推广，仅取设计原则，用于 §二点四/二点五/五）。
+> - ⚠️ https://blog.51cto.com/aiweker/13318911：无法访问（页面解析失败），内容未纳入；推测为 pyecharts 指南，等你能访问时补。
+> - ⚠️ https://zhuanlan.zhihu.com/p/346416675：403 无法访问，内容未纳入。
+> - ⚠️ https://blog.csdn.net/fuhanghang/article/details/128016831：521 无法访问，内容未纳入。
+> 🌐 官方来源：Matplotlib Gallery https://matplotlib.org/stable/gallery/index.html ；渐变柱 https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html ；颜色条放置 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html ；Plotly https://plotly.com/python/ ；pyecharts https://pyecharts.org/ 。
+
 ## 更新记录
-- 2026-09-23 重写（v2）：参考 Workshop 1 笔记结构全量重写；新增五大主题（整图背景含渐变 / 柱状图七种特效 / 数值渐变着色 / 颜色条图例 / 双轴共享轴等）；P1–P7 原文重新逐页提取并回填；新增避雷清单。
+- 2026-09-23 v3（完美版）：新增图表选型决策（§二）、设计美学与结论标注、数据预处理闭环（§五）、完整示例脚本（§六）、交互式图表（§七）、自测扩至 10 题；融合 5 篇用户参考（2 篇成功、3 篇无法访问并标注）。
+- 2026-09-23 v2：新增五大主题（整图背景 / 柱状图七种特效 / 数值渐变着色 / 颜色条 / 双轴共享轴等）；P1–P7 原文重新逐页提取回填；避雷清单。
 - 2026-09-23 v1：首次整理 + 骨架逐行讲解 + 10 种制图技巧库。
