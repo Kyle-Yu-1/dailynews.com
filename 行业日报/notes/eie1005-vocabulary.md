@@ -239,3 +239,11 @@
 - rounded canvas — 圆角画布
 - transparent — 透明背景
 
+### 进阶 · 多写法对照（Workshop 01 B v6.1 新增，2026-09-24）
+- object-oriented API — 面向对象式（fig/ax 对象）
+- pyplot state machine — pyplot 状态机式
+- pandas plot — pandas 一行式绘图
+- setter — set_ 系列修改方法
+- plt.gca() — 获取当前坐标轴
+- ax.get_figure() — 由坐标轴取回画布
+

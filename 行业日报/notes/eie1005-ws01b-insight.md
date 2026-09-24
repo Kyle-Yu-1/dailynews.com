@@ -1,6 +1,6 @@
 # EIE1005 · Workshop 01 (B)「To Insight」数据可视化完全笔记（v6 全量详解版）
 
-> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v6）应「所有章节逐条详解 + 尽可能拓展」：全篇改为「逐行 + 坑」格式，整图背景扩到**八招**，新增 Normalize 家族、colorbar 参数速查、pandas 预处理代码、交互库迷你代码，并附综合示例图。融合你提供的参考（见 §参考来源）。
+> 按 note-organizer 规则：课件原文用正文色，后加讲解 / 考点 / 拓展一律用引用块（金色左边框）。本版（v6）应「所有章节逐条详解 + 尽可能拓展」：全篇改为「逐行 + 坑」格式，整图背景扩到**八招**，新增 Normalize 家族、colorbar 参数速查、pandas 预处理代码、交互库迷你代码，并附综合示例图。融合你提供的参考（见 §参考来源）；并补「每种图完整代码」（§2.7/§3.6）与「同一效果四种写法对照」（§3.7）。
 
 ## 📎 原始课件
 - 逐页原文（7 页，2026-09-23 重新逐页提取）：`行业日报/files/eie1005/eie1005-ws01b-insight-原文.txt`
@@ -215,6 +215,153 @@
 
 ---
 
+### 2.7 扩展图 · 完整可运行代码速查（逐条）
+
+> 🧠 拓展（自主补充，2026-09-24）：上面每种图只给了 API 名字，这里补「六要素齐全」的完整代码（import / 数据 / 建图 / 画图 / 样式 / 显示）。共用数据见开头，每段可独立复制运行。
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.arange(5)                       # 0,1,2,3,4
+v1 = [10, 18, 12, 22, 16]              # 系列 1
+v2 = [4, 6, 8, 5, 9]                   # 系列 2
+names = ['Eng', 'Bus', 'Sci', 'Arts', 'Med']
+```
+
+**① 环形图（Donut）**
+
+```python
+fig, ax = plt.subplots()
+ax.pie(v1, labels=names, autopct='%1.1f%%', startangle=90,
+       wedgeprops=dict(width=0.4))        # width<1 挖空中心 → 环形
+ax.set_title('Donut Chart')
+plt.show()
+```
+
+**② 堆叠面积图（Stackplot）**
+
+```python
+fig, ax = plt.subplots()
+ax.stackplot(x, v1, v2, labels=['A', 'B'], alpha=0.7)   # 两层累加
+ax.legend(loc='upper left')
+ax.set_title('Stacked Area')
+plt.show()
+```
+
+**③ 堆叠柱状图（Stacked Bar）**
+
+```python
+fig, ax = plt.subplots()
+ax.bar(x, v1, label='A')
+ax.bar(x, v2, bottom=v1, label='B')        # bottom=垫在 v1 之上
+ax.legend()
+ax.set_title('Stacked Bar')
+plt.show()
+```
+
+**④ 散点图（Scatter，第三维=颜色）**
+
+```python
+fig, ax = plt.subplots()
+sc = ax.scatter(x, v1, s=60, c=v2, cmap='viridis')   # s 点大小；c 数值→渐变着色
+fig.colorbar(sc, ax=ax, label='V2')                  # 散点自带 mappable，直接给 colorbar
+ax.set_title('Scatter + Colormap')
+plt.show()
+```
+
+**⑤ 气泡图（Bubble，第三维=大小）**
+
+```python
+fig, ax = plt.subplots()
+ax.scatter(x, v1, s=np.array(v2) * 30, alpha=0.6)    # s 与 v2 成正比
+ax.set_title('Bubble Chart')
+plt.show()
+```
+
+**⑥ 热力图（Heatmap）**
+
+```python
+fig, ax = plt.subplots()
+z = np.random.rand(5, 5)                     # 5x5 随机矩阵（真实数据用 df.corr() 等）
+im = ax.imshow(z, cmap='Blues')              # 单色渐变，别用彩虹
+fig.colorbar(im, ax=ax)
+ax.set_title('Heatmap')
+plt.show()
+```
+
+**⑦ 箱线图（Boxplot）**
+
+```python
+fig, ax = plt.subplots()
+ax.boxplot([v1, v2], tick_labels=['A', 'B'])   # 中位数/四分位/离群点
+ax.set_title('Boxplot')
+plt.show()
+```
+
+**⑧ 南丁格尔玫瑰图（Rose）**
+
+```python
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(111, projection='polar')          # 极坐标
+theta = np.linspace(0, 2 * np.pi, len(v1), endpoint=False)
+ax.bar(theta, v1, width=2 * np.pi / len(v1) * 0.8, alpha=0.8)   # 每瓣宽度
+ax.set_title('Nightingale Rose')
+plt.show()
+```
+
+**⑨ 双向条形图（Diverging Bar）**
+
+```python
+vals = [12, -7, 9, -3, 15]
+fig, ax = plt.subplots()
+ax.barh(names, [v if v > 0 else 0 for v in vals], color='green')   # 右侧正值
+ax.barh(names, [v if v < 0 else 0 for v in vals], color='red')     # 左侧负值
+ax.axvline(0, color='black', lw=0.8)               # 中心轴
+ax.set_title('Diverging Bar')
+plt.show()
+```
+
+**⑩ 雷达图（Radar）**
+
+```python
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(111, projection='polar')
+theta = np.linspace(0, 2 * np.pi, len(v1), endpoint=False)
+vals = np.append(v1, v1[0]); theta_c = np.append(theta, theta[0])   # 首尾相接闭合
+ax.plot(theta_c, vals); ax.fill(theta_c, vals, alpha=0.25)
+ax.set_title('Radar Chart')
+plt.show()
+```
+
+**⑪ 瀑布图（Waterfall，手动）**
+
+```python
+deltas = [100, -20, -30, -10, 20]                 # 每步增减
+cum = np.cumsum([0] + deltas)                     # 累计和（起点 0）
+fig, ax = plt.subplots()
+for i, d in enumerate(deltas):
+    ax.bar(i, d, bottom=cum[i], color='green' if d >= 0 else 'red')
+ax.axhline(0, color='black', lw=0.8)
+ax.set_title('Waterfall')
+plt.show()
+```
+
+**⑫ 子弹图（Bullet，模拟）**
+
+```python
+fig, ax = plt.subplots()
+ax.barh(['Q1'], [85], color='#4f81bd')                       # 实际值 85
+ax.barh(['Q1'], [100], color='none', edgecolor='black')      # 目标 100 空心框
+ax.axvline(100, color='black', lw=1)                         # 目标线
+ax.set_title('Bullet Chart (simulated)')
+plt.show()
+```
+
+> 📖 译注：Matplotlib 无原生「玫瑰/雷达/瀑布/子弹」，上面都是**用极坐标或手动叠加**模拟；需要真交互/原生支持时换 Plotly（§八）。
+
+---
+
 ## 三、通用骨架逐行讲解（逐行 + 坑）
 
 > 本骨架是 22 个示例与 WS01(B) 共用的「一图一 ax」写法：先建画布 → 划格子 → 建坐标轴 → 读数据 → 画图 → 保存。每一行都给「作用 / 参数 / 坑」。
@@ -299,6 +446,160 @@ fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300, bbox_inches='tight')
 > - `subplots_adjust(wspace, hspace)`：数值是「占子图平均宽/高比例」——0.35 = 左右间距为子图宽的 35%。
 > - `savefig(dpi=300, bbox_inches='tight')`：300 dpi 高清；tight 裁白边防标签被切。
 > - 坑：`bbox_inches='tight'` 会轻微缩放内容；文件名写错不报错、默默存到别处。
+
+---
+
+### 3.6 四种必考图 · 完整可运行代码（逐条）
+
+> 🧠 拓展（自主补充，2026-09-24）：§3.4 只有一行 API，这里补成「六要素齐全」的完整脚本，可直接复制改数据用。
+
+**① 折线图 Line**
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_excel('salary.xlsx', sheet_name='Table 01')    # ① 读数据
+x = df['year']; y = df['salary']                            # ② 取两列
+
+fig, ax = plt.subplots(figsize=(10, 5))                     # ③ 建图
+ax.plot(x, y, marker='o', linewidth=2, color='#1f77b4',
+        label='Salary')                                     # ④ 画折线：参数一次写完
+ax.set_title('Salary Trend', fontweight='bold')             # ⑤ 样式：加粗标题
+ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')        #    轴标签带单位
+ax.legend(); ax.grid(True, linestyle='--', alpha=0.5)       #    图例 + 淡网格
+fig.savefig('line.png', dpi=300, bbox_inches='tight')       # ⑥ 导出高清
+```
+
+**② 面积图 Area**
+
+```python
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.fill_between(x, y, alpha=0.3)                 # 先填色（半透明）
+ax.plot(x, y, color='#2e8b57', linewidth=2)      # 再描边，边线不被盖
+ax.set_title('Salary Area', fontweight='bold')
+ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
+ax.grid(True, linestyle='--', alpha=0.5)
+fig.savefig('area.png', dpi=300, bbox_inches='tight')
+```
+
+**③ 柱状图 Bar（竖向）**
+
+```python
+fig, ax = plt.subplots(figsize=(10, 5))
+bars = ax.bar(names, values, width=0.6, color='#1f77b4')
+ax.bar_label(bars, fmt='%.0f', padding=3)        # 柱顶数值标签
+ax.set_title('Salary by Major', fontweight='bold')
+ax.set_ylabel('Salary (USD)')
+ax.set_ylim(0, max(values) * 1.2)                # 从 0 起 + 顶部留白放标签
+fig.savefig('bar.png', dpi=300, bbox_inches='tight')
+```
+
+**④ 条形图 Barh（横向，长系名）**
+
+```python
+order = sorted(range(len(values)), key=lambda i: values[i])   # 排序索引
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.barh([names[i] for i in order], [values[i] for i in order],
+        color='#1f77b4')                          # 横向，系名完整不裁
+ax.set_title('Salary by Major', fontweight='bold')
+ax.set_xlabel('Salary (USD)')
+fig.savefig('barh.png', dpi=300, bbox_inches='tight')
+```
+
+**⑤ 饼图 Pie**
+
+```python
+fig, ax = plt.subplots(figsize=(7, 7))
+ax.pie(values, labels=names, autopct='%1.1f%%',
+       startangle=90, wedgeprops=dict(width=0.4))   # 挖环形 + 百分比
+ax.set_title('Salary Share', fontweight='bold')
+fig.savefig('pie.png', dpi=300, bbox_inches='tight')
+```
+
+### 3.7 同一效果的多种写法（问题 2 专项 · 逐条对照）
+
+> 🧠 阿基米德提问法结论：同一效果至少有 4 种等价写法，各司其职——①参数写进调用（最直观）②先画后 setter（便于循环批量改）③pyplot 状态机（单图脚本最快）④pandas 一行式（数据+图一体）。下面先给对照表，再给 4 个**输出完全一样**的完整脚本。
+
+**对照表（效果 → 四种写法）**
+
+| 效果 | ① 写进调用 | ② setter 另行改 | ③ pyplot 状态机 | ④ pandas 一行式 |
+|---|---|---|---|---|
+| 颜色 | `ax.plot(x,y,color='red')` | `line.set_color('red')` | `plt.plot(x,y,color='red')` | `df.plot(color='red')` |
+| 线宽 | `plot(...,linewidth=2)` | `line.set_linewidth(2)` | `plt.plot(...,linewidth=2)` | `df.plot(linewidth=2)` |
+| 线型 | `plot(...,linestyle='--')` | `line.set_linestyle('--')` | 同左 | `df.plot(linestyle='--')` |
+| 数据点 | `plot(...,marker='o')` | `line.set_marker('o')` | 同左 | `df.plot(marker='o')` |
+| 透明度 | `plot(...,alpha=0.5)` | `line.set_alpha(0.5)` | 同左 | `df.plot(alpha=0.5)` |
+| 标题 | `ax.set_title('T')` | `ax.title.set_text('T')` | `plt.title('T')` | `df.plot(title='T')` |
+| 轴标签 | `ax.set_xlabel('X')` | `ax.xaxis.set_label_text('X')` | `plt.xlabel('X')` | `ax.set_xlabel('X')`（df.plot 返回 ax） |
+| 图例 | `ax.legend()` | `line.set_label('名')` 再 legend | `plt.legend()` | `df.plot(legend=True)` |
+| 网格 | `ax.grid(True)` | `ax.grid(color=, ls=, alpha=)` | `plt.grid(True)` | `df.plot(grid=True)` |
+| 背景 | `ax.set_facecolor('#fafafa')` | `ax.patch.set_facecolor('#fafafa')` | `plt.gca().set_facecolor(...)` | 改 rcParams |
+| 柱顶标签 | `ax.bar_label(bars)` | 手动 `ax.text(i, v, ...)` | 无简写 | `df.plot().bar_label(...)` 不方便 |
+| 按值着色 | `bar(color=colors)` | `bars.set_facecolor(colors)` | 无简写 | `df.plot(colormap='viridis')`（散点） |
+| 颜色条 | `fig.colorbar(sm, ax=ax)` | `sm.set_array(v)` 后 colorbar | `plt.colorbar(sm)` | 无简写 |
+
+**写法 A · 面向对象式（推荐：参数集中写进调用）**
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_excel('salary.xlsx', sheet_name='Table 01')
+x, y = df['year'], df['salary']
+
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.plot(x, y, color='red', linewidth=2, marker='o', label='Salary')   # 一行写全
+ax.set_title('Salary Trend', fontweight='bold')
+ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
+ax.legend(); ax.grid(True, linestyle='--', alpha=0.5)
+ax.set_facecolor('#fafafa')
+fig.savefig('a.png', dpi=300, bbox_inches='tight')
+```
+
+**写法 B · 面向对象式（先画后 setter，另行修改）**
+
+```python
+fig, ax = plt.subplots(figsize=(10, 5))
+line, = ax.plot(x, y)              # ① 先只画，不带任何样式
+line.set_color('red')              # ② 逐个 setter 修改
+line.set_linewidth(2)
+line.set_marker('o')
+line.set_label('Salary')
+ax.set_title('Salary Trend'); ax.title.set_fontweight('bold')   # ③ 标题也可先设后改
+ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
+ax.legend(); ax.grid(True, linestyle='--', alpha=0.5)
+ax.patch.set_facecolor('#fafafa')  # ④ 与 ax.set_facecolor 完全等价
+fig.savefig('b.png', dpi=300, bbox_inches='tight')
+```
+
+**写法 C · pyplot 状态机式（单图脚本最快）**
+
+```python
+plt.figure(figsize=(10, 5))
+plt.plot(x, y, color='red', linewidth=2, marker='o', label='Salary')
+plt.title('Salary Trend', fontweight='bold')
+plt.xlabel('Year'); plt.ylabel('Salary (USD)')
+plt.legend(); plt.grid(True, linestyle='--', alpha=0.5)
+plt.gca().set_facecolor('#fafafa')       # gca()=当前坐标轴
+plt.savefig('c.png', dpi=300, bbox_inches='tight')
+```
+
+**写法 D · pandas 一行式（数据处理 + 画图一体）**
+
+```python
+ax = df.plot(x='year', y='salary', kind='line',
+             color='red', linewidth=2, marker='o', legend=True)   # pandas 直接画
+ax.set_title('Salary Trend', fontweight='bold')
+ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
+ax.grid(True, linestyle='--', alpha=0.5); ax.set_facecolor('#fafafa')
+ax.get_figure().savefig('d.png', dpi=300, bbox_inches='tight')   # ax.get_figure() 拿画布
+```
+
+> 📖 译注 · 逐条：
+> - 四种写法**输出完全一致**，按场景选：A 参数集中好维护；B 的 setter 适合「循环里按条件改样式」；C 单图脚本最快；D 与 pandas 清洗流程无缝衔接。
+> - 坑：`ax.plot` 返回列表，`line, = ax.plot(...)` 的解包逗号不能丢；`df.plot` 返回的是 Axes 不是 Figure，保存要先 `ax.get_figure()`；状态机式在多子图时容易画错对象，多图用 A/B。
+> - `line.set_*` 系列完整清单：`set_color / set_linewidth / set_linestyle / set_marker / set_markersize / set_label / set_alpha`。
 
 ---
 
@@ -1085,6 +1386,7 @@ fig.text 用画布坐标 0~1，(0.5,0.5)=整幅图正中心，与子图数据坐
 > 🌐 官方来源：Matplotlib Gallery https://matplotlib.org/stable/gallery/index.html ；渐变柱 https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html ；颜色条放置 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html ；Plotly https://plotly.com/python/ ；pyecharts https://pyecharts.org/ 。
 
 ## 更新记录
+- 2026-09-24 v6.1（阿基米德提问法优化）：§2.7 新增 12 种扩展图完整可运行代码；§3.6 新增四种必考图完整代码；§3.7 新增「同一效果四种写法」对照表 + 4 个等价完整脚本（参数内联 / setter / pyplot / pandas）。
 - 2026-09-24 v6：应「全部逐条详解 + 尽可能拓展」——§1 新增检查清单逐条拆解、§2 新增每图一条坑、§3 全段重写为逐行+坑、§4.1.1 背景扩到八招（新增对角条纹/极坐标/圆角画布）+示例图、§4.3 新增 Normalize 家族与色带选择、§4.4 新增 colorbar 参数速查与离散色条、§6 重写为 pandas 代码逐条、§7 新增逐行 walkthrough、§8 重写为三库迷你代码；自测增至 17 题。
 - 2026-09-23 v5：§五主题美化改为逐条详解（每库按「是什么→逐行→坑」）；§4.1 新增五招个性化背景（双色/三色渐变/图片/水印/角标）；自测增至 14 题。
 - 2026-09-23 v4：新增 §五 全局美化（内置风格 / qbstyles / matplotx / mplcyberpunk / 自定义 mplstyle），自测增至 12 题；来源并入用户粘贴文章。
