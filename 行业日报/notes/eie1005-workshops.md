@@ -1,10 +1,10 @@
 ## 📎 原始课件
-- 三个工作坊课件尚未发布，待老师上传后同步。
+- Workshop 1 课件已发布（06 Python Project Folder + WS01(B)）；Workshop 2/3 待发布。
 
 # EIE1005 三次 Workshop 笔记（各占 10%，共 30%）
 
 ## Workshop 1 · Data Visualization – From Data to Insight（Wk3&4）
-- 🐍 完整代码逐行讲解见：[eie1005-w1-dataviz-python.md](eie1005-w1-dataviz-python.md)（22 个 Matplotlib 示例 + 3 个 Excel 数据）
+- 🐍 完整全讲见：[eie1005-w1-dataviz-python.md](eie1005-w1-dataviz-python.md)（零基础→WS01(B)：22 例逐例详解 + 背景/渐变着色/颜色条/主题美化）。**WS01(B) 截止 10/2 23:59，命名 EIE1005_StudentID_Workshop_01_B.py**
 - 目标：把数据变成能讲故事的图表，写出见解。
 - 要点：图表类型选择（趋势用折线、占比用饼/条、分布用直方图/箱线图）；避免误导性坐标轴；颜色与标注；洞察 = 对比 + 解释原因。
 - 工具：Matplotlib / Tableau / Power BI / Excel。
@@ -22,3 +22,5 @@
 
 ## 通用高分清单
 1. 截图/录屏证明「你自己跑通了」；2. 写明步骤与关键代码；3. 记录一次失败与修复；4. 与课程概念挂钩（如「这里用了监督学习」）。
+
+更新记录：2026-09-24 · Workshop 1 指向合并版全讲并补 WS01(B) 截止。

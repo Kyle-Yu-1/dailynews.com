@@ -10,7 +10,7 @@
 - Guest（Wk5 · NVIDIA HK）：行业讲座，出席计分
 - L3（Wk7 · Richard PANG）：虚拟世界中的 AI（数字孪生/Game AI）
 - L4（Wk10 · Luca ROSSI）：对话式 AI（LLM/NLP/RAG）
-- Workshop1（Wk3–4）：Data Visualization – From Data to Insight（[Python 代码逐行讲解](eie1005-w1-dataviz-python.md)）
+- Workshop1（Wk3–4）：Data Visualization – From Data to Insight（[数据可视化全讲 · 零基础→WS01(B) 进阶](eie1005-w1-dataviz-python.md)，含 22 例逐例详解 + WS01(B) 检查清单）
 - Workshop2（Wk8–9）：Game AI　·　Workshop3（Wk11–12）：Conversational AI
 - AIDA e-Module：6 个模块在线课程+测验（AI/数据分析、生成式AI与提示词、机器学习、计算机视觉、神经网络与深度学习、大数据计算）+ Excel/Slide 模块
 
@@ -28,6 +28,7 @@
 - 10/23 前（By Week 8）AIDA e-module 全部完成
 - 10/26–30（Wk9 实验课）AIDA 闭卷测验
 - **9/24（四）23:59**：Workshop 1 (WS01 A) 提交（10 分，Canvas 作业 19620）
+- **10/2（五）23:59**：Workshop 1 (WS01 B) 提交（10 分，命名 EIE1005_StudentID_Workshop_01_B.py）
 - 11/28 Mini-project 报告 + 演示视频
 - 11/23（Wk13 周一 16:30 Z209）**Test 2**
 
@@ -39,4 +40,4 @@ W1 L1 → W2 L2 + 项目准备 → W3–4 Workshop1 → W5 Guest → W6 Test1 �
 - Workshop 1（数据可视化 Python 逐行讲解）：ie1005-w1-dataviz-python.md
 - 三次 Workshop 汇总：ie1005-workshops.md · 词汇表：ie1005-vocabulary.md · Mini-project：project.md · AI 伦理：thics.md
 
-更新记录：最后更新 2026-09-16 · 数据来源（Canvas courses/4018「Week 3 and 4: Workshop 1: Data Visualization」模块 Python Project Folder）
+更新记录：最后更新 2026-09-24 · 补 WS01(B) 10/2 截止与合并版索引 · 数据来源（Canvas courses/4018）
