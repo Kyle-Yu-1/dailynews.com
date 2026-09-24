@@ -489,9 +489,9 @@ fig.savefig('pie.png', dpi=300, bbox_inches='tight')
 > - `pie`：`autopct='%1.1f%%'` 百分比 1 位小数、`startangle=90` 从 12 点起画、`wedgeprops` 可挖环形。
 > - 坑：竖向 `bar` 的长类目名在 x 轴必被裁，WS01(B) 检查清单点名用 `barh`；饼图类别 >9 会糊。
 
-### 3.6 同一效果的多种写法（问题 2 专项 · 逐条对照）
+### 3.6 同一效果的多种写法（四种写法逐条详解）
 
-> 🧠 阿基米德提问法结论：同一效果至少有 4 种等价写法，各司其职——①参数写进调用（最直观）②先画后 setter（便于循环批量改）③pyplot 状态机（单图脚本最快）④pandas 一行式（数据+图一体）。下面先给对照表，再给 4 个**输出完全一样**的完整脚本。
+> 🧠 阿基米德提问法结论：同一效果至少有 4 种等价写法，各司其职——①参数写进调用（最直观）②先画后 setter（便于循环批量改）③pyplot 状态机（单图最快）④pandas 一行式（数据+图一体）。下面先给对照表，再逐个写法「是什么 → 完整代码 → 逐行 → 适用场景 → 坑」展开。
 
 **对照表（效果 → 四种写法）**
 
@@ -507,19 +507,15 @@ fig.savefig('pie.png', dpi=300, bbox_inches='tight')
 | 图例 | `ax.legend()` | `line.set_label('名')` 再 legend | `plt.legend()` | `df.plot(legend=True)` |
 | 网格 | `ax.grid(True)` | `ax.grid(color=, ls=, alpha=)` | `plt.grid(True)` | `df.plot(grid=True)` |
 | 背景 | `ax.set_facecolor('#fafafa')` | `ax.patch.set_facecolor('#fafafa')` | `plt.gca().set_facecolor(...)` | 改 rcParams |
-| 柱顶标签 | `ax.bar_label(bars)` | 手动 `ax.text(i, v, ...)` | 无简写 | `df.plot().bar_label(...)` 不方便 |
+| 柱顶标签 | `ax.bar_label(bars)` | 手动 `ax.text(i, v, ...)` | 无简写 | 不方便，仍用 ax |
 | 按值着色 | `bar(color=colors)` | `bars.set_facecolor(colors)` | 无简写 | `df.plot(colormap='viridis')`（散点） |
 | 颜色条 | `fig.colorbar(sm, ax=ax)` | `sm.set_array(v)` 后 colorbar | `plt.colorbar(sm)` | 无简写 |
 
-**写法 A · 面向对象式（推荐：参数集中写进调用）**
+#### 3.6.1 写法① · 参数写进调用（最直观）
+
+**是什么**：颜色、线宽、标记等全部作为**关键字参数**，在 `ax.plot(...)` 调用时一次性传入。
 
 ```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.read_excel('salary.xlsx', sheet_name='Table 01')
-x, y = df['year'], df['salary']
-
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.plot(x, y, color='red', linewidth=2, marker='o', label='Salary')   # 一行写全
 ax.set_title('Salary Trend', fontweight='bold')
@@ -529,35 +525,73 @@ ax.set_facecolor('#fafafa')
 fig.savefig('a.png', dpi=300, bbox_inches='tight')
 ```
 
-**写法 B · 面向对象式（先画后 setter，另行修改）**
+> 📖 译注 · 逐行：
+> - `color / linewidth / marker / label` 都是 `plot()` 的**已知参数**，一行写完。
+> - 标题、轴标签、图例、网格**不是** `plot` 的参数，所以接着用 `set_title / legend / grid`。
+
+**适用**：一次成型、参数固定的静态图；代码最短最好读。
+**坑**：
+- 参数多时一行过长，可换行、每行一个参数；
+- 写错参数名直接 `TypeError`——只有该函数的已知参数能写进调用。
+
+#### 3.6.2 写法② · 先画后 setter（最灵活）
+
+**是什么**：先 `line, = ax.plot(x, y)` 拿到 **Line2D 对象**，再用 `line.set_xxx(...)` 逐个改样式。**Matplotlib 里线、柱、轴、标题都是 Artist，全都带 `set_` 方法**，所以这条套路对任何元素通用。
 
 ```python
 fig, ax = plt.subplots(figsize=(10, 5))
-line, = ax.plot(x, y)              # ① 先只画，不带任何样式
+line, = ax.plot(x, y)              # ① 先只画，不带样式；逗号解包拿那一条线
 line.set_color('red')              # ② 逐个 setter 修改
 line.set_linewidth(2)
 line.set_marker('o')
 line.set_label('Salary')
-ax.set_title('Salary Trend'); ax.title.set_fontweight('bold')   # ③ 标题也可先设后改
+ax.set_title('Salary Trend'); ax.title.set_fontweight('bold')   # ③ 标题也是 Artist，可先设后改
 ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
 ax.legend(); ax.grid(True, linestyle='--', alpha=0.5)
 ax.patch.set_facecolor('#fafafa')  # ④ 与 ax.set_facecolor 完全等价
 fig.savefig('b.png', dpi=300, bbox_inches='tight')
 ```
 
-**写法 C · pyplot 状态机式（单图脚本最快）**
+**常用 `set_` 清单**：
+
+| 对象 | setter 示例 |
+|---|---|
+| Line2D（线） | `set_color / set_linewidth / set_linestyle / set_marker / set_markersize / set_markerfacecolor / set_label / set_alpha / set_zorder / set_visible(False)` |
+| Axes（轴） | `set_title / set_xlabel / set_ylabel / set_xlim / set_ylim / set_facecolor / set_xticks` |
+| 批量改多个 | `ax.set(title=..., xlabel=..., ylabel=..., ylim=(0, 100))` |
+
+> 📖 译注 · 逐行：
+> - `ax.plot` 返回的是**列表**，`line, = ...` 的逗号把列表里那一条线解包出来；丢逗号会把列表当线用而报错。
+> - setter 返回 `None`，别写成 `line = line.set_color('r')`，也**不能链式** `line.set_color('r').set_linewidth(2)`。
+
+**适用**：循环里按条件改样式、动画、交互式更新（同一个对象反复改，不必重画）。
+**坑**：所有 `set_*` 要在 `plt.show()/savefig` 之前执行；之后才改的话需要重新渲染。
+
+#### 3.6.3 写法③ · pyplot 状态机式（单图最快）
+
+**是什么**：用 `plt.` 开头的函数；Matplotlib 内部始终维护「**当前 figure**」和「**当前 axes**」，`plt.xxx` 都打到这个"当前"对象上。
 
 ```python
-plt.figure(figsize=(10, 5))
+plt.figure(figsize=(10, 5))                       # 建画布并设为"当前"
 plt.plot(x, y, color='red', linewidth=2, marker='o', label='Salary')
 plt.title('Salary Trend', fontweight='bold')
 plt.xlabel('Year'); plt.ylabel('Salary (USD)')
 plt.legend(); plt.grid(True, linestyle='--', alpha=0.5)
-plt.gca().set_facecolor('#fafafa')       # gca()=当前坐标轴
+plt.gca().set_facecolor('#fafafa')                # gca()=拿当前坐标轴
 plt.savefig('c.png', dpi=300, bbox_inches='tight')
 ```
 
-**写法 D · pandas 一行式（数据处理 + 画图一体）**
+> 📖 译注 · 逐行：
+> - `plt.figure` 新建并激活一张画布；`plt.plot` 画到「当前 axes」，同时返回 Line2D 列表。
+> - `plt.gca()` = get current **axes**；`plt.gcf()` = get current **figure**。
+> - 切换对象：`plt.sca(ax)` 把某个 ax 设为当前；`plt.scf(fig)` 同理。
+
+**适用**：单图脚本、Jupyter 快速探索。
+**坑**：多子图时 `plt.plot` 总打到最后激活的那个 axes，**极易画错地方**——多图一律用 ax 对象式（写法①/②）。
+
+#### 3.6.4 写法④ · pandas 一行式（数据 + 图一体）
+
+**是什么**：DataFrame / Series 自带 `.plot`，用 `kind=` 选图型；内部仍是调用 Matplotlib，**返回 Axes**。
 
 ```python
 ax = df.plot(x='year', y='salary', kind='line',
@@ -568,10 +602,26 @@ ax.grid(True, linestyle='--', alpha=0.5); ax.set_facecolor('#fafafa')
 ax.get_figure().savefig('d.png', dpi=300, bbox_inches='tight')   # ax.get_figure() 拿画布
 ```
 
-> 📖 译注 · 逐条：
-> - 四种写法**输出完全一致**，按场景选：A 参数集中好维护；B 的 setter 适合「循环里按条件改样式」；C 单图脚本最快；D 与 pandas 清洗流程无缝衔接。
-> - 坑：`ax.plot` 返回列表，`line, = ax.plot(...)` 的解包逗号不能丢；`df.plot` 返回的是 Axes 不是 Figure，保存要先 `ax.get_figure()`；状态机式在多子图时容易画错对象，多图用 A/B。
-> - `line.set_*` 系列完整清单：`set_color / set_linewidth / set_linestyle / set_marker / set_markersize / set_label / set_alpha`。
+> 📖 译注 · 逐行：
+> - `kind=` 取值：`line / area / bar / barh / pie / scatter / hist / box / kde`；等价写法 `df.plot.line(...)`、`df.plot.pie(...)`（kind 换成方法名）。
+> - 返回 **Axes**：接着用 `ax.set_title(...)` 补样式；保存要 `ax.get_figure()`。
+> - 多列时每列自动一条线；只想画一列用 `y='列名'`；饼图必须指定 `y=`（数值列）。
+
+**适用**：刚读完 Excel、边清洗边画。
+**坑（重点）**：
+- **`kind=` 只属于 pandas**：`ax.plot(kind='pie')` 不存在，会报 `TypeError: plot() got an unexpected keyword argument 'kind'`——Matplotlib 选图型靠换方法名（plot / bar / barh / pie / scatter）。
+- `df.plot` 返回 Axes 不是 Figure，直接 `.savefig()` 会报错。
+
+**四种写法怎么选（横向对比）**
+
+| 写法 | 场景 | 一句话 |
+|---|---|---|
+| ① 参数内联 | 一次性静态图 | 最直观、最短 |
+| ② setter | 循环 / 动画 / 动态改样式 | 最灵活、可复用对象 |
+| ③ pyplot | 单图快速探索 | 最快，多图易错 |
+| ④ pandas | 清洗后直接出图 | 与 pandas 流程无缝 |
+
+> 📖 译注：四种写法**输出完全一致**，按场景选；本作业推荐 ①（参数集中、好维护），多子图别用 ③。
 
 ---
 
@@ -1347,6 +1397,9 @@ fig.text 用画布坐标 0~1，(0.5,0.5)=整幅图正中心，与子图数据坐
 <details><summary>Q17 圆角画布的关键步骤？</summary>
 `fig.patch.set_facecolor('none')` 透明底 + `FancyBboxPatch(boxstyle='round,...,rounding_size=...', transform=fig.transFigure, zorder=0)` 圆角底片 + `ax.set_zorder(1)`，导出 `transparent=True`。</details>
 
+<details><summary>Q18 `ax.plot(kind='pie')` 为什么报错？</summary>
+`kind` 是 pandas 的 `.plot` 参数，不是 Matplotlib 的；Matplotlib 选图型靠换方法名（plot/bar/barh/pie/scatter）。pandas 写法是 `df.plot(kind='pie', y='col')`，底层仍调 `ax.pie`。</details>
+
 ## 参考来源（本次新增）
 > 🌐 你提供的 5 篇参考，2026-09-23 读取状态：
 > - ✅ [15 个可视化图表（cnblogs）](https://www.cnblogs.com/fanruan/p/19955941)：已读取，用于 §二选型速查与误区。
@@ -1358,6 +1411,7 @@ fig.text 用画布坐标 0~1，(0.5,0.5)=整幅图正中心，与子图数据坐
 > 🌐 官方来源：Matplotlib Gallery https://matplotlib.org/stable/gallery/index.html ；渐变柱 https://matplotlib.org/stable/gallery/lines_bars_and_markers/gradient_bar.html ；颜色条放置 https://matplotlib.org/stable/users/explain/axes/colorbar_placement.html ；Plotly https://plotly.com/python/ ；pyecharts https://pyecharts.org/ 。
 
 ## 更新记录
+- 2026-09-24 v7.1：§3.6 四种写法改为逐条详解（各含是什么 / 完整代码 / 逐行 / set_ 清单 / 适用 / 坑），新增 `ax.plot(kind=)` 易错点与写法选择表；自测增至 18 题。
 - 2026-09-24 v7（整体整合）：合并 §2.6「坑」进 §2.2 三张速查表（补面积图行）；删除 §3.4 并把 API 参数逐条并入 §3.5；重排 3.5→3.4、3.6→3.5、3.7→3.6 并同步交叉引用；skill 同步新增「整体迭代」铁律。
 - 2026-09-24 v6.1（阿基米德提问法优化）：§2.6 新增 12 种扩展图完整可运行代码（原 §2.7，v7 重排）；§3.6 新增四种必考图完整代码；§3.7 新增「同一效果四种写法」对照表 + 4 个等价完整脚本（参数内联 / setter / pyplot / pandas）。
 - 2026-09-24 v6：应「全部逐条详解 + 尽可能拓展」——§1 新增检查清单逐条拆解、§2 新增每图一条坑、§3 全段重写为逐行+坑、§4.1.1 背景扩到八招（新增对角条纹/极坐标/圆角画布）+示例图、§4.3 新增 Normalize 家族与色带选择、§4.4 新增 colorbar 参数速查与离散色条、§6 重写为 pandas 代码逐条、§7 新增逐行 walkthrough、§8 重写为三库迷你代码；自测增至 17 题。

@@ -247,3 +247,11 @@
 - plt.gca() — 获取当前坐标轴
 - ax.get_figure() — 由坐标轴取回画布
 
+### 进阶 · 四种写法详解（Workshop 01 B v7.1 新增，2026-09-24）
+- kind — pandas .plot 的选图型参数
+- Artist — Matplotlib 图形元素基类（线/柱/轴/标题）
+- Line2D — 线条对象（ax.plot 的返回值）
+- plt.gcf() — 获取当前画布（get current figure）
+- plt.sca() / plt.scf() — 把某坐标轴 / 画布设为当前
+- setter（set_ 系列）— 对象上的修改方法
+

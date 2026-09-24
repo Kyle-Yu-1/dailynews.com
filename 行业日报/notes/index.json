@@ -289,7 +289,7 @@
   {
     "id": "eie1005-ws01b-insight",
     "title": "Workshop 1 (B) · To Insight 可视化进阶代码",
-    "desc": "v7整合版：选型表含坑、每图完整代码、四种写法对照、逐行+坑、背景八招、Normalize家族、17题自测",
+    "desc": "v7.1整合版：四种写法逐条详解（参数内联/setter/pyplot/pandas）+每图完整代码+选型含坑+背景八招+18题自测",
     "file": "eie1005-ws01b-insight.md",
     "course": "EIE1005 · 人工智能与数据分析"
   }
