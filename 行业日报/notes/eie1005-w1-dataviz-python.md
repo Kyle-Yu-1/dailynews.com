@@ -232,6 +232,46 @@ df_price.plot(ax=ax1, kind='pie', y='Apple Price', labels=df_price['Year'])
 
 ---
 
+### 4.5 南丁格尔玫瑰图 Nightingale Rose（拓展 · 完整项目代码）
+
+> 🧠 拓展（Python Graph Gallery，检索于 2026-09-25）：玫瑰图 = **极坐标柱状图**（Coxcomb）。用**扇区半径**表示数值、扇区面积 ∝ 半径²，适合「数值差距小时放大差异」或周期性数据（如一周七天的订单量）。
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+days   = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+orders = [120, 150, 140, 160, 180, 220, 200]
+
+fig = plt.figure(figsize=(9, 9))
+ax = fig.add_subplot(111, projection='polar')          # 关键：极坐标轴（角度 + 半径）
+
+n = len(orders)
+theta = np.linspace(0, 2 * np.pi, n, endpoint=False)   # n 个等分角度（弧度）
+width = 2 * np.pi / n * 0.8                            # 每瓣宽度，留 20% 缝隙
+
+ax.bar(theta, orders, width=width, alpha=0.8,
+       edgecolor='white', linewidth=1.5)               # 极坐标 bar：角度=位置、数值=半径
+ax.set_theta_zero_location('N')                        # 0° 指向正北
+ax.set_xticks(theta)                                   # 刻度放每瓣中心
+ax.set_xticklabels(days)
+ax.set_title('Orders by Day (Nightingale Rose)', fontweight='bold', pad=20)
+
+plt.show()
+```
+
+> 📖 译注 · 逐条：
+> - `add_subplot(111, projection='polar')`：玫瑰图**必须用极坐标轴**，普通 `GridSpec` 格子画不了。
+> - `np.linspace(0, 2π, n, endpoint=False)`：一周 7 天 = 圆周上 7 个等分角度（**弧度制**）。
+> - `ax.bar(theta, orders, width=…)`：极坐标里的 bar——`theta` 定角度位置、`orders` 定半径（柱长）。
+> - `set_theta_zero_location('N')`：让第一瓣从正北（12 点方向）开始。
+> - 坑：`width` 别超过 `2π/n`，否则花瓣重叠；数值差距太大时小值会被压得看不见（这正是玫瑰图"放大差异"的特性，反过来说别用它比差距悬殊的数据）。
+> - 与 PPT 关系：PPT 的 `df.plot(kind=…)` 画不了极坐标，这是第一个「跳出 PPT 骨架」的图——用 `plt.figure + add_subplot(projection='polar')` 起步。
+
+> 🌐 来源：https://python-graph-gallery.com/circular-barplot-basic/（检索于 2026-09-25）
+
+---
+
 ## 第 5 步 · 一页放多图（Example 11–14 原格式）
 
 ```python
@@ -1932,6 +1972,9 @@ Figure=整张画布（一张纸）；Axes=纸上的一个坐标系（可多块�
 
 ---
 
+<details><summary>Q21 南丁格尔玫瑰图的两个关键点？</summary>
+①`add_subplot(111, projection='polar')` 建极坐标轴；②`ax.bar(theta, 数值, width=2π/n*0.8)`——theta 是等分弧度角度、数值是半径；`set_theta_zero_location('N')` 让第一瓣朝北。</details>
+
 ## 参考来源（本次新增）
 > 🌐 你提供的 5 篇参考，2026-09-23 读取状态：
 > - ✅ [15 个可视化图表（cnblogs）](https://www.cnblogs.com/fanruan/p/19955941)：已读取，用于 §二选型速查与误区。
@@ -1946,6 +1989,7 @@ Figure=整张画布（一张纸）；Axes=纸上的一个坐标系（可多块�
 
 > 🌐 v10 新增来源：Canvas 130052《Part 01 - From Data.pdf》(133 页)；官方 Pyplot/Quick start/Plot types、pandas 10min、Python Graph Gallery；MIT OCW 6.100L L25；《Python for Data Analysis 3e》(McKinney)、《Fundamentals of Data Visualization》(Wilke)、《Storytelling with Data》(Knaflic)、《The Visual Display of Quantitative Information》(Tufte)。检索于 2026-09-25。
 ## 更新记录
+- 2026-09-25 v10.1：新增 §4.5 南丁格尔玫瑰图完整项目代码（极坐标 bar 逐行 + 易错 + Graph Gallery 来源）；自测增至 21 题。
 - 2026-09-25 v10（全对齐 PPT 代码格式）：主教学代码全部改为 PPT 同款骨架（plt.figure/subplots_adjust/suptitle/GridSpec/add_subplot/df.plot/show）；修正刻度旋转 45°、颜色/标记表按 PPT；新增第 0.5 步四原则（反例→修正）；第 4 步每图附 Graph Gallery；第 7 步改双作业 WS01(A)+(B) 并补 GES2023 关键数据；第 10 步三版全部 PPT 骨架；新增附录 B 资源书单；内容源自 Canvas 130052 全文。
 - 2026-09-24 v9（方案 A 重写）：第 1~10 步阶梯式重排；重点=四种写法与进阶美化。
 - 更早记录见 git 历史。

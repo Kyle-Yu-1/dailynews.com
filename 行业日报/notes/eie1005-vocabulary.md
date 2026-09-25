@@ -282,3 +282,11 @@
 
 
 覆盖率：本表共收录 223 条术语（读音提示表覆盖可视化高频 20 条；其余按需补充音标/谐音）。
+
+### 进阶 · 极坐标（Workshop 1 v10.1 新增，2026-09-25）
+- Nightingale rose chart — 南丁格尔玫瑰图（极坐标柱状图）
+- polar coordinates — 极坐标（角度 + 半径）
+- projection='polar' — 极坐标投影
+- theta — 角度（弧度制）
+- set_theta_zero_location — 设定 0° 方向（N=正北）
+
