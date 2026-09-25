@@ -1,418 +1,335 @@
-# EIE1005 · Workshop 1 数据可视化（从零手把手 · 方案 A 重写版）
+# EIE1005 · Workshop 1 数据可视化（v10 · 全对齐 PPT 代码格式）
 
-> 📖 重写说明（按你的三点要求）：①不讲环境配置；②重点 = **第 8 步 代码书写方式**与**第 9 步 进阶美化**；③每个知识点都**先给完整项目代码（复制即跑）→ 再逐行拆解**，并附「输出长什么样 / 术语对照 / 参数表 / 易错 / 回扣作业」，代码示例尽可能多。课件原文与 22 例完整讲解保留在附录 A。
+> 📖 v10 说明（按你的要求重做）：主教学路径的全部代码**与 PPT / 项目文件夹同款格式**——三行 import → `plt.figure + subplots_adjust + suptitle` → `GridSpec + add_subplot` → pandas 读数据 → `df.plot(ax=…, kind=…, x=…, y=…)` → `plt.show()`。每节仍是「完整项目代码 → 逐行拆解 → 输出 → 术语 → 参数 → 易错 → 回扣作业」。其它写法（ax.plot / plt.subplots / pyplot）只放在第 8 步作对照。
 
 ## 📎 原始课件
-- Workshop 1 项目包（22 个 `.py` + 3 个 Excel）：`行业日报/files/eie1005/EIE1005-DataViz-06-Python-Project-Folder-Student.zip`；逐文件原文 `dataviz06-python-project-原文.txt`
-- Workshop 01 (B) PDF（7 页）：Canvas files/130047；逐页原文 `eie1005-ws01b-insight-原文.txt`
-- 数据：USA College Graduate Salary 2025 Projection（Table 01–04，Excel 已提供）
+- **01 - Part 01 - From Data.pdf**（133 页，Canvas files/130052）：1.1 什么是数据可视化 / 1.2 环境 / 1.3 数据与显示（22 个示例代码）/ 1.4 Workshop 01 (A)
+- **02 - Part 02 - To Insight.pdf**（WS01(B)，Canvas files/130047，7 页）
+- **06 - Python Project Folder**（22 个 `.py` + 3 个 Excel；已解压到桌面 `EIE1005`）
+- WS01(A) 数据源：PolyU Graduate Employment Survey 2023（SAO 官方 PDF）
 
 ## ⏱ 30 秒速览
 
-> 连环追问：是什么 → 怎么学 → 学完能干什么。
+**① 一句话**：完全按 PPT 的代码格式，从零到交两份作业（WS01(A) + WS01(B)）。
 
-**① 这是什么？**
-一句话：一份**从零开始手把手**教你用 Python 画图的教程，学完能交 WS01(B) 作业。
+**② 学习路径（按顺序）**
 
-**② 学习路径（按顺序，别跳步）**
-
-| 步 | 学什么 | 一句话 |
-|---|---|---|
-| 1–3 | 画第一张图 → 三个概念 → 让图完整 | 先把一张图画对 |
-| 4 | 四种必考图（折线/面积/柱/饼） | 每种一个完整项目 |
-| 5–6 | 一页多图 + pandas 读数据 | 从一张到多张、从列表到 Excel |
-| 7 | WS01(B) 任务与检查清单 | 知道交什么、怎么评分 |
-| 8 | **代码书写方式（四种写法）** | 同一效果多种写法 |
-| 9 | **进阶美化（背景/柱状特效/渐变着色/颜色条/主题）** | 从"能看"到"高分" |
-| 10 | 完整作业示例（基础/进阶/炫酷三版） | 抄一个就能交 |
-
-**③ 学完能干什么？**
-交出「选型正确 + 标签齐全 + 数值着色 + 颜色条 + 自定义背景」的 WS01(B) `.py`，逐项过掉 P7 四类检查清单。
+| 步 | 内容 |
+|---|---|
+| 0.5 | 数据可视化四原则（选对图 / 诚实轴 / 去杂乱 / 一句话结论） |
+| 1–3 | PPT 骨架 → 三个概念 → 让图完整 |
+| 4 | 四种必考图（每图 PPT 同款完整代码） |
+| 5–6 | 一页多图 + pandas 读数据 |
+| 7 | 两份作业 A/B 与检查清单 |
+| 8 | 四种代码写法对照 |
+| 9 | 进阶美化（背景/柱特效/渐变/颜色条/主题） |
+| 10 | 作业三版（基础/进阶/炫酷） |
 
 **三条结论**
-1. 画图 = 读数据 → 建画布 → 画 → 装饰 → 保存，顺序永不变。
-2. 同一效果至少有 4 种写法（参数内联 / setter / pyplot / pandas），按场景选。
-3. 颜色三件套 `colormap + Normalize + ScalarMappable` 是「按数值着色 + 颜色条」的通用套路。
+1. PPT 骨架 = `import → figure → subplots_adjust → suptitle → GridSpec → add_subplot → read_excel → df.plot → show`。
+2. `df.plot(ax=ax1, kind=…, x=…, y=…)` 是 PPT 唯一画图写法；`kind` 换 `line/area/bar/barh/pie`。
+3. 检查清单四问：Q1 图数、Q2 故事、Q3 类型、Q4 样式。
 
-**关键词**：Figure、Axes、Artist、plot、bar、pie、legend、grid、savefig、kind、setter、colormap、Normalize、colorbar、facecolor、bar_label、twinx、subplot_mosaic。
+**关键词**：Figure、GridSpec、add_subplot、DataFrame、df.plot、kind、suptitle、subplots_adjust、set_title、set_xticklabels、marker、color。
 
 ## 前置 / 后接
-- 前置：Python 基础（变量、列表、函数调用）。
-- 后接：Test 1（L1+L2+W1）；三次 Workshop 总览与报告高分清单。
+- 前置：Python 基础；L1 数据分析五步。
+- 后接：Test 1（L1+L2+W1）；WS01(A) 9/24 截止、WS01(B) 10/2 截止。
 
 ---
 
-## 第 1 步 · 画第一张图（最小 5 行 + 输出长什么样）
+## 第 0.5 步 · 数据可视化四原则（每原则：反例 → 修正完整代码）
 
-**① 完整项目代码（复制即跑）**
+> 🧠 拓展（Wilke《Fundamentals of Data Visualization》+ Knaflic《Storytelling with Data》，检索于 2026-09-25）：先记住四条原则，后面的美化都围绕它们。
+
+**原则 1 · 选对图**：趋势用折线、对比用柱、占比用饼。反例：拿饼图看趋势 ❌。
+
+**原则 2 · 诚实坐标轴**：柱状图必须从 0 开始（高度=量），否则夸大差距。
 
 ```python
-import matplotlib.pyplot as plt            # 1 引入画图工具箱
-plt.plot([1, 2, 3, 4], [1, 4, 9, 16])      # 2 画折线：两组等长的数
-plt.title('My First Chart')                # 3 标题
-plt.xlabel('x'); plt.ylabel('y')           # 4 横/纵轴标签
-plt.show()                                 # 5 显示出来
+# 反例 ❌：y 轴不从 0 开始，60 和 48 看着像差一倍
+df.plot(ax=ax1, kind='bar', x='major', y='salary')
+ax1.set_ylim(40, 65)
+
+# 修正 ✅：保留 0 基线
+df.plot(ax=ax1, kind='bar', x='major', y='salary')
+ax1.set_ylim(0, 65)
 ```
 
-**② 逐行拆解**
+**原则 3 · 去杂乱（灰色衬托 + 一个强调色）**：把不重要的元素变灰，只留一个颜色讲重点。
 
-| 行 | 干什么 | 为什么这样写 |
-|---|---|---|
-| 1 | `import ... as plt` | 给画图库起短名 `plt`，后面全用它 |
-| 2 | `plt.plot(x 列表, y 列表)` | 把 (1,1)(2,4)(3,9)(4,16) 四个点**连成线** |
-| 3 | `plt.title('文字')` | 给图加标题 |
-| 4 | `plt.xlabel / plt.ylabel` | 给横轴、纵轴加名字 |
-| 5 | `plt.show()` | 弹窗把图画出来（VS Code 右键 Run 就能看到） |
+```python
+# 反例 ❌：满屏彩色，不知道看哪
+df.plot(ax=ax1, kind='bar', x='major', color=['r', 'g', 'b', 'y', 'm'])
 
-**③ 画出来是什么样**
-
-```
-y
-16 ┤                   ●
- 9 ┤             ●
- 4 ┤       ●
- 1 ┤ ●
-   └──┬──────┬──────┬────── x
-      1      2      3      4
+# 修正 ✅：全部灰，只有最大值用强调色
+colors = ['#c0392b' if v == df['salary'].max() else '#9aa0a6' for v in df['salary']]
+df.plot(ax=ax1, kind='bar', x='major', color=colors)
 ```
 
-**④ 术语对照**：plot 画图 / title 标题 / label 标签 / show 显示。
-**⑤ 易错**：两个列表**长度不等**会报错；忘写 `plt.show()` 图不出现。
+**原则 4 · 每图一句话结论**：图下加一句「读图结论」，老板不用猜。
+
+```python
+ax1.set_title('Salary by Major', fontweight='bold')
+ax1.text(0.02, -0.18, 'Conclusion: Medicine graduates earn the most ($61k).',
+         transform=ax1.transAxes, fontsize=10, color='#555')
+```
+
+> 🌐 来源：https://clauswilke.com/dataviz/ ；https://www.storytellingwithdata.com/ （检索于 2026-09-25）
 
 ---
 
-## 第 2 步 · 三个核心概念（Figure / Axes / Artist）
+## 第 1 步 · PPT 骨架：先跑通一张图
 
-```
-Figure（画布）：一整张纸
- └─ Axes（坐标区）：纸上的一块绘图区（一张纸可贴多块）
-     ├─ Line2D（线）、Patch（柱/扇形）…… 统称 Artist
-     └─ Text（标题/标签）、XAxis / YAxis（坐标轴）
-```
-
-> 📖 逐条：
-> - **Figure = 整张画布**：`plt.figure()` / `plt.subplots()` 创建；一张画布可装多张子图。
-> - **Axes = 一个坐标系**（一张小图）：标题、坐标、线都挂在它身上；`ax.plot / ax.set_title`。
-> - **Artist = 一切可见元素**（线、柱、文字、图例）：它们都有 `set_xxx` 方法（第 8 步写法②的核心）。
-> - 两种入口：`plt.plot(...)`（状态机式，单图快）与 `ax.plot(...)`（对象式，多图清晰）；后者内部也是先拿"当前 Axes"再画。
-
-**术语对照**：Figure 画布（菲·格儿）/ Axes 坐标区（艾克·西兹）/ Artist 图形元素（阿·提斯特）。
-
----
-
-## 第 3 步 · 让一张图完整（标题 / 轴标签 / 图例 / 网格 / 保存）
-
-**① 完整项目代码（复制即跑）**
-
-```python
-import matplotlib.pyplot as plt
-
-year   = [2022, 2023, 2024, 2025]
-salary = [42000, 46000, 51000, 58000]
-
-fig, ax = plt.subplots(figsize=(8, 5))        # 建画布 + 坐标区（对象式）
-
-ax.plot(year, salary, marker='o', linewidth=2,
-        color='#1f77b4', label='Salary')      # 画线：点/线宽/颜色/图例名
-
-ax.set_title('Salary Trend', fontweight='bold')  # 标题（加粗）
-ax.set_xlabel('Year')                         # 横轴标签
-ax.set_ylabel('Salary (USD)')                 # 纵轴标签（带单位）
-
-ax.legend()                                   # 图例
-ax.grid(True, linestyle='--', alpha=0.5)      # 淡虚线网格
-
-fig.savefig('chart.png', dpi=300, bbox_inches='tight')  # 高清保存
-plt.show()                                    # 显示
-```
-
-**② 逐行拆解**
-
-| 行 | 干什么 | 为什么这样写 |
-|---|---|---|
-| `plt.subplots()` | 一次返回 `fig`（画布）和 `ax`（坐标区） | 对象式写法，多图时不乱 |
-| `marker='o'` | 数据点画圆点 | 看清每个点在哪 |
-| `linewidth=2` | 线宽 2 | 比默认 1 更醒目 |
-| `label='Salary'` | 给这条线起名 | `legend()` 会显示它 |
-| `fontweight='bold'` | 标题加粗 | 对应作业「Descriptive Titles」 |
-| `ax.legend()` | 显示图例 | 多线时区分谁是谁 |
-| `ax.grid(linestyle='--', alpha=0.5)` | 淡虚线网格 | 方便读数又不抢戏 |
-| `savefig(dpi=300, bbox_inches='tight')` | 高清保存、裁白边 | 300 dpi 清晰；tight 防标签被切 |
-
-**③ 参数表**：`marker`（`o` `*` `s` `^`）/ `linestyle`（`-` `--` `-.` `:`）/ `color`（名字 `'red'` 或 `#1f77b4`）。
-**④ 术语对照**：marker 标记 / linewidth 线宽 / legend 图例 / grid 网格 / savefig 保存图片 / dpi 清晰度 / bbox_inches 裁边。
-**⑤ 易错**：忘 `plt.show()`；`savefig` 文件名写错不报错、默默存到别处；标题没 `bold` 丢分。
-
----
-
-
-## 第 4 步 · 四种必考图（每种一个完整项目代码 → 逐行拆解）
-
-> 对应 WS01(B) Q3 的 Line / Area / Bar / Pie。下面每个都按「完整代码 → 逐行 → 输出 → 术语 → 参数 → 易错 → 回扣作业」七件套。
-
-### 4.1 折线图 Line（看趋势）
-
-**① 完整项目代码**
-
-```python
-import matplotlib.pyplot as plt
-
-year   = [2022, 2023, 2024, 2025]
-salary = [42000, 46000, 51000, 58000]
-
-fig, ax = plt.subplots(figsize=(8, 5))
-ax.plot(year, salary, marker='o', linewidth=2, color='#1f77b4', label='Salary')
-ax.set_title('Salary Trend', fontweight='bold')
-ax.set_xlabel('Year'); ax.set_ylabel('Salary (USD)')
-ax.legend(); ax.grid(True, linestyle='--', alpha=0.5)
-fig.savefig('line.png', dpi=300, bbox_inches='tight')
-plt.show()
-```
-
-**② 逐行拆解**：`subplots()` 建画布+坐标区 → `plot(x, y)` 按位置配对连成线（`marker` 加圆点、`linewidth` 线宽、`label` 图例名）→ `set_title/…` 装饰 → `legend/grid` 图例网格 → `savefig` 高清保存。
-**③ 输出**：一条左低右高的折线，每个数据点有圆点，标题加粗、轴带单位、右上角图例。
-**④ 术语**：marker 标记 / linewidth 线宽 / legend 图例 / grid 网格 / savefig 保存。
-**⑤ 参数**：`marker`（o * s ^）· `linestyle`（- -- -. :）· `color`（名字或 `#hex`）。
-**⑥ 易错**：两列表长度不等报错；数据点 >20 时缩小 marker 加粗线，否则密成蜘蛛网。
-**⑦ 回扣作业**：Q3=Line；`bold` 标题=Descriptive Titles；单位=Axis Labels。
-
-### 4.2 面积图 Area（趋势 + 总量感）
-
-**① 完整项目代码**
-
-```python
-import matplotlib.pyplot as plt
-
-year   = [2022, 2023, 2024, 2025]
-sales  = [100, 130, 120, 160]
-
-fig, ax = plt.subplots(figsize=(8, 5))
-ax.fill_between(year, sales, alpha=0.3)            # 先填色（半透明）
-ax.plot(year, sales, color='#2e8b57', linewidth=2) # 再描边，边线不被盖
-ax.set_title('Sales Area', fontweight='bold')
-ax.set_xlabel('Year'); ax.set_ylabel('Sales')
-ax.grid(True, linestyle='--', alpha=0.5)
-fig.savefig('area.png', dpi=300, bbox_inches='tight')
-plt.show()
-```
-
-**② 逐行拆解**：`fill_between(x, y, alpha=0.3)` 把「曲线与 x 轴之间」填色，`alpha` 0=透明 1=不透明；**先填色再 `plot` 描边**，边线才不被盖住。
-**③ 输出**：绿色曲线 + 曲线下方淡绿填色。
-**④ 术语**：fill_between 区域填色 / alpha 透明度。
-**⑤ 易错**：只填色不描边，边缘发虚；层多时每层都要 alpha 且最重要的放底层。
-
-### 4.3 柱状图 Bar / 横柱 Barh（比大小）
-
-**① 完整项目代码（竖向 bar）**
-
-```python
-import matplotlib.pyplot as plt
-
-majors = ['Eng', 'Bus', 'Sci', 'Arts', 'Med']
-salary = [52, 48, 61, 44, 59]
-
-fig, ax = plt.subplots(figsize=(8, 5))
-bars = ax.bar(majors, salary, width=0.6, color='#1f77b4')
-ax.bar_label(bars, fmt='%d', padding=3)            # 柱顶数值标签
-ax.set_title('Salary by Major', fontweight='bold')
-ax.set_ylabel('Salary (k USD)')
-ax.set_ylim(0, 68)                                  # 从 0 起 + 顶部留白放标签
-fig.savefig('bar.png', dpi=300, bbox_inches='tight')
-plt.show()
-```
-
-**①' 完整项目代码（横向 barh，长系名不裁）**
-
-```python
-order = sorted(range(len(salary)), key=lambda i: salary[i])   # 按数值排序的索引
-fig, ax = plt.subplots(figsize=(8, 5))
-ax.barh([majors[i] for i in order], [salary[i] for i in order], color='#1f77b4')
-ax.set_title('Salary by Major', fontweight='bold')
-ax.set_xlabel('Salary (k USD)')
-fig.savefig('barh.png', dpi=300, bbox_inches='tight')
-plt.show()
-```
-
-**② 逐行拆解**：`bar(x, y, width=)` 竖柱、`barh(y=类目, width=数值)` 横柱；`bar_label(bars)` 自动把数值标在柱顶；`sorted(... key=lambda)` 只取排序后的**索引**，再按索引重排类目和数值。
-**③ 输出**：5 根等宽柱子，高度=数值，柱顶有数字，从矮到高排列（barh 版）。
-**④ 术语**：bar 柱状图 / barh 横向柱 / bar_label 柱顶标签 / sort 排序。
-**⑤ 易错**：竖柱长类目名在 x 轴**必被裁**（WS01(B) 检查清单点名用 barh）；`ylim` 不从 0 起会被质疑夸大差距。
-
-### 4.4 饼图 Pie（看占比）
-
-**① 完整项目代码**
-
-```python
-import matplotlib.pyplot as plt
-
-majors = ['Eng', 'Bus', 'Sci', 'Arts', 'Med']
-salary = [52, 48, 61, 44, 59]
-
-fig, ax = plt.subplots(figsize=(7, 7))
-ax.pie(salary, labels=majors, autopct='%1.1f%%',
-       startangle=90, wedgeprops=dict(width=0.4))   # width<1 挖空 → 环形
-ax.set_title('Salary Share', fontweight='bold')
-fig.savefig('pie.png', dpi=300, bbox_inches='tight')
-plt.show()
-```
-
-**② 逐行拆解**：`pie(数值, labels=类目)` 数值决定扇区大小；`autopct='%1.1f%%'` 标百分比保留 1 位小数；`startangle=90` 从 12 点起顺时针；`wedgeprops=dict(width=0.4)` 挖空中心变环形。
-**③ 输出**：一个环形图，每瓣标百分比。
-**④ 术语**：pie 饼图 / autopct 百分比标签 / startangle 起始角 / wedgeprops 扇形属性。
-**⑤ 易错**：**饼图没有 `x=`**，用 `y`（数值）+ `labels`（标签）；类别 >9 会糊，小类合并成 Other；别加 3D。
-
----
-
-
-## 第 5 步 · 一页放多图（三种布局完整项目）
-
-**① GridSpec 2×2 四图（经典作业布局）**
-
-```python
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-
-fig = plt.figure(figsize=(12, 9))
-gs = gridspec.GridSpec(2, 2)              # 2 行 2 列 = 4 格
-ax1 = fig.add_subplot(gs[0, 0])           # 左上
-ax2 = fig.add_subplot(gs[0, 1])           # 右上
-ax3 = fig.add_subplot(gs[1, 0])           # 左下
-ax4 = fig.add_subplot(gs[1, 1])           # 右下
-
-ax1.plot(year, sales, marker='o'); ax1.set_title('Line')
-ax2.fill_between(year, sales, alpha=0.3); ax2.set_title('Area')
-ax3.bar(majors, salary); ax3.set_title('Bar')
-ax4.pie(salary, labels=majors); ax4.set_title('Pie')
-
-fig.subplots_adjust(wspace=0.35, hspace=0.4)   # 横/纵向间距，防标签重叠
-plt.show()
-```
-
-> 逐行：`GridSpec(行, 列)` 只规划不画；`gs[r, c]` 下标从 0 数；`subplots_adjust` 调间距。坑：同一格重复 `add_subplot` 会重叠。
-
-**② `subplots()` 一行建多图（更简洁）**
-
-```python
-fig, axes = plt.subplots(2, 2, figsize=(12, 9))   # 直接返回 2x2 的 axes 数组
-axes[0, 0].plot(year, sales); axes[0, 1].bar(majors, salary)
-axes[1, 0].fill_between(year, sales, alpha=0.3); axes[1, 1].pie(salary, labels=majors)
-plt.show()
-```
-
-> 逐行：`axes[r, c]` 与 `gs[r, c]` 对应同一格；比 GridSpec 少两行。
-
-**③ mosaic 字符串布局（'AB;CC' = 上两格 + 下通栏）**
-
-```python
-fig, axd = plt.subplot_mosaic('AB;CC', figsize=(12, 9))   # 第一行 A B，第二行 C 跨两格
-axd['A'].plot(year, sales); axd['B'].bar(majors, salary)
-axd['C'].fill_between(year, sales, alpha=0.3)
-plt.show()
-```
-
-> 逐行：字符串每一行分号分隔、字母占一格；同字母重复=合并通栏。坑：`'CC'` 表示 C 横跨两格。
-
----
-
-## 第 6 步 · 数据准备（pandas 读 Excel + 清洗，完整项目）
+**① 完整项目代码（PPT 同款，复制即跑）**
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 
-df = pd.read_excel('salary.xlsx', sheet_name='Table 01')   # 1 读一张表 → DataFrame
-df = df.dropna()                          # 2 删缺失行
-df = df.drop_duplicates()                 # 3 去重复
-df = df[df['salary'] > 0]                 # 4 只留正数（去异常）
-top5 = (df.groupby('major')['salary']      # 5 按专业聚合求均值
-          .mean()
-          .sort_values(ascending=False)    # 6 降序，方便画条形图
-          .head(5))
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 01 - Simple Chart', fontsize=24)
 
-fig, ax = plt.subplots(figsize=(9, 5))
-top5.plot(ax=ax, kind='barh')             # 7 pandas 直接画（第 8 步写法④）
-ax.set_title('Top 5 Majors by Salary', fontweight='bold')
-ax.set_xlabel('Salary (USD)')
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+data = {'Year': [2022, 2023, 2024, 2025],
+        'Apple Price': [20, 25, 18, 28]}
+df_price = pd.DataFrame(data)
+df_price.plot(ax=ax1, kind='line', x='Year', y='Apple Price')
+
 plt.show()
 ```
 
-> 逐行：`read_excel(sheet_name='表名')` 返回 DataFrame；`dropna/drop_duplicates` 清洗；`df[条件]` 筛选；`groupby('major')['salary'].mean()` 分组求均值；`sort_values(ascending=False)` 降序。术语：DataFrame 数据框 / groupby 分组 / mean 均值。
-> 易错：`groupby` 后忘 `.mean()` 只是分组对象；`dropna` 会删整行，数据少慎用。
+**② 逐行拆解**
 
----
-
-## 第 7 步 · WS01(B) 任务与检查清单（课件 P1–P7 原文保留）
-
-### 7.1 任务（P2–P6）
-- 主题（P2）：**I want to Understand —— USA College Graduate Salary: 2025 Projection, Are You Ready?**
-- 数据（P3–P5）：From Data → To Insight，Table 01–04；P5 写明 Excel 已提供（Already Provided Excel File for You）。
-- 要求（P6）：Please Design Your Workshop 01 (B)，限时 60 分钟，Submit Your Work by PolyU Blackboard。
-
-> 📖 译注（P3–P4）：Table 01–04 的数据表是图片、PDF 无文字层，数值一律以提供的 Excel 为准。
-
-### 7.2 第 7 页：Pre-submission Checklist（逐条原文）
-
-**Chart Layout（四问）**
-
-| 问 | 内容 |
-|---|---|
-| Q1 | How many charts to display? 1 / 2 / 3 / 4 Chart |
-| Q2 | What story does this data set tell? |
-| Q3 | What Type of Chart? Line / Area / Bar / Pie |
-| Q4 | What Kind of Style? Title / Label / Legend / Grid Line / Color |
-
-**1. Data Accuracy & Integrity（数据准确与完整）**
-- [ ] Source Consistency：数据是否与 2023 PolyU SAO 数据集一致？
-
-**2. Chart Formatting & Labels（格式与标签）**
-- [ ] Descriptive Titles：每张图顶部是否有清晰加粗标题？
-- [ ] Axis Labels：X、Y 轴是否都带单位标签？
-- [ ] Legend Clarity：图例是否可见且准确？
-- [ ] Scale & Intervals：轴刻度是否合理易读？
-
-**3. Visual Presentation & Layout（视觉呈现与布局）**
-- [ ] Consistency：不同图中同类目是否用同一颜色？
-- [ ] Readability：柱状图左轴的 Department 名称是否完整显示、不被裁掉？
-- [ ] Alignment：三张图是否对齐整齐、留白均匀？
-- [ ] No Overlaps：数据标签 / 文本框是否不与线、柱重叠？
-
-**4. Final Verification（最终核验）**
-- [ ] File Naming：`EIE1005_StudentID_Workshop_01_B.py`
-
-> 🔴 考点（源自第 7 页）：四类清单 = 四个评分维度。「同类目同色」「系名不被裁」「标签不重叠」三条最容易丢分。
-
-### 7.3 四问 → 代码映射表
-
-| 问 | 决定什么 | 对应代码 |
+| 行 | 干什么 | 为什么这样写 |
 |---|---|---|
-| Q1 几张图 | 画布布局 | `GridSpec(行,列)` + `fig.add_subplot(gs[r,c])` |
-| Q2 什么故事 | 选哪些列 / 表 | `df['表名']['列名']` |
-| Q3 什么类型 | 画图 API | `plot / fill_between / bar、barh / pie` |
-| Q4 什么样式 | 装饰 | `set_title… / legend / grid / color / facecolor` |
+| 1–3 | 三个 import | pandas 管数据、pyplot 画图、gridspec 切格子 |
+| 5 | `plt.figure(figsize=(15, 9))` | 建画布（整张纸），宽 15 高 9 英寸 |
+| 6 | `plt.subplots_adjust(top=0.9, …)` | 图四周留白，顶部留 10% 放大标题 |
+| 7 | `fig.suptitle(…, fontsize=24)` | 整幅**总标题**，字号 24 |
+| 9–10 | `GridSpec(1, 1)` + `add_subplot(gs[0, 0])` | 1 格，把格子变成坐标轴 `ax1` |
+| 12–14 | `pd.DataFrame(data)` | 把字典变成 DataFrame（类 Excel 表格） |
+| 15 | `df_price.plot(ax=ax1, kind='line', x=…, y=…)` | **PPT 唯一画图写法**：画到 ax1、类型、横/纵列 |
+| 17 | `plt.show()` | 显示 |
+
+**③ 输出**：一张折线图，大标题在上，图居中。
+**④ 术语**：DataFrame 数据框 / GridSpec 网格规格 / suptitle 总标题 / subplots_adjust 留白调整。
+**⑤ 易错**：忘 `plt.show()` 图不出现；`x=` 列名写错报 KeyError。
 
 ---
 
-### 7.4 检查清单逐条拆解（怎么满足 + 坑）
+## 第 2 步 · 三个核心概念（对应 PPT 变量名）
 
-| 条目 | 含义 | 代码实现 | 常见坑 |
-|---|---|---|---|
-| Source Consistency | 数值与 2023 PolyU SAO 数据一致 | 只用提供的 Excel，不手输、不换源 | 另找网图数据，数值对不上 |
-| Descriptive Titles | 每图顶部清晰**加粗**标题 | `ax.set_title(..., fontweight='bold')` | 忘 bold，标题太淡 |
-| Axis Labels | X / Y 轴都带单位 | `set_xlabel('Year')`、`set_ylabel('Salary (USD)')` | 只写名称不写单位 |
-| Legend Clarity | 图例可见且准确 | `ax.legend(loc='best')`，多线必须设 `label` | 多线无图例分不清 |
-| Scale & Intervals | 刻度合理易读 | `set_ylim` / `set_xticks` 控制跨度 | 不从 0 开始被质疑夸大（见译注） |
-| Consistency 同类同色 | 跨图同类目同一颜色 | 预定义 `color_map = {'Engineering': '#1f77b4', ...}` | 每张图随手换色 |
-| Readability 系名不裁 | 柱状图左轴系名完整 | `barh()` 或 `tight_layout()` | 竖柱长名被裁 |
-| Alignment 三图对齐 | 三图整齐、留白均匀 | `GridSpec` + `subplots_adjust(wspace, hspace)` | 手工摆放导致漂移 |
-| No Overlaps | 标签不压线 / 柱 | `bar_label(padding=)` + 放大 `ylim` | annotate 文字压线 |
-| File Naming | 命名规范 | `EIE1005_StudentID_Workshop_01_B.py` | 大小写 / 下划线写错 |
+```
+fig（Figure 画布 = 一整张纸）
+ ├─ gs（GridSpec = 纸上划好的格子规划表）
+ │    └─ ax1（Axes = 第 1 个格子里的坐标区/小图）
+ │          └─ df.plot(ax=ax1, ...) 画的线/柱 = Artist（元素）
+ └─ suptitle = 整张纸的大标题
+```
 
-> 📖 译注（Scale 两难）：柱状图的高度代表量，**应从 0 开始**才不误导；但差距小时从 0 又看不出区别。考试按「合理易读」处理——柱状图保留 0 基线，折线图可放大局部但需注明截断。
+> 📖 逐条：`fig` 是画布；`gs = GridSpec(行, 列)` 只是规划；`ax1 = fig.add_subplot(gs[r, c])` 把某格变成坐标轴；之后 `df.plot(ax=ax1, …)` 都画到它身上。`fig.suptitle` 是总标题，`ax1.set_title` 才是每张小图的标题。
 
 ---
 
+## 第 3 步 · 让图完整（PPT 的 Style 五种）
+
+**① 完整项目代码（PPT 同款）**
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 03 - Line Chart', fontsize=24)
+
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price', color='g')
+
+ax1.set_title('Apple Price Over Years')          # 图标题
+ax1.set_xlabel('Year')                           # 横轴标签
+ax1.set_ylabel('Price in USD $')                 # 纵轴标签（带单位）
+ax1.legend(loc='best')                           # 图例
+ax1.grid(visible=True, axis='y')                 # 网格（只画横线）
+ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=45)  # 刻度旋转 45°
+
+plt.show()
+```
+
+**② PPT 颜色速查表**：`'b'` 蓝 blue · `'g'` 绿 green · `'r'` 红 red · `'c'` 青 cyan · `'m'` 品红 magenta · `'y'` 黄 yellow · `'k'` 黑 black · `'w'` 白 white。
+**③ PPT 标记速查表**：`'o'` 圆 circle · `'+'` 加号 plus · `'*'` 星号 star · `'s'` 方 square · `'x'` 叉 x · `'D'` 菱形 diamond。
+**④ 术语**：set_title 图标题 / set_xlabel 横轴标签 / legend 图例 / grid 网格 / set_xticklabels 刻度标签 / rotation 旋转角度。
+**⑤ 易错**：`suptitle`（总标题）与 `set_title`（子图标题）别混；刻度旋转 PPT 用 **45°**。
+
 ---
+
+## 第 4 步 · 四种必考图（每种 PPT 同款完整代码）
+
+### 4.1 折线图 Line（Example 03 原格式）
+
+```python
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 03 - Line Chart', fontsize=24)
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='line', marker='o', x='Year', y='Apple Price')
+plt.show()
+```
+
+> 逐行：`kind='line'` 折线；`marker='o'` 数据点画圆；`x/y` 指定列。易错：点多时 marker 缩小、线加粗。多线=再调一次 `.plot(..., y='Orange Price')`。进阶实例见 [Graph Gallery 折线](https://python-graph-gallery.com/line-chart/)。
+
+### 4.2 面积图 Area（Example 05 原格式）
+
+```python
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Example 05 - Area Chart', fontsize=24)
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+df_price.plot(ax=ax1, kind='area', x='Year', y='Apple Price', alpha=0.1)
+df_price.plot(ax=ax1, kind='area', x='Year', y='Orange Price', alpha=0.1)
+plt.show()
+```
+
+> 逐行：`kind='area'` 面积；`alpha=0.1` 半透明避免两层互盖。易错：层多每层都要 alpha。进阶见 [Graph Gallery 面积](https://python-graph-gallery.com/area-plot/)。
+
+### 4.3 柱状图 Bar / 横柱 Barh（Example 06/07 原格式）
+
+```python
+# 竖柱（Example 06）
+df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
+
+# 横柱（Example 07，长类目名不被裁）
+df_price.plot(ax=ax1, kind='barh', x='Year', y='Apple Price')
+
+# 堆叠（Example 08）
+df_price.plot(ax=ax1, kind='barh', stacked=True, x='Year')
+```
+
+> 逐行：`bar` 竖柱、`barh` 横柱、`stacked=True` 堆叠（不写 `y=` 即画全部数值列）。易错：竖柱长名被裁 → 用 `barh`；y 轴应从 0 起。进阶见 [Graph Gallery 柱状](https://python-graph-gallery.com/barplot/)。
+
+### 4.4 饼图 Pie（Example 09 原格式）
+
+```python
+df_price.plot(ax=ax1, kind='pie', y='Apple Price', labels=df_price['Year'])
+```
+
+> 逐行：饼图**没有 `x=`**——`y=` 决定扇区大小、`labels=` 是分类标签。易错：类别 >9 会糊；别加 3D。进阶见 [Graph Gallery 饼图](https://python-graph-gallery.com/pie-plot/)。
+
+---
+
+## 第 5 步 · 一页放多图（Example 11–14 原格式）
+
+```python
+# 1 图（基线）
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
+
+# 2 图（左右并排）
+gs = gridspec.GridSpec(1, 2)
+ax1 = fig.add_subplot(gs[0, 0]); ax2 = fig.add_subplot(gs[0, 1])
+
+# 4 图（2x2）
+gs = gridspec.GridSpec(2, 2)
+ax1 = fig.add_subplot(gs[0, 0]); ax2 = fig.add_subplot(gs[0, 1])
+ax3 = fig.add_subplot(gs[1, 0]); ax4 = fig.add_subplot(gs[1, 1])
+
+# 3 图（左通栏 + 右两小图）
+gs = gridspec.GridSpec(2, 2)
+ax1 = fig.add_subplot(gs[:, 0])          # 冒号 = 整列合并 → 通栏
+ax2 = fig.add_subplot(gs[0, 1]); ax3 = fig.add_subplot(gs[1, 1])
+```
+
+> 考点：`gs[:, 0]` 的冒号是「取整列」，实现通栏大图（Example 14 / 20 同款）。
+
+---
+
+## 第 6 步 · 数据准备（PPT 两种数据源 + pandas 速查卡）
+
+```python
+# PPT 数据源 ①：手造 DataFrame（Example 01）
+data = {'Year': [2022, 2023, 2024, 2025],
+        'Apple Price': [20, 25, 18, 28],
+        'Orange Price': [16, 18, 20, 26]}
+df_price = pd.DataFrame(data)
+
+# PPT 数据源 ②：读 Excel（Example 02）
+df_price = pd.read_excel('EIE1005_Part01_Data.xlsx', sheet_name='Price')
+```
+
+**pandas 速查卡（官方 10min 精选）**
+
+| 需求 | 一行式 |
+|---|---|
+| 排序 | `df.sort_values('salary', ascending=False)` |
+| 分组求均值 | `df.groupby('major')['salary'].mean()` |
+| 筛选 | `df[df['salary'] > 0]`（等价 `df.query('salary > 0')`） |
+| 去缺失 | `df.dropna()` |
+| 去重复 | `df.drop_duplicates()` |
+| 前 5 行 | `df.head(5)` |
+
+> 🌐 来源：https://pandas.pydata.org/docs/user_guide/10min.html（检索于 2026-09-25）
+
+---
+
+
+## 第 7 步 · 两份作业：WS01(A) 与 WS01(B)（PPT 原文）
+
+### 7.1 两份作业对比
+
+| | WS01(A)（Part 01） | WS01(B)（Part 02） |
+|---|---|---|
+| 数据 | **PolyU Graduate Employment Survey 2023**（SAO） | USA College Graduate Salary 2025 Projection（Table 01–04） |
+| 要求 | 60 分钟设计、交 Blackboard | 60 分钟设计、交 Blackboard |
+| 文件命名 | `EIE1005_StudentID_Workshop_01_A.py` | `EIE1005_StudentID_Workshop_01_B.py` |
+| 截止 | 9/24 23:59（10 分） | 10/2 23:59（10 分） |
+
+### 7.2 检查清单（A/B 同款四类 · PPT 第 133 页原文）
+
+**Chart Layout 四问**：Q1 几张图（1/2/3/4）· Q2 数据讲什么故事 · Q3 类型（Line/Area/Bar/Pie）· Q4 样式（Title/Label/Legend/Grid Line/Color）。
+
+1. **Data Accuracy & Integrity**：[ ] Source Consistency：数据与 2023 PolyU SAO 数据集一致？
+2. **Chart Formatting & Labels**：[ ] 每图顶部清晰加粗标题 · [ ] X/Y 轴带单位 · [ ] 图例可见准确 · [ ] 刻度合理易读
+3. **Visual Presentation & Layout**：[ ] 同类目同色 · [ ] 柱状图左轴系名完整不裁 · [ ] 三图对齐留白均匀 · [ ] 标签不压线/柱
+4. **Final Verification**：[ ] 文件命名 `EIE1005_StudentID_Workshop_01_A.py`（A）或 `..._Workshop_01_B.py`（B）
+
+### 7.3 WS01(A) 关键数据（PPT 第 121–127 页原文）
+
+- **就业率 98.7%**（含就业与升学）· **问卷回收率 85.5%**（4,241 人中 3,628 人回应）
+- 毕业去向：就业 82.4% · 升学 8.8% · 其他 7.7%（移民/返乡/不求职）· 失业 1.1%
+- **平均月薪 $24,017**（较 2022 的 $22,827 上升 5.2%）；2023 年 49.0% 毕业生月薪高于 $21,999（2022 仅 40.3%）
+- 行业平均月薪：社区与社会服务 $32,652（+5.5%）· 政府及相关机构 $25,343（+9.7%，增幅最高）· 建造/工程与工业 $22,382（+6.5%）· 商业 $20,304（+4.3%）· 教育 $18,320（−3.8%）
+
+> 📖 译注：WS01(A) 的「故事」就是"就业率高、薪资上涨、政府/社区行业领跑"——Q2 可以直接用这三句。
+
+### 7.4 四问 → 代码映射
+
+| 问 | 决定 | PPT 代码 |
+|---|---|---|
+| Q1 几张图 | 布局 | `gs = gridspec.GridSpec(行, 列)` + `add_subplot(gs[r, c])` |
+| Q2 故事 | 选列 | `x='Year'`、`y='Apple Price'` 等 |
+| Q3 类型 | kind | `kind='line' / 'area' / 'bar' / 'barh' / 'pie'` |
+| Q4 样式 | 装饰 | `set_title / set_xlabel / set_ylabel / legend / grid / color` |
+
+---
+
 ## 第 8 步 · 代码书写方式（四种写法，重点）
+
+> 📖 译注（v10）：**写法④（pandas 一行式）就是 PPT 的主教学格式**（`df.plot(ax=…, kind=…, x=…, y=…)`）；其余三种写法（参数内联 / setter / pyplot）作对照与拓展。
 
 > 🧠 阿基米德提问法结论：同一效果至少有 4 种等价写法，各司其职——①参数写进调用（最直观）②先画后 setter（便于循环批量改）③pyplot 状态机（单图最快）④pandas 一行式（数据+图一体）。下面先给对照表，再逐个写法「是什么 → 完整代码 → 逐行 → 适用场景 → 坑」展开。
 
@@ -596,7 +513,11 @@ plt.show()
 
 ---
 
+---
+
 ## 第 9 步 · 进阶美化（重点）
+
+> 📖 译注（v10）：进阶技巧用 `ax` 对象式更细，与 PPT 骨架的桥 = `ax1.containers[0]`（从 `df.plot` 返回的 Axes 里取柱对象）。
 
 ### 9.1 给整张图加背景
 
@@ -1150,195 +1071,115 @@ with plt.rc_context({'grid.alpha': 0.3}):       # ③ 临时块内覆盖（局�
 ---
 
 ---
-## 第 10 步 · 完整作业示例（三个版本，从能交到炫酷）
 
-### 10.1 基础版 · 2×2 四图（最低配，完整项目）
+---
+
+## 第 10 步 · 作业三版（全用 PPT 骨架）
+
+### 10.1 基础版 · WS01(B) 2×2 四图（PPT 格式，可直接交）
 
 ```python
-# workshop01_b.py —— 基础版：直接满足 Q1~Q4 与检查清单
+# EIE1005_StudentID_Workshop_01_B.py —— 基础版
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
-df = pd.read_excel('salary.xlsx', sheet_name=None)     # 读全部工作表
-t = df['Table 01']
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('USA College Graduate Salary 2025', fontsize=24)
 
-fig = plt.figure(figsize=(16, 9))
 gs = gridspec.GridSpec(2, 2)
 ax1 = fig.add_subplot(gs[0, 0])   # Line
 ax2 = fig.add_subplot(gs[0, 1])   # Area
 ax3 = fig.add_subplot(gs[1, 0])   # Barh
 ax4 = fig.add_subplot(gs[1, 1])   # Pie
 
-ax1.plot(t['year'], t['salary'], marker='o', linewidth=2)
-ax2.fill_between(t['year'], t['salary'], alpha=0.3); ax2.plot(t['year'], t['salary'], color='g')
-ax3.barh(y=t['major'], width=t['salary'], color='#1f77b4')
-ax4.pie(t['salary'], labels=t['major'], autopct='%1.1f%%', startangle=90)
+t = pd.read_excel('salary.xlsx', sheet_name='Table 01')
+t.plot(ax=ax1, kind='line', marker='o', x='year', y='salary')
+t.plot(ax=ax2, kind='area', x='year', y='salary', alpha=0.1)
+t.plot(ax=ax3, kind='barh', x='major', y='salary', color='g')
+t.plot(ax=ax4, kind='pie', y='salary', labels=t['major'])
 
-for ax, title in zip([ax1, ax2, ax3, ax4],
-                     ['Salary Trend', 'Salary Area', 'Salary by Major', 'Salary Share']):
-    ax.set_title(title, fontweight='bold')            # 每图加粗标题
-ax1.set_xlabel('Year'); ax1.set_ylabel('Salary (USD)')  # 轴带单位
+ax1.set_title('Salary Trend'); ax2.set_title('Salary Area')
+ax3.set_title('Salary by Major'); ax4.set_title('Salary Share')
+ax1.set_xlabel('Year'); ax1.set_ylabel('Salary (USD)')
 ax3.set_xlabel('Salary (USD)')
-fig.subplots_adjust(wspace=0.35, hspace=0.4)          # 三图对齐、留白均匀
-
-fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300,
-            bbox_inches='tight', facecolor=fig.get_facecolor())
 plt.show()
 ```
 
-> 逐行要点：`for ax, title in zip(...)` 一次给四张图加标题；文件名严格按 `EIE1005_StudentID_Workshop_01_B.py`；`subplots_adjust` 满足「三图对齐」。
-
-### 10.2 进阶版 · 全部技巧合一（完整项目）
-
-> 🧠 拓展（自主整合，2026-09-23）：一个脚本串起「背景两层 → 排序 → 渐变着色 → 描边 → 柱顶标签 → 高亮极值 → 均值线 → annotate 注释 → 颜色条 → 高清导出」，可直接当 WS01(B) 的 Bar 图底稿。
+### 10.2 进阶版 · PPT 骨架 + 渐变着色 + 颜色条
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 
-# 数据（示例薪资）
-depts = ['Engineering', 'Business', 'Sciences', 'Arts', 'Medicine']
-salary = np.array([52000, 48000, 61000, 44000, 59000])
+fig = plt.figure(figsize=(15, 9))
+plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.95)
+fig.suptitle('Salary by Major (Gradient)', fontsize=24)
+gs = gridspec.GridSpec(1, 1)
+ax1 = fig.add_subplot(gs[0, 0])
 
-# 画布与背景两层
-fig, ax = plt.subplots(figsize=(12, 7))
-fig.patch.set_facecolor('#f4f4f8')
-ax.set_facecolor('#fffdf8')
-
-# 排序 + 按数值渐变着色
-order = np.argsort(salary)
-salary_sorted = salary[order]
-depts_sorted = [depts[i] for i in order]
+t = pd.read_excel('salary.xlsx', sheet_name='Table 01').sort_values('salary')
 cmap = plt.get_cmap('viridis')
-norm = mcolors.Normalize(vmin=salary_sorted.min(), vmax=salary_sorted.max())
-colors = [cmap(norm(v)) for v in salary_sorted]
+norm = mcolors.Normalize(vmin=t['salary'].min(), vmax=t['salary'].max())
+colors = [cmap(norm(v)) for v in t['salary']]
 
-bars = ax.bar(depts_sorted, salary_sorted, color=colors,
-              edgecolor='white', linewidth=1.2)
+t.plot(ax=ax1, kind='barh', x='major', y='salary', color=colors, legend=False)
+bars = ax1.containers[0]              # df.plot 画出的柱，从这里拿对象
+ax1.bar_label(bars, fmt='%d', padding=3)
 
-# 柱顶标签 + 高亮最大值
-for i, v in enumerate(salary_sorted):
-    color = '#c0392b' if v == salary_sorted.max() else 'black'
-    ax.text(i, v + 800, f'${v:,}', ha='center', va='bottom',
-            color=color, fontweight='bold')
-
-# 均值线 + 结论注释
-mean_s = salary_sorted.mean()
-ax.axhline(mean_s, color='grey', linestyle='--', alpha=0.7)
-ax.annotate(f'Mean ${mean_s:,.0f}', xy=(2, mean_s),
-            xytext=(2.6, mean_s + 7000), arrowprops=dict(arrowstyle='->'))
-
-# 颜色条 + 轴标签 + 标题
-sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-sm.set_array(salary_sorted)
-fig.colorbar(sm, ax=ax, label='Salary (USD)')
-ax.set_title('USA College Graduate Salary 2025', fontweight='bold', fontsize=14)
-ax.set_ylabel('Salary (USD)')
-ax.set_ylim(0, salary_sorted.max() * 1.25)
-ax.grid(True, axis='y', linestyle='--', alpha=0.4)
-
-# 高清导出且不丢背景
-fig.savefig('EIE1005_StudentID_Workshop_01_B.png', dpi=300,
-            bbox_inches='tight', facecolor=fig.get_facecolor())
+sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm); sm.set_array(t['salary'])
+fig.colorbar(sm, ax=ax1, label='Salary (USD)')
+ax1.set_title('Salary by Major (Gradient)')
+ax1.set_xlabel('Salary (USD)')
+plt.show()
 ```
 
----
+> 📖 译注：PPT 风格与进阶技巧的桥 = `ax1.containers[0]`（df.plot 返回的 Axes 里第一个容器就是柱集合，供 `bar_label` 使用）。
 
-**逐行 walkthrough（①②③…对应脚本里的注释）**：
-
-> 📖 译注 · 逐条：
-> - ①② `fig.patch` + `ax.set_facecolor`：两层背景，导出时还要 `facecolor=fig.get_facecolor()`。
-> - ③④ `argsort` 排序 + `cmap/norm/colors`：数值越大颜色越亮（见 §9.3）。
-> - ⑤ `edgecolor='white'`：柱间白色描边，深色背景也不糊。
-> - ⑥⑦ `ax.text` 柱顶标签 + 最大柱标红：直接满足「No Overlaps」与「讲结论」。
-> - ⑧ `axhline(mean)`：均值参考线；`annotate` 用箭头把「Mean」文字指过去。
-> - ⑨ `ScalarMappable + colorbar`：颜色条图例（见 §9.4）。
-> - ⑩ `set_ylim(0, max*1.25)`：顶部留 25% 空间放标签；从 0 开始避免误导。
-> - ⑪ `savefig(dpi=300, bbox_inches='tight', facecolor=...)`：高清、裁边、不丢背景。
-
----
-
----
-### 10.3 炫酷版 · 主题 + 发光（完整项目）
+### 10.3 炫酷版 · 主题 + 发光（演示用，提交勿用）
 
 ```python
 import numpy as np
 import mplcyberpunk
 import matplotlib.pyplot as plt
 
-x = np.linspace(0, 10, 20)
-y = np.sin(x)
-
-plt.style.use('cyberpunk')               # 黑底霓虹主题
+plt.style.use('cyberpunk')
+x = np.linspace(0, 10, 20); y = np.sin(x)
 plt.figure(figsize=(8, 8))
 plt.plot(x, y, marker='o')
-mplcyberpunk.add_glow_effects()          # 一键给全部对象加发光
-plt.xlabel('X-Axis'); plt.ylabel('Y-Axis')
+mplcyberpunk.add_glow_effects()
 plt.title('Cyberpunk Style Plot')
 plt.show()
 ```
 
-> 说明：第三方库 `pip install mplcyberpunk`；**交作业的 .py 老师机器未必装了它**——炫酷版做演示加分，正式提交用 10.1/10.2。
+> ⚠️ 第三方库老师机器未必安装，正式提交用 10.1 / 10.2。
 
 ---
 
-### 10.4 交互式图表（加分项）
+## 附录 B · 资源与书单（官方 / 高校 / 经典教材）
 
-> 🧠 拓展（自主补充，检索于 2026-09-23）：作业要求 `.py` + 静态 PNG 即可；交互只是加分项。
+**官方教程**
+- [Matplotlib Pyplot tutorial](https://matplotlib.org/stable/tutorials/pyplot.html) ｜ [Quick start guide（推荐 OO 写法）](https://matplotlib.org/stable/users/explain/quick_start.html) ｜ [Plot types 全图型](https://matplotlib.org/stable/plot_types/index.html)
+- [pandas 官方 10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+- [Python Graph Gallery](https://python-graph-gallery.com/)（数百图 + 完整代码）
 
-**Matplotlib**（静态、出版级、完全可控）
+**高校课程**
+- [MIT OCW 6.100L · Lecture 25: Plotting](https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/)
+- [Real Python · Data Visualization with Python 学习路径](https://realpython.com/learning-paths/data-visualization-python/)
 
-```python
-import matplotlib.pyplot as plt
-plt.plot(x, y)          # 画完是死图；plt.show() 弹窗可缩放但不可导出交互
-```
+**经典教材（按学习顺序）**
+1. 《Python for Data Analysis》第 3 版 · Wes McKinney（pandas 作者，工具书；第 9 章绘图）
+2. 《Fundamentals of Data Visualization》 · Claus O. Wilke（免费在线：https://clauswilke.com/dataviz/ ，选型与诚实作图）
+3. 《Storytelling with Data》 · Cole N. Knaflic（去杂乱、单一强调色、一句话结论）
+4. 《The Visual Display of Quantitative Information》 · Edward Tufte（data-ink ratio 经典）
 
-**Plotly**（悬停 / 缩放 / 下钻 / 旭日 / 瀑布原生）
+**建议学习顺序**：官方 Pyplot 入门 → 本页第 1–7 步 → McKinney 第 9 章查缺 → Wilke 学选型 → Knaflic 学讲结论 → Graph Gallery 找进阶实例。
 
-```python
-import plotly.express as px
-
-fig = px.bar(x=depts, y=salary, color=salary,   # ① color=数值 → 自动渐变+颜色条
-             title='USA College Graduate Salary 2025')
-fig.show()        # ② 打开交互页面：悬停看值、框选缩放、右上角导出
-```
-
-> 📖 译注 · 逐条：`px.bar` 一行完成「数值渐变着色 + 颜色条」，比 Matplotlib 的 Normalize 三件套省事；`fig.show()` 在浏览器打开。坑：需要 `pip install plotly`；导出静态图用 `fig.write_image(...)` 还需装 kaleido。
-
-**pyecharts**（ECharts 的 Python 封装，中文生态）
-
-```python
-from pyecharts.charts import Bar
-
-bar = (Bar()
-       .add_xaxis(depts)                # ① 横轴类目
-       .add_yaxis('Salary', salary))    # ② 数值系列
-bar.render('salary.html')               # ③ 生成可交互网页，浏览器打开
-```
-
-> 📖 译注 · 逐条：`add_xaxis / add_yaxis` 是链式写法；`render` 输出 HTML。坑：需要 `pip install pyecharts`；交作业仍是 `.py`+PNG，HTML 只作演示。
-
-| 库 | 特点 | 何时用 |
-|---|---|---|
-| Matplotlib | 静态、出版级、完全可控 | 本次作业、论文图 |
-| Plotly | 悬停 / 缩放 / 下钻 / 旭日 / 瀑布原生 | 演示、看板 |
-| pyecharts | ECharts 封装，中文生态，30+ 图表 | 中文报告、网页嵌入 |
-
-> 🌐 来源：https://plotly.com/python/ ；https://pyecharts.org/（检索于 2026-09-23）
+> 🌐 检索于 2026-09-25（来源均为官方/高校/经典出版物）。
 
 ---
 
----
-### 10.5 提交前自查清单
 
-- [ ] 数据与 2023 PolyU SAO 一致
-- [ ] 每图粗体标题；XY 轴带单位；图例准确；刻度合理
-- [ ] 同类目同色；系名完整；三图对齐；无重叠
-- [ ] 选型正确（趋势=折线、对比=柱、占比=饼）
-- [ ] 配色 ≤3–5 色；异常点已标注；图下有结论
-- [ ] 文件名 `EIE1005_StudentID_Workshop_01_B.py`；提交 PolyU Blackboard
 
 ---
 
@@ -1695,12 +1536,12 @@ df_price.plot(ax=ax1, kind='bar', x='Year', color=['g','y'])
 ```python
 df_price.plot(ax=ax1, kind='bar', x='Year', y='Apple Price')
 ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=45)
-# ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=90)
+# ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=45)
 ```
 
 > 逐行：
 > - `set_xticklabels([...], rotation=45)`：把横轴刻度文字**手动替换**成指定列表，并旋转 45°。
-> - 注释行是 `rotation=90`（竖排）的备选。
+> - 注释行是 `rotation=45`（竖排）的备选。
 
 > 📖 译注：刻度文字太长、挤在一起时用 `rotation` 旋转解决；`set_xticklabels` 的数量要和数据点数量一致，否则会错位。
 
@@ -1709,7 +1550,7 @@ ax1.set_xticklabels(['2022', '2023', '2024', '2025'], rotation=45)
 ```python
 df_price.plot(ax=ax1, kind='barh', x='Year', y='Apple Price')
 ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=45)
-# ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=90)
+# ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=45)
 ```
 
 > 逐行：
@@ -2023,6 +1864,8 @@ ax1.set_yticklabels(['2022', '2023', '2024', '2025'], rotation=45)
 
 ---
 
+---
+
 ## 自测（答案折叠）
 
 <details><summary>Q1 四问分别决定什么？</summary>
@@ -2087,6 +1930,8 @@ Figure=整张画布（一张纸）；Axes=纸上的一个坐标系（可多块�
 
 ---
 
+---
+
 ## 参考来源（本次新增）
 > 🌐 你提供的 5 篇参考，2026-09-23 读取状态：
 > - ✅ [15 个可视化图表（cnblogs）](https://www.cnblogs.com/fanruan/p/19955941)：已读取，用于 §二选型速查与误区。
@@ -2099,9 +1944,9 @@ Figure=整张画布（一张纸）；Axes=纸上的一个坐标系（可多块�
 
 ---
 
+> 🌐 v10 新增来源：Canvas 130052《Part 01 - From Data.pdf》(133 页)；官方 Pyplot/Quick start/Plot types、pandas 10min、Python Graph Gallery；MIT OCW 6.100L L25；《Python for Data Analysis 3e》(McKinney)、《Fundamentals of Data Visualization》(Wilke)、《Storytelling with Data》(Knaflic)、《The Visual Display of Quantitative Information》(Tufte)。检索于 2026-09-25。
 ## 更新记录
-- 2026-09-24 v9（方案 A 重写）：按「从零手把手」重排为第 1~10 步（每步=完整项目代码→逐行→输出→术语→参数→易错→回扣作业）；应要求去掉环境节、重点展开第 8 步四种写法与第 9 步进阶美化、新增 10.1 基础版 / 10.3 炫酷版等多个完整项目；附录 A 22 例与自测/参考来源保留。
-- 2026-09-24 v8.1（详细优先、不缩篇幅）：恢复 W1 篇完整环境与 22 例逐例详解；skill 目的改为「详细易懂 + 高难度拓展，不为篇幅删减」。
-- 2026-09-24 v8（两篇合并）：W1 与 WS01(B) 合并；新增零基础入门与 22 例速查。
-- 更早记录见原 eie1005-ws01b-insight.md（已并入本页）。
+- 2026-09-25 v10（全对齐 PPT 代码格式）：主教学代码全部改为 PPT 同款骨架（plt.figure/subplots_adjust/suptitle/GridSpec/add_subplot/df.plot/show）；修正刻度旋转 45°、颜色/标记表按 PPT；新增第 0.5 步四原则（反例→修正）；第 4 步每图附 Graph Gallery；第 7 步改双作业 WS01(A)+(B) 并补 GES2023 关键数据；第 10 步三版全部 PPT 骨架；新增附录 B 资源书单；内容源自 Canvas 130052 全文。
+- 2026-09-24 v9（方案 A 重写）：第 1~10 步阶梯式重排；重点=四种写法与进阶美化。
+- 更早记录见 git 历史。
 
