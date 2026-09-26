@@ -292,5 +292,12 @@
     "desc": "内容已合并进 eie1005-w1-dataviz-python.md；本页保留为跳转",
     "file": "eie1005-ws01b-insight.md",
     "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
+    "id": "eie1005-ws01b-solution",
+    "title": "WS01(B) 个人作业逐行讲解 + 子图排版间距",
+    "desc": "60行脚本逐行讲解、7处易错修正、subplots_adjust/GridSpec间距/tight_layout专题",
+    "file": "eie1005-ws01b-solution.md",
+    "course": "EIE1005 · 人工智能与数据分析"
   }
 ]
