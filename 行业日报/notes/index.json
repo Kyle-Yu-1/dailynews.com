@@ -57,8 +57,8 @@
   },
   {
     "id": "project",
-    "title": "Mini-project 完全指南",
-    "desc": "组队、Teachable Machine 流程、评分与提交",
+    "title": "Mini-project 完全指南（小组项目+准备课）",
+    "desc": "组队9/30、Teachable Machine+MNIST全流程、三张参数实验表、评分细则、11/28提交",
     "file": "project.md",
     "course": "EIE1005 · 人工智能与数据分析"
   },

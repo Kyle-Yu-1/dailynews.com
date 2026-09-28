@@ -1,86 +1,106 @@
+# EIE1005 · Mini-project 完全指南（小组项目 + 准备工作坊）
+
+> 按 note-organizer 规则：课件原文用正文色，后加讲解/考点用引用块。数据来源：Canvas courses/4018 Week 2 模块（文件 169566、171152），检索于 2026-09-28。
+
 ## 📎 原始课件
-- [Mini-project 项目要求（原文）](files/eie1005/project-requirements.txt)
-- [Mini-project Preparation（原文）](files/eie1005/project-preparation.txt)
+- **Group Project and Demonstration.pdf**（2 页 · files/171152）：小组项目要求、评分、截止
+- **Mini-project Preparation - Developing Character Recognition with Deep Learning.docx**（14 页 · files/169566）：Teachable Machine 入门 + MNIST 手写数字识别全流程
+- 视频：`Mini-project Preparation…Deep Learning.mp4`、`Data Preparation.mp4`
+- 数据：`MNIST Dataset.zip`（训练/测试各 0–9 十类，每类 100 张）、`Additional data.zip`（数字 1、7 的另一种手写风格）
+- 工具：Teachable Machine https://teachablemachine.withgoogle.com/
 
-# EIE1005 Mini-Project 完全指南(占 20%)
+## ⏱ 30 秒速览
 
-> 来源:Group Project and Demonstration.pdf + Mini-project Preparation.docx
-> 一句话:5–6 人组队,用 Teachable Machine 训练一个"识别物体"的 AI 模型,做成 5–7 分钟 PPT 演示视频,11/28 前提交。
+- **一句话**：5–6 人组队，用 Teachable Machine 训练"识别物体"的 AI 模型，录 5–7 分钟 PPT 演示视频，11/28 前交。
+- **三个关键节点**：9/30 组队截止（People→Groups→Join）→ 训练+测试（3–5 类/组；准备课做 MNIST 0–9 十类练习）→ **11/28 交演示视频（每组一份，anyone-with-link 可看）**。
+- **评分**：演示技巧与组织 15% + 技术内容 85%（问题陈述 15% / 采样 20% / Teachable Machine 训练 25% / 测试 25%）。
 
-## 任务要求
+## 一、小组项目总要求（Group Project PDF 原文）
 
-- 用 **Teachable Machine**(https://teachablemachine.withgoogle.com/)训练 AI 模型识别物体,主题要**能应用到你的专业**;
-- 建 **3–5 个类别(class)**;
-- 采集样本:自己拍照 或 从网上下载(参考 Data Preparation.mp4);
-- 训练 → 测试 → 录 5–7 分钟演示视频(**必须用 Microsoft PowerPoint**)。
+- **组队**：5–6 人；Canvas「People」→「Groups」→ Join 加入；**9/30 前提交组员名单**，逾期未组队将被随机分到不足 5 人的组。
+- **任务**：开放命题——用 **Teachable Machine** 训练 AI 模型识别物体，应用到自己专业领域；鼓励自学、逻辑思维与演示能力。
+- **流程**：① 建 3–5 个类别 → ② 采样（相机拍摄或网上下载，参考 Data Preparation.mp4）→ ③ Teachable Machine 训练 → ④ 测试模型 → ⑤ 录 5–7 分钟演示视频（必须用 PowerPoint）。
+- **提交**：**11/28 前**交到 Canvas（Week 2 模块内稍后放出提交链接）；**每组交一份**；给视频 **Web 链接**（OneDrive/YouTube 等）并设 **anyone with link can view**；**以最后一次提交为准评分**；迟交扣分。
 
-## 组队(9/30 截止)
+## 二、演示视频 PPT 五段结构（原文）
 
-Canvas → **People → Groups** → 点 **Join** 加入一个 5–6 人小组;9/30 后没组的会被随机塞进不足 5 人的组。
+1. **Front page**：清晰标题 + 组号、全体成员姓名与学号、**每人分工**。
+2. **Introduction**：项目概述、目标与意义。
+3. **Objective(s)**：任务如何应用到自己专业 + 明确目标、如何改进该应用。
+4. **Implementation and results**：数据怎么准备 → Teachable Machine 怎么训练 → 截图展示模型准确率。
+5. **Conclusions**：关键发现与贡献 + 成功与局限反思 + 未来改进方向。
 
-## 数据集(Canvas Week 2 模块下载)
+> 🔴 考点/评分提示：英文**简洁、逻辑清晰、流畅**给高分（High marks）。
 
-- `MNIST Dataset.zip`:解压后 `MNIST – training`(0–9 十个文件夹,每类 100 张)与 `MNIST – testing`;
-- `Additional data.zip`:文件夹 `1`、`7` 是数字 1、7 的**另一种手写风格**(用来测泛化)。
+## 三、评分细则（20%）
 
-## Workshop 实操流程(照着做)
+| 部分 | 占比 |
+|---|---|
+| Presentation skills and Organization | 15% |
+| Technical Content（合计 85%） | |
+| · Problem statement and objectives | 15% |
+| · Collect samples（拍摄/网上下载） | 20% |
+| · Use Teachable Machine to train | 25% |
+| · Test the well-trained model | 25% |
 
-### Part I:Teachable Machine 入门
-1. 打开 teachablemachine.withgoogle.com → **Get Started**;
-2. 选 **Image Project** → **Standard image model**;
-3. 界面要点:
-   - **Class Name / Add a Class**:建 10 个类,命名为 Number 0 ~ Number 9(多余的可 More option → Delete Class);
-   - **Add Image Samples**:Webcam 拍照 / 上传 / 拖拽;
-   - **Training 高级设置**:Epochs(整轮数)、Batch size(一次迭代用的样本数;100 张图 batch=10 ⇒ 1 epoch=10 batches)、Learning rate(向损失最小点移动的步长)、Under the hood(训练细节);
-   - **Preview**:训练后在这里测模型;
-   - **Panel**:可"Download the project as file"(只存样本,不存模型)。
+## 四、准备课：Teachable Machine + MNIST 手写数字识别（docx 14 页原文整理）
 
-### Part II:手写数字识别训练
-1. 每类先上传 **20 张** MNIST-training 样本(随机)→ Train Model;
-2. 打开 **Under the hood → vocab**:可见 **Training samples 85% / Testing(validation)samples 15%**(15% 不参与训练,用来评估没见过的新数据);
-3. 看 **Accuracy per epoch**(训练中分类正确比例,完美=1)与 **Loss per epoch**(学得越差 loss 越大,完美=0,学习过程中 loss 应下降)。
+> 目标：能讲清神经网络训练流程；会用 MNIST 数据集与训练管线；实现/训练/评估手写数字分类模型；会读性能指标并发现问题。（**本工作表无需提交**）
 
-### 三张实验表(worksheet 要求记录,No submission)
-- **样本量对比**:每类 20 张 vs 100 张(记录:首个达到最佳 train accuracy 的 epoch、最终 test accuracy、10/30/49 epoch 的 test loss)→ 换样本用 More Option → Remove All Samples 再传。
-- **Epochs 对比**:10 vs 50(batch=16、lr=0.001 不变)。
-- **Batch size 对比**:16 vs 64(epochs=50、lr=0.001 不变)。
-- **预期规律**:样本多 → 泛化更好、test loss 更低;epoch 过多 → train 精度继续涨但 test 可能过拟合;batch 越大 → 每 epoch 迭代少、训练更稳但可能收敛慢。
+### 4.1 Teachable Machine 入门（Part I）
 
-### 测试与多样性
-- 训练好(100 张/类,Epochs=50,Batch=16,lr=0.001)后,把 `MNIST – testing` 的图拖进 **Preview**,或 Webcam 手写数字测试;Preview 每个类的 Output = 该类概率,取最高者为预测。
-- 多样性实验:把 Additional data(1、7)的图喂给已训练模型 → **性能会明显下降**(没见过的新风格);然后把 1、7 两类改为「75 张 MNIST + 25 张 Additional」重训 → 性能回升。结论:**训练样本多样性影响泛化能力**。
+- 网页工具，无需代码；本项目用 **Image Project → Standard image model**（另两种：Audio、Pose）。
+- 界面术语：Class（类）、Add Image Samples（拍照/上传/拖拽采样）、**Epochs**（整个训练集过多少遍）、**Batch size**（一次迭代用的样本数；100 张图、batch=10 → 1 epoch=10 batch）、**Learning rate**（向损失函数最小值移动的步长）、Under the hood（训练详情）、Preview（测试）、Panel（可下载项目文件，含样本但不含已训练模型）。
 
-## 演示视频结构(评分点,PPT 必含)
+### 4.2 训练流程（Part II · 10 类手写数字）
 
-1. **Front page**:清晰标题(体现应用方向)+ 组号 + 全员姓名学号 + **每人分工**;
-2. **Introduction**:项目概述、目标与意义;
-3. **Objective(s)**:任务如何应用到本专业 + 想改进什么;
-4. **Implementation and results**:数据准备 → Teachable Machine 训练过程 → 截取结果展示模型准确率;
-5. **Conclusions**:关键发现与贡献 + 成功与局限反思 + 未来改进方向。
+1. 解压 MNIST：`MNIST – training`（0–9 十个文件夹，每类 100 张）与 `MNIST – testing`。
+2. Teachable Machine 建 **10 个类**：Number 0 … Number 9；每类从对应文件夹**随机传 20 张**。
+3. 点 **Train Model** 训练（85% 样本训练、15% 留作验证）。
+4. **Under the hood** 看 vocab：Training samples 85% / Testing(validation) samples 15%；看 **Accuracy per epoch**（分对比例，满分 1）与 **Loss per epoch**（越接近 0 越好，学习变好时下降）。
+5. 测试：把 `MNIST – testing` 里的图拖进 **Preview**，或 Webcam 手写数字实时测；观察输出概率与标签是否一致。
 
-> 高分要点:简洁、逻辑清晰、**流利清晰的英语**。
+### 4.3 三张实验表（准备课必做，理解参数影响）
 
-## 评分细则
+**① 每类样本量**（20 vs 100 张，参数不动）→ 记录：最早达到最好训练精度的 epoch / 最终测试精度 / 第 10、30、49 轮的测试损失。
+**② Epochs**（10 vs 50，batch=16、lr=0.001 不动）→ 最终测试精度、最终损失、最终测试损失。
+**③ Batch size**（16 vs 64，epochs=50、lr=0.001 不动）→ 同上。
 
-- Presentation skills & Organization:**15%**
-- Technical Content:**85%**
-  - Problem statement & objectives **15%**
-  - Collect samples(拍照/下载)**20%**
-  - Teachable Machine 训练 **25%**
-  - 测试已训模型 **25%**
+> 📖 译注：做完比较差异，能回答"样本越多/训练越久/批次怎么影响精度与损失"——这正是 Test 1 Part B 与项目报告里可能被问的点。
 
-## 提交(11/28 前)
+### 4.4 提高多样性（Additional data）
 
-- 每组**一次**提交,Canvas 提交链接稍后在 Week 2 模块放出;
-- 提交演示视频的**网页链接**(OneDrive / YouTube 等),权限设为"**anyone with link can view**";
-- **以最后一次提交为准**;逾期扣分。
+- Additional data.zip：数字 **1 和 7 的另一种手写风格**。
+- 实验：用原模型预测新风格 1/7 → 看性能；然后把 1、7 两类的样本换成 **75 张 MNIST + 25 张 Additional** 重训 → 再测，比较提升。
 
-## 行动清单
+## 五、术语表（中英对照）
 
-- [ ] 9/30 前:Canvas 组队(5–6 人)并分工
-- [ ] 下载 MNIST Dataset.zip 与 Additional data.zip
-- [ ] 用 Teachable Machine 完成 20 vs 100 样本实验表
-- [ ] 完成 epochs、batch size 调参实验表
-- [ ] 选一个"结合本专业"的识别主题(不必非手写数字,可另采样本做 3–5 类)
-- [ ] 录 5–7 分钟 PPT 演示(英文)
-- [ ] 11/28 前:上传视频链接(anyone with link)
+| 英文 | 中文 | 一句话 |
+|---|---|---|
+| Teachable Machine | 可教机器学习（网页训练工具） | 无代码训练图像/音频/姿态模型 |
+| Image Project | 图像项目 | 本项目类型 |
+| class / label | 类别 / 标签 | Number 0…9 |
+| sample | 样本 | 每类图片 |
+| epochs | 训练轮数 | 整个训练集过一遍=1 epoch |
+| batch size | 批次大小 | 一次迭代用多少样本 |
+| learning rate | 学习率 | 参数更新步长 |
+| accuracy | 准确率 | 分对比例，满分 1 |
+| loss | 损失 | 预测误差，越接近 0 越好 |
+| validation | 验证 | 15% 未训练样本测泛化 |
+| vocab | 词表（模型类别表） | Under the hood 里查看 |
+
+## 六、自测（答案折叠）
+
+<details><summary>Q1 组队与提交的两个硬截止？</summary>
+组队 9/30（逾期随机分配）；报告+演示视频 11/28（迟交扣分，每组一份，以最后一次提交评分）。</details>
+<details><summary>Q2 演示视频 PPT 必须有哪五部分？</summary>
+Front page（标题+组员学号分工）→ Introduction → Objectives（应用到专业）→ Implementation & results（采样/训练/准确率截图）→ Conclusions（发现+局限+未来）。</details>
+<details><summary>Q3 100 张图、batch size 10，几个 batch 才算 1 epoch？</summary>
+10 个 batch（100/10）。Epoch=整个训练集过一遍。</details>
+<details><summary>Q4 Teachable Machine 默认训练/验证比例？</summary>
+85% 训练、15% 验证（从未用于训练的样本来评估泛化）。</details>
+<details><summary>Q5 评分里技术内容四块各占多少？</summary>
+问题陈述 15%、采样 20%、训练 25%、测试 25%；另有演示技巧与组织 15%。</details>
+
+## 更新记录
+- 2026-09-28 全量更新：并入《Group Project and Demonstration.pdf》要求/评分/截止与《Mini-project Preparation》14 页 Teachable Machine+MNIST 全流程；补三张参数实验表、术语表、自测。

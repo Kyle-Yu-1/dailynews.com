@@ -4,6 +4,7 @@ window.TASKS = [
   { id:"eie-team", date:"2026-09-30", dateLabel:"9/30", time:"—", course:"EIE1005", title:"组队提交截止", type:"任务", weight:"—", note:"未组队将随机分配" },
   { id:"phy-hw12", date:"2026-10-01", dateLabel:"10/1", time:"23:59", course:"AP10005", title:"作业测验 1-2（Ch5–6）", type:"测验", weight:"40 分", note:"Canvas Quiz" },
   { id:"phy-hw13", date:"2026-10-01", dateLabel:"10/1", time:"23:59", course:"AP10005", title:"作业测验 1-3（Ch7–8）", type:"测验", weight:"30 分", note:"Canvas Quiz" },
+  { id:"eie-cf105", date:null, dateLabel:"Wk5", time:"自定", course:"EIE1005", title:"CF105 实验室开放（Mini-project 讨论）", type:"任务", weight:"—", note:"正课 workshop 时段开放 · 无职员在场 · 自由使用" },
   { id:"eie-nvidia", date:"2026-09-28", dateLabel:"9/28", time:"正课时间", course:"EIE1005", title:"Week 5 NVIDIA 讲座（出席计分）", type:"讲座", weight:"Guest 5%", note:"正课时间与地点 · 讲座开始即点名" },
   { id:"eie-test1", date:"2026-10-05", dateLabel:"10/5", time:"正课时间", course:"EIE1005", title:"Test 1（L1+L2+Workshop1+项目准备）", type:"考试", weight:"20%", note:"闭卷 70 分钟 · Part A 10 MCQ(NVIDIA讲座)+Part B 20 MCQ/简答 · 两间课室待公布 · 不考手写代码，考读代码/预测图" },
   { id:"lei-report", date:"2026-10-12", dateLabel:"10/12–16", time:"中文课当晚 23:59", course:"LEI1101", title:"个人书面报告（反思+计划+5篇日志）", type:"作业", weight:"CLC 20%", note:"封面 Honour Declaration Form" },
