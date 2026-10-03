@@ -96,7 +96,7 @@
 4. **概念类**：supervised vs unsupervised vs reinforcement 各举一例。
 5. **读图类**：给一行 `df.plot(...)` 或 `plt` 代码，问输出什么图（横条/堆叠/折线，见 Workshop1 笔记）。
 6. **Frequent Pattern Mining**：给交易表算 support / confidence，判断规则是否 qualified（≥ minsup 且 ≥ minconf）。
-7. **NVIDIA 讲座 MC**：Part A 十题来自 Week 5 讲座，需自行看讲座笔记。
+7. **NVIDIA 讲座 MC（Part A 十题）**：来自 Week 5 NVIDIA 讲座（Dr. Ginny Wong），十大预测考点已整理成 [Guest Lecture 笔记](eie1005-guest-nvidia.md)：Agent=Harness+Models、Observe→Reason→Act、ChatGPT→DeepSeek→Agent Harnesses 时间线、100s→1000s→1,000,000s token 三级跳、Systems of Models、NVIDIA 模型矩阵（Nemotron/Cosmos/GR00T/Clara/Earth-2）、Cosmos 3 四角色、GR00T/Omniverse/Jetson Thor 三支柱、Isaac Sim vs Isaac Lab。
 
 ## 七、自测（答案折叠）
 1. 简述数据分析五步。
