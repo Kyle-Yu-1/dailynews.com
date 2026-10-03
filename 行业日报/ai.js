@@ -12,6 +12,7 @@
   ];
   var CFG_KEY = 'ai_cfg_v1';
   var CHAT_KEY = 'ai_chat_v1';
+  var WRITE_PROMPT = 'You are an English writing coach. Please score my essay on four dimensions (each 1-5): Grammar, Vocabulary, Coherence, Task Achievement. Then list each error as original -> correction + one reason, give one rewritten version, and finally ask me exactly one guiding question instead of giving the answer. My essay:' + '\n\n';
 
   var aiBtn = document.getElementById('aiBtn');
   var aiView = document.getElementById('aiView');
@@ -28,7 +29,7 @@
   function escAttr(s) { return esc(s).replace(/'/g, '&#39;'); }
 
   function hideAll() {
-    ['listView', 'detailView', 'treeView', 'notesView', 'noteReader', 'tasksView', 'libraryView', 'libraryReader', 'aiView']
+    ['listView', 'detailView', 'treeView', 'notesView', 'noteReader', 'tasksView', 'libraryView', 'libraryReader', 'aiView', 'vocabView']
       .forEach(function (id) { var el = document.getElementById(id); if (el) el.classList.add('hidden'); });
   }
 
@@ -153,13 +154,19 @@
     }).join('');
     var welcome = chatHistory.length ? '' : '<div class="ai-welcome">你好！先点 ⚙️ 设置填好「代理地址 + Key」，然后直接问我任何问题。当前支持 DeepSeek / OpenAI / Kimi / 通义 / 智谱 / 硅基流动。</div>';
     box.innerHTML = '<div class="ai-messages" id="aiMessages">' + welcome + msgs + '<div id="aiBusy" class="ai-busy hidden">思考中…</div></div>'
+      + '<div class="ai-quick"><button id="aiWriteCoach" class="back-btn">✏️ 写作批改（四维评分）</button></div>'
       + '<div class="ai-input-row">'
       + '<textarea id="aiInput" placeholder="输入问题…（Enter 发送，Shift+Enter 换行）"></textarea>'
       + '<button id="aiSend" class="ai-send">发送</button>'
       + '</div>';
 
     var messagesEl = document.getElementById('aiMessages');
-    document.getElementById('aiSend').addEventListener('click', send);
+    document.getElementById('aiWriteCoach').addEventListener('click', function () {
+    var box = document.getElementById('aiInput');
+    box.value = WRITE_PROMPT;
+    box.focus();
+  });
+  document.getElementById('aiSend').addEventListener('click', send);
     var input = document.getElementById('aiInput');
     input.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }

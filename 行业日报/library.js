@@ -30,7 +30,7 @@
 
   function hideAll() {
     var aiView = document.getElementById('aiView');
-    [listView, detailView, treeView, notesView, noteReader, tasksView, libraryView, libraryReader, aiView]
+    [listView, detailView, treeView, notesView, noteReader, tasksView, libraryView, libraryReader, aiView, document.getElementById('vocabView')]
       .forEach(function (v) { if (v) v.classList.add('hidden'); });
   }
 

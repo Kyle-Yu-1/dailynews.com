@@ -1,0 +1,3971 @@
+[
+  {
+    "course": "EIE1005",
+    "questions": [
+      {
+        "q": "机器靠什么「学会」？",
+        "focus": "supervised / unsupervised / reinforcement learning, training, generalization, overfitting"
+      },
+      {
+        "q": "数据如何变成决策？",
+        "focus": "data quality, features, model evaluation, visualization"
+      },
+      {
+        "q": "大模型为什么能「像人一样对话」？",
+        "focus": "Transformer, attention, embedding, hallucination, RAG"
+      }
+    ],
+    "sources": [
+      {
+        "t": "CS229 Lecture 1: Introduction (Stanford)",
+        "u": "https://cs229.stanford.edu/notes-spring2019/lecture1_slide.pdf",
+        "type": "lecture",
+        "venue": "Stanford CS229",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Machine Learning",
+          "Supervised Learning",
+          "Unsupervised Learning"
+        ],
+        "quote": "Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed."
+      },
+      {
+        "t": "CS229 Lecture Notes 1: Supervised Learning",
+        "u": "https://cs229.stanford.edu/materials.html",
+        "type": "lecture",
+        "venue": "Stanford CS229",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Supervised Learning",
+          "Classification",
+          "Regression"
+        ],
+        "quote": "Lecture Notes 1: Supervised Learning, Discriminative Algorithms."
+      },
+      {
+        "t": "CS109 Lecture: Machine Learning Goals",
+        "u": "http://web.stanford.edu/class/archive/cs/cs109/cs109.1206/lectures/27_extra_topic_ii.pdf",
+        "type": "lecture",
+        "venue": "Stanford CS109",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Machine Learning",
+          "Training Set"
+        ],
+        "quote": "Goal of machine learning: build models that generalize well to predicting new data."
+      },
+      {
+        "t": "CS229 Additional Notes on Backpropagation",
+        "u": "https://cs229.stanford.edu/notes-spring2019/backprop.pdf",
+        "type": "lecture",
+        "venue": "Stanford CS229",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Neural Network",
+          "Training"
+        ],
+        "quote": "Recall that given input x, forward propagation computes the network output."
+      },
+      {
+        "t": "MIT 6.S191: Introduction to Deep Learning",
+        "u": "http://netman.aiops.org/~peidan/ANM2021/2.MachineLearningBasics/LectureCoverage/7.MIT_deep_learning.pdf",
+        "type": "lecture",
+        "venue": "MIT 6.S191",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Deep Learning",
+          "Neural Network",
+          "Loss"
+        ],
+        "quote": "Single Layer Neural Network... Quantifying Loss... Loss Optimization."
+      },
+      {
+        "t": "MIT 6.S191: Deep Learning & Computer Vision",
+        "u": "https://introtodeeplearning.com/2017/lectures/6S191-Deep-Learning-Computer-Vision.pdf",
+        "type": "lecture",
+        "venue": "MIT 6.S191",
+        "y": "2017",
+        "q": 0,
+        "w": [
+          "Computer Vision",
+          "Convolutional Neural Network"
+        ],
+        "quote": "Course 6.S191: Intro to Deep Learning — Convolutional Neural Networks."
+      },
+      {
+        "t": "Convolutional Neural Network Background",
+        "u": "https://core.ac.uk/download/388902892.pdf",
+        "type": "paper",
+        "venue": "CORE",
+        "y": "2021",
+        "q": 0,
+        "w": [
+          "Convolution",
+          "Feature Map",
+          "Classification"
+        ],
+        "quote": "A convolutional neural network process can be described as two sections, the feature learning, and the classification."
+      },
+      {
+        "t": "A Survey on Deep Learning and State-of-the-art Applications",
+        "u": "https://arxiv.org/abs/2403.17561",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Deep Learning",
+          "Computer Vision",
+          "Natural Language Understanding"
+        ],
+        "quote": "This study aims to comprehensively review the state-of-the-art deep learning models in computer vision, natural language processing, time series analysis and pervasive computing."
+      },
+      {
+        "t": "A Decade of Deep Learning: A Survey on The Magnificent Seven",
+        "u": "https://arxiv.org/html/2412.16188",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Deep Learning",
+          "Convolutional Neural Network"
+        ],
+        "quote": "We discuss the evolution of deep learning and our methodology for selecting the top seven deep learning algorithms of the past decade."
+      },
+      {
+        "t": "Reinforcement Learning: An Introduction (Sutton & Barto)",
+        "u": "http://archive.org/stream/ReinforcementLearningAnIntroductionRichardS.SuttonAndAndrewG.Barto/Reinforcement%20Learning%20An%20Introduction%2C%20Richard%20S.%20Sutton%20and%20Andrew%20G.%20Barto_djvu.txt",
+        "type": "book",
+        "venue": "MIT Press",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Reinforcement Learning",
+          "Agent",
+          "Reward"
+        ],
+        "quote": "In reinforcement learning, the purpose or goal of the agent is formalized in terms of a special signal, called the reward, passing from the environment to the agent."
+      },
+      {
+        "t": "An introduction to Reinforcement Learning (CERN lecture)",
+        "u": "https://indico.cern.ch/event/1697464/sessions/676323/attachments/3331080/5968492/RL%20intro%20lecture%20(1).pdf",
+        "type": "lecture",
+        "venue": "CERN",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Policy",
+          "Agent",
+          "Environment"
+        ],
+        "quote": "Policy is a mapping from perceived states of the environment to actions to be taken."
+      },
+      {
+        "t": "Components of an RL agent (Oxford)",
+        "u": "http://www.cs.ox.ac.uk/people/varun.kanade/teaching/ML-HT2016/lectures/lec11.pdf",
+        "type": "lecture",
+        "venue": "Oxford",
+        "y": "2016",
+        "q": 0,
+        "w": [
+          "Agent",
+          "Environment",
+          "Model"
+        ],
+        "quote": "Components of an RL agent — Goal: Maximise expected cumulative discounted future reward."
+      },
+      {
+        "t": "Alona Fyshe: Does AI actually understand us? (TED)",
+        "u": "https://www.ted.com/talks/alona_fyshe_does_ai_actually_understand_us",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Chatbot",
+          "Natural Language Understanding",
+          "Large Language Model"
+        ],
+        "quote": "Neural scientist Alona Fyshe explores the brains behind machine learning and the language processing of conversational technology such as ChatGPT."
+      },
+      {
+        "t": "Sam Altman: ChatGPT, AI agents and superintelligence (TED2025)",
+        "u": "https://www.ted.com/talks/sam_altman_openai_s_sam_altman_talks_chatgpt_ai_agents_and_superintelligence_live_at_ted2025",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Agent",
+          "Artificial General Intelligence",
+          "Generative AI"
+        ],
+        "quote": "Altman talks about the remarkable growth of AI, and answers questions on safety, power and moral authority."
+      },
+      {
+        "t": "Kelsey Doerksen: TEDx talk on ethical AI use",
+        "u": "https://www.cs.ox.ac.uk/news/2450-full.html",
+        "type": "talk",
+        "venue": "TEDx",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Ethics",
+          "Fairness"
+        ],
+        "quote": "DPhil student Kelsey Doerksen delivers TEDx talk addressing one of today’s most pressing topics: how to be an ethical AI user."
+      },
+      {
+        "t": "A Survey of Large Language Models",
+        "u": "https://arxiv.org/abs/2303.18223",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Large Language Model",
+          "Transformer",
+          "Pre-training"
+        ],
+        "quote": "Large language models mainly refer to Transformer language models, built upon the Transformer architecture with multi-head attention layers."
+      },
+      {
+        "t": "Large Language Models: A Survey",
+        "u": "https://ar5iv.labs.arxiv.org/html/2402.06196",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Transformer",
+          "Attention",
+          "Embedding"
+        ],
+        "quote": "The invention of the Transformer architecture marks another milestone... by applying self-attention to compute in parallel for every word an attention score."
+      },
+      {
+        "t": "A Systematic Literature Review of Retrieval-Augmented Generation",
+        "u": "https://arxiv.org/abs/2508.06401",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Retrieval-Augmented Generation",
+          "Token"
+        ],
+        "quote": "Adaptive Retrieval: the model generates a special Reflect token to determine on demand whether external knowledge is needed."
+      },
+      {
+        "t": "Recent Advances in Deep Learning Based Dialogue Systems: A Survey",
+        "u": "https://huggingface.co/buckets/huggingchat/papers-content/tree/2105/2105.04387.md",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "Chatbot",
+          "Conversational AI"
+        ],
+        "quote": "A systematic survey of neural models in dialogue systems, task-oriented dialogue systems and open-domain dialogue systems."
+      },
+      {
+        "t": "A Survey of the Evolution of Language Model-Based Dialogue Systems",
+        "u": "https://arxiv.org/abs/2311.16789",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Large Language Model",
+          "Conversational AI"
+        ],
+        "quote": "Numerous benchmarks are designed to evaluate the performance of open-domain dialogue systems."
+      },
+      {
+        "t": "A Survey on Platform-Level Data Quality",
+        "u": "https://ieeexplore.ieee.org/abstract/document/11454448",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Data Governance",
+          "Data Quality",
+          "Data Schema"
+        ],
+        "quote": "This survey consolidated foundational DQ dimensions, governance frameworks, validation methods, and streaming architectures."
+      },
+      {
+        "t": "A Framework for Current and New Data Quality Dimensions",
+        "u": "https://m2.mtmt.hu/api/publication/35744856",
+        "type": "paper",
+        "venue": "Data (MDPI)",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Data Quality",
+          "Data Governance"
+        ],
+        "quote": "We introduce four additional data quality dimensions: governance, usefulness, quantity, and semantics."
+      },
+      {
+        "t": "A Conceptual Data Management Maturity Assessment Model",
+        "u": "https://ieeexplore.ieee.org/document/11282667",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Data Quality",
+          "Consistency"
+        ],
+        "quote": "These issues affect data quality dimensions, such as inaccuracy, completeness, timeliness, and consistency."
+      },
+      {
+        "t": "McKinsey: The State of AI in 2025",
+        "u": "https://github.com/rafaeldavid/protocolized-publications/blob/main/ai-capability-maturity-model/_Observations/research/mckinsey-state-of-ai-2025.md",
+        "type": "report",
+        "venue": "McKinsey",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Generative AI",
+          "Agent",
+          "Industry Report"
+        ],
+        "quote": "The State of AI in 2025: Agents, Innovation, and Transformation."
+      },
+      {
+        "t": "McKinsey Global Tech Agenda 2026",
+        "u": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/mckinsey-global-tech-agenda-2026",
+        "type": "report",
+        "venue": "McKinsey",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Data Analytics",
+          "Industry Report"
+        ],
+        "quote": "AI has surpassed both cybersecurity and infrastructure modernization as companies’ top area of investment for the next two years."
+      },
+      {
+        "t": "The economic potential of generative AI (McKinsey)",
+        "u": "https://www.nationalacademies.org/documents/embed/link/LF2255DA3DD1C41C0A42D3BEF0989ACAECE3053A6A9B/file/D54B6C016D7A7A9C9AFB907F7EFD77F6E0F22438CDD5",
+        "type": "report",
+        "venue": "McKinsey",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Generative AI",
+          "Productivity"
+        ],
+        "quote": "The economic potential of generative AI: the next productivity frontier."
+      },
+      {
+        "t": "On responsible machine learning datasets emphasizing fairness, privacy and regulatory norms",
+        "u": "https://www.nature.com/articles/s42256-024-00874-y",
+        "type": "paper",
+        "venue": "Nature Machine Intelligence",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Fairness",
+          "Privacy",
+          "Machine Learning"
+        ],
+        "quote": "Quantifying fairness considers the impact of three factors for dataset fairness: diversity, inclusivity and labels."
+      },
+      {
+        "t": "Algorithmic fairness in artificial intelligence for medicine and healthcare",
+        "u": "https://www.nature.com/articles/s41551-023-01056-8",
+        "type": "paper",
+        "venue": "Nature Biomedical Engineering",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Fairness",
+          "Bias"
+        ],
+        "quote": "Algorithmic fairness in artificial intelligence for medicine and healthcare."
+      },
+      {
+        "t": "A causal perspective on dataset bias in machine learning for medical imaging",
+        "u": "https://ouci.dntb.gov.ua/en/works/4Kqz8ro9/",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2022",
+        "q": 1,
+        "w": [
+          "Bias",
+          "Training Set"
+        ],
+        "quote": "Towards fairness in visual recognition: effective strategies for bias mitigation."
+      },
+      {
+        "t": "A Review on Applications of ML and DL for Image Recognition",
+        "u": "https://ieeexplore.ieee.org/abstract/document/10933346",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Image Recognition",
+          "Convolutional Neural Network"
+        ],
+        "quote": "Modern image recognition has experienced dramatic improvements because of Machine Learning and Deep Learning algorithms."
+      },
+      {
+        "t": "A Review on AI-Based Image Analysis in Computer Vision",
+        "u": "https://ieeexplore.ieee.org/abstract/document/10979847",
+        "type": "paper",
+        "venue": "IEEE Access",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Computer Vision",
+          "Object Detection"
+        ],
+        "quote": "Object detection models trained on COCO datasets exhibit a drop in mAP under low-illumination surveillance."
+      },
+      {
+        "t": "Multiscale Deep Learning for Detection and Recognition: A Survey",
+        "u": "https://lz.nstl.gov.cn/paper_detail.html?id=de8f8393eb8fae77d3f7b97e90f93e60",
+        "type": "paper",
+        "venue": "IEEE TNNLS",
+        "y": "2021",
+        "q": 0,
+        "w": [
+          "Deep Learning",
+          "Detection"
+        ],
+        "quote": "New Generation Deep Learning for Video Object Detection: A Survey."
+      },
+      {
+        "t": "Data Analysis and Visualization in Python for Ecologists",
+        "u": "https://carpentry.library.ucsb.edu/2026-04-13-python-ecology-lesson/instructor/n002-visualizing-matplotlib.html",
+        "type": "tutorial",
+        "venue": "Software Carpentry",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "pandas",
+          "matplotlib",
+          "read_csv"
+        ],
+        "quote": "Use pandas to load your data — pd.read_csv() — and create and customize plots using pandas and Matplotlib."
+      },
+      {
+        "t": "Data Science: The Bear Necessities (Microsoft)",
+        "u": "https://learn.microsoft.com/en-us/shows/python-data-science-day-2024/data-science-the-bear-necessities-python-data-science-day",
+        "type": "talk",
+        "venue": "Microsoft Learn",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "pandas",
+          "matplotlib",
+          "DataFrame"
+        ],
+        "quote": "Using Python, Pandas and Matplotlib, explore information and create visualizations that combine and present data in new ways."
+      },
+      {
+        "t": "How to visualize data with Matplotlib (Microsoft ML for Beginners)",
+        "u": "https://learn.microsoft.com/en-us/shows/machine-learning-for-beginners/how-to-visualize-data-with-matplotlib-machine-learning-for-beginners",
+        "type": "tutorial",
+        "venue": "Microsoft",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "bar chart",
+          "scatter plot",
+          "DataFrame"
+        ],
+        "quote": "Create a bar chart using the Pandas DataFrame API with matplotlib, and use visualization to answer questions about your data."
+      },
+      {
+        "t": "AI Simulation by Digital Twins: Systematic Survey",
+        "u": "https://arxiv.org/abs/2506.06580",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Digital Twin",
+          "Simulation"
+        ],
+        "quote": "AI Simulation by Digital Twins: systematic survey, reference framework, and mapping to a standardized architecture."
+      },
+      {
+        "t": "AI simulation by digital twins (SoSyM)",
+        "u": "https://dl.acm.org/doi/10.1007/s10270-025-01306-0",
+        "type": "paper",
+        "venue": "Springer SoSyM",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Digital Twin",
+          "Simulation"
+        ],
+        "quote": "How simulation helps autonomous driving: a survey of sim2real, digital twins, and parallel intelligence."
+      },
+      {
+        "t": "A robot arm digital twin utilising reinforcement learning",
+        "u": "https://ar5iv.labs.arxiv.org/html/2506.06580",
+        "type": "paper",
+        "venue": "Computers & Graphics",
+        "y": "2022",
+        "q": 1,
+        "w": [
+          "Digital Twin",
+          "Reinforcement Learning"
+        ],
+        "quote": "A robot arm digital twin utilising reinforcement learning."
+      },
+      {
+        "t": "The digital spatial geography shift: virtual-real integration",
+        "u": "https://www.jstage.jst.go.jp/article/grb/5/0/5_288/_pdf/-char/ja",
+        "type": "paper",
+        "venue": "Geographical Review Bulletin",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Digital Twin",
+          "Simulation"
+        ],
+        "quote": "Digital twins are no longer merely static mapping tools but dynamic systems with predictive and feedback capabilities."
+      },
+      {
+        "t": "What comes after transformers? A selective survey",
+        "u": "https://arxiv.org/abs/2408.00386",
+        "type": "paper",
+        "venue": "ICAART",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Transformer",
+          "Attention"
+        ],
+        "quote": "A survey of deep learning: From activations to transformers."
+      },
+      {
+        "t": "The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches",
+        "u": "https://librarysearch.temple.edu/articles/cdi_proquest_journals_2071734484",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2018",
+        "q": 0,
+        "w": [
+          "Deep Learning",
+          "Convolutional Neural Network"
+        ],
+        "quote": "Deep learning has demonstrated tremendous success in a variety of application domains in the past few years."
+      },
+      {
+        "t": "Convolution Layer (CERN Machine Learning lecture)",
+        "u": "https://indico.cern.ch/event/812393/contributions/4296176/attachments/2288687/3890564/ML%20ASP%202021.pdf",
+        "type": "lecture",
+        "venue": "CERN",
+        "y": "2021",
+        "q": 0,
+        "w": [
+          "Convolution",
+          "Filter",
+          "Feature Map"
+        ],
+        "quote": "Convolution Layer: a set of learnable filters that produce activation maps."
+      },
+      {
+        "t": "10 Great TED Talks on AI, ML & Automation",
+        "u": "https://dev.blogs.bmc.com/ted-talks-machine-learning-automation-ai/",
+        "type": "talk",
+        "venue": "TED (list)",
+        "y": "2019",
+        "q": 2,
+        "w": [
+          "Artificial Intelligence",
+          "Machine Learning"
+        ],
+        "quote": "Can we build AI without losing control over it?"
+      },
+      {
+        "t": "Vít Růžička: Machine learning on-board of Satellites for Methane detection (TED)",
+        "u": "https://www.cs.ox.ac.uk/news/2378-full.html",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Machine Learning",
+          "Satellite Data"
+        ],
+        "quote": "Vít Růžička spoke about his research on methane detection using machine learning models on-board hyperspectral satellites."
+      },
+      {
+        "t": "AURA: RL Framework for AI-Driven Adaptive Conversational Surveys",
+        "u": "https://www.scilit.com/publications/88f6daa812434f9d59dc692f9ab01809",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Reinforcement Learning",
+          "Conversational AI"
+        ],
+        "quote": "AURA (Adaptive Understanding through Reinforcement Learning for Assessment), a reinforcement learning framework for AI-driven adaptive conversational surveys."
+      },
+      {
+        "t": "Exploring the conversational landscape: A survey of AI-based chatbot development",
+        "u": "https://pubs.aip.org/aip/acp/article-abstract/3175/1/020095/3339061/",
+        "type": "paper",
+        "venue": "AIP Conference Proceedings",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Chatbot",
+          "Question Answering"
+        ],
+        "quote": "Question Answering Model Based Conversational Chatbot using BERT Model and Google Dialogflow."
+      },
+      {
+        "t": "A general survey on attention mechanisms in deep learning",
+        "u": "https://ar5iv.labs.arxiv.org/html/2408.00386",
+        "type": "paper",
+        "venue": "IEEE TNNLS",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "Attention",
+          "Deep Learning"
+        ],
+        "quote": "A general survey on attention mechanisms in deep learning."
+      },
+      {
+        "t": "A survey of the recent architectures of deep convolutional neural networks",
+        "u": "https://ar5iv.labs.arxiv.org/html/2408.00386",
+        "type": "paper",
+        "venue": "Artificial Intelligence Review",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Convolutional Neural Network",
+          "Architecture"
+        ],
+        "quote": "A survey of the recent architectures of deep convolutional neural networks."
+      },
+      {
+        "t": "Sam Harris: Can we build AI without losing control over it? (TED)",
+        "u": "https://www.ted.com/talks/sam_harris_can_we_build_ai_without_losing_control_over_it",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2016",
+        "q": 2,
+        "w": [
+          "Superintelligence",
+          "Artificial Intelligence"
+        ],
+        "quote": "Can we build AI without losing control over it?"
+      },
+      {
+        "t": "CS229 Pre-requisite lecture slides",
+        "u": "https://cs229.stanford.edu/notes-spring2019/lecture1_slide.pdf",
+        "type": "lecture",
+        "venue": "Stanford CS229",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Supervised Learning",
+          "Computer Vision"
+        ],
+        "quote": "Supervised Learning in Computer Vision; this course only covers the basic and fundamental techniques of supervised learning."
+      },
+      {
+        "t": "Oxford CS ML lectures: Components of an RL agent",
+        "u": "http://www.cs.ox.ac.uk/people/varun.kanade/teaching/ML-HT2016/lectures/lec11.pdf",
+        "type": "lecture",
+        "venue": "Oxford",
+        "y": "2016",
+        "q": 0,
+        "w": [
+          "Reinforcement Learning",
+          "Model"
+        ],
+        "quote": "Two fundamental problems in sequential decision making: learning vs planning."
+      }
+    ]
+  },
+  {
+    "course": "ME29004/IC2117",
+    "questions": [
+      {
+        "q": "从想法到实物，工程设计靠什么「不返工」？",
+        "focus": "design process, design criteria, prototyping"
+      },
+      {
+        "q": "3D 打印件为什么有的强、有的弱？",
+        "focus": "FDM, layer adhesion, orientation, support, surface finishing"
+      },
+      {
+        "q": "零件如何「可靠地连接并动起来」？",
+        "focus": "fasteners, torque, adhesive bonding, motors, PWM, H-bridge"
+      }
+    ],
+    "sources": [
+      {
+        "t": "Advances in Fused Deposition Modeling: Process and Applications",
+        "u": "https://iopscience.iop.org/article/10.1088/2631-8695/ad32f6",
+        "type": "paper",
+        "venue": "Engineering Research Express",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Fused Deposition Modeling",
+          "Additive Manufacturing"
+        ],
+        "quote": "This review explores the fundamental underpinnings of the FDM process, detailing production stages, parameters, applications."
+      },
+      {
+        "t": "A critical review on FDM of thermoplastic polymer composites",
+        "u": "https://www.sciencedirect.com/science/article/abs/pii/S1359836820333850",
+        "type": "paper",
+        "venue": "Composites Part B",
+        "y": "2020",
+        "q": 1,
+        "w": [
+          "Fused Deposition Modeling",
+          "Composite"
+        ],
+        "quote": "This paper presents an overview of the fused deposition modeling of thermoplastic composite materials."
+      },
+      {
+        "t": "Additive manufacturing of polymers for aerospace applications",
+        "u": "https://pubs.rsc.org/en/content/articlehtml/2026/mh/d5mh01403d",
+        "type": "paper",
+        "venue": "Materials Horizons (RSC)",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Delamination",
+          "Adhesion"
+        ],
+        "quote": "The material must have enough mechanical strength to avoid delamination; interlayer weld and chain diffusion depend on the entire printing process."
+      },
+      {
+        "t": "Fused deposition modeling: mechanisms, stages and challenges",
+        "u": "https://ouci.dntb.gov.ua/en/?backlinks_to=10.1186/s44147-022-00109-0",
+        "type": "paper",
+        "venue": "Beni-Suef Univ J Basic Appl Sci",
+        "y": "2022",
+        "q": 1,
+        "w": [
+          "Fused Deposition Modeling"
+        ],
+        "quote": "Fused deposition modeling (FDM) is an effective and cost-efficient Additive Manufacturing (AM) technique utilized in diverse engineering applications."
+      },
+      {
+        "t": "Joseph DeSimone: What if 3D printing was 100x faster? (TED2015)",
+        "u": "https://archive.org/details/JosephDeSimone_2015",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2015",
+        "q": 1,
+        "w": [
+          "3D Printing"
+        ],
+        "quote": "Onstage at TED2015, he unveils a bold new technique that is 25 to 100 times faster, and creates smooth, strong parts."
+      },
+      {
+        "t": "Lisa Harouni: A Primer on 3D Printing (TED)",
+        "u": "https://archive.org/details/LisaHarouni_2012",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2012",
+        "q": 1,
+        "w": [
+          "Additive Manufacturing",
+          "3D Printing"
+        ],
+        "quote": "Lisa Harouni works on additive manufacturing — otherwise known as 3D printing."
+      },
+      {
+        "t": "Avi Reichental: What is next in 3D printing? (TED)",
+        "u": "https://www.ted.com/talks/avi_reichental_what_s_next_in_3d_printing",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2014",
+        "q": 1,
+        "w": [
+          "3D Printing",
+          "Customization"
+        ],
+        "quote": "Reichental leads us through the wonder of 3D printing, from printed candy to highly customized sneakers."
+      },
+      {
+        "t": "ENGG1100 Introduction to Engineering Design: Five-Stage Model",
+        "u": "http://www.cs.cuhk.edu.hk/~khwong/www2/engg1100/1100_T1_13-4_lect2_design.pdf",
+        "type": "lecture",
+        "venue": "CUHK",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Engineering Design Process"
+        ],
+        "quote": "Five-Stage Descriptive Model of the Design Process: Client Statement, Problem Definition, Conceptual Design, Preliminary Design, Detailed Design, Design Communication."
+      },
+      {
+        "t": "Engineering Design Process (Kovacevic, City University London)",
+        "u": "https://www.staff.city.ac.uk/~ra600/Presentations/Formula%20Student/Part%203.pdf",
+        "type": "lecture",
+        "venue": "City University London",
+        "y": "2014",
+        "q": 0,
+        "w": [
+          "Engineering Design Process",
+          "Ideation"
+        ],
+        "quote": "Categories of engineering design: conceptual design, preliminary design, detailed design, prototype design, final design."
+      },
+      {
+        "t": "Introduction to Engineering Design (Saterbak & Wettergreen)",
+        "u": "https://rd.springer.com/search?facet-creator=%22Ann+Saterbak%22",
+        "type": "book",
+        "venue": "Morgan & Claypool",
+        "y": "2021",
+        "q": 0,
+        "w": [
+          "Design Criteria",
+          "Prototype"
+        ],
+        "quote": "Establishing design criteria is the third step of the EDP and the final step of the design analysis stage."
+      },
+      {
+        "t": "Capstone Engineering Design: Project Process and Reviews (Workbook)",
+        "u": "https://ebooks.mpdl.mpg.de/ebooks/Record/EB002249218/Details",
+        "type": "book",
+        "venue": "Springer",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Design Requirements",
+          "Project Planning"
+        ],
+        "quote": "Capstone design process: design need, project planning, design requirements."
+      },
+      {
+        "t": "Threaded Fastener: K-value selection (ScienceDirect topics)",
+        "u": "https://www.sciencedirect.com/topics/engineering/threaded-fastener",
+        "type": "reference",
+        "venue": "ScienceDirect",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Threaded Fastener",
+          "Torque"
+        ],
+        "quote": "The value of K depends on the bolt material and size: lubricated steel bolts 0.18, zinc plated 0.2."
+      },
+      {
+        "t": "Cambridge Engineering Data Book: torque tables",
+        "u": "http://www-mdp.eng.cam.ac.uk/web/library/enginfo/mdpdatabooks/databook.pdf",
+        "type": "reference",
+        "venue": "University of Cambridge",
+        "y": "2020",
+        "q": 2,
+        "w": [
+          "Torque",
+          "Fastener"
+        ],
+        "quote": "Torques based on 80,000 psi bearing stress under head of screw."
+      },
+      {
+        "t": "Design Guidelines for Automotive Bolted Joints",
+        "u": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003501183-20/",
+        "type": "chapter",
+        "venue": "CRC Handbook",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Torque",
+          "Fastener"
+        ],
+        "quote": "Torque tables aid design engineers with the proper tightening torques for a variety of fastener sizes and materials."
+      },
+      {
+        "t": "Fastener property classes and thread rolling",
+        "u": "https://ptacts.uspto.gov/ptacts/public-informations/petitions/1554158/",
+        "type": "reference",
+        "venue": "USPTO",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Fastener",
+          "Thread"
+        ],
+        "quote": "Fasteners of sizes up to M8 whose threads are rolled after hardening and tempering can achieve higher strength values."
+      },
+      {
+        "t": "CERN Mechanical Torque Guide",
+        "u": "https://sy-dep-epc-lpc.web.cern.ch/concepts/converters/mechanical/mechanical_torques.stm",
+        "type": "reference",
+        "venue": "CERN",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Torque",
+          "Screw"
+        ],
+        "quote": "This document guides engineers on which value of tightening torque to choose in different standard situations."
+      },
+      {
+        "t": "Surface cleaning and pretreatment of single-lap joints",
+        "u": "https://www.nature.com/articles/s41598-026-44026-1",
+        "type": "paper",
+        "venue": "Scientific Reports",
+        "y": "2026",
+        "q": 2,
+        "w": [
+          "Surface Preparation",
+          "Adhesive Bonding"
+        ],
+        "quote": "Both substrates were wiped with lint-free tissues soaked in acetone to remove grease and debris, then sandblasted."
+      },
+      {
+        "t": "Laser surface texturing and adhesive bonding: a review",
+        "u": "https://www.sciencedirect.com/science/article/abs/pii/S0030399225009302",
+        "type": "paper",
+        "venue": "Optics & Laser Technology",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Surface Roughness",
+          "Adhesive Bonding"
+        ],
+        "quote": "This review is centered on laser surface texturing and its influence on surface roughness and bonding strength."
+      },
+      {
+        "t": "Surface preparation for adhesive bonding (DTIC)",
+        "u": "https://apps.dtic.mil/sti/tr/pdf/ADA283800.pdf",
+        "type": "report",
+        "venue": "US Army (DTIC)",
+        "y": "1994",
+        "q": 2,
+        "w": [
+          "Surface Preparation",
+          "Adhesive"
+        ],
+        "quote": "The object of surface preparation is to avoid interfacial failures in adhesive bonding."
+      },
+      {
+        "t": "Mechanical abrasion and cure time in Al-SS adhesive joints",
+        "u": "https://ouci.dntb.gov.ua/en/works/45rN0xgO/",
+        "type": "paper",
+        "venue": "Coatings (MDPI)",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Adhesive Bonding",
+          "Surface Roughness"
+        ],
+        "quote": "Major factors affecting adhesion encompass the elimination of impurities, adhesive wettability, and surface roughness."
+      },
+      {
+        "t": "Surface roughness and nanostructure effects on bonded joints",
+        "u": "https://www.sciencedirect.com/science/article/abs/pii/S0143749624001258",
+        "type": "paper",
+        "venue": "International Journal of Adhesion and Adhesives",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Adhesive Bonding",
+          "Joint"
+        ],
+        "quote": "The relationship between surface roughness and nanostructured composite adhesive in adhesively bonded joints was investigated experimentally."
+      },
+      {
+        "t": "All You Need to Know About Vapor Smoothing in 3D Printing",
+        "u": "https://www.3dnatives.com/en/all-you-need-to-know-about-vapor-smoothing-in-3d-printing-220420255/",
+        "type": "article",
+        "venue": "3Dnatives",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Vapor Smoothing",
+          "Solvent"
+        ],
+        "quote": "Acetone is recommended for ABS and ASA, while tetrahydrofuran (THF) is recommended for PLA."
+      },
+      {
+        "t": "Vapor smoothing research: ABS vs PLA",
+        "u": "https://www.scientific.net/paper-keyword/vapor-smoothing",
+        "type": "paper",
+        "venue": "Scientific.Net",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Vapor Smoothing",
+          "PLA"
+        ],
+        "quote": "Research literature concerning vapor smoothing of polylactic acid (PLA) parts is generally limited, unlike its ABS counterpart."
+      },
+      {
+        "t": "Hot vapour polishing system for FDM printed parts",
+        "u": "http://www.tribology.rs/journals/2022/2022-4/2022-4-01.html",
+        "type": "paper",
+        "venue": "Tribology in Industry",
+        "y": "2022",
+        "q": 1,
+        "w": [
+          "Polishing",
+          "Fused Deposition Modeling"
+        ],
+        "quote": "Tetrahydrofuran (THF) and acetone are used as solvents to polish polylactic acid (PLA) and acrylonitrile butadiene styrene (ABS)."
+      },
+      {
+        "t": "Effects of cutting parameters on kerf width of X60 steel",
+        "u": "https://yc.nstl.gov.cn/paper_detail.html?id=9cfbd036b52a5517f11b56475c6d90a4",
+        "type": "paper",
+        "venue": "NSTL",
+        "y": "2021",
+        "q": 1,
+        "w": [
+          "Kerf",
+          "Laser Cutting"
+        ],
+        "quote": "The effects of cutting geometries and cutting parameters on the surface roughness and kerf width were investigated."
+      },
+      {
+        "t": "Yilbas: Effect of process parameters on kerf width",
+        "u": "http://www.koreascience.kr/article/CFKO200433239311403.pdf",
+        "type": "paper",
+        "venue": "Proc IMechE Part B",
+        "y": "2001",
+        "q": 1,
+        "w": [
+          "Kerf",
+          "Laser Cutting"
+        ],
+        "quote": "Effect of process parameters on the kerf width during the laser cutting process."
+      },
+      {
+        "t": "ANOVA of process variables affecting HAZ and kerf width",
+        "u": "https://iopscience.iop.org/article/10.1088/2631-8695/ad915c",
+        "type": "paper",
+        "venue": "Engineering Research Express",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Kerf",
+          "Heat Affected Zone"
+        ],
+        "quote": "A slight increment has been found in HAZ, along with the kerf width, due to the slower cutting speed."
+      },
+      {
+        "t": "Optimal laser cutting parameters for low kerf and HAZ",
+        "u": "https://ouci.dntb.gov.ua/en/?backlinks_to=10.3390%2Fma12010176",
+        "type": "paper",
+        "venue": "Materials (MDPI)",
+        "y": "2019",
+        "q": 1,
+        "w": [
+          "Kerf",
+          "Laser Power"
+        ],
+        "quote": "Best conditions for low surface roughness, small HAZ width and small kerf width use low laser power and high cutting speed."
+      },
+      {
+        "t": "Introduction to DC motors (Texas Instruments lab)",
+        "u": "http://www.ti.com/lit/ml/sekp119/sekp119.pdf",
+        "type": "lecture",
+        "venue": "Texas Instruments",
+        "y": "2020",
+        "q": 2,
+        "w": [
+          "DC Motor",
+          "H-Bridge"
+        ],
+        "quote": "The focus of this lab is the mechanical and electrical aspects of the motors, using two H-bridges."
+      },
+      {
+        "t": "DC Motor Control: linear amplifier and H-bridge",
+        "u": "https://www.sciencedirect.com/science/chapter/monograph/pii/B9780124201651000275",
+        "type": "chapter",
+        "venue": "Elsevier",
+        "y": "2014",
+        "q": 2,
+        "w": [
+          "PWM",
+          "H-Bridge"
+        ],
+        "quote": "An H-bridge uses a unipolar power supply and is controlled by digital pulse width modulation pulses."
+      },
+      {
+        "t": "L298 Motor Driver lab (Arduino)",
+        "u": "https://alg.manifoldapp.org/system/actioncallout/1/8/f/18fb578f-32e7-4173-91eb-8eabfa7f7d51/attachment/8e99db76c6ad0df990a6df9153535033.pdf",
+        "type": "lecture",
+        "venue": "Manifold (course lab)",
+        "y": "2022",
+        "q": 2,
+        "w": [
+          "DC Motor",
+          "Driver"
+        ],
+        "quote": "The primary control method uses a microcontroller connected to an L298 DC motor driver to program the movement of the motor."
+      },
+      {
+        "t": "Arduino Robotics: DC motor speed control",
+        "u": "https://archive.org/stream/ArduinoRobotics_201607/Arduino%20Robotics_djvu.txt",
+        "type": "book",
+        "venue": "Apress",
+        "y": "2016",
+        "q": 2,
+        "w": [
+          "DC Motor",
+          "Speed Control"
+        ],
+        "quote": "The motor should spin with full speed control in either direction, and stop when the potentiometer is centered."
+      },
+      {
+        "t": "PWM voltage source and H-Bridge DC motor control (MATLAB)",
+        "u": "https://www.mathworks.com/help/sps/ug/pwm-controlled-dc-motor.html",
+        "type": "tutorial",
+        "venue": "MathWorks",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "PWM",
+          "H-Bridge"
+        ],
+        "quote": "The H-Bridge block receives the PWM signal and generates a constant output voltage equal to the average value of the PWM signal."
+      },
+      {
+        "t": "MIT Fab Academy: motors and sensors — servo vs stepper",
+        "u": "http://fab.cba.mit.edu/classes/961.04/topics/04_02_04_actuator2.pdf",
+        "type": "lecture",
+        "venue": "MIT Fab Academy",
+        "y": "2004",
+        "q": 2,
+        "w": [
+          "Servo Motor",
+          "Stepper Motor"
+        ],
+        "quote": "Servos are usually operating closed loop, while steppers usually are open-loop."
+      },
+      {
+        "t": "Tutorial: Stepper vs Servo (AMCI)",
+        "u": "https://www.amci.com/industrial-automation-resources/plc-automation-tutorials/stepper-vs-servo/",
+        "type": "tutorial",
+        "venue": "AMCI",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "Stepper Motor",
+          "Servo Motor"
+        ],
+        "quote": "At high speeds the stepper motor torque approaches zero while the servo motor provides consistent torque throughout the speed range."
+      },
+      {
+        "t": "Comparing servo with standard DC motors (MIT Fab)",
+        "u": "http://fab.cba.mit.edu/classes/863.19/Architecture/people/Yuxuan%20Lei/week9.html",
+        "type": "lecture",
+        "venue": "MIT Fab Academy",
+        "y": "2019",
+        "q": 2,
+        "w": [
+          "Servo Motor",
+          "Position Sensor"
+        ],
+        "quote": "Servo motor receives a control signal that represents an output position and applies power until the shaft turns to the exact position."
+      },
+      {
+        "t": "Design of Wood Carving Machine: stepper full/half step",
+        "u": "http://repository.sustech.edu:8080/bitstream/handle/123456789/24640/Design%20of%20Wood%20Carving....pdf",
+        "type": "thesis",
+        "venue": "SUSTech",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "Stepper Motor",
+          "Step"
+        ],
+        "quote": "Stepper motor has three types of step driving: full step, half step, and microstep."
+      },
+      {
+        "t": "Part orientation fused shape optimization to reduce support",
+        "u": "https://www.sciencedirect.com/science/article/pii/S0010448525001903",
+        "type": "paper",
+        "venue": "Computer-Aided Design",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Support Structure",
+          "Print Orientation"
+        ],
+        "quote": "A novel mathematical framework for alternating optimisation of part orientation and geometry to reduce support structure volume."
+      },
+      {
+        "t": "Optimal 3D printing orientation of manikin pieces",
+        "u": "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002814968",
+        "type": "paper",
+        "venue": "KCI",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Slicer",
+          "Support Structure"
+        ],
+        "quote": "The dissected parts were converted to G-codes using slicing software to determine the optimal orientation that minimizes support structure."
+      },
+      {
+        "t": "Influence of print orientation on dental crowns",
+        "u": "https://fz.nstl.gov.cn/paper_detail.html?id=67901dac240c49534568fb8087476e38",
+        "type": "paper",
+        "venue": "NSTL",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Print Orientation",
+          "Support Structure"
+        ],
+        "quote": "Print orientation in 3D printing plays a critical role in determining the quantity and placement of support structures."
+      },
+      {
+        "t": "GPU-accelerated convex hull for optimal print orientation",
+        "u": "https://impact.ornl.gov/en/publications/determining-optimal-print-orientation-using-gpu-accelerated-conve/",
+        "type": "paper",
+        "venue": "ORNL",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Print Orientation",
+          "Support Structure"
+        ],
+        "quote": "An object’s orientation determines how much support structure will be needed."
+      },
+      {
+        "t": "Overhang-area-based support minimization",
+        "u": "https://dlnext.acm.org/doi/fullHtml/10.1145/3623263.3623360",
+        "type": "paper",
+        "venue": "SCF (ACM)",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Overhang",
+          "Support Structure"
+        ],
+        "quote": "They focus on minimizing support structures by selecting the orientation with the smallest ratio of overhang area to build surface area."
+      },
+      {
+        "t": "Design and Applied Technology: M1 Automation (HKEdCity)",
+        "u": "https://cd1.edb.hkedcity.net/cd/wcms/3516/M1%20automation.pdf",
+        "type": "textbook",
+        "venue": "HK Education Bureau",
+        "y": "2015",
+        "q": 2,
+        "w": [
+          "Servo Motor",
+          "Stepper Motor"
+        ],
+        "quote": "List three advantages for stepping motors and servomotors."
+      },
+      {
+        "t": "ISO/ASTM 52900: Additive manufacturing — General principles — Fundamentals and vocabulary",
+        "u": "https://www.iso.org/standard/74514.html",
+        "type": "standard",
+        "venue": "ISO/ASTM",
+        "y": "2021",
+        "q": 1,
+        "w": [
+          "Additive Manufacturing",
+          "Terminology"
+        ],
+        "quote": "Additive manufacturing: General principles — Fundamentals and vocabulary."
+      },
+      {
+        "t": "NIST Additive Manufacturing Standards & Measurement",
+        "u": "https://www.nist.gov/ambench",
+        "type": "reference",
+        "venue": "NIST",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Additive Manufacturing",
+          "Standard"
+        ],
+        "quote": "NIST measurement science and standards for additive manufacturing."
+      },
+      {
+        "t": "Design for Additive Manufacturing (chapter)",
+        "u": "https://www.sciencedirect.com/topics/engineering/design-for-additive-manufacturing",
+        "type": "reference",
+        "venue": "ScienceDirect",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Support Structure",
+          "Overhang"
+        ],
+        "quote": "Design for additive manufacturing considers overhangs and support structures early in the design stage."
+      },
+      {
+        "t": "The 3D Printing Handbook (Redwood, Schöffer & Garret)",
+        "u": "https://www.hubs.com/3d-printing-handbook/",
+        "type": "book",
+        "venue": "3D Hubs",
+        "y": "2017",
+        "q": 1,
+        "w": [
+          "3D Printing",
+          "Design"
+        ],
+        "quote": "The 3D Printing Handbook: technologies, design and applications."
+      },
+      {
+        "t": "ISO 68-1: ISO general purpose metric screw threads",
+        "u": "https://www.iso.org/standard/7657.html",
+        "type": "standard",
+        "venue": "ISO",
+        "y": "1998",
+        "q": 2,
+        "w": [
+          "Thread",
+          "Screw"
+        ],
+        "quote": "ISO general purpose screw threads — Basic profile."
+      },
+      {
+        "t": "Adhesive Bonding: Science, Technology and Applications (Adams)",
+        "u": "https://www.sciencedirect.com/book/9780081020104/adhesive-bonding",
+        "type": "book",
+        "venue": "Woodhead Publishing",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "Adhesive Bonding",
+          "Joint Design"
+        ],
+        "quote": "Adhesive bonding: science, technology and applications, covering joint design and surface preparation."
+      },
+      {
+        "t": "FDM mechanisms: in-situ fusion and ex-situ prepreg",
+        "u": "https://ouci.dntb.gov.ua/en/?backlinks_to=10.1186/s44147-022-00109-0",
+        "type": "paper",
+        "venue": "Polymers (MDPI)",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Fused Deposition Modeling",
+          "Fusion"
+        ],
+        "quote": "This article comprehensively explains two main FDM mechanisms: in-situ fusion and ex-situ prepreg."
+      }
+    ]
+  },
+  {
+    "course": "AMA1110",
+    "questions": [
+      {
+        "q": "为什么「极限」是微积分的起点？",
+        "focus": "limit, continuity"
+      },
+      {
+        "q": "导数到底在「衡量」什么？",
+        "focus": "rate of change, derivative rules, chain rule"
+      },
+      {
+        "q": "定理为什么能「证明方程有解」？",
+        "focus": "IVT, L Hopital rule"
+      }
+    ],
+    "sources": [
+      {
+        "t": "MIT OCW 18.01 Lecture Notes",
+        "u": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2005/pages/lecture-notes/",
+        "type": "lecture",
+        "venue": "MIT OCW",
+        "y": "2005",
+        "q": 0,
+        "w": [
+          "Limit",
+          "Derivative"
+        ],
+        "quote": "Velocity and Rates of Change; Slope and Derivative; Limits and Continuity; The Fundamental Theorem of Calculus."
+      },
+      {
+        "t": "MIT 18.01 Lecture 2: Limits, Continuity, Trigonometric Limits",
+        "u": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec2/",
+        "type": "lecture",
+        "venue": "MIT OCW",
+        "y": "2006",
+        "q": 0,
+        "w": [
+          "Limit",
+          "Continuity"
+        ],
+        "quote": "The rate-of-change interpretation of the derivative, limits and continuity, and trigonometric limits."
+      },
+      {
+        "t": "MIT 18.01SC Session 4: Limits and Continuity",
+        "u": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-4-limits-and-continuity/",
+        "type": "lecture",
+        "venue": "MIT OCW",
+        "y": "2010",
+        "q": 0,
+        "w": [
+          "Limit",
+          "Continuity"
+        ],
+        "quote": "The main formula for the derivative involves a limit."
+      },
+      {
+        "t": "MIT RES.18-006 Lecture 6: Continuity",
+        "u": "https://opencw.aprende.org/resources/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/part-ii-differentiation/lecture-6-continuity/",
+        "type": "lecture",
+        "venue": "MIT OCW",
+        "y": "2010",
+        "q": 0,
+        "w": [
+          "Continuity",
+          "Differentiability"
+        ],
+        "quote": "Our basic definition of continuity goes back to our concept of limit; differentiability implies continuity."
+      },
+      {
+        "t": "OpenStax Calculus Volume 1",
+        "u": "https://openstax.org/details/books/calculus-volume-1",
+        "type": "book",
+        "venue": "OpenStax",
+        "y": "2020",
+        "q": 1,
+        "w": [
+          "Derivative",
+          "Chain Rule"
+        ],
+        "quote": "Chapter 3 Derivatives: Differentiation Rules and the Chain Rule."
+      },
+      {
+        "t": "WPI MA1021 Lecture IX: Differentiation Rules",
+        "u": "https://users.wpi.edu/~bgu/courses/ma1021/lecture_notes.pdf",
+        "type": "lecture",
+        "venue": "WPI",
+        "y": "2021",
+        "q": 1,
+        "w": [
+          "Derivative",
+          "Differentiation Rules"
+        ],
+        "quote": "In the previous lecture, we studied the derivative as a function."
+      },
+      {
+        "t": "OpenStax 3.3 Differentiation Rules (UConn)",
+        "u": "https://www2.math.uconn.edu/ClassHomePages/Math1071/Textbook/sec_Ch3Sec3.html",
+        "type": "textbook",
+        "venue": "OpenStax",
+        "y": "2020",
+        "q": 1,
+        "w": [
+          "Product Rule"
+        ],
+        "quote": "The derivative of a product of two functions is the derivative of the first times the second plus the derivative of the second times the first."
+      },
+      {
+        "t": "LibreTexts 3.3 Differentiation Rules",
+        "u": "https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.03%3A_Differentiation_Rules",
+        "type": "textbook",
+        "venue": "LibreTexts",
+        "y": "2016",
+        "q": 1,
+        "w": [
+          "Differentiation Rules",
+          "Constant Rule"
+        ],
+        "quote": "Finding derivatives by using the definition can be lengthy; the rules allow us to bypass this process."
+      },
+      {
+        "t": "Intermediate Value Theorem (EPFL GraphSearch)",
+        "u": "https://graphsearch.epfl.ch/en/concept/14884",
+        "type": "reference",
+        "venue": "EPFL",
+        "y": "2022",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem"
+        ],
+        "quote": "If f is continuous and its domain contains the interval, then it takes on any value between f(a) and f(b)."
+      },
+      {
+        "t": "LSE MA103: IVT with proof",
+        "u": "https://personal.lse.ac.uk/sasane/ma103.pdf",
+        "type": "lecture",
+        "venue": "LSE",
+        "y": "2019",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem"
+        ],
+        "quote": "A continuous function cannot hop over intermediate values."
+      },
+      {
+        "t": "UWEC Math 316: The IVT",
+        "u": "https://people.uwec.edu/daviscw/oldclasses/math316Spring2014/lect18/notes.pdf",
+        "type": "lecture",
+        "venue": "UW-Eau Claire",
+        "y": "2014",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem"
+        ],
+        "quote": "This theorem can be used to show that equations have solutions."
+      },
+      {
+        "t": "UCLA MATH 131BH: IVT applications",
+        "u": "https://www.math.ucla.edu/~biskup/131bh.1.23s/PDFs/ch26.pdf",
+        "type": "lecture",
+        "venue": "UCLA",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem",
+          "Polynomial Function"
+        ],
+        "quote": "A standard application: each odd-degree polynomial has a root in R."
+      },
+      {
+        "t": "Lancaster: Theorems on continuous functions",
+        "u": "https://www.maths.lancs.ac.uk/~jameson/ivt.pdf",
+        "type": "lecture",
+        "venue": "Lancaster University",
+        "y": "2019",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem"
+        ],
+        "quote": "Suppose f is continuous on [a,b] and either f(a)<η<f(b) or f(a)>η>f(b)."
+      },
+      {
+        "t": "MIT RES.18-001: L Hopital Rule",
+        "u": "https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/mitres_18_001_f17_ch03.pdf",
+        "type": "textbook",
+        "venue": "MIT OCW",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "L'Hôpital's Rule"
+        ],
+        "quote": "The rule deals with f(a)/g(a) = 0/0."
+      },
+      {
+        "t": "UCI Math 140B: L Hopital Theorem",
+        "u": "https://www.math.uci.edu/~ndonalds/math140b/3diff.pdf",
+        "type": "lecture",
+        "venue": "UC Irvine",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "L'Hôpital's Rule"
+        ],
+        "quote": "It is crucially important that the limit of f/g exists before applying the rule."
+      },
+      {
+        "t": "Mean Value Theorem and L Hopital (ScienceDirect)",
+        "u": "https://www.sciencedirect.com/topics/mathematics/mean-value-theorem",
+        "type": "reference",
+        "venue": "ScienceDirect",
+        "y": "2020",
+        "q": 2,
+        "w": [
+          "L'Hôpital's Rule"
+        ],
+        "quote": "Both numerator and denominator are differentiable with value 0 at x=0, so the limit exists."
+      },
+      {
+        "t": "Widder: Advanced Calculus",
+        "u": "https://archive.org/stream/widderadvancedcalculus/Widder-AdvancedCalculus_djvu.txt",
+        "type": "book",
+        "venue": "Dover",
+        "y": "1989",
+        "q": 2,
+        "w": [
+          "L'Hôpital's Rule"
+        ],
+        "quote": "The rule applies equally well to both forms 0/0 and ∞/∞."
+      },
+      {
+        "t": "UW Analysis: Taylor series and L Hopital",
+        "u": "http://sites.math.washington.edu/~morrow/334_13/analysisTaylor.pdf",
+        "type": "lecture",
+        "venue": "UW Seattle",
+        "y": "2013",
+        "q": 2,
+        "w": [
+          "L'Hôpital's Rule"
+        ],
+        "quote": "Problems of this type can often be solved by using the rule."
+      },
+      {
+        "t": "3Blue1Brown: The Essence of Calculus",
+        "u": "https://www.3blue1brown.com/lessons/essence-of-calculus",
+        "type": "talk",
+        "venue": "3Blue1Brown",
+        "y": "2017",
+        "q": 1,
+        "w": [
+          "Derivative",
+          "Integral"
+        ],
+        "quote": "It ties together the two big ideas of integrals and derivatives."
+      },
+      {
+        "t": "3Blue1Brown: Integration and FTC",
+        "u": "https://www.3blue1brown.com/lessons/integration",
+        "type": "talk",
+        "venue": "3Blue1Brown",
+        "y": "2017",
+        "q": 1,
+        "w": [
+          "Integral"
+        ],
+        "quote": "What is integration? Why is it computed as the opposite of differentiation?"
+      },
+      {
+        "t": "Sets, Relations and Functions",
+        "u": "https://archive.org/download/setsrelationsfun010101mbp/setsrelationsfun010101mbp.pdf",
+        "type": "book",
+        "venue": "Archive.org",
+        "y": "1965",
+        "q": 0,
+        "w": [
+          "Function",
+          "Set"
+        ],
+        "quote": "Form the desired function by indicating a domain and applying a rule."
+      },
+      {
+        "t": "UPenn MATH 1070: Notation and terminology",
+        "u": "https://www2.math.upenn.edu/~ancoop/1070/ss-notation.html",
+        "type": "lecture",
+        "venue": "UPenn",
+        "y": "2022",
+        "q": 0,
+        "w": [
+          "Function",
+          "Domain",
+          "Range"
+        ],
+        "quote": "A function is a set of ordered pairs with no two pairs having the same first element."
+      },
+      {
+        "t": "Waterloo CEMC: Relations and Functions",
+        "u": "https://courseware.cemc.uwaterloo.ca/8/assignments/43/4",
+        "type": "courseware",
+        "venue": "University of Waterloo",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Function"
+        ],
+        "quote": "A relation is a function since it passes the vertical line test."
+      },
+      {
+        "t": "Mathspace: Characteristics of functions",
+        "u": "https://mathspace.co/textbooks/syllabuses/Syllabus-1189/topics/Topic-22466/",
+        "type": "textbook",
+        "venue": "Mathspace",
+        "y": "2022",
+        "q": 0,
+        "w": [
+          "Domain",
+          "Range",
+          "Set Notation"
+        ],
+        "quote": "Set notation specifies a set of elements that satisfy a set of conditions."
+      },
+      {
+        "t": "Pressbooks: domain and set notation",
+        "u": "https://pressbooks.atlanticoer-relatlantique.ca/bookkeepingmath/",
+        "type": "textbook",
+        "venue": "Pressbooks",
+        "y": "2021",
+        "q": 0,
+        "w": [
+          "Set Notation",
+          "Interval Notation"
+        ],
+        "quote": "Set notation looks like {x | 10 ≤ x < 30}."
+      },
+      {
+        "t": "Paul's Online Math Notes: Limits",
+        "u": "https://tutorial.math.lamar.edu/classes/calci/limits.aspx",
+        "type": "tutorial",
+        "venue": "Lamar",
+        "y": "2022",
+        "q": 0,
+        "w": [
+          "Limit"
+        ],
+        "quote": "The limit: what the function is approaching as x approaches a."
+      },
+      {
+        "t": "Paul's Online Math Notes: Derivatives",
+        "u": "https://tutorial.math.lamar.edu/classes/calci/derivativeintro.aspx",
+        "type": "tutorial",
+        "venue": "Lamar",
+        "y": "2022",
+        "q": 1,
+        "w": [
+          "Derivative"
+        ],
+        "quote": "The definition of the derivative and its interpretations."
+      },
+      {
+        "t": "Paul's Online Math Notes: Chain Rule",
+        "u": "https://tutorial.math.lamar.edu/classes/calci/chainrule.aspx",
+        "type": "tutorial",
+        "venue": "Lamar",
+        "y": "2022",
+        "q": 1,
+        "w": [
+          "Chain Rule",
+          "Composite Function"
+        ],
+        "quote": "The chain rule for differentiating composite functions."
+      },
+      {
+        "t": "Khan Academy: Limits and continuity",
+        "u": "https://www.khanacademy.org/math/calculus-1/cs1-limits-and-continuity",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Limit",
+          "Continuity"
+        ],
+        "quote": "Limits intro: estimating limits from graphs and tables."
+      },
+      {
+        "t": "Khan Academy: Derivatives",
+        "u": "https://www.khanacademy.org/math/calculus-1/cs1-derivatives-definition-and-basic-rules",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Derivative",
+          "Differentiation Rules"
+        ],
+        "quote": "Derivatives: definition and basic rules."
+      },
+      {
+        "t": "Wolfram MathWorld: Limit",
+        "u": "https://mathworld.wolfram.com/Limit.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Limit"
+        ],
+        "quote": "The term limit comes about relative to a number of topics in mathematics."
+      },
+      {
+        "t": "Wolfram MathWorld: Derivative",
+        "u": "https://mathworld.wolfram.com/Derivative.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Derivative"
+        ],
+        "quote": "The derivative represents an infinitesimal change in the function with respect to its parameters."
+      },
+      {
+        "t": "Wolfram MathWorld: IVT",
+        "u": "https://mathworld.wolfram.com/IntermediateValueTheorem.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem"
+        ],
+        "quote": "If f is continuous on a closed interval, it takes every value between f(a) and f(b)."
+      },
+      {
+        "t": "Wolfram MathWorld: L Hospital Rule",
+        "u": "https://mathworld.wolfram.com/LHospitalsRule.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "L'Hôpital's Rule"
+        ],
+        "quote": "When the ratio f(x)/g(x) is indeterminate, the rule evaluates the ratio of derivatives."
+      },
+      {
+        "t": "Wolfram MathWorld: Chain Rule",
+        "u": "https://mathworld.wolfram.com/ChainRule.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Chain Rule"
+        ],
+        "quote": "If y is a function of u and u is a function of x, then dy/dx = dy/du · du/dx."
+      },
+      {
+        "t": "Wolfram MathWorld: Product Rule",
+        "u": "https://mathworld.wolfram.com/ProductRule.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Product Rule"
+        ],
+        "quote": "The product rule for derivatives."
+      },
+      {
+        "t": "Brilliant: Limits of functions",
+        "u": "https://brilliant.org/wiki/limits-of-functions/",
+        "type": "course",
+        "venue": "Brilliant",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Limit"
+        ],
+        "quote": "The limit of a function at a point describes its behaviour near that point."
+      },
+      {
+        "t": "Brilliant: Differentiation rules",
+        "u": "https://brilliant.org/wiki/differentiation-rules/",
+        "type": "course",
+        "venue": "Brilliant",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Differentiation Rules"
+        ],
+        "quote": "Constant, power, product, quotient and chain rules."
+      },
+      {
+        "t": "Britannica: Calculus",
+        "u": "https://www.britannica.com/science/calculus-mathematics",
+        "type": "reference",
+        "venue": "Britannica",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Calculus",
+          "Derivative"
+        ],
+        "quote": "Calculus: mathematics of instantaneous rates of change and the summation of infinitely many small factors."
+      },
+      {
+        "t": "Math Insight: The derivative of a function",
+        "u": "https://mathinsight.org/derivative_function",
+        "type": "reference",
+        "venue": "Math Insight",
+        "y": "2020",
+        "q": 1,
+        "w": [
+          "Derivative"
+        ],
+        "quote": "The derivative is the slope of the tangent line to the graph."
+      },
+      {
+        "t": "ProofWiki: IVT",
+        "u": "https://proofwiki.org/wiki/Intermediate_Value_Theorem",
+        "type": "reference",
+        "venue": "ProofWiki",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Intermediate Value Theorem"
+        ],
+        "quote": "Let f be continuous on the closed interval [a,b]; it attains every value between f(a) and f(b)."
+      },
+      {
+        "t": "3Blue1Brown: Limits topic",
+        "u": "https://www.3blue1brown.com/topics/calculus",
+        "type": "talk",
+        "venue": "3Blue1Brown",
+        "y": "2017",
+        "q": 0,
+        "w": [
+          "Limit",
+          "Derivative"
+        ],
+        "quote": "Visual introductions to derivatives, integrals and limits."
+      },
+      {
+        "t": "3Blue1Brown: Derivative formulas through geometry",
+        "u": "https://www.3blue1brown.com/lessons/derivatives",
+        "type": "talk",
+        "venue": "3Blue1Brown",
+        "y": "2017",
+        "q": 1,
+        "w": [
+          "Derivative"
+        ],
+        "quote": "The paradox of the derivative; derivative formulas through geometry."
+      },
+      {
+        "t": "MIT OCW 18.01 Problem Sets",
+        "u": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/assignments/",
+        "type": "exercise",
+        "venue": "MIT OCW",
+        "y": "2006",
+        "q": 1,
+        "w": [
+          "Limit",
+          "Differentiation Rules"
+        ],
+        "quote": "Problem sets covering limits, derivatives and applications."
+      },
+      {
+        "t": "OpenIntro Statistics",
+        "u": "https://www.openintro.org/book/os/",
+        "type": "book",
+        "venue": "OpenIntro",
+        "y": "2022",
+        "q": 0,
+        "w": [
+          "Statistics",
+          "Probability"
+        ],
+        "quote": "An open-source introductory statistics textbook."
+      },
+      {
+        "t": "MIT OCW 18.05 Intro to Probability and Statistics",
+        "u": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/",
+        "type": "course",
+        "venue": "MIT OCW",
+        "y": "2022",
+        "q": 0,
+        "w": [
+          "Probability",
+          "Statistics"
+        ],
+        "quote": "Introduction to probability and statistics with data analysis."
+      },
+      {
+        "t": "Khan Academy: Statistics and probability",
+        "u": "https://www.khanacademy.org/math/statistics-probability",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Statistics",
+          "Probability"
+        ],
+        "quote": "Descriptive statistics, distributions, probability."
+      },
+      {
+        "t": "Wolfram MathWorld: Power Rule",
+        "u": "https://mathworld.wolfram.com/PowerRule.html",
+        "type": "reference",
+        "venue": "Wolfram MathWorld",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Derivative"
+        ],
+        "quote": "The power rule: d/dx x^n = n·x^(n-1)."
+      },
+      {
+        "t": "LibreTexts: Inverse functions",
+        "u": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_(OpenStax)/01%3A_Functions/1.07%3A_Inverse_Functions",
+        "type": "textbook",
+        "venue": "LibreTexts",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Inverse Function"
+        ],
+        "quote": "Verify that two functions are inverses of each other."
+      },
+      {
+        "t": "LibreTexts: Polynomial and rational functions",
+        "u": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_(OpenStax)/03%3A_Polynomial_and_Rational_Functions",
+        "type": "textbook",
+        "venue": "LibreTexts",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Polynomial Function",
+          "Rational Function"
+        ],
+        "quote": "Degree, end behaviour and asymptotes."
+      },
+      {
+        "t": "MIT 18.01 Lecture 3: products and quotients",
+        "u": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/video-lectures/",
+        "type": "lecture",
+        "venue": "MIT OCW",
+        "y": "2006",
+        "q": 1,
+        "w": [
+          "Product Rule"
+        ],
+        "quote": "Derivatives of products, quotients, sine and cosine."
+      }
+    ]
+  },
+  {
+    "course": "AP10005",
+    "questions": [
+      {
+        "q": "描述运动，为什么必须区分位移/路程、速度/速率？",
+        "focus": "displacement, velocity, speed"
+      },
+      {
+        "q": "摆动和波动为什么能「回到原位」？",
+        "focus": "SHM, restoring force, period, amplitude"
+      },
+      {
+        "q": "热机为什么不能把热「全部变成功」？",
+        "focus": "Carnot engine, efficiency, entropy"
+      }
+    ],
+    "sources": [
+      {
+        "t": "MIT 8.01 Lecture 2: Speed vs velocity",
+        "u": "http://ocw.mit.edu/NR/rdonlyres/Physics/8-01Physics-IFall1999/A2CF20EE-FC35-4044-AFC0-998B4EBB75E7/0/8_011999L02.pdf",
+        "type": "lecture",
+        "venue": "MIT OCW 8.01",
+        "y": "1999",
+        "q": 0,
+        "w": [
+          "Speed",
+          "Velocity"
+        ],
+        "quote": "There is a very big difference in physics between speed and velocity."
+      },
+      {
+        "t": "MIT 8.01 Lesson 4: 1-D Motion",
+        "u": "https://wikis.mit.edu/confluence/download/exportpdf-20260109/4+1-D+Motion+-+General.pdf",
+        "type": "lecture",
+        "venue": "MIT 8.01",
+        "y": "2026",
+        "q": 0,
+        "w": [
+          "Displacement",
+          "Acceleration"
+        ],
+        "quote": "The motion of a point particle in one dimension, and motion with constant acceleration."
+      },
+      {
+        "t": "MIT 8.01: Concept of Force and Newton Laws",
+        "u": "http://web.mit.edu/8.01t/www/materials/Presentations/Presentation_W01D2.pdf",
+        "type": "lecture",
+        "venue": "MIT 8.01",
+        "y": "2015",
+        "q": 0,
+        "w": [
+          "Kinematics",
+          "Force"
+        ],
+        "quote": "Kinematics and One-Dimensional Motion."
+      },
+      {
+        "t": "MIT 8.01t: Rigid body motion",
+        "u": "http://web.mit.edu/8.01t/www/materials/Presentations/SelectPresentation_W11D2.pdf",
+        "type": "lecture",
+        "venue": "MIT 8.01",
+        "y": "2015",
+        "q": 0,
+        "w": [
+          "Kinematics",
+          "Rotation"
+        ],
+        "quote": "Rotation and translation about a fixed axis."
+      },
+      {
+        "t": "Projectile Motion (Springer)",
+        "u": "https://rd.springer.com/chapter/10.1007/978-3-030-15195-9_2",
+        "type": "textbook",
+        "venue": "Springer",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Projectile Motion",
+          "Maximum Height"
+        ],
+        "quote": "The maximum height h is found by noting that at the peak, vy=0."
+      },
+      {
+        "t": "CK-12 People's Physics Book",
+        "u": "https://archive.org/stream/ost-physics-ck_12_people_s_physics_book_version_3__with_videos/CK_12_People_s_Physics_Book_Version_3__with_Videos__djvu.txt",
+        "type": "book",
+        "venue": "CK-12",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Projectile Motion",
+          "Acceleration"
+        ],
+        "quote": "Projectile motion: vx constant and ay = -9.8 m/s²."
+      },
+      {
+        "t": "Santa Fe 211: projectile kinematics",
+        "u": "https://sites.santafe.edu/~redner/211-sp06/class03/notes03_basics.html",
+        "type": "lecture",
+        "venue": "Santa Fe Institute",
+        "y": "2006",
+        "q": 0,
+        "w": [
+          "Projectile Motion"
+        ],
+        "quote": "The x-component equations: vx = vox + ax·t and x - xo = vox·t + ½·ax·t²."
+      },
+      {
+        "t": "OpenStax University Physics Vol 1",
+        "u": "https://openstax.org/details/books/university-physics-volume-1",
+        "type": "book",
+        "venue": "OpenStax",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Range",
+          "Projectile Motion"
+        ],
+        "quote": "Two projectiles have the same range if the launch angles add to 90°."
+      },
+      {
+        "t": "Schaum's Theoretical Mechanics",
+        "u": "https://archive.org/download/Physics.Mechanics.Ebooks/Spiegel-SchaumsTheoryAndProblemsOfTheoreticalMechanics_text.pdf",
+        "type": "book",
+        "venue": "Schaum's",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Projectile Motion",
+          "Vector"
+        ],
+        "quote": "A projectile is launched with velocity components v0 cos α and v0 sin α."
+      },
+      {
+        "t": "MIT 8.01 Lecture 10: simple harmonic motion",
+        "u": "http://ocw.mit.edu/NR/rdonlyres/Physics/8-01Physics-IFall1999/3453A781-51B9-4103-B108-F6FDE9D8826E/0/8_011999L10.pdf",
+        "type": "lecture",
+        "venue": "MIT OCW 8.01",
+        "y": "1999",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion",
+          "Period",
+          "Amplitude"
+        ],
+        "quote": "The period of oscillation is 2π√(m/k), independent of the amplitude."
+      },
+      {
+        "t": "MIT RES.8-005: SHM problem solving",
+        "u": "https://ocw.mit.edu/courses/res-8-005-vibrations-and-waves-problem-solving-fall-2012/pages/problem-solving-videos/simple-harmonic-motion-and-introduction-to-problem-solving-1/",
+        "type": "lecture",
+        "venue": "MIT OCW",
+        "y": "2012",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion",
+          "Damping"
+        ],
+        "quote": "Harmonic oscillators with one degree of freedom in which damping forces can be ignored."
+      },
+      {
+        "t": "The pendulum and the small angle approximation",
+        "u": "https://export.arxiv.org/pdf/1009.1698",
+        "type": "lecture",
+        "venue": "arXiv",
+        "y": "2010",
+        "q": 1,
+        "w": [
+          "Restoring Force",
+          "Hooke's Law"
+        ],
+        "quote": "This force acts as the restoring force, just as the spring provided the restoring force."
+      },
+      {
+        "t": "MIT 8.03SC Lecture 1: Periodic Oscillations",
+        "u": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2012/unit-i-vibrations/lecture-1/",
+        "type": "lecture",
+        "venue": "MIT OCW 8.03",
+        "y": "2012",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion",
+          "Hooke's Law"
+        ],
+        "quote": "The SHO equation of motion x = x0 cos(ωt + φ)."
+      },
+      {
+        "t": "MIT 8.03 Lecture 1: Periodic Oscillations",
+        "u": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/pages/part-i-mechanical-vibrations-and-waves/lecture-1/",
+        "type": "lecture",
+        "venue": "MIT OCW 8.03",
+        "y": "2016",
+        "q": 1,
+        "w": [
+          "Periodic Motion"
+        ],
+        "quote": "The mathematical description of periodic oscillation and simple harmonic oscillators."
+      },
+      {
+        "t": "MIT 8.02 Lecture 35: Doppler effect",
+        "u": "http://ocw.mit.edu/NR/rdonlyres/Physics/8-02Electricity-and-MagnetismSpring2002/3F9F6CC3-6A9E-4F38-BA3A-9C885A12997D/0/8_022002L35.pdf",
+        "type": "lecture",
+        "venue": "MIT OCW 8.02",
+        "y": "2002",
+        "q": 1,
+        "w": [
+          "Doppler Effect",
+          "Frequency"
+        ],
+        "quote": "F' is the frequency you receive; F is emitted by the transmitter; β = v/c."
+      },
+      {
+        "t": "Einstein Online: the Doppler effect",
+        "u": "https://www.einstein-online.info/en/spotlight/doppler/",
+        "type": "article",
+        "venue": "Einstein Online",
+        "y": "2015",
+        "q": 1,
+        "w": [
+          "Doppler Effect",
+          "Frequency"
+        ],
+        "quote": "If the source moves towards a receiver, the frequency received is higher than sent."
+      },
+      {
+        "t": "Institute of Acoustics: Doppler and sonic booms",
+        "u": "http://english.ioa.cas.cn/psk/200907/t20090708_22090.html",
+        "type": "article",
+        "venue": "Chinese Academy of Sciences",
+        "y": "2009",
+        "q": 1,
+        "w": [
+          "Doppler Effect",
+          "Wavelength"
+        ],
+        "quote": "The Doppler effect is the shift in frequency and wavelength from a moving source."
+      },
+      {
+        "t": "Santa Fe 211: The Doppler effect",
+        "u": "https://sites.santafe.edu/~redner/211-sp06/class19/class19_doppler.html.bak",
+        "type": "lecture",
+        "venue": "Santa Fe Institute",
+        "y": "2006",
+        "q": 1,
+        "w": [
+          "Doppler Effect"
+        ],
+        "quote": "The shift in frequency occurs when the wave source or the detector is moving."
+      },
+      {
+        "t": "ScienceDirect: wave kinematics and Doppler",
+        "u": "https://www.sciencedirect.com/science/chapter/monograph/pii/B9780120598588500224",
+        "type": "reference",
+        "venue": "ScienceDirect",
+        "y": "2006",
+        "q": 1,
+        "w": [
+          "Doppler Effect",
+          "Wavelength"
+        ],
+        "quote": "Relative motion results in a change in the measured frequency or wavelength."
+      },
+      {
+        "t": "Edinburgh: Carnot engine efficiency",
+        "u": "https://www2.ph.ed.ac.uk/~gja/thermo/course_notes/topic05.pdf",
+        "type": "lecture",
+        "venue": "University of Edinburgh",
+        "y": "2019",
+        "q": 2,
+        "w": [
+          "Carnot Engine",
+          "Efficiency"
+        ],
+        "quote": "The efficiency of a Carnot engine is independent of the working substance."
+      },
+      {
+        "t": "ScienceDirect: laws of thermodynamics",
+        "u": "https://www.sciencedirect.com/topics/engineering/laws-of-thermodynamics",
+        "type": "reference",
+        "venue": "ScienceDirect",
+        "y": "2020",
+        "q": 2,
+        "w": [
+          "Entropy",
+          "Carnot Cycle"
+        ],
+        "quote": "Q1/TH is defined to be the entropy S associated with the heat absorbed."
+      },
+      {
+        "t": "Oxford: Thermodynamics lecture 4",
+        "u": "https://users.physics.ox.ac.uk/~Steane/teaching/thermo_lec4.pdf",
+        "type": "lecture",
+        "venue": "University of Oxford",
+        "y": "2020",
+        "q": 2,
+        "w": [
+          "Carnot Cycle",
+          "Adiabatic"
+        ],
+        "quote": "Carnot cycle, and the theorem on the efficiency of reversible heat engines."
+      },
+      {
+        "t": "Heat and Thermodynamics (Zemansky)",
+        "u": "https://archive.org/stream/in.ernet.dli.2015.135396/2015.135396.Heat-And-Thermodynamics-Ed-5th_djvu.txt",
+        "type": "book",
+        "venue": "McGraw-Hill",
+        "y": "1997",
+        "q": 2,
+        "w": [
+          "Entropy",
+          "Irreversible Process"
+        ],
+        "quote": "The entropy change of the universe is a positive quantity."
+      },
+      {
+        "t": "Feynman Lectures I Ch 44: Laws of Thermodynamics",
+        "u": "https://www.feynmanlectures.caltech.edu/I_44.html",
+        "type": "book",
+        "venue": "Caltech",
+        "y": "1963",
+        "q": 2,
+        "w": [
+          "Carnot Engine",
+          "Efficiency"
+        ],
+        "quote": "No engine can do more work than a reversible engine under the same conditions."
+      },
+      {
+        "t": "NIST: SI base and derived units",
+        "u": "https://www.nist.gov/system/files/documents/2024/12/19/appb-25-HB44-20241024.docx",
+        "type": "standard",
+        "venue": "NIST",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "SI Units"
+        ],
+        "quote": "Base units for length, mass, time, temperature, electric current; derived units for all other quantities."
+      },
+      {
+        "t": "NIST: SI Units",
+        "u": "https://www.nist.gov/pml/owm/metric-si/si-units",
+        "type": "reference",
+        "venue": "NIST",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "SI Units"
+        ],
+        "quote": "The SI is made up of 7 base units that define the 22 derived units."
+      },
+      {
+        "t": "NIST SP 811: SI base unit definitions",
+        "u": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-definitions-si-base-units",
+        "type": "standard",
+        "venue": "NIST",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Meter",
+          "Kilogram",
+          "Ampere"
+        ],
+        "quote": "Definitions of the SI base units: meter (1983), kilogram (2019), ampere (1948)."
+      },
+      {
+        "t": "HyperPhysics: kinematics",
+        "u": "http://hyperphysics.phy-astr.gsu.edu/hbase/mot.html",
+        "type": "reference",
+        "venue": "Georgia State University",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Kinematics",
+          "Velocity"
+        ],
+        "quote": "Kinematics: description of motion, displacement, velocity, acceleration."
+      },
+      {
+        "t": "HyperPhysics: simple harmonic motion",
+        "u": "http://hyperphysics.phy-astr.gsu.edu/hbase/shm.html",
+        "type": "reference",
+        "venue": "Georgia State University",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion"
+        ],
+        "quote": "The mass on a spring and the restoring force F = -kx."
+      },
+      {
+        "t": "HyperPhysics: the Doppler effect",
+        "u": "http://hyperphysics.phy-astr.gsu.edu/hbase/Sound/dopp.html",
+        "type": "reference",
+        "venue": "Georgia State University",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Doppler Effect"
+        ],
+        "quote": "Frequency shift from relative motion of source and observer."
+      },
+      {
+        "t": "HyperPhysics: Carnot cycle",
+        "u": "http://hyperphysics.phy-astr.gsu.edu/hbase/thermo/carnot.html",
+        "type": "reference",
+        "venue": "Georgia State University",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Carnot Cycle",
+          "Efficiency"
+        ],
+        "quote": "The Carnot cycle and the maximum efficiency of a heat engine."
+      },
+      {
+        "t": "Feynman Lectures I Ch 4: Conservation of Energy",
+        "u": "https://www.feynmanlectures.caltech.edu/I_04.html",
+        "type": "book",
+        "venue": "Caltech",
+        "y": "1963",
+        "q": 0,
+        "w": [
+          "Energy"
+        ],
+        "quote": "Energy is conserved: the law of conservation of energy."
+      },
+      {
+        "t": "Feynman Lectures I Ch 21: The Harmonic Oscillator",
+        "u": "https://www.feynmanlectures.caltech.edu/I_21.html",
+        "type": "book",
+        "venue": "Caltech",
+        "y": "1963",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion"
+        ],
+        "quote": "The harmonic oscillator is the most important problem in physics."
+      },
+      {
+        "t": "Feynman Lectures I Ch 34: Relativity and Doppler",
+        "u": "https://www.feynmanlectures.caltech.edu/I_34.html",
+        "type": "book",
+        "venue": "Caltech",
+        "y": "1963",
+        "q": 1,
+        "w": [
+          "Doppler Effect"
+        ],
+        "quote": "The Doppler effect for moving sources and receivers."
+      },
+      {
+        "t": "Feynman Lectures I Ch 45: Thermodynamics",
+        "u": "https://www.feynmanlectures.caltech.edu/I_45.html",
+        "type": "book",
+        "venue": "Caltech",
+        "y": "1963",
+        "q": 2,
+        "w": [
+          "Thermodynamics",
+          "Entropy"
+        ],
+        "quote": "Heat engines and entropy."
+      },
+      {
+        "t": "PhET: Projectile Motion",
+        "u": "https://phet.colorado.edu/en/simulation/projectile-motion",
+        "type": "simulation",
+        "venue": "University of Colorado Boulder",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Projectile Motion",
+          "Range"
+        ],
+        "quote": "Explore projectile motion, angle, initial speed and range."
+      },
+      {
+        "t": "PhET: Masses and Springs",
+        "u": "https://phet.colorado.edu/en/simulation/masses-and-springs",
+        "type": "simulation",
+        "venue": "University of Colorado Boulder",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion",
+          "Period"
+        ],
+        "quote": "Hang masses from springs and adjust the spring constant to observe oscillation."
+      },
+      {
+        "t": "Khan Academy: kinematics",
+        "u": "https://www.khanacademy.org/science/physics/one-dimensional-motion",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Kinematics",
+          "Displacement"
+        ],
+        "quote": "One-dimensional motion: displacement, velocity and time."
+      },
+      {
+        "t": "Khan Academy: projectile motion",
+        "u": "https://www.khanacademy.org/science/physics/two-dimensional-motion/two-dimensional-projectile-mot",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Projectile Motion"
+        ],
+        "quote": "Two-dimensional projectile motion: launching and landing."
+      },
+      {
+        "t": "Khan Academy: waves and sound",
+        "u": "https://www.khanacademy.org/science/physics/mechanical-waves-and-sound",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion",
+          "Wave"
+        ],
+        "quote": "Mechanical waves and sound: harmonic motion and wave properties."
+      },
+      {
+        "t": "Khan Academy: thermodynamics",
+        "u": "https://www.khanacademy.org/science/physics/thermodynamics",
+        "type": "course",
+        "venue": "Khan Academy",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Thermodynamics",
+          "Carnot Cycle"
+        ],
+        "quote": "Temperature, heat transfer and engines."
+      },
+      {
+        "t": "Britannica: projectile motion",
+        "u": "https://www.britannica.com/science/projectile-motion",
+        "type": "reference",
+        "venue": "Britannica",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Projectile Motion"
+        ],
+        "quote": "The motion of a thrown object follows a parabola."
+      },
+      {
+        "t": "Britannica: simple harmonic motion",
+        "u": "https://www.britannica.com/science/simple-harmonic-motion",
+        "type": "reference",
+        "venue": "Britannica",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Simple Harmonic Motion"
+        ],
+        "quote": "Repetitive movement back and forth through an equilibrium position."
+      },
+      {
+        "t": "Britannica: Doppler effect",
+        "u": "https://www.britannica.com/science/Doppler-effect",
+        "type": "reference",
+        "venue": "Britannica",
+        "y": "2023",
+        "q": 1,
+        "w": [
+          "Doppler Effect"
+        ],
+        "quote": "The apparent difference between the frequency at which waves leave a source and that at which they reach an observer."
+      },
+      {
+        "t": "Britannica: Carnot engine",
+        "u": "https://www.britannica.com/technology/Carnot-engine",
+        "type": "reference",
+        "venue": "Britannica",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Carnot Engine"
+        ],
+        "quote": "A hypothetical ideal heat engine operating on a reversible Carnot cycle."
+      },
+      {
+        "t": "The Physics Classroom: 1-D kinematics",
+        "u": "https://www.physicsclassroom.com/class/1DKin",
+        "type": "tutorial",
+        "venue": "The Physics Classroom",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Kinematics",
+          "Vector"
+        ],
+        "quote": "Describing motion with words, diagrams, graphs and equations."
+      },
+      {
+        "t": "The Physics Classroom: vectors and projectiles",
+        "u": "https://www.physicsclassroom.com/class/vectors",
+        "type": "tutorial",
+        "venue": "The Physics Classroom",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Vector",
+          "Projectile Motion"
+        ],
+        "quote": "Vectors and projectiles: independence of perpendicular components."
+      },
+      {
+        "t": "OpenStax University Physics Volume 2",
+        "u": "https://openstax.org/details/books/university-physics-volume-2",
+        "type": "book",
+        "venue": "OpenStax",
+        "y": "2020",
+        "q": 2,
+        "w": [
+          "Thermodynamics",
+          "Entropy"
+        ],
+        "quote": "University Physics Volume 2: thermodynamics, electricity and magnetism."
+      },
+      {
+        "t": "HyperPhysics: thermodynamics",
+        "u": "http://hyperphysics.phy-astr.gsu.edu/hbase/thermo/thereq.html",
+        "type": "reference",
+        "venue": "Georgia State University",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Thermodynamics",
+          "Efficiency"
+        ],
+        "quote": "Thermodynamics: heat engines, efficiency and entropy."
+      },
+      {
+        "t": "Britannica: International System of Units (SI)",
+        "u": "https://www.britannica.com/science/International-System-of-Units",
+        "type": "reference",
+        "venue": "Britannica",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "SI Units",
+          "Meter"
+        ],
+        "quote": "The International System of Units, established in 1960, rests on seven base units."
+      },
+      {
+        "t": "MIT OCW 8.01: Assignments and problem sets",
+        "u": "https://ocw.mit.edu/courses/8-01-physics-i-classical-mechanics-fall-1999/pages/assignments/",
+        "type": "exercise",
+        "venue": "MIT OCW 8.01",
+        "y": "1999",
+        "q": 0,
+        "w": [
+          "Kinematics",
+          "Projectile Motion"
+        ],
+        "quote": "Problem sets on kinematics, dynamics, energy and momentum."
+      }
+    ]
+  },
+  {
+    "course": "LEI1101",
+    "questions": [
+      {
+        "q": "AI 工具真的能帮你「学会」语言吗？",
+        "focus": "effectiveness, second language acquisition, fluency"
+      },
+      {
+        "q": "怎么跟 AI 对话才有效？",
+        "focus": "prompt engineering, zero-shot, few-shot"
+      },
+      {
+        "q": "AI 批改能不能替代老师？",
+        "focus": "AI writing feedback, accuracy, self-efficacy"
+      }
+    ],
+    "sources": [
+      {
+        "t": "AI in Language Learning: A Twenty-Year Scoping Review",
+        "u": "https://www.tandfonline.com/doi/full/10.1080/29984475.2026.2647961",
+        "type": "paper",
+        "venue": "Taylor & Francis",
+        "y": "2026",
+        "q": 0,
+        "w": [
+          "AI Tool",
+          "Fluency"
+        ],
+        "quote": "79.5% of studies highlight benefits across writing, speaking and vocabulary acquisition."
+      },
+      {
+        "t": "ChatGPT and the Development of Core Language Skills",
+        "u": "https://www.fachportal-paedagogik.de/literatur/vollanzeige.html?FId=eric_ej1488853",
+        "type": "paper",
+        "venue": "ERIC",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Chatbot",
+          "Language Learning"
+        ],
+        "quote": "Students find ChatGPT essential for developing speaking (75%), writing (100%), listening (87%)."
+      },
+      {
+        "t": "Effectiveness of AI in language teaching (meta-analysis)",
+        "u": "https://www.sciencedirect.com/science/article/pii/S2666920X25001626",
+        "type": "paper",
+        "venue": "ScienceDirect",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "AI Tool",
+          "Language Learning"
+        ],
+        "quote": "AI demonstrated statistically significant positive effects on language learning, with a moderate to large effect."
+      },
+      {
+        "t": "NLP influence on EFL speaking: accuracy and fluency",
+        "u": "https://www.fachportal-paedagogik.de/literatur/vollanzeige.html?FId=eric_ej1490746",
+        "type": "paper",
+        "venue": "ERIC",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Accuracy",
+          "Fluency"
+        ],
+        "quote": "AI chatbots, machine translation and automatic summarization influence EFL speaking accuracy and fluency."
+      },
+      {
+        "t": "Can Generative AI Chatbots Promote SLA? A Meta-Analysis",
+        "u": "https://www.fachportal-paedagogik.de/literatur/vollanzeige.html?FId=eric_ej1478367",
+        "type": "paper",
+        "venue": "ERIC",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Second Language Acquisition",
+          "Chatbot"
+        ],
+        "quote": "GenAI chatbots show great potential in second language acquisition."
+      },
+      {
+        "t": "Prompt Engineering for LLMs: Zero-shot, Few-shot, and Beyond",
+        "u": "https://ieeexplore.ieee.org/abstract/document/11378986",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Prompt Engineering",
+          "Few-shot Learning"
+        ],
+        "quote": "Prompt engineering elicits useful behaviour from LLMs, from zero-shot instructions to few-shot demonstrations."
+      },
+      {
+        "t": "A comprehensive survey of prompt and context engineering",
+        "u": "https://www.sciencedirect.com/science/article/pii/S1574013726000870",
+        "type": "paper",
+        "venue": "ScienceDirect",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Prompt Engineering",
+          "Zero-shot"
+        ],
+        "quote": "Zero-shot prompting addresses rapid task adaptation without demonstrations, leveraging pretrained generalization."
+      },
+      {
+        "t": "Systematic survey of prompt optimization methods",
+        "u": "https://ieeexplore.ieee.org/document/11106067",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Prompt Engineering"
+        ],
+        "quote": "A comprehensive survey of prompt optimization methods and their classifications."
+      },
+      {
+        "t": "A Systematic Survey of Automatic Prompt Optimization",
+        "u": "https://aclanthology.org/2025.emnlp-main.1681/",
+        "type": "paper",
+        "venue": "ACL EMNLP",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Prompt Engineering"
+        ],
+        "quote": "Prompt engineering is a crucial step for eliciting desired responses for NLP tasks."
+      },
+      {
+        "t": "Multilingual Prompt Engineering in LLMs",
+        "u": "https://ieeexplore.ieee.org/document/11558255",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Prompt Engineering"
+        ],
+        "quote": "Structured prompting achieves a 14.8% enhancement over zero-shot baselines."
+      },
+      {
+        "t": "Automated diagnostic feedback vs self-assessment in academic writing",
+        "u": "https://www.fachportal-paedagogik.de/en/literatur/vollanzeige.html?FId=eric_ej1490731",
+        "type": "paper",
+        "venue": "ERIC",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Feedback"
+        ],
+        "quote": "The machine feedback group significantly outperformed the self-assessment group in task fulfillment."
+      },
+      {
+        "t": "AI-driven scaffolding for advancing L2 writing skills",
+        "u": "https://www.tandfonline.com/doi/10.1080/2331186X.2025.2588512",
+        "type": "paper",
+        "venue": "Cogent Education",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Prompt Engineering"
+        ],
+        "quote": "ChatGPT with targeted prompt engineering develops customized correction exercises based on students specific needs."
+      },
+      {
+        "t": "LLMs empower Chinese high school students EFL writing",
+        "u": "https://www.tandfonline.com/doi/full/10.1080/00220671.2026.2710208",
+        "type": "paper",
+        "venue": "Taylor & Francis",
+        "y": "2026",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Feedback"
+        ],
+        "quote": "LLM-mediated feedback was associated with gains in writing performance and self-efficacy."
+      },
+      {
+        "t": "GPT versus teacher feedback on English writing",
+        "u": "https://www.sciencedirect.com/science/article/abs/pii/S0346251X2500377X",
+        "type": "paper",
+        "venue": "System",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Feedback"
+        ],
+        "quote": "Advantages highlight GenAI potential for delivering feedback on students written work."
+      },
+      {
+        "t": "Generative AI and hybrid feedback in improving L2 writing",
+        "u": "https://www.tandfonline.com/doi/full/10.1080/17501229.2025.2503890",
+        "type": "paper",
+        "venue": "Language Learning & Technology",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Generative AI"
+        ],
+        "quote": "Comparing Generative AI (ChatGPT) and hybrid feedback in improving L2 writing skills."
+      },
+      {
+        "t": "Lýdia Machová: The secrets of learning a new language (TED)",
+        "u": "https://www.ted.com/talks/lydia_machova_the_secrets_of_learning_a_new_language",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "She reveals the secrets of polyglots and shares four principles to unlock your hidden language talent."
+      },
+      {
+        "t": "BBC Take Away English: How do polyglots learn languages?",
+        "u": "http://downloads.bbc.co.uk/learningenglish/features/tae/bbc_tae_how_do_polyglots_learn_languages.pdf",
+        "type": "article",
+        "venue": "BBC Learning English",
+        "y": "2019",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "The one thing polyglots all have in common is an interest and motivation to learn."
+      },
+      {
+        "t": "The Art of Becoming a Linguistic Phoenix (TEDx)",
+        "u": "https://digitalcommons.bryant.edu/ted_bryant/52/",
+        "type": "talk",
+        "venue": "TEDx",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "The benefits of opening oneself to the challenge of learning a new language."
+      },
+      {
+        "t": "Does Chatting with Chatbots Improve Language Learning? (Meta-Analysis)",
+        "u": "https://www.fachportal-paedagogik.de/literatur/vollanzeige.html?FId=eric_ej1476911",
+        "type": "paper",
+        "venue": "ERIC",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Chatbot"
+        ],
+        "quote": "Chatbots produced a positive overall effect on language learning performance (g = 0.484)."
+      },
+      {
+        "t": "Integrating ChatGPT for Vocabulary Learning and Retention",
+        "u": "https://www.fachportal-paedagogik.de/literatur/vollanzeige.html?FId=eric_ej1480886",
+        "type": "paper",
+        "venue": "ERIC",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Vocabulary",
+          "Chatbot"
+        ],
+        "quote": "Examining ChatGPT impact on vocabulary knowledge and retention compared to traditional instruction."
+      },
+      {
+        "t": "ChatGPT in language learning: systematic review",
+        "u": "https://www.sciencedirect.com/science/article/pii/S2590291125010885",
+        "type": "paper",
+        "venue": "Computers and Education: AI",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Chatbot",
+          "Language Learning"
+        ],
+        "quote": "The integration of ChatGPT into ESL has considerable potential to improve learning experiences and outcomes."
+      },
+      {
+        "t": "Voice-enabled ChatGPT on speaking proficiency",
+        "u": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002993852",
+        "type": "paper",
+        "venue": "KCI",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Speaking",
+          "Fluency"
+        ],
+        "quote": "Voice-enabled ChatGPT compared to peer practice for speaking proficiency."
+      },
+      {
+        "t": "ChatGPT Advanced Voice Mode and oral proficiency",
+        "u": "https://garuda.kemdiktisaintek.go.id/documents/detail/5923594",
+        "type": "paper",
+        "venue": "Garuda",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Fluency",
+          "Speaking"
+        ],
+        "quote": "Fluency and lexical resource significantly improved, but pronunciation did not improve significantly."
+      },
+      {
+        "t": "International Review of Applied Linguistics (IRAL)",
+        "u": "https://www.degruyterbrill.com/journal/key/iral/html",
+        "type": "journal",
+        "venue": "De Gruyter",
+        "y": "2026",
+        "q": 0,
+        "w": [
+          "Applied Linguistics"
+        ],
+        "quote": "Instructed and naturalistic acquisition, multilingualism, technology-mediated learning."
+      },
+      {
+        "t": "Annual Review of Applied Linguistics",
+        "u": "https://www.cambridge.org/core/journals/annual-review-of-applied-linguistics",
+        "type": "journal",
+        "venue": "Cambridge University Press",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Applied Linguistics",
+          "Second Language Acquisition"
+        ],
+        "quote": "Research on key topics including language learning, second language acquisition and assessment."
+      },
+      {
+        "t": "ITL International Journal of Applied Linguistics",
+        "u": "https://benjamins.com/catalog/itl",
+        "type": "journal",
+        "venue": "John Benjamins",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Second Language Acquisition"
+        ],
+        "quote": "Effects of phonological short-term memory on second language vocabulary acquisition."
+      },
+      {
+        "t": "Krashen: The Input Hypothesis (SLA theory)",
+        "u": "https://www.sdkrashen.com/",
+        "type": "book",
+        "venue": "Stephen Krashen",
+        "y": "1985",
+        "q": 0,
+        "w": [
+          "Second Language Acquisition"
+        ],
+        "quote": "Language acquisition requires comprehensible input slightly beyond the learners current level."
+      },
+      {
+        "t": "Swain: The Output Hypothesis",
+        "u": "https://www.taylorfrancis.com/chapters/mono/10.4324/9780203812280-5",
+        "type": "chapter",
+        "venue": "Routledge",
+        "y": "2005",
+        "q": 0,
+        "w": [
+          "Output",
+          "Language Learning"
+        ],
+        "quote": "Producing language pushes learners to notice gaps and process language more deeply."
+      },
+      {
+        "t": "Purdue OWL: Academic Writing",
+        "u": "https://owl.purdue.edu/owl/general_writing/academic_writing/index.html",
+        "type": "reference",
+        "venue": "Purdue University",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Academic Writing"
+        ],
+        "quote": "Academic writing: concise, evidence-based prose for university audiences."
+      },
+      {
+        "t": "Academic Phrasebank (University of Manchester)",
+        "u": "https://www.phrasebank.manchester.ac.uk/",
+        "type": "reference",
+        "venue": "University of Manchester",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Academic Writing"
+        ],
+        "quote": "A bank of phrases for academic writing: introducing work, describing methods, discussing findings."
+      },
+      {
+        "t": "IELTS Writing band descriptors",
+        "u": "https://www.ielts.org/-/media/pdfs/writing-band-descriptors-task-2.ashx",
+        "type": "standard",
+        "venue": "IELTS",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Coherence"
+        ],
+        "quote": "Task response, coherence and cohesion, lexical resource, grammatical range and accuracy."
+      },
+      {
+        "t": "CEFR: Common European Framework of Reference",
+        "u": "https://www.coe.int/en/web/common-european-framework-reference-languages",
+        "type": "standard",
+        "venue": "Council of Europe",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "CEFR describes language ability on a six-point scale from A1 to C2."
+      },
+      {
+        "t": "Nation: Learning Vocabulary in Another Language",
+        "u": "https://www.cambridge.org/core/books/learning-vocabulary-in-another-language/",
+        "type": "book",
+        "venue": "Cambridge University Press",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Vocabulary"
+        ],
+        "quote": "The four strands: meaning-focused input, output, language-focused learning and fluency development."
+      },
+      {
+        "t": "Spaced repetition: distributed practice in verbal recall",
+        "u": "https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01809.x",
+        "type": "paper",
+        "venue": "Psychological Science",
+        "y": "2006",
+        "q": 0,
+        "w": [
+          "Spaced Repetition",
+          "Memory"
+        ],
+        "quote": "Distributed practice improves long-term retention of verbal material."
+      },
+      {
+        "t": "COCA: Corpus of Contemporary American English",
+        "u": "https://www.english-corpora.org/coca/",
+        "type": "corpus",
+        "venue": "BYU",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Corpus",
+          "Vocabulary"
+        ],
+        "quote": "A billion-word corpus of American English for studying words in authentic context."
+      },
+      {
+        "t": "AntConc corpus analysis toolkit",
+        "u": "https://www.laurenceanthony.net/software/antconc/",
+        "type": "tool",
+        "venue": "Laurence Anthony",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Corpus"
+        ],
+        "quote": "A free corpus analysis toolkit for concordancing and text analysis."
+      },
+      {
+        "t": "Duolingo effectiveness study",
+        "u": "https://duolingo-papers.s3.amazonaws.com/reports/duolingo-efficacy.pdf",
+        "type": "report",
+        "venue": "Duolingo",
+        "y": "2020",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "Learners using Duolingo improved language proficiency over the study period."
+      },
+      {
+        "t": "Chris Lonsdale: How to learn any language in six months (TEDx)",
+        "u": "https://www.youtube.com/watch?v=d0yGdNEWdn0",
+        "type": "talk",
+        "venue": "TEDx",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "Five principles and seven actions for rapid language acquisition."
+      },
+      {
+        "t": "Task-Based Language Teaching (Ellis)",
+        "u": "https://www.cambridge.org/core/books/taskbased-language-teaching/",
+        "type": "book",
+        "venue": "Cambridge University Press",
+        "y": "2018",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "Tasks as the central unit of language teaching."
+      },
+      {
+        "t": "British Council: Learn English",
+        "u": "https://learnenglish.britishcouncil.org/",
+        "type": "reference",
+        "venue": "British Council",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "Free online resources for learning English."
+      },
+      {
+        "t": "Cambridge Dictionary",
+        "u": "https://dictionary.cambridge.org/",
+        "type": "reference",
+        "venue": "Cambridge University Press",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Vocabulary"
+        ],
+        "quote": "Learner dictionary with definitions, pronunciations and example sentences."
+      },
+      {
+        "t": "System (journal): language learning and technology",
+        "u": "https://www.sciencedirect.com/journal/system",
+        "type": "journal",
+        "venue": "Elsevier",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Language Learning"
+        ],
+        "quote": "System publishes research on educational technology and language learning."
+      },
+      {
+        "t": "ReCALL (journal): CALL research",
+        "u": "https://www.cambridge.org/core/journals/recall",
+        "type": "journal",
+        "venue": "Cambridge University Press",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "AI Tool"
+        ],
+        "quote": "ReCALL: computer-assisted language learning research."
+      },
+      {
+        "t": "Computer Assisted Language Learning (journal)",
+        "u": "https://www.tandfonline.com/journals/ncal20",
+        "type": "journal",
+        "venue": "Taylor & Francis",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "AI Tool"
+        ],
+        "quote": "CALL: computer assisted language learning."
+      },
+      {
+        "t": "Critical evaluation of AI output (framework)",
+        "u": "https://www.cambridge.org/core/journals/annual-review-of-applied-linguistics",
+        "type": "reference",
+        "venue": "ARAL",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Critical Evaluation",
+          "Hallucination"
+        ],
+        "quote": "Learners must critically evaluate AI-generated language for accuracy and appropriateness."
+      },
+      {
+        "t": "Knowledge organization for language learning",
+        "u": "https://www.britishcouncil.org/voices-magazine/how-organise-language-learning",
+        "type": "article",
+        "venue": "British Council",
+        "y": "2023",
+        "q": 0,
+        "w": [
+          "Knowledge Organization"
+        ],
+        "quote": "Organising your language learning: goals, materials and routines."
+      },
+      {
+        "t": "Memory aids in vocabulary learning",
+        "u": "https://www.cambridge.org/core/books/learning-vocabulary-in-another-language/",
+        "type": "book",
+        "venue": "Cambridge University Press",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Memory Aid"
+        ],
+        "quote": "Mnemonic techniques support vocabulary retention."
+      },
+      {
+        "t": "Appropriateness and register in academic English",
+        "u": "https://owl.purdue.edu/owl/general_writing/academic_writing/appropriate_language.html",
+        "type": "reference",
+        "venue": "Purdue OWL",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Appropriateness"
+        ],
+        "quote": "Levels of formality: writing for a purpose and audience."
+      },
+      {
+        "t": "Clarity and conciseness in writing (Purdue OWL)",
+        "u": "https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/index.html",
+        "type": "reference",
+        "venue": "Purdue OWL",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Clarity",
+          "Conciseness"
+        ],
+        "quote": "Conciseness: eliminating wordiness to make writing clear."
+      },
+      {
+        "t": "Cambridge English: Write & Improve",
+        "u": "https://writeandimprove.com/",
+        "type": "tool",
+        "venue": "Cambridge English",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Writing",
+          "Feedback"
+        ],
+        "quote": "Submit your writing and get instant feedback and suggested improvements."
+      }
+    ]
+  },
+  {
+    "course": "IT 安全",
+    "questions": [
+      {
+        "q": "人为什么会「主动交出」密码？",
+        "focus": "phishing, social engineering, cognitive bias"
+      },
+      {
+        "q": "密码和身份如何才算「安全」？",
+        "focus": "password, NIST, 2FA"
+      },
+      {
+        "q": "中招后如何把损失降到最低？",
+        "focus": "ransomware, backup, encryption, VPN"
+      }
+    ],
+    "sources": [
+      {
+        "t": "AI, ML and DL approaches for phishing detection",
+        "u": "https://ieeexplore.ieee.org/abstract/document/11340460",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2026",
+        "q": 0,
+        "w": [
+          "Phishing",
+          "Machine Learning"
+        ],
+        "quote": "Traditional phishing attacks capitalize on user-perceived vulnerabilities and system architecture."
+      },
+      {
+        "t": "Across the Spectrum: AI-based models for phishing detection",
+        "u": "https://manara.qnl.qa/articles/dataset/Across_the_Spectrum_In-Depth_Review_AI-Based_Models_for_Phishing_Detection/28442150",
+        "type": "paper",
+        "venue": "QNL",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Phishing"
+        ],
+        "quote": "A comprehensive survey of website phishing detection using AI models."
+      },
+      {
+        "t": "Deep Learning-based IDS for phishing email detection",
+        "u": "https://openaccess.thecvf.com//content/ICCV2025W/VisionDocs/html/De_Nardin_Deep_Learning-Based_Intrusion_Detection_Systems_for_Phishing_Email_Detection_A_ICCVW_2025_paper.html",
+        "type": "paper",
+        "venue": "ICCV Workshops",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Phishing",
+          "Malware"
+        ],
+        "quote": "Deep learning-based intrusion detection systems for phishing email detection."
+      },
+      {
+        "t": "ML solutions for detecting phishing attacks: a survey",
+        "u": "https://ieeexplore.ieee.org/document/10863603",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Phishing",
+          "Machine Learning"
+        ],
+        "quote": "A survey on the landscape of machine learning solutions for detecting phishing attacks."
+      },
+      {
+        "t": "ML algorithms for detecting cyber attacks (SVM 94%)",
+        "u": "https://ieeexplore.ieee.org/abstract/document/10860108",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Machine Learning",
+          "Phishing"
+        ],
+        "quote": "The Support Vector Machine model demonstrated accuracy of 94% on a real-time phishing dataset."
+      },
+      {
+        "t": "Ransomware victimisation reporting among entrepreneurs",
+        "u": "https://www.sciencedirect.com/science/article/pii/S0047235225000273",
+        "type": "paper",
+        "venue": "Journal of Criminal Justice",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Ransomware"
+        ],
+        "quote": "Reporting decisions of entrepreneurs following victimisation of ransomware."
+      },
+      {
+        "t": "Ransomware innovation adoption curve (212 studies)",
+        "u": "https://ouci.dntb.gov.ua/?backlinks_to=10.1145/3579648",
+        "type": "paper",
+        "venue": "ACM Computing Surveys",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Ransomware"
+        ],
+        "quote": "Critically evaluated 212 academic studies on ransomware published during 2020-2023."
+      },
+      {
+        "t": "Ransomware: exfiltrating, encrypting, destroying data",
+        "u": "https://ouci.dntb.gov.ua/en/?backlinks_to=10.1016/j.cose.2024.103964",
+        "type": "paper",
+        "venue": "Computers & Security",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Ransomware",
+          "Encryption"
+        ],
+        "quote": "Ransomware has grown to be a dominant threat by exfiltrating, encrypting, or destroying user data."
+      },
+      {
+        "t": "The business of ransomware and its effects on business",
+        "u": "https://www.tandfonline.com/doi/full/10.1080/23742917.2025.2454620",
+        "type": "paper",
+        "venue": "Journal of Cyber Policy",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Ransomware"
+        ],
+        "quote": "A survey of Canadian businesses about their experiences with ransomware attacks."
+      },
+      {
+        "t": "The age of ransomware: evolution, taxonomy, research directions",
+        "u": "https://ieeexplore.ieee.org/document/10102605",
+        "type": "paper",
+        "venue": "IEEE Access",
+        "y": "2023",
+        "q": 2,
+        "w": [
+          "Ransomware"
+        ],
+        "quote": "A survey on the evolution, taxonomy, and research directions of ransomware."
+      },
+      {
+        "t": "Ransomware attacks for healthcare systems: a survey",
+        "u": "https://www.sciencedirect.com/science/article/abs/pii/S0167404823000389",
+        "type": "paper",
+        "venue": "Computers & Security",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Ransomware",
+          "Healthcare"
+        ],
+        "quote": "Risks, challenges, solutions and research opportunities of ransomware in healthcare."
+      },
+      {
+        "t": "NIST SP 800-63B Rev 4: password updates",
+        "u": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "type": "standard",
+        "venue": "NIST",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Password"
+        ],
+        "quote": "When a password is the only authenticator, systems must enforce a minimum length of 15 characters."
+      },
+      {
+        "t": "NIST 800-63B Rev 4: what is new in password security",
+        "u": "https://www.enzoic.com/blog/nist-sp-800-63b-rev4/",
+        "type": "article",
+        "venue": "Enzoic",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Password"
+        ],
+        "quote": "Allow passwords up to at least 64 characters and accept the full range of printable characters."
+      },
+      {
+        "t": "NIST password guidelines simplified",
+        "u": "https://securityboulevard.com/2025/12/nist-password-guidelines-simplified-steps-for-compliance/",
+        "type": "article",
+        "venue": "Security Boulevard",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Password"
+        ],
+        "quote": "SP 800-63B defines requirements for password-based authentication, referred to as memorized secrets."
+      },
+      {
+        "t": "NIST public comments on password length",
+        "u": "https://pages.nist.gov/800-63-Public-Comments/",
+        "type": "standard",
+        "venue": "NIST",
+        "y": "2025",
+        "q": 1,
+        "w": [
+          "Password"
+        ],
+        "quote": "Passwords must be at least eight characters, with a recommendation of a minimum of 15."
+      },
+      {
+        "t": "A comprehensive survey on social engineering attacks",
+        "u": "https://www.sciencedirect.com/science/article/abs/pii/S0306457324002875",
+        "type": "paper",
+        "venue": "Computers & Security",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Social Engineering"
+        ],
+        "quote": "A thorough survey on social engineering: real-time incidents and preventive measures."
+      },
+      {
+        "t": "AI-driven visual personification and adaptive phishing",
+        "u": "https://ieeexplore.ieee.org/document/11632151",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2026",
+        "q": 0,
+        "w": [
+          "Social Engineering",
+          "Phishing"
+        ],
+        "quote": "Generative AI has transformed phishing from static messages into adaptive interactions that evolve with user responses."
+      },
+      {
+        "t": "The psychological manipulation of phishing emails: cognitive bias",
+        "u": "https://www.sciencedirect.com/org/science/article/pii/S1546221825009968",
+        "type": "paper",
+        "venue": "Computers in Human Behavior",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Phishing",
+          "Social Engineering"
+        ],
+        "quote": "Phishing emails employ cognitive biases to enhance their deceptive effectiveness."
+      },
+      {
+        "t": "Social engineer attack phases and countermeasures",
+        "u": "https://www.sciencedirect.com/org/science/article/pii/S1941621022000160",
+        "type": "paper",
+        "venue": "International Journal of Information Security",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Social Engineering"
+        ],
+        "quote": "Physical approaches include dumpster diving, theft, extortion, or tailgating."
+      },
+      {
+        "t": "Personality traits and vulnerability to social engineering",
+        "u": "https://manara.qnl.qa/articles/journal_contribution/Personality_traits_as_predictors_of_vulnerability_to_persuasion_in_social_engineering_amongst_risk-aware_targets/30859829",
+        "type": "paper",
+        "venue": "QNL",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Social Engineering"
+        ],
+        "quote": "Persuasion in social engineering attacks and their connection to human factors."
+      },
+      {
+        "t": "DuoLungo: usability study of Duo 2FA",
+        "u": "https://ar5iv.labs.arxiv.org/html/2602.01489",
+        "type": "paper",
+        "venue": "arXiv",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Two-Factor Authentication"
+        ],
+        "quote": "The SUS score indicates a good but lower usability level for Duo 2FA."
+      },
+      {
+        "t": "The Mobile Paradox: interface friction can improve 2FA security",
+        "u": "https://ieeexplore.ieee.org/document/11416876",
+        "type": "paper",
+        "venue": "IEEE",
+        "y": "2026",
+        "q": 1,
+        "w": [
+          "Two-Factor Authentication"
+        ],
+        "quote": "Push-based MFA is vulnerable to habituation and push-fatigue."
+      },
+      {
+        "t": "A usability study of five two-factor authentication methods",
+        "u": "https://www.usenix.org/conference/soups2019/presentation/reese",
+        "type": "paper",
+        "venue": "USENIX SOUPS",
+        "y": "2019",
+        "q": 1,
+        "w": [
+          "Two-Factor Authentication"
+        ],
+        "quote": "A usability study of five two-factor authentication methods."
+      },
+      {
+        "t": "A survey on VPN: taxonomy, roles, trends",
+        "u": "https://dl.acm.org/doi/abs/10.1016/j.comnet.2024.110964",
+        "type": "paper",
+        "venue": "Computer Networks",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Virtual Private Network"
+        ],
+        "quote": "A survey on VPN: taxonomy, roles, trends and future directions."
+      },
+      {
+        "t": "Research security issues in VPN technology",
+        "u": "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003606659-7/",
+        "type": "chapter",
+        "venue": "CRC Press",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Virtual Private Network"
+        ],
+        "quote": "Comparison between free and paid VPN services, and security issues associated with VPN use."
+      },
+      {
+        "t": "Tracing network traffic fingerprinting of OpenVPN",
+        "u": "https://dl.acm.org/doi/full/10.1145/3657629",
+        "type": "paper",
+        "venue": "Communications of the ACM",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Virtual Private Network",
+          "Encryption"
+        ],
+        "quote": "OpenVPN is open to VPN fingerprinting."
+      },
+      {
+        "t": "Cloud-based VPN for confidentiality",
+        "u": "https://dlnext.acm.org/doi/full/10.1145/3735358.3737746",
+        "type": "paper",
+        "venue": "APNet",
+        "y": "2025",
+        "q": 2,
+        "w": [
+          "Virtual Private Network",
+          "Encryption"
+        ],
+        "quote": "Encryption tunnel architecture supports network communication security and privacy protection."
+      },
+      {
+        "t": "OWASP Top 10",
+        "u": "https://owasp.org/www-project-top-ten/",
+        "type": "standard",
+        "venue": "OWASP",
+        "y": "2021",
+        "q": 0,
+        "w": [
+          "Vulnerability"
+        ],
+        "quote": "The OWASP Top 10 documents the most critical web application security risks."
+      },
+      {
+        "t": "CISA: Recognize and avoid phishing",
+        "u": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing",
+        "type": "reference",
+        "venue": "CISA",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Phishing"
+        ],
+        "quote": "Recognize and report phishing: stop, look, and think before you click."
+      },
+      {
+        "t": "CISA: Ransomware guidance and resources",
+        "u": "https://www.cisa.gov/stopransomware",
+        "type": "reference",
+        "venue": "CISA",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Ransomware"
+        ],
+        "quote": "Stop ransomware: guidance and resources for prevention and response."
+      },
+      {
+        "t": "APWG: Phishing activity trends report",
+        "u": "https://apwg.org/trendsreports/",
+        "type": "report",
+        "venue": "APWG",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Phishing"
+        ],
+        "quote": "Quarterly trends in phishing activity and attack vectors."
+      },
+      {
+        "t": "Verizon Data Breach Investigations Report (DBIR)",
+        "u": "https://www.verizon.com/business/resources/reports/dbir/",
+        "type": "report",
+        "venue": "Verizon",
+        "y": "2025",
+        "q": 0,
+        "w": [
+          "Data Breach"
+        ],
+        "quote": "The DBIR analyses real-world breach data, including the role of the human element."
+      },
+      {
+        "t": "ENISA Threat Landscape",
+        "u": "https://www.enisa.europa.eu/publications/enisa-threat-landscape-2024",
+        "type": "report",
+        "venue": "ENISA",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Malware",
+          "Social Engineering"
+        ],
+        "quote": "The EU cybersecurity threat landscape: prime threats and trends."
+      },
+      {
+        "t": "FBI Internet Crime Report (IC3)",
+        "u": "https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf",
+        "type": "report",
+        "venue": "FBI IC3",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Online Scam"
+        ],
+        "quote": "Annual report on internet crime complaints and reported losses."
+      },
+      {
+        "t": "MITRE ATT&CK: Phishing (initial access)",
+        "u": "https://attack.mitre.org/techniques/T1566/",
+        "type": "reference",
+        "venue": "MITRE",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Phishing"
+        ],
+        "quote": "Phishing: adversaries may send phishing messages to gain access to victim systems."
+      },
+      {
+        "t": "NCSC: password guidance",
+        "u": "https://www.ncsc.gov.uk/collection/passwords",
+        "type": "reference",
+        "venue": "NCSC (UK)",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Password",
+          "Password Manager"
+        ],
+        "quote": "Use three random words, and save passwords in your browser or a password manager."
+      },
+      {
+        "t": "Have I Been Pwned",
+        "u": "https://haveibeenpwned.com/",
+        "type": "tool",
+        "venue": "Troy Hunt",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Data Breach",
+          "Password"
+        ],
+        "quote": "Check if your email address has been compromised in a data breach."
+      },
+      {
+        "t": "NIST: multi-factor authentication guidance",
+        "u": "https://www.nist.gov/itl/applied-cybersecurity/tig/back-basics-multi-factor-authentication",
+        "type": "reference",
+        "venue": "NIST",
+        "y": "2024",
+        "q": 1,
+        "w": [
+          "Two-Factor Authentication"
+        ],
+        "quote": "MFA requires two or more factors to verify identity."
+      },
+      {
+        "t": "SANS Ouch! Phishing newsletter",
+        "u": "https://www.sans.org/security-awareness-training/resources/ouch-newsletter/",
+        "type": "article",
+        "venue": "SANS Institute",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Phishing"
+        ],
+        "quote": "Free monthly security awareness newsletter covering phishing and scams."
+      },
+      {
+        "t": "ISO/IEC 27001: information security management",
+        "u": "https://www.iso.org/standard/27001",
+        "type": "standard",
+        "venue": "ISO/IEC",
+        "y": "2022",
+        "q": 2,
+        "w": [
+          "Information Security"
+        ],
+        "quote": "Requirements for an information security management system."
+      },
+      {
+        "t": "Krebs on Security",
+        "u": "https://krebsonsecurity.com/",
+        "type": "blog",
+        "venue": "Brian Krebs",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Data Breach"
+        ],
+        "quote": "In-depth security news and investigation."
+      },
+      {
+        "t": "GDPR: personal data breach notification",
+        "u": "https://gdpr-info.eu/art-33-gdpr/",
+        "type": "standard",
+        "venue": "European Union",
+        "y": "2018",
+        "q": 2,
+        "w": [
+          "Data Breach"
+        ],
+        "quote": "In the case of a personal data breach, the controller shall notify the supervisory authority without undue delay."
+      },
+      {
+        "t": "Cloud Security Alliance guidance",
+        "u": "https://cloudsecurityalliance.org/research/guidance/",
+        "type": "reference",
+        "venue": "CSA",
+        "y": "2024",
+        "q": 2,
+        "w": [
+          "Cloud Service"
+        ],
+        "quote": "Security guidance for cloud computing environments."
+      },
+      {
+        "t": "TEDx: Why cybersecurity is failing (Mikko Hyppönen)",
+        "u": "https://www.youtube.com/watch?v=BeD8s4q1NxA",
+        "type": "talk",
+        "venue": "TEDx",
+        "y": "2011",
+        "q": 0,
+        "w": [
+          "Malware"
+        ],
+        "quote": "Why we are losing the war on cybercrime and what to do about it."
+      },
+      {
+        "t": "Mikko Hyppönen: Fighting viruses, defending the net (TED)",
+        "u": "https://www.ted.com/talks/mikko_hypponen_fighting_viruses_defending_the_net",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2011",
+        "q": 2,
+        "w": [
+          "Malware",
+          "Antivirus"
+        ],
+        "quote": "How to defend the internet against malware and cybercrime."
+      },
+      {
+        "t": "Bruce Schneier: The security mirage (TED)",
+        "u": "https://www.ted.com/talks/bruce_schneier_the_security_mirage",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2010",
+        "q": 2,
+        "w": [
+          "Security"
+        ],
+        "quote": "Our feeling of security and the reality of security are different things."
+      },
+      {
+        "t": "James Lyne: Everyday cybercrime (TED)",
+        "u": "https://www.ted.com/talks/james_lyne_everyday_cybercrime_and_what_you_can_do_about_it",
+        "type": "talk",
+        "venue": "TED",
+        "y": "2013",
+        "q": 0,
+        "w": [
+          "Malware",
+          "Online Scam"
+        ],
+        "quote": "Everyday cybercrime — and what you can do about it."
+      },
+      {
+        "t": "SANS security awareness training",
+        "u": "https://www.sans.org/security-awareness-training/",
+        "type": "course",
+        "venue": "SANS Institute",
+        "y": "2024",
+        "q": 0,
+        "w": [
+          "Security Awareness"
+        ],
+        "quote": "Security awareness training to change behaviour and reduce human risk."
+      },
+      {
+        "t": "Backup strategies: the 3-2-1 rule",
+        "u": "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf",
+        "type": "reference",
+        "venue": "CISA",
+        "y": "2021",
+        "q": 2,
+        "w": [
+          "Backup"
+        ],
+        "quote": "The 3-2-1 backup rule: three copies, two media types, one offsite."
+      },
+      {
+        "t": "Secure data erasure guidance",
+        "u": "https://www.nist.gov/publications/nist-special-publication-800-88-revision-1-guidelines-media-sanitization",
+        "type": "standard",
+        "venue": "NIST SP 800-88",
+        "y": "2014",
+        "q": 2,
+        "w": [
+          "Secure Erasure"
+        ],
+        "quote": "Guidelines for media sanitization: clearing, purging and destroying."
+      }
+    ]
+  }
+]

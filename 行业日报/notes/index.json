@@ -1,5 +1,12 @@
 [
   {
+    "id": "eie1005-test1-prep",
+    "title": "Test 1 考前冲刺（10/5）",
+    "desc": "Past Paper Q1/Q2 真题与答案、3 道 Sample MC、必背英文定义清单、预测考题、计算题模板",
+    "file": "eie1005-test1-prep.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
     "id": "eie1005-overview",
     "title": "课程总览与安排（合并版）",
     "desc": "讲师、课表、评分构成、四讲大纲、关键日期、每课索引",

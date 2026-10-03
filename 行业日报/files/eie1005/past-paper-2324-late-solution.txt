@@ -1,0 +1,55 @@
+# EIE1005 Past Paper · 2023/24 Sem 1 Late Assessment（45 分钟 · 闭卷 · 4 题 × 25 分）
+# 来源：Canvas courses/4018/pages/past-paper（file 264805, EIE1005_test-sample_late2324 Sem 1 -solution_v2.pdf）
+# 教师提示：今年 Test 1 的简答题与本卷 Q1、Q2 非常相似。
+
+## Q1（25 分）
+(a) Name the five steps of Data Analysis Process and briefly describe each step.（10 分）
+1. Define Questions and Goals — Define the problem statement and objectives.
+2. Collect Data — Collect quantitative and/or qualitative data from different sources (First, Second, and Third-party data).
+3. Data Wrangling — Data cleaning or Data Pre-processing.
+4. Determine Analysis — Choosing a method of analysis (Diagnostic, Descriptive, or Predictive) will heavily depend on the questions/goals defined earlier and the type of analysis needed.
+5. Interpret Results — Sharing insights and findings; interpreting the outcomes and presenting them in a manner digestible to everyone.
+
+(b) What are "Strong" and "Weak" AI?（10 分）
+- Strong AI: Self-aware, emotion, response is unpredictable; like human beings; only in fictional characters (at this moment at least).
+- Weak AI (Narrow AI): A specific type of AI in which a technology outperforms humans in some very narrowly defined tasks.
+
+(c) What are centroids in K-means Clustering?（5 分）
+- A centroid represents a kind of centre of gravity for a set of instances in the same cluster.
+- The within-cluster sum of squares distance between the centroid and each data point is minimum.
+
+## Q2（25 分）· fully-connected neural network（狗/兔/鼠图像分类）
+(a) What are the five important steps to train the network?（10 分）
+1. Randomly initialize Weights and Biases
+2. Determine network activation for each training image
+3. Compute Loss for the entire training image
+4. Update Weights
+5. Epoch: Repeat Steps 2–4 until Loss reduces to an Acceptable Level
+
+(b) 40×40 grayscale input: N, M and number of weights?（10 分）
+- N = 1600（=40×40）；M = 3（三类输出）
+- 权重数 = 1600×16 + 16×3 = 25648（含两层权重，不含 bias 的计法）
+
+(c) 模型能识别狗，但识别不了无毛狗，可能是什么问题？（5 分）
+- 训练数据中没有包含无毛狗的照片（训练数据代表性/偏置问题）。
+
+## Q3（25 分）· Game AI
+(a) FSM 与 RL 控制 NPC 的差异（优缺点）。（6 分）
+- FSM：预定义状态 + 事件触发转移；简单、可预测、易控制；适合复杂度有限的动作游戏；状态多时难管理；行为较生硬。
+- RL：从交互与奖励中学习；自适应、更难预测；适合需要学习与适应的策略游戏；需大量计算与训练时间；可解释性差。
+(b) Q-Learning 三个参数的作用 + 例子。（11 分）
+- Learning rate α：控制 Q 值更新速度；高 α 适应快但可能不稳定，低 α 学习慢但稳定。
+- Discount factor γ：未来奖励的重要性；高 γ 重视长期回报，低 γ 只看眼前。
+- Exploration-exploitation ε：探索新动作 vs 利用已知好动作；早期高 ε 多探索，后期低 ε 多利用。
+- 例：迷宫老鼠——高 ε 探索路径；α 决定更新速度；γ 让它重视通向奶酪的延迟奖励；ε 下降后专注最优路径。
+(c) FrozenLake Q-table 找路径（8 分）· Action 0 LEFT, 1 DOWN, 2 RIGHT, 3 UP。
+
+## Q4（25 分）· Conversational AI
+(a) 两种无标签训练 GPT 的方法。（15 分）
+- Method 1（MLM 掩码预测）：随机遮住句中词，训练 GPT 预测被遮的词，如 "Today [MASK] Sunday, and the [MASK] is great."
+- Method 2（下一句预测）：训练 GPT 判断两句顺序是否正确。
+(b) GPT 在对话系统中的作用？（5 分）
+- 作为大语言模型，建模语料中的语法与语言结构（grammar and linguistic structures）。
+(c) "对话系统只由语音识别 + 语音合成组成" 对吗？（5 分）
+- 不对。还应包含自然语言理解（NLU）模块和语言生成模块。
+- END -
