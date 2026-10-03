@@ -39,9 +39,10 @@
 W1 L1 → W2 L2 + 项目准备 → W3–4 Workshop1 → 9/30 组队 → W5 NVIDIA 讲座(点名) → W6 Test1 → W7 L3 → W8 AIDA 完成 → W9 AIDA 测验 + Workshop2 → W10 L4 → W11–12 Workshop3 → W13 Test2 → 11/28 项目提交
 
 ## 📚 每课笔记索引
+- **Guest Lecture（NVIDIA）**：eie1005-guest-nvidia.md（Part A 十题考点：Agent/模型矩阵/Physical AI）
 - **Test 1 冲刺**：eie1005-test1-prep.md（真题 Q1/Q2 + 背诵清单 + 预测题）
 - L1：ie1005-l1.md · L2：ie1005-l2.md · L3：ie1005-l3.md · L4：ie1005-l4.md
 - Workshop 1（数据可视化 Python 逐行讲解）：ie1005-w1-dataviz-python.md
 - 三次 Workshop 汇总：ie1005-workshops.md · 词汇表：ie1005-vocabulary.md · Mini-project：project.md · AI 伦理：thics.md
 
-更新记录：最后更新 2026-10-03 · 新增「Test 1 考前冲刺」笔记（Past Paper Q1/Q2 真题+答案+预测题）；确认今年 Test1 简答题与往年卷 Q1、Q2 非常相似 · 数据来源（Canvas courses/4018 Past Paper 页 file 264805）
+更新记录：最后更新 2026-10-03 · 新增「Test 1 考前冲刺」与「Guest Lecture（NVIDIA）」两份笔记（Part A 十题考点已整理）；Test1 简答题与往年卷 Q1/Q2 非常相似 · 数据来源（Canvas courses/4018 Past Paper 页 file 264805、Guest Lecture file 264264）

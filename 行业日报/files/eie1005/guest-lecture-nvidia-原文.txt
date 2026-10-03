@@ -1,0 +1,182 @@
+# PolyU Guest Lecture（Week 5 · 2026-09-28）逐页原文
+# 来源：Canvas courses/4018 files/264264（PolyU Guest Lecture.pdf，49 页）
+# 演讲者：Dr. Ginny Wong, Senior Data Scientist, NVIDIA AI Technology Center
+# 题目：How Open Models, Agents, and Physical AI Are Fueling a Flywheel of Innovations
+# 说明：PPT 多为图形页，以下按 DocViewer 文本层逐页收录全部文字。
+
+### 第 1 页
+Sep 28, 2026 · Dr. Ginny Wong · Senior Data Scientist | NVIDIA AI Technology Center
+How Open Models, Agents, and Physical AI Are Fueling a Flywheel of Innovations
+
+### 第 2 页 · The Evolution of AI Agents
+From LLMs and multi-turn prompts to long-running agents that complete tasks.
+ChatGPT (Nov 2022) → DeepSeek (Jan 2025) → Agent Harnesses (2026)
+Foundation LLMs → Multi-turn Prompts → Reasoning Enables Reflection For Better Outcomes → Self-Evolving Agents Working on Your Behalf → 100x → 1000x
+
+### 第 3 页 · Compute（token 规模增长）
+November 2022 ChatGPT: 100s of Tokens → December 2024 Reasoning Models: 1000s of Tokens → January 2026 AI Agents: 1,000,000s of Tokens
+Understanding, thinking, acting · Agentic AI Inflecting
+
+### 第 4 页 · Agentic AI Has Arrived
+From generating answers to doing work · 3x productivity in software engineering · GitHub Exponential Growth
+Agent = Harness + Models · Agentic AI Is a New Computing Pattern
+
+### 第 5 页 · Agentic AI Introduces a New Computing Pattern
+Memory (Harness | NemoClaw) · Context · LLM (Observe → Reason → Act) · Sandbox | OpenShell · Orchestration · Prompt · Tools and Skills · Security and Governance
+
+### 第 6 页 · Agents Go to Work（例 1）
+"Make a JavaScript Newton's Cradle animation in a single HTML file." · Context → Observe → Reason → Act
+
+### 第 7 页 · Agents Go to Work（例 2）
+"I lost my remote control battery clip, it looks like this. Create a CAD file ready for 3D printing to create a new one." · Context → Observe → Reason → Act
+
+### 第 8 页 · What Long-Running Agentic Systems Need
+AI is Not a One Size Fits All Problem · Systems of Models · Specialized Agents · High Efficiency
+
+### 第 9 页 · Agentic AI is Built on a System of Models
+Agents often combine proprietary and open models.
+Open LLM · Open VLM · GPT-5 · Multimodal Router · User · ASR · TTS · Conversation & Guidance · Research · Visual Understanding · Guardrails · Data
+
+### 第 10 页 · NVIDIA 模型矩阵（一）
+Alpamayo - Autonomous Vehicle · Clara - Biomedical AI · GR00T - Robotics · Earth-2 - AI-Physics · Nemotron - Agentic AI · Cosmos - Physical AI
+NVIDIA Leads AI Open Source With Repository Growth / Open-Source AI Contributions
+
+### 第 11 页 · NVIDIA Nemotron Open Models, Data, Libraries for Agentic AI
+Data: 10 Trillion Pretraining Tokens · 40 Million Post-training Samples · 900K RL Tasks · 11K Safety Traces
+Models: Nemotron 3 · Nemotron VL · Nemotron Speech · Nemotron RAG · Nemotron Safety
+
+### 第 12 页 · What Long-Running Agentic Systems Need（重复）
+AI is Not a One Size Fits All Problem · Systems of Models · Specialized Agents · High Efficiency
+
+### 第 13 页 · The Benefits of Specialized Agents
+Turn data and open models into actionable workflows for smarter, faster, and more cost-efficient AI.
+Deployment Flexibility · Data & IP Control · Cost Optimization · Adaptability & Continuous Learning · Domain-Specific Accuracy
+
+### 第 14 页 · Post-training is Essential for Specialized Agents
+Realize transformative enterprise value through domain-specific expertise and business process integration.
+Industrial Design · Cybersecurity · Chip Design · Autonomous Vehicles · Scientific Discovery · Code Generation
+
+### 第 15 页 · Post-training Ingredients
+Computational Scale · Specialized Environments & Verifiers · Domain Tasks · Base Model
+
+### 第 16 页 · NVIDIA Agent Toolkit and Nemotron Open Models
+End-to-End Platform for Agentic AI
+Open models customized for scientific reasoning: Scientific Research · Molecular Design · Wet Lab Automation · Scientific Data Processing
+
+### 第 17 页 · NVIDIA Agent Toolkit 组成
+Memory (Harness | NemoClaw) · Context · LLM (Observe/Reason/Act) · Sandbox | OpenShell · Prompt · Tools and Skills · Security and Governance · Orchestration · NVIDIA Open Models
+
+### 第 18 页 · Accelerated tools give agents ability
+NVIDIA Agent Toolkit + CUDA-X Libraries ·（同第 17 页组件）
+
+### 第 19 页 · IQVIA Agents for Life Sciences on NVIDIA AI
+Healthcare-grade AI platform · Data Sources: IQVIA / Public / Client / NVIDIA
+NVIDIA: Nemotron · NeMo Retriever · NeMo Customizer
+Orchestrator Agents / Data Agents: Validation Agent · Entity Agent · Test Plan Agent · Rx Agent · Client Agent · Reference Agent
+RLHF · Data Tools · Retriever · Data Integration (Clinical/Medical/Commercial) · Chatbot
+NeMo Guardrails · Data Review Agent · Literature Review Agent · Field Companion Agent
+
+### 第 20 页 · Physical AI（开篇）
+Physical AI for $98 Trillion Industries
+"Ask me or tell me to do something."
+Text Tokens + Sensor Tokens → Physical AI Foundation Model → Action Tokens
+Automotive · ("Robot") Robots · Healthcare Robots · Robotic Factories · Sensor Inputs · Instructions
+
+### 第 21 页 · Agents Enter the Physical World
+Context · Observe · Reason · Act · OpenShell
+
+### 第 22 页 · Robot Foundation Models / Simulation Frameworks / Synthetic Data Generation Pipelines
+TRAINING: GR00T · SIMULATION: OMNIVERSE · INFERENCE: COSMOS / Jetson Thor · CUDA-X Libraries
+NVIDIA Isaac: Open robotics development platform for all robot embodiments
+
+### 第 23 页 · Training Data is the Grand Challenge of Robotics
+Data Generation · Environment Generation · Policy Learning · Policy Evaluation · Hardware Optimization
+Scaling Robot Intelligence Requires Massive Amounts of Data
+
+### 第 24 页 · New Physical AI Tools & Skills
+Isaac Sim · Isaac Lab · Omniverse · Neural Reconstruction · Video Augmentation
+New Physical AI Open Models: Cosmos · GR00T
+Libraries & Frameworks · OpenShell (Context/Observe/Reason/Act) · Agent Harness · Available on GitHub and Skill.sh
+
+### 第 25 页 · NVIDIA Cosmos 3
+The frontier foundation model for Physical AI – breakthrough architecture; more accurate across capabilities.
+输入输出：Text/Image/Video/Audio/Action（双向）
+Reasoner (Autoregressive) + Generator (Diffusion) · Built on Mixture of Transformer
+First omnimodel to understand and generate worlds and action for physical AI.
+四种角色：
+- As Vision Language Model (VLM): turns vision into dense captions, sub-second insights, and alerts.
+- As World Model: speeds up synthetic data generation by up to 60x – including unseen scenarios.
+- As World Simulator: reduces training and evaluation from months to days.
+- As World Action Model (WAM): adapts policies faster from general embodiment pretraining.
+build.nvidia.com · NVIDIA NIM · Cosmos 3 Nano | Cosmos 3 Super
+
+### 第 26 页 · NVIDIA Physical AI Datasets
+Robotics Trajectories · USD SimReady Assets · Real & Synthetic Driving Data · Access on Hugging Face
+GR00T-X Embodiment Sim: #1 Most Downloaded on HF (Robotics) · 15M+ Total Downloads
+World's largest open dataset for training, fine-tuning, and evaluating physical AI
+
+### 第 27 页 · NVIDIA Omniverse NuRec and Isaac TeleOp
+Open frameworks and libraries to bring real world data into interactive simulation · TeleOp Core · Isaac Sim ↔ Real World
+
+### 第 28 页 · NVIDIA Omniverse NuRec Libraries
+3D Gaussian-based reconstruction and rendering for high-fidelity simulation
+Accelerate Rendering: under 10 ms on NVIDIA RTX PRO 6000 · Scale with agents: millions of simulations overnight
+Open Foundation: built on open-source, CUDA-accelerated gsplat library · Enhance Reconstructions: generative models enable asset deletion/insertion
+Available on GitHub and NGC
+
+### 第 29 页 · NVIDIA Isaac Teleop
+Open workflow for collecting data to train and test the robotics stack.
+Whole Body Controls: mapping head, hand, wrist poses to humanoid policies.
+Zero-Shot Transfer: same teleop setup across sim and real without code changes.
+Environment Interaction: procedural environments to test policy robustness.
+
+### 第 30 页 · Simulation and Robot Learning Framework
+How Robots Become Robots · Policy Training and Evaluation · Isaac Lab and Newton · GR00T N · Isaac Lab-Arena
+Post-training Data → Feedback loop for continued learning
+NuRec, Cosmos → Isaac Sim, Isaac Lab, Newton → Real World, Isaac Teleop
+Internet Scale Data → Pre-trained Model → Post-trained Model
+
+### 第 31 页 · NVIDIA Isaac Sim
+NVIDIA Isaac Sim · Teleop Data · Real World Data · 3D Assets · Synthetic Data Generation · SIL/HIL Testing
+Manipulators · Humanoids · Autonomous Mobile Robots · Agent-friendly reference framework for robotics simulation
+
+### 第 32 页 · Physically-based Simulation for Real World Robotics（Isaac Sim 特性）
+Fully Extensible · High-fidelity Physics Simulation (PhysX, RTX) · Robot Models & SimReady Assets (1,000+ assets)
+Synthetic Data Generation · Launch Isaac Sim on Brev
+
+### 第 33 页 · Isaac Sim for Software-in-the-Loop Testing
+- Control, test, and monitor robots in high-fidelity, physically accurate simulation environments.
+- Simulate diverse scenarios and edge cases virtually before real-world deployment.
+- Generate physically accurate synthetic data, reducing the sim-to-real gap.
+- Full ROS 2 integration with standard message types.
+
+### 第 34 页 · NVIDIA Isaac Lab
+Agent-friendly framework for robot learning and policy training.
+State/Observations · Actions · Configuration · Trained policy
+Reinforcement Learning · Imitation Learning · Teleop Data · Real World Data · 3D Assets · PhysX
+Workstation · Server · DGX Cloud · Humanoids · Autonomous Mobile Robots · Manipulators
+
+### 第 35 页 · Physically-based Simulation（Isaac Lab 特性）
+Parallel simulations · Unified and Modular framework · GPU accelerated simulation
+Multiple Robot Learning Methods: RL, imitation learning, and planning
+
+### 第 36 页 · Isaac Lab-Arena
+- Create diverse robot and scene environments
+- Scale policy evaluation across thousands of parallel simulations
+- Use standardized benchmarks for comparison and collaboration
+- Run evaluations anywhere: local, cloud, or LeRobot Environment Hub
+Open-source framework for large-scale policy evaluation in simulation
+
+### 第 37 页 · Rheo Blueprint for Hospital Automation
+Policy Training and SW In-The-Loop Evaluation · Isaac Lab (RL Post Training) → Post-Trained GR00T-N
+Imitation Learning Groot Finetuning · Isaac Sim (SIL Testing) · Omniverse NuRec · Hospital Images → Hospital Digital Twin
+Data Collection, Multiplication, Sim2Real Augmentation · Tele-Op Demo · Mimic Gen · Expert Demo → Trajectories Multiplied → Cosmos Transfer
+
+### 第 38 页 · Humanoid Robot Development / GR00T End-to-end Workflow
+A Single Platform for Data Creation, Training, Evaluation and Deployment
+Isaac Lab · Isaac Teleop · GR00T Models · Isaac Lab-Arena · Isaac ROS · Powered by Jetson Thor
+Data Creation → Training → Deployment · Developer Validated Policy · End-to-end reference workflow
+
+### 第 39 页 · Thank You
+
+覆盖页清单：第 1..39 页（PPT 内页编号至 79，DocViewer 计 49 页，文字层覆盖上述全部内容页；纯图形过渡页无文字，缺页：无文字页）。

@@ -1,5 +1,12 @@
 [
   {
+    "id": "eie1005-guest-nvidia",
+    "title": "Guest Lecture · NVIDIA（Part A 十题考点）",
+    "desc": "Agent=Harness+Models、Observe-Reason-Act、NVIDIA 模型矩阵、Cosmos 3、GR00T/Omniverse/Jetson Thor、预测题",
+    "file": "eie1005-guest-nvidia.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
     "id": "eie1005-test1-prep",
     "title": "Test 1 考前冲刺（10/5）",
     "desc": "Past Paper Q1/Q2 真题与答案、3 道 Sample MC、必背英文定义清单、预测考题、计算题模板",
