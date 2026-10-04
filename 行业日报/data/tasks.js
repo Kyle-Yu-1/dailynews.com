@@ -30,4 +30,18 @@ window.TASKS = [
   { id:"lei-slides", date:null, dateLabel:"单元六", time:"课前 24h", course:"LEI1101", title:"CLC 简报制作", type:"作业", weight:"10%", note:"" },
   { id:"lei-oral", date:null, dateLabel:"单元六", time:"课上", course:"LEI1101", title:"CLC 小组口头报告", type:"报告", weight:"20%", note:"内容12%+表达协调8%" },
   { id:"lei-group", date:null, dateLabel:"单元六后一周", time:"—", course:"LEI1101", title:"CLC 小组报告", type:"报告", weight:"30%", note:"" }
-];
+
+  ,{ id:"self-w6", date:"2026-10-11", dateLabel:"10/5–11", time:"周内完成", course:"自学计划", title:"8.012 L1–L5 定位补漏（向量→牛顿应用）+ PS1/PS2", type:"主线", weight:"第6周", note:"辅：Taylor ch2 抛体题" },
+  { id:"self-w7", date:"2026-10-18", dateLabel:"10/12–18", time:"周内完成", course:"自学计划", title:"8.012 L6–L8 动量·碰撞·火箭 + PS3", type:"主线", weight:"第7周", note:"周末：期中1模考（L1–6）· Taylor ch3" },
+  { id:"self-w8", date:"2026-10-25", dateLabel:"10/19–25", time:"周内完成", course:"自学计划", title:"8.012 L9–L10 能量·势能 + PS4", type:"主线", weight:"第8周", note:"10/19 假期多刷题 · Taylor ch4" },
+  { id:"self-w9", date:"2026-11-01", dateLabel:"10/26–11/1", time:"周内完成", course:"自学计划", title:"8.012 L11–L12 能量守恒·碰撞II + PS5", type:"主线", weight:"第9周", note:"期中2模考（L7–12）· Morin 能量带星题" },
+  { id:"self-w10", date:"2026-11-08", dateLabel:"11/2–8", time:"周内完成", course:"自学计划", title:"8.012 L13–L15 定轴转动·转动惯量·滚动 + PS6", type:"主线", weight:"第10周", note:"3B1B 第1–8集 · Taylor ch5 振动" },
+  { id:"self-w11", date:"2026-11-15", dateLabel:"11/9–15", time:"周内完成", course:"自学计划", title:"8.012 L16–L18 刚体·陀螺I/II + PS7/PS8", type:"主线", weight:"第11周", note:"3B1B 第9–16集 · Taylor ch5 阻尼/受迫" },
+  { id:"self-w12", date:"2026-11-22", dateLabel:"11/16–22", time:"周内完成", course:"自学计划", title:"8.012 L19–L21 卡文迪许·惯量张量·欧拉方程", type:"主线", weight:"第12周", note:"期中3模考（L13–19）· numpy 验证 R(θ1)R(θ2)" },
+  { id:"self-w13", date:"2026-11-28", dateLabel:"11/23–28", time:"周内完成", course:"自学计划", title:"8.012 L22–L24 旋转系·开普勒·相对论 + PS9", type:"主线", weight:"第13周", note:"学校期末冲刺：物理转维护模式" },
+  { id:"self-rev", date:"2026-12-02", dateLabel:"11/30–12/2", time:"—", course:"自学计划", title:"复习周：停新内容，只复盘错题", type:"缓冲", weight:"—", note:"学校复习优先，物理让位 GPA" },
+  { id:"self-final", date:"2027-01-10", dateLabel:"12/19–1/10", time:"挑1天", course:"自学计划", title:"寒假：8.012 Final 整套模考 + 收尾", type:"封顶", weight:"—", note:"对 2008 官方答案 · 3B1B 二刷可选" },
+  { id:"self-s2-linalg", date:null, dateLabel:"2027春", time:"自定", course:"自学计划", title:"AMA1120 同步：Strang 18.06 + 3B1B 二刷", type:"线代", weight:"—", note:"配合理大线代课" },
+  { id:"self-s2-taylor", date:null, dateLabel:"2027春", time:"自定", course:"自学计划", title:"Taylor ch9–11（非惯性系/刚体/耦合振子）", type:"进阶", weight:"—", note:"矩阵学完再进" },
+  { id:"self-s2-bala", date:null, dateLabel:"2027春", time:"自定", course:"自学计划", title:"NPTEL Balakrishnan 经典力学（拉格朗日/哈密顿）", type:"分析力学", weight:"—", note:"接 Taylor 后半本" },
+  { id:"self-s2-landau", date:null, dateLabel:"2027春/秋", time:"自定", course:"自学计划", title:"朗道《力学》第1/2/6/7章 + Susskind", type:"思想升华", weight:"—", note:"配合线上课程板块" }];
