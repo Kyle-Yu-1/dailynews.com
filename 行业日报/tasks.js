@@ -6,7 +6,8 @@
   var COLORS = {
     'AMA1110': '#d4a574', 'EIE1005': '#c38d94', 'ME29004': '#81b29a',
     'AP10005': '#9d91c4', 'LEI1101': '#c95f8d', 'IT 安全': '#8fa6bd',
-  '自学计划': '#4dd0c9'
+  '自学计划': '#4dd0c9',
+  '自学数学': '#ffb86c'
   };
   var tasksBtn = document.getElementById('tasksBtn');
   var tasksBack = document.getElementById('tasksBack');
@@ -95,7 +96,7 @@
       '<input type="checkbox" class="task-check" data-id="' + esc(t.id) + '"' + (checked ? ' checked' : '') + '>' +
       '<span class="task-date">' + esc(t.dateLabel || '') + '</span>' +
       '<span class="task-course" style="color:' + colorOf(t.course) + '">' + esc(t.course) + '</span>' +
-      (t.course === '自学计划' ? '<span class="task-title" style="color:' + colorOf(t.course) + '">' + esc(t.title) + '</span>' : '<span class="task-title">' + esc(t.title) + '</span>') +
+      ((t.course === '自学计划' || t.course === '自学数学') ? '<span class="task-title" style="color:' + colorOf(t.course) + '">' + esc(t.title) + '</span>' : '<span class="task-title">' + esc(t.title) + '</span>') +
       '<span class="task-meta">' + esc(t.type || '') + ' · ' + esc(t.weight || '') + (t.time ? ' · ' + esc(t.time) : '') + '</span>' +
       (t.note ? '<span class="task-note">' + esc(t.note) + '</span>' : '') +
       '</label>';
@@ -104,21 +105,27 @@
     renderCalendar();
     renderList();
     var done = getDone();
-    var school = TASKS.filter(function (t) { return t.course !== '自学计划'; });
-    var self = TASKS.filter(function (t) { return t.course === '自学计划'; });
+    var school = TASKS.filter(function (t) { return t.course !== '自学计划' && t.course !== '自学数学'; });
+    var phys = TASKS.filter(function (t) { return t.course === '自学计划'; });
+    var math = TASKS.filter(function (t) { return t.course === '自学数学'; });
     var sn = school.filter(function (t) { return done.indexOf(t.id) !== -1; }).length;
-    var en = self.filter(function (t) { return done.indexOf(t.id) !== -1; }).length;
+    var pn = phys.filter(function (t) { return done.indexOf(t.id) !== -1; }).length;
+    var mn = math.filter(function (t) { return done.indexOf(t.id) !== -1; }).length;
     var sp = school.length ? Math.round(sn / school.length * 100) : 0;
-    var ep = self.length ? Math.round(en / self.length * 100) : 0;
+    var pp = phys.length ? Math.round(pn / phys.length * 100) : 0;
+    var mp = math.length ? Math.round(mn / math.length * 100) : 0;
     tasksProgress.innerHTML =
       '<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:12px;color:var(--muted-ink);margin:0 0 10px">'
-      + '<span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#4dd0c9;margin-right:6px"></span>自学计划（MIT 8.012）</span>'
+      + '<span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#4dd0c9;margin-right:6px"></span>物理自学（MIT 8.012）</span>'
+      + '<span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ffb86c;margin-right:6px"></span>数学自学（读本＋吉米多维奇）</span>'
       + '<span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#d4a574;margin-right:6px"></span>学校任务</span>'
       + '</div>'
       + '<div style="font-size:13px;margin:0 0 4px">🏫 学校任务：已完成 <b>' + sn + '</b> / ' + school.length + ' 项（' + sp + '%）</div>'
       + '<div class="progress-bar"><div class="progress-fill" style="width:' + sp + '%"></div></div>'
-      + '<div style="font-size:13px;margin:8px 0 4px">🎯 自学计划：已完成 <b>' + en + '</b> / ' + self.length + ' 项（' + ep + '%）</div>'
-      + '<div class="progress-bar"><div class="progress-fill" style="width:' + ep + '%;background:#4dd0c9"></div></div>';
+      + '<div style="font-size:13px;margin:8px 0 4px">🎯 物理自学：已完成 <b>' + pn + '</b> / ' + phys.length + ' 项（' + pp + '%）</div>'
+      + '<div class="progress-bar"><div class="progress-fill" style="width:' + pp + '%;background:#4dd0c9"></div></div>'
+      + '<div style="font-size:13px;margin:8px 0 4px">📐 数学自学：已完成 <b>' + mn + '</b> / ' + math.length + ' 项（' + mp + '%）</div>'
+      + '<div class="progress-bar"><div class="progress-fill" style="width:' + mp + '%;background:#ffb86c"></div></div>';
   }
 
   tasksBtn.addEventListener('click', function () {

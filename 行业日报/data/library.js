@@ -1,5 +1,5 @@
 /* 图书馆数据 · 学习 Agent
-   每本书：id 唯一；localPdf 为站内 PDF 路径 */
+   每本书：id 唯一；localPdf=站内 PDF；link=官方渠道；freeLink=免费资源（合法官方源） */
 window.LIBRARY_BOOKS = [
   {
     id: "nndl-v2",
@@ -28,8 +28,8 @@ window.LIBRARY_BOOKS = [
     tags: ["PyTorch", "动手实践", "开源"],
     localPdf: "files/library/nndl-practice.pdf",
     size: "4.4 MB"
-  }
-  ,{
+  },
+  {
     id: "k-and-k",
     title: "An Introduction to Mechanics（伯克利力学）",
     edition: "第二版 · 主线教材",
@@ -38,10 +38,12 @@ window.LIBRARY_BOOKS = [
     category: "经典力学",
     accent: "#d4a574",
     glyph: "🎯",
-    desc: "MIT 8.012 指定教材。向量→牛顿定律→动量→能量→转动→刚体→非惯性系→相对论，主线课程完全对照此书。",
+    desc: "MIT 8.012 指定教材（你手头已有）。向量→牛顿定律→动量→能量→转动→刚体→非惯性系→相对论；MIT 官方把全套讲义免费公开，可直接对照学习。",
     tags: ["MIT 8.012", "经典力学", "主线教材"],
     link: "https://www.cambridge.org/9780521198219",
-    linkLabel: "出版社 · Cambridge"
+    linkLabel: "出版社 · Cambridge",
+    freeLink: "https://ocw.mit.edu/courses/8-012-physics-i-classical-mechanics-fall-2008/pages/lecture-notes/",
+    freeLabel: "MIT 8.012 讲义（免费·覆盖全书）"
   },
   {
     id: "taylor-cm",
@@ -52,10 +54,12 @@ window.LIBRARY_BOOKS = [
     category: "经典力学 · 题库",
     accent: "#7ea6c9",
     glyph: "🌊",
-    desc: "主线题库：非线性振动、混沌、数值方法最贴近机器人建模。第 2–5 章现在同步刷，第 9–11 章留到大一下矩阵学完再进。",
+    desc: "主线题库：非线性振动、混沌、数值方法最贴近机器人建模。第 2–5 章现在同步刷，第 9–11 章留到大一下矩阵学完。免费替代：David Tong 讲义覆盖同段位。",
     tags: ["题库", "混沌", "数值"],
     link: "https://books.google.com/books?id=t4lpEQAAQBAJ",
-    linkLabel: "Google Books · 出版社信息"
+    linkLabel: "Google Books · 出版社信息",
+    freeLink: "http://www.damtp.cam.ac.uk/user/tong/dynamics.html",
+    freeLabel: "David Tong 讲义（免费 PDF）"
   },
   {
     id: "morin-icm",
@@ -66,10 +70,12 @@ window.LIBRARY_BOOKS = [
     category: "经典力学 · 难题",
     accent: "#c38d94",
     glyph: "🔥",
-    desc: "哈佛荣誉大一力学（Physics 16）教材。每两周挑 1–2 道带星难题练手，不整本啃。官方电子书付费；作者官网有免费章节（如哈密顿方法）与勘误。",
+    desc: "哈佛荣誉大一力学（Physics 16）教材。每两周挑 1–2 道带星难题练手。官方电子书付费，但作者本人公开了部分章节（如哈密顿方法）供免费下载。",
     tags: ["哈佛 Physics 16", "带星难题", "官方电子书"],
     link: "https://www.cambridge.org/9780521876223",
-    linkLabel: "出版社 · 官方电子书"
+    linkLabel: "出版社 · 官方电子书",
+    freeLink: "https://scholar.harvard.edu/david-morin/classical-mechanics",
+    freeLabel: "作者免费章节（哈密顿方法等）"
   },
   {
     id: "landau-mech",
@@ -80,10 +86,12 @@ window.LIBRARY_BOOKS = [
     category: "理论力学 · 审美",
     accent: "#9a8fd0",
     glyph: "✨",
-    desc: "大二上作思想升华：只读第 1、2、6、7 章，配合 Susskind《Theoretical Minimum》服用，不整本硬啃。",
+    desc: "大二上思想升华：只读第 1、2、6、7 章，配合 Susskind 课与 Tong 讲义服用。原书付费，但同等内容有免费讲义替代。",
     tags: ["朗道", "最小作用量", "大二上"],
     link: "https://shop.elsevier.com/books/mechanics/landau/978-0-08-050347-9",
-    linkLabel: "出版社 · Elsevier"
+    linkLabel: "出版社 · Elsevier",
+    freeLink: "http://www.damtp.cam.ac.uk/user/tong/dynamics.html",
+    freeLabel: "免费替代：Tong 讲义 / Susskind 课"
   },
   {
     id: "apostol-c2",
@@ -94,10 +102,12 @@ window.LIBRARY_BOOKS = [
     category: "数学 · 参考书",
     accent: "#7ec9a6",
     glyph: "📘",
-    desc: "微积分与线性代数公理化融合，Jacobian 与坐标变换的严谨出处。定位：大二/大三参考书，大一不必整本读。",
+    desc: "微积分与线性代数公理化融合，Jacobian 的严谨出处。原书付费；免费替代：Strang《Calculus》全本 PDF（MIT 官方）+ MIT 18.02 视频。",
     tags: ["多元微积分", "参考书", "大二/大三"],
     link: "https://www.wiley.com/en-us/9780471000075",
-    linkLabel: "出版社 · Wiley"
+    linkLabel: "出版社 · Wiley",
+    freeLink: "https://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf",
+    freeLabel: "免费替代：Strang《Calculus》PDF"
   },
   {
     id: "strang-ila",
@@ -108,10 +118,12 @@ window.LIBRARY_BOOKS = [
     category: "线性代数",
     accent: "#e0b86a",
     glyph: "📐",
-    desc: "MIT 18.06 配套教材，几何直觉与计算并重。现在先看前 3 章 + 3B1B，大一下与 AMA1120 同步用。",
+    desc: "MIT 18.06 配套教材，几何直觉与计算并重。原书付费；免费替代：Treil《Linear Algebra Done Wrong》（作者免费）+ 18.06 视频。",
     tags: ["Strang", "18.06", "AMA1120 同步"],
     link: "https://math.mit.edu/~gs/linearalgebra/ila6/indexila6.html",
-    linkLabel: "作者官网 · 购书页"
+    linkLabel: "作者官网 · 购书页",
+    freeLink: "https://www.math.brown.edu/streil/papers/LADW/LADW.html",
+    freeLabel: "免费替代：Treil《LADW》PDF"
   },
   {
     id: "lifesaver-calc",
@@ -122,10 +134,12 @@ window.LIBRARY_BOOKS = [
     category: "微积分 · 工具书",
     accent: "#d4a574",
     glyph: "🛟",
-    desc: "你手头的《普林斯顿微积分读本》。定位是伴读参考书而非教材：跟 AMA1110 进度查漏，不通处翻对应章节。",
+    desc: "你手头的《普林斯顿微积分读本》，伴读参考书。原书付费；免费替代：Strang《Calculus》全本 PDF + Paul's Online Math Notes。",
     tags: ["微积分", "伴读参考", "AMA1110"],
     link: "https://books.google.com/books?id=hnGVyRaXM5MC",
-    linkLabel: "Google Books · 出版社信息"
+    linkLabel: "Google Books · 出版社信息",
+    freeLink: "https://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf",
+    freeLabel: "免费替代：Strang《Calculus》PDF"
   },
   {
     id: "craig-robotics",
@@ -136,10 +150,12 @@ window.LIBRARY_BOOKS = [
     category: "机器人学 · 中阶",
     accent: "#c38d94",
     glyph: "🤖",
-    desc: "正运动学/雅可比/动力学经典教材，大二学完线代后正式进入。先存着，现在不用买。",
+    desc: "正运动学/雅可比/动力学经典教材。原书付费；免费替代：Lynch & Park《Modern Robotics》官方免费预习版 + 全套视频，质量同级甚至更现代。",
     tags: ["机器人", "运动学", "Jacobian", "大二"],
     link: "https://www.pearson.com/en-gb/subject-catalog/p/introduction-to-robotics-global-edition/P200000003994",
-    linkLabel: "出版社 · Pearson"
+    linkLabel: "出版社 · Pearson",
+    freeLink: "http://hades.mech.northwestern.edu/index.php/Modern_Robotics",
+    freeLabel: "免费替代：《Modern Robotics》"
   },
   {
     id: "corke-rvc",
@@ -150,9 +166,95 @@ window.LIBRARY_BOOKS = [
     category: "机器人学 · 实践",
     accent: "#7ea6c9",
     glyph: "🦾",
-    desc: "代码驱动：作者官网免费提供全部 Python/MATLAB 工具链与练习代码，最适合“边学边跑”。配合 ROS 与仿真，大二开始用。",
+    desc: "代码驱动：作者官网免费提供全部 Python/MATLAB 工具链、练习代码，并长期提供旧版免费下载，最适合“边学边跑”。",
     tags: ["Python", "MATLAB", "工具链", "大二"],
     link: "https://petercorke.com/rvc3p/home/",
-    linkLabel: "作者官网 · 免费工具链"
+    linkLabel: "第三版官网 · 免费工具链",
+    freeLink: "https://petercorke.com/rvc/",
+    freeLabel: "作者官网 · 旧版免费下载"
+  },
+  {
+    id: "feynman-lectures",
+    title: "The Feynman Lectures on Physics（费曼物理学讲义）",
+    edition: "三卷 · New Millennium",
+    author: "Feynman, Leighton, Sands",
+    org: "Caltech 官方",
+    category: "物理 · 免费经典",
+    accent: "#9a8fd0",
+    glyph: "📚",
+    desc: "Caltech 官方免费在线版，物理直觉的巅峰之作。力学卡概念时的第一补充读物，配合伯克利主线使用。",
+    tags: ["费曼", "免费在线阅读", "直觉"],
+    link: "https://www.feynmanlectures.caltech.edu/",
+    linkLabel: "免费在线阅读（Caltech 官方）"
+  },
+  {
+    id: "openstax-up",
+    title: "University Physics（大学物理）Vol 1–3",
+    edition: "CC BY 开源",
+    author: "Ling, Sanny, Moebs",
+    org: "OpenStax · Rice University",
+    category: "物理 · 免费教材",
+    accent: "#7ec9a6",
+    glyph: "🏛️",
+    desc: "完全免费的大学物理教材（CC BY 许可），含例题、习题与解答，可下载 PDF 或在线读，适合与理大 AP 物理课对照。",
+    tags: ["OpenStax", "CC BY", "免费 PDF"],
+    link: "https://openstax.org/details/books/university-physics-volume-1",
+    linkLabel: "免费下载（OpenStax）"
+  },
+  {
+    id: "strang-calculus",
+    title: "Calculus（微积分）",
+    edition: "第三版 · 1991",
+    author: "Gilbert Strang",
+    org: "MIT OCW",
+    category: "数学 · 免费教材",
+    accent: "#e0b86a",
+    glyph: "∫",
+    desc: "MIT 官方免费全本，涵盖单变量与多变量微积分，例题习题齐全，是普林斯顿读本和 Apostol 的免费同段位替代。",
+    tags: ["Strang", "免费 PDF", "微积分"],
+    link: "https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/pages/open-textbook/",
+    linkLabel: "免费全本 PDF（MIT OCW）"
+  },
+  {
+    id: "tong-dynamics",
+    title: "Lectures on Classical Dynamics",
+    edition: "约 130 页讲义",
+    author: "David Tong",
+    org: "Cambridge DAMTP",
+    category: "物理 · 免费讲义",
+    accent: "#c38d94",
+    glyph: "🎓",
+    desc: "剑桥理论物理讲义的黄金标准：拉格朗日/哈密顿体系清晰严密，免费 PDF。Taylor 与朗道之间的最佳桥梁。",
+    tags: ["David Tong", "分析力学", "免费 PDF"],
+    link: "http://www.damtp.cam.ac.uk/user/tong/dynamics.html",
+    linkLabel: "免费 PDF（剑桥官方）"
+  },
+  {
+    id: "modern-robotics",
+    title: "Modern Robotics: Mechanics, Planning, and Control",
+    edition: "官方免费预习版",
+    author: "Kevin Lynch & Frank Park",
+    org: "Northwestern University",
+    category: "机器人学 · 免费教材",
+    accent: "#7ea6c9",
+    glyph: "🦿",
+    desc: "机器人学的现代标准教材：旋量理论、运动学、动力学、规划、控制，官方免费 PDF + 全套视频课，大二正式进入。",
+    tags: ["机器人", "免费 PDF", "视频课", "大二"],
+    link: "http://hades.mech.northwestern.edu/index.php/Modern_Robotics",
+    linkLabel: "免费预习版 + 视频（官方）"
+  },
+  {
+    id: "ladw",
+    title: "Linear Algebra Done Wrong",
+    edition: "荣誉级线代",
+    author: "Sergei Treil",
+    org: "Brown University",
+    category: "数学 · 免费教材",
+    accent: "#7ea6c9",
+    glyph: "🧩",
+    desc: "作者免费公开的荣誉级线性代数教材（284 页，9 章），证明严谨，免费 PDF，作 Strang 之外的进阶补强。",
+    tags: ["线代", "免费 PDF", "进阶"],
+    link: "https://www.math.brown.edu/streil/papers/LADW/LADW.html",
+    linkLabel: "免费 PDF（作者官方）"
   }
 ];

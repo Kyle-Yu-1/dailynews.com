@@ -56,8 +56,13 @@
     if (b.localPdf) {
       actions += '<button class="book-action primary" data-act="read" data-id="' + escAttr(b.id) + '">📖 站内浏览</button>';
       actions += '<a class="book-action" href="' + escAttr(b.localPdf) + '" download>⤓ 本地下载' + (b.size ? ' · ' + esc(b.size) : '') + '</a>';
-    } else if (b.link) {
-      actions += '<a class="book-action primary" href="' + escAttr(b.link) + '" target="_blank" rel="noopener">🌐 ' + esc(b.linkLabel || '官网 · 官方渠道') + '</a>';
+    } else {
+      if (b.freeLink) {
+        actions += '<a class="book-action primary" href="' + escAttr(b.freeLink) + '" target="_blank" rel="noopener">🎁 ' + esc(b.freeLabel || '免费资源') + '</a>';
+      }
+      if (b.link) {
+        actions += '<a class="book-action" href="' + escAttr(b.link) + '" target="_blank" rel="noopener">🌐 ' + esc(b.linkLabel || '官网 · 官方渠道') + '</a>';
+      }
     }
     return '<article class="book-card">'
       + coverHtml(b)
