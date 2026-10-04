@@ -63,7 +63,7 @@
   }
 
   function hideAll() {
-    [listView, detailView, treeView, notesView, noteReader, document.getElementById('tasksView'), document.getElementById('libraryView'), document.getElementById('libraryReader'), document.getElementById('aiView'), document.getElementById('vocabView')].forEach(function (v) {
+    [listView, detailView, treeView, notesView, noteReader, document.getElementById('tasksView'), document.getElementById('libraryView'), document.getElementById('libraryReader'), document.getElementById('aiView'), document.getElementById('vocabView'), document.getElementById('coursesView')].forEach(function (v) {
       if (v) v.classList.add('hidden');
     });
   }

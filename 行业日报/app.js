@@ -245,7 +245,7 @@
     currentReport = null;
     detailView.classList.add('hidden');
     listView.classList.remove('hidden');
-    ['libraryReader', 'libraryView', 'aiView', 'vocabView'].forEach(function (id) { var el = document.getElementById(id); if (el) el.classList.add('hidden'); });
+    ['libraryReader', 'libraryView', 'coursesView', 'aiView', 'vocabView'].forEach(function (id) { var el = document.getElementById(id); if (el) el.classList.add('hidden'); });
     pageTitle.textContent = currentIndustry;
     var items = filteredReports();
     if (!items.length) {
@@ -322,7 +322,7 @@
   treeBtn.addEventListener('click', function () {
     listView.classList.add('hidden');
     detailView.classList.add('hidden');
-    [document.getElementById('notesView'), document.getElementById('noteReader'), document.getElementById('tasksView'), document.getElementById('libraryView'), document.getElementById('libraryReader'), document.getElementById('aiView'), document.getElementById('vocabView')].forEach(function (v) { if (v) v.classList.add('hidden'); });
+    [document.getElementById('notesView'), document.getElementById('noteReader'), document.getElementById('tasksView'), document.getElementById('libraryView'), document.getElementById('libraryReader'), document.getElementById('aiView'), document.getElementById('vocabView'), document.getElementById('coursesView')].forEach(function (v) { if (v) v.classList.add('hidden'); });
     treeView.classList.remove('hidden');
     window.dispatchEvent(new Event('tree-open'));
   });

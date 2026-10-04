@@ -30,7 +30,7 @@
 
   function hideAll() {
     var aiView = document.getElementById('aiView');
-    [listView, detailView, treeView, notesView, noteReader, tasksView, libraryView, libraryReader, aiView, document.getElementById('vocabView')]
+    [listView, detailView, treeView, notesView, noteReader, tasksView, libraryView, libraryReader, aiView, document.getElementById('vocabView'), document.getElementById('coursesView')]
       .forEach(function (v) { if (v) v.classList.add('hidden'); });
   }
 
@@ -53,8 +53,12 @@
 
   function cardHtml(b) {
     var actions = '';
-    actions += '<button class="book-action primary" data-act="read" data-id="' + escAttr(b.id) + '">📖 站内浏览</button>';
-    actions += '<a class="book-action" href="' + escAttr(b.localPdf) + '" download>⤓ 本地下载' + (b.size ? ' · ' + esc(b.size) : '') + '</a>';
+    if (b.localPdf) {
+      actions += '<button class="book-action primary" data-act="read" data-id="' + escAttr(b.id) + '">📖 站内浏览</button>';
+      actions += '<a class="book-action" href="' + escAttr(b.localPdf) + '" download>⤓ 本地下载' + (b.size ? ' · ' + esc(b.size) : '') + '</a>';
+    } else if (b.link) {
+      actions += '<a class="book-action primary" href="' + escAttr(b.link) + '" target="_blank" rel="noopener">🌐 ' + esc(b.linkLabel || '官网 · 官方渠道') + '</a>';
+    }
     return '<article class="book-card">'
       + coverHtml(b)
       + '<div class="book-body">'
@@ -112,6 +116,7 @@
   }
 
   function openReader(b) {
+    if (!b.localPdf) return;
     currentBook = b;
     hideAll();
     libraryReader.classList.remove('hidden');

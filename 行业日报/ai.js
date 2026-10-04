@@ -29,7 +29,7 @@
   function escAttr(s) { return esc(s).replace(/'/g, '&#39;'); }
 
   function hideAll() {
-    ['listView', 'detailView', 'treeView', 'notesView', 'noteReader', 'tasksView', 'libraryView', 'libraryReader', 'aiView', 'vocabView']
+    ['listView', 'detailView', 'treeView', 'notesView', 'noteReader', 'tasksView', 'libraryView', 'libraryReader', 'aiView', 'vocabView', 'coursesView']
       .forEach(function (id) { var el = document.getElementById(id); if (el) el.classList.add('hidden'); });
   }
 
