@@ -1,0 +1,69 @@
+# TM1326 · Surface Finishing（表面处理）逐页原文
+# 来源：Canvas courses/3503 files/132833（2627_TM1326_SE.pptx，14 页，2026/27）
+
+### 第 1 页
+TM1326 - Fundamental Engineering Project · Surface finishing · 2026/2027
+
+### 第 2 页 · Learning Schedule
+30min Introduction · 45min Demonstration（Sanding / Sand blasting / Vapour polishing / Spray coating / Friction test / Roughness test）· 15min Break · 60min Practice · 30min Assessment (MC)
+
+### 第 3 页 · Workshop Safety Instructions
+General Rules:
+- DON'T operate any machine unless authorized；开机前必须会操作，熟悉急停位置。
+- DON'T leave any running machine unattended.
+- DON'T play, run, eat, or drink in the workshop.
+Specific Precautions:
+- 长发必须扎起；靠近运动机械不得穿宽松衣物及项链、围巾、手镯、手套等。
+- 必须佩戴合适 PPE（手套、安全围裙、安全鞋、面罩、护目镜）。
+- 化学品容器用后盖紧。
+- 化学品溅入眼/皮肤：用大量清水冲洗 15 分钟，必要时脱去污染衣物。
+
+### 第 4 页 · Surface finishing in Prototyping
+Surface finishing enhances the appearance and functionality of prototypes.
+- Sanding：快速磨平粗糙边缘与表面。
+- Sand blasting：除锈、除漆、除污染物，为后续处理做准备。
+- Vapour polishing：平滑 3D 打印件。
+- Spray coating：快速、低成本改善外观并提高耐久性。
+技术选择取决于材料、外观要求、时间与可用资源。
+
+### 第 5 页 · Sanding
+Purpose：去除层纹（layer lines）；改善平滑度；为喷漆/后续处理打底。
+Process：粗砂纸 120–220 grit 去粗糙 → 中 400 grit → 细 800–1000 grit 平滑 → 湿磨（更佳、少粉尘）。
+Disadvantages：耗时；费力易疲劳；过度打磨会变形/磨平细节；难触及细小缝隙与复杂几何。
+
+### 第 6 页 · Sand blasting
+Sand blasting 用高压空气把磨料颗粒（如砂）喷向表面。
+常见磨料：Aluminum oxide（氧化铝）、Glass beads（玻璃珠）、Steel grit（钢砂）。
+目的：清洁表面（除锈/漆/污染物）；增加表面粗糙度以改善涂层附着力；制造哑光表面。
+
+### 第 7 页 · Vapour polishing（一）
+目的：溶解表层（阶梯结构）使表面平滑；减少可见层纹；获得高光专业外观；降低活动件摩擦；为后续工艺做准备。
+过程：在受控腔室中暴露于溶剂蒸气 → 蒸气软化并平滑表面 → 晾干硬化。
+适用聚合物：ABS、ASA、PLA、nylon、TPU、PC 等，用不同溶剂。
+
+### 第 8 页 · Vapour polishing（二）过度抛光的后果
+Deformation（软化变形/warping）· Loss of Detail（细节模糊熔化）· Cracking（变脆、机械强度下降）· Sticky/Tacky Surface（溶剂未全蒸发，表面发粘吸尘）。
+
+### 第 9 页 · Spray coating
+目的：改善外观与颜色；均匀平滑表面；防潮/防磨/防 UV 提耐久；选合适涂料（如 Teflon、silicone）可减/增摩擦。
+过程：清洁以助附着 → 通风处用喷枪喷薄而均匀的涂层 → 典型为 primer + paint + clear coat 三层 → 每层干后再喷下一层。
+优点：快、易涂、低成本、适用多种表面。
+
+### 第 10 页 · Friction test
+定义：Friction is a force that opposes motion between two surfaces in contact.
+影响因素：Surface roughness、Material type、Weight/force pressing surfaces、Lubrication。
+用途：评估材料/涂层/润滑剂的性能、效率与质量；确定适用性、优化设计。
+摩擦的日常用途：行走跑步（防滑）、刹车（制动）、抓握物体、擦火柴点火、驾车（轮胎抓地）。
+
+### 第 11 页 · Roughness test
+目的：测量表面的纹理/平滑度。
+方法：粗糙度仪（profilometer）让探针扫过表面，记录峰与谷。
+重要性：影响摩擦与磨损；影响外观与手感；影响零件配合与功能。
+日常：粗糙路面防滑、手柄/运动器材/工具粗纹理更好抓握、粗糙表面让油漆/胶/涂层粘得更牢。
+
+### 第 12 页 · Practice
+3D 打印件表面处理三件套：1. Sanding　2. Vapour polishing　3. Painting
+
+### 第 13–14 页 · 版权声明 + END
+
+覆盖页清单：第 1..14 页，缺页：无。

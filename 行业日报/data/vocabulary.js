@@ -1322,6 +1322,956 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
+    "id": "eie-133",
+    "word": "figure",
+    "abbr": "",
+    "meaning": "画布（整张图对象）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-134",
+    "word": "patch",
+    "abbr": "",
+    "meaning": "补丁对象（画布 / 坐标区的底片矩形）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-135",
+    "word": "facecolor",
+    "abbr": "",
+    "meaning": "背景色 / 表面颜色",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-136",
+    "word": "edgecolor",
+    "abbr": "",
+    "meaning": "描边颜色",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-137",
+    "word": "alpha",
+    "abbr": "",
+    "meaning": "透明度",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-138",
+    "word": "colormap (cmap)",
+    "abbr": "",
+    "meaning": "色带 / 颜色映射表",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-139",
+    "word": "Normalize",
+    "abbr": "",
+    "meaning": "归一化（把数值映射到 0–1）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-140",
+    "word": "TwoSlopeNorm",
+    "abbr": "",
+    "meaning": "双斜率归一化（正负发散用）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-141",
+    "word": "ScalarMappable",
+    "abbr": "",
+    "meaning": "标量可映射对象（colorbar 的桥）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-142",
+    "word": "colorbar",
+    "abbr": "",
+    "meaning": "颜色条（渐变色示意图 + 数值标尺）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-143",
+    "word": "gradient",
+    "abbr": "",
+    "meaning": "渐变",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-144",
+    "word": "hatch",
+    "abbr": "",
+    "meaning": "填充纹理（斜线、点等）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-145",
+    "word": "bar_label",
+    "abbr": "",
+    "meaning": "柱顶数值标签",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-146",
+    "word": "yerr",
+    "abbr": "",
+    "meaning": "误差棒长度",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-147",
+    "word": "capsize",
+    "abbr": "",
+    "meaning": "误差棒端帽大小",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-148",
+    "word": "annotate",
+    "abbr": "",
+    "meaning": "注释标注（箭头指向关键点）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-149",
+    "word": "spines",
+    "abbr": "",
+    "meaning": "坐标轴边框线",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-150",
+    "word": "bbox_inches",
+    "abbr": "",
+    "meaning": "导出时的裁剪边界",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-151",
+    "word": "dpi",
+    "abbr": "",
+    "meaning": "每英寸点数（图像分辨率）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-152",
+    "word": "interpolation",
+    "abbr": "",
+    "meaning": "插值（bicubic 双三次插值）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-153",
+    "word": "transAxes",
+    "abbr": "",
+    "meaning": "轴坐标变换（0..1 相对坐标）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-154",
+    "word": "viridis",
+    "abbr": "",
+    "meaning": "感知均匀色带（蓝紫→黄）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-155",
+    "word": "RdYlGn",
+    "abbr": "",
+    "meaning": "红黄绿发散色带",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-156",
+    "word": "FancyBboxPatch",
+    "abbr": "",
+    "meaning": "圆角矩形补丁",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-157",
+    "word": "constrained_layout",
+    "abbr": "",
+    "meaning": "受约束自动布局",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-158",
+    "word": "tight_layout",
+    "abbr": "",
+    "meaning": "紧凑布局",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-159",
+    "word": "scatter plot",
+    "abbr": "",
+    "meaning": "散点图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-160",
+    "word": "bubble chart",
+    "abbr": "",
+    "meaning": "气泡图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-161",
+    "word": "heatmap",
+    "abbr": "",
+    "meaning": "热力图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-162",
+    "word": "boxplot",
+    "abbr": "",
+    "meaning": "箱线图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-163",
+    "word": "radar chart",
+    "abbr": "",
+    "meaning": "雷达图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-164",
+    "word": "rose chart / Nightingale rose",
+    "abbr": "",
+    "meaning": "南丁格尔玫瑰图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-165",
+    "word": "bullet chart",
+    "abbr": "",
+    "meaning": "子弹图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-166",
+    "word": "waterfall chart",
+    "abbr": "",
+    "meaning": "瀑布图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-167",
+    "word": "sunburst chart",
+    "abbr": "",
+    "meaning": "旭日图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-168",
+    "word": "stacked bar / stacked area",
+    "abbr": "",
+    "meaning": "堆叠柱状图 / 堆叠面积图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-169",
+    "word": "diverging bar",
+    "abbr": "",
+    "meaning": "双向条形图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-170",
+    "word": "dimension",
+    "abbr": "",
+    "meaning": "维度（分类字段）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-171",
+    "word": "measure",
+    "abbr": "",
+    "meaning": "度量（数值指标）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-172",
+    "word": "data cleaning",
+    "abbr": "",
+    "meaning": "数据清洗",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-173",
+    "word": "data aggregation",
+    "abbr": "",
+    "meaning": "数据聚合",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-174",
+    "word": "trend line",
+    "abbr": "",
+    "meaning": "趋势线",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-175",
+    "word": "mean line",
+    "abbr": "",
+    "meaning": "均值线",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-176",
+    "word": "annotation",
+    "abbr": "",
+    "meaning": "注释标注",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-177",
+    "word": "chart type selection",
+    "abbr": "",
+    "meaning": "图表选型",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-178",
+    "word": "color scheme",
+    "abbr": "",
+    "meaning": "配色方案",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-179",
+    "word": "hierarchy",
+    "abbr": "",
+    "meaning": "信息层级",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-180",
+    "word": "preset style",
+    "abbr": "",
+    "meaning": "预设风格（如 ggplot、fivethirtyeight）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-181",
+    "word": "style.use / style.context",
+    "abbr": "",
+    "meaning": "全局 / 局部加载风格",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-182",
+    "word": "theme",
+    "abbr": "",
+    "meaning": "主题（Dracula 等）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-183",
+    "word": "rcParams",
+    "abbr": "",
+    "meaning": "运行时配置参数（字体、网格、线条等）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-184",
+    "word": "mplstyle",
+    "abbr": "",
+    "meaning": "Matplotlib 样式文件（.mplstyle）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-185",
+    "word": "glow",
+    "abbr": "",
+    "meaning": "发光（线条光效）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-186",
+    "word": "qbstyles",
+    "abbr": "",
+    "meaning": "QuantumBlack 的 Matplotlib 样式库",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-187",
+    "word": "matplotx",
+    "abbr": "",
+    "meaning": "主题库（Dracula、Pitaya Smoothie）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-188",
+    "word": "mplcyberpunk",
+    "abbr": "",
+    "meaning": "赛博朋克风格库",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-189",
+    "word": "serif / sans-serif",
+    "abbr": "",
+    "meaning": "衬线体 / 无衬线体",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-190",
+    "word": "monospace",
+    "abbr": "",
+    "meaning": "等宽字体",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-191",
+    "word": "markerfacecolor",
+    "abbr": "",
+    "meaning": "标记填充色",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-192",
+    "word": "titlecolor / labelcolor",
+    "abbr": "",
+    "meaning": "标题色 / 轴标签色",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-193",
+    "word": "watermark",
+    "abbr": "",
+    "meaning": "水印",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-194",
+    "word": "zorder",
+    "abbr": "",
+    "meaning": "图层顺序（数值大靠上）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-195",
+    "word": "fig.text",
+    "abbr": "",
+    "meaning": "画布上的文字（坐标 0–1）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-196",
+    "word": "imread",
+    "abbr": "",
+    "meaning": "读取图片文件",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-197",
+    "word": "LinearSegmentedColormap",
+    "abbr": "",
+    "meaning": "自定义分段色带",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-198",
+    "word": "rc_context",
+    "abbr": "",
+    "meaning": "临时覆盖样式的上下文",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-199",
+    "word": "default style",
+    "abbr": "",
+    "meaning": "默认风格（恢复用）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-200",
+    "word": "brand / logo corner",
+    "abbr": "",
+    "meaning": "品牌角标",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-201",
+    "word": "polar coordinates",
+    "abbr": "",
+    "meaning": "极坐标",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-202",
+    "word": "thetagrid / rgrid",
+    "abbr": "",
+    "meaning": "角度网格 / 半径网格",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-203",
+    "word": "LogNorm",
+    "abbr": "",
+    "meaning": "对数归一化",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-204",
+    "word": "BoundaryNorm",
+    "abbr": "",
+    "meaning": "边界（分档）归一化",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-205",
+    "word": "ListedColormap",
+    "abbr": "",
+    "meaning": "离散色带",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-206",
+    "word": "sequential colormap",
+    "abbr": "",
+    "meaning": "顺序型色带",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-207",
+    "word": "diverging colormap",
+    "abbr": "",
+    "meaning": "发散型色带",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-208",
+    "word": "qualitative colormap",
+    "abbr": "",
+    "meaning": "定性（分类）色带",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-209",
+    "word": "stripes texture",
+    "abbr": "",
+    "meaning": "条纹纹理",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-210",
+    "word": "rounded canvas",
+    "abbr": "",
+    "meaning": "圆角画布",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-211",
+    "word": "transparent",
+    "abbr": "",
+    "meaning": "透明背景",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-212",
+    "word": "object-oriented API",
+    "abbr": "",
+    "meaning": "面向对象式（fig/ax 对象）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-213",
+    "word": "pyplot state machine",
+    "abbr": "",
+    "meaning": "pyplot 状态机式",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-214",
+    "word": "pandas plot",
+    "abbr": "",
+    "meaning": "pandas 一行式绘图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-215",
+    "word": "setter",
+    "abbr": "",
+    "meaning": "set_ 系列修改方法",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-216",
+    "word": "plt.gca()",
+    "abbr": "",
+    "meaning": "获取当前坐标轴",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-217",
+    "word": "ax.get_figure()",
+    "abbr": "",
+    "meaning": "由坐标轴取回画布",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-218",
+    "word": "kind",
+    "abbr": "",
+    "meaning": "pandas .plot 的选图型参数",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-219",
+    "word": "Artist",
+    "abbr": "",
+    "meaning": "Matplotlib 图形元素基类（线/柱/轴/标题）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-220",
+    "word": "Line2D",
+    "abbr": "",
+    "meaning": "线条对象（ax.plot 的返回值）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-221",
+    "word": "plt.gcf()",
+    "abbr": "",
+    "meaning": "获取当前画布（get current figure）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-222",
+    "word": "plt.sca() / plt.scf()",
+    "abbr": "",
+    "meaning": "把某坐标轴 / 画布设为当前",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "Python / 数据可视化（pandas + Matplotlib）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-223",
+    "word": "Nightingale rose chart",
+    "abbr": "",
+    "meaning": "南丁格尔玫瑰图（极坐标柱状图）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🔊 关键术语读音提示（谐音 · 可视化高频 20 条，2026-09-24 补）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-224",
+    "word": "polar coordinates",
+    "abbr": "",
+    "meaning": "极坐标（角度 + 半径）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🔊 关键术语读音提示（谐音 · 可视化高频 20 条，2026-09-24 补）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-225",
+    "word": "projection='polar'",
+    "abbr": "",
+    "meaning": "极坐标投影",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🔊 关键术语读音提示（谐音 · 可视化高频 20 条，2026-09-24 补）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-226",
+    "word": "theta",
+    "abbr": "",
+    "meaning": "角度（弧度制）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🔊 关键术语读音提示（谐音 · 可视化高频 20 条，2026-09-24 补）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-227",
+    "word": "set_theta_zero_location",
+    "abbr": "",
+    "meaning": "设定 0° 方向（N=正北）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🔊 关键术语读音提示（谐音 · 可视化高频 20 条，2026-09-24 补）",
+    "sentence": ""
+  },
+  {
     "id": "me-001",
     "word": "Engineering Design Process",
     "abbr": "EDP",
@@ -1893,6 +2843,336 @@ window.VOCABULARY = [
   },
   {
     "id": "me-058",
+    "word": "Open Circuit",
+    "abbr": "",
+    "meaning": "开路",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-059",
+    "word": "Closed Circuit",
+    "abbr": "",
+    "meaning": "闭路 / 通路",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-060",
+    "word": "Short Circuit",
+    "abbr": "",
+    "meaning": "短路",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-061",
+    "word": "Component",
+    "abbr": "",
+    "meaning": "元件",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-062",
+    "word": "Connection",
+    "abbr": "",
+    "meaning": "连接",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-063",
+    "word": "Printed Circuit Board",
+    "abbr": "PCB",
+    "meaning": "印刷电路板",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-064",
+    "word": "Digital Signal",
+    "abbr": "",
+    "meaning": "数字信号",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-065",
+    "word": "Analog Signal",
+    "abbr": "",
+    "meaning": "模拟信号",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-066",
+    "word": "Pulse",
+    "abbr": "",
+    "meaning": "脉冲",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-067",
+    "word": "Bus",
+    "abbr": "",
+    "meaning": "总线",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-068",
+    "word": "Tachometer",
+    "abbr": "",
+    "meaning": "转速表",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-069",
+    "word": "Variable Resistor",
+    "abbr": "",
+    "meaning": "可变电阻",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-070",
+    "word": "Voltage Regulator Module",
+    "abbr": "",
+    "meaning": "调压 / 稳压模块",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-071",
+    "word": "Two-side Switch",
+    "abbr": "",
+    "meaning": "双掷开关",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-072",
+    "word": "Li-Ion Battery",
+    "abbr": "",
+    "meaning": "锂离子电池",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-073",
+    "word": "Dupont Wire",
+    "abbr": "",
+    "meaning": "杜邦线",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-074",
+    "word": "Jumper Wire",
+    "abbr": "",
+    "meaning": "跳线",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-075",
+    "word": "Pulse Width",
+    "abbr": "",
+    "meaning": "脉宽",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-076",
+    "word": "Sensor Shield",
+    "abbr": "",
+    "meaning": "传感器扩展板",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-077",
+    "word": "NEMA-17",
+    "abbr": "",
+    "meaning": "NEMA 17 步进电机规格（1.7in 安装面）",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-078",
+    "word": "Step Angle",
+    "abbr": "",
+    "meaning": "步距角",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-079",
+    "word": "Steps per Revolution",
+    "abbr": "",
+    "meaning": "每转步数",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-080",
+    "word": "Driver Module",
+    "abbr": "",
+    "meaning": "驱动模块",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-081",
+    "word": "A4988",
+    "abbr": "",
+    "meaning": "A4988 步进电机驱动芯片",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-082",
+    "word": "Step / Direction",
+    "abbr": "",
+    "meaning": "步进 / 方向（控制引脚）",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-083",
+    "word": "Library",
+    "abbr": "",
+    "meaning": "库（Arduino 软件库）",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-084",
+    "word": "AccelStepper",
+    "abbr": "",
+    "meaning": "AccelStepper 步进电机库",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-085",
+    "word": "analogWrite",
+    "abbr": "",
+    "meaning": "analogWrite（PWM 输出函数）",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-086",
+    "word": "Pin Assignment",
+    "abbr": "",
+    "meaning": "引脚分配",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-087",
+    "word": "Power Supply",
+    "abbr": "",
+    "meaning": "电源",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-088",
+    "word": "Rotation Direction",
+    "abbr": "",
+    "meaning": "旋转方向",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-089",
+    "word": "Forward / Reverse",
+    "abbr": "",
+    "meaning": "正转 / 反转",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-090",
+    "word": "Reflection Paper",
+    "abbr": "",
+    "meaning": "反光纸",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "电子原型",
+    "sentence": ""
+  },
+  {
+    "id": "me-091",
     "word": "Adhesive Joint",
     "abbr": "",
     "meaning": "胶接接头",
@@ -1902,7 +3182,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-059",
+    "id": "me-092",
     "word": "Adhesion",
     "abbr": "",
     "meaning": "粘附",
@@ -1912,7 +3192,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-060",
+    "id": "me-093",
     "word": "Cohesion",
     "abbr": "",
     "meaning": "内聚",
@@ -1922,7 +3202,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-061",
+    "id": "me-094",
     "word": "Mechanical Bonding",
     "abbr": "",
     "meaning": "机械键合",
@@ -1932,7 +3212,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-062",
+    "id": "me-095",
     "word": "Physical Bonding",
     "abbr": "",
     "meaning": "物理键合",
@@ -1942,7 +3222,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-063",
+    "id": "me-096",
     "word": "Chemical Bonding",
     "abbr": "",
     "meaning": "化学键合",
@@ -1952,7 +3232,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-064",
+    "id": "me-097",
     "word": "Natural / Synthetic / Hybrid Adhesive",
     "abbr": "",
     "meaning": "天然 / 合成 / 混合胶粘剂",
@@ -1962,7 +3242,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-065",
+    "id": "me-098",
     "word": "Epoxy",
     "abbr": "",
     "meaning": "环氧树脂",
@@ -1972,7 +3252,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-066",
+    "id": "me-099",
     "word": "Cyanoacrylate",
     "abbr": "",
     "meaning": "氰基丙烯酸酯（快干胶）",
@@ -1982,7 +3262,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-067",
+    "id": "me-100",
     "word": "Silicone",
     "abbr": "",
     "meaning": "硅胶",
@@ -1992,7 +3272,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-068",
+    "id": "me-101",
     "word": "Surface Preparation",
     "abbr": "",
     "meaning": "表面准备",
@@ -2002,7 +3282,7 @@ window.VOCABULARY = [
     "sentence": "The object of surface preparation is to avoid interfacial failures in adhesive bonding."
   },
   {
-    "id": "me-069",
+    "id": "me-102",
     "word": "Surface Energy",
     "abbr": "",
     "meaning": "表面能",
@@ -2012,7 +3292,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-070",
+    "id": "me-103",
     "word": "Substrate",
     "abbr": "",
     "meaning": "被粘基材",
@@ -2022,7 +3302,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-071",
+    "id": "me-104",
     "word": "Lap Joint",
     "abbr": "",
     "meaning": "搭接接头",
@@ -2032,7 +3312,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-072",
+    "id": "me-105",
     "word": "Butt Joint",
     "abbr": "",
     "meaning": "对接接头",
@@ -2042,7 +3322,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-073",
+    "id": "me-106",
     "word": "Scarf Joint",
     "abbr": "",
     "meaning": "斜面接头",
@@ -2052,7 +3332,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-074",
+    "id": "me-107",
     "word": "Peel",
     "abbr": "",
     "meaning": "剥离",
@@ -2062,7 +3342,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-075",
+    "id": "me-108",
     "word": "Surface Finishing",
     "abbr": "",
     "meaning": "表面处理",
@@ -2072,7 +3352,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-076",
+    "id": "me-109",
     "word": "Sanding",
     "abbr": "",
     "meaning": "砂纸打磨",
@@ -2082,7 +3362,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-077",
+    "id": "me-110",
     "word": "Grit",
     "abbr": "",
     "meaning": "目数",
@@ -2092,7 +3372,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-078",
+    "id": "me-111",
     "word": "Vapour Polishing",
     "abbr": "",
     "meaning": "蒸气抛光",
@@ -2102,7 +3382,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-079",
+    "id": "me-112",
     "word": "Spray Coating",
     "abbr": "",
     "meaning": "喷涂",
@@ -2112,7 +3392,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-080",
+    "id": "me-113",
     "word": "Primer",
     "abbr": "",
     "meaning": "底漆",
@@ -2122,7 +3402,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-081",
+    "id": "me-114",
     "word": "Friction Test",
     "abbr": "",
     "meaning": "摩擦测试",
@@ -2132,7 +3412,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-082",
+    "id": "me-115",
     "word": "Roughness Test",
     "abbr": "",
     "meaning": "粗糙度测试",
@@ -2142,7 +3422,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-083",
+    "id": "me-116",
     "word": "Roughness",
     "abbr": "Ra",
     "meaning": "表面粗糙度",
@@ -2152,7 +3432,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-084",
+    "id": "me-117",
     "word": "Laser Cutting",
     "abbr": "",
     "meaning": "激光切割",
@@ -2162,7 +3442,7 @@ window.VOCABULARY = [
     "sentence": "Effect of process parameters on the kerf width during the laser cutting process."
   },
   {
-    "id": "me-085",
+    "id": "me-118",
     "word": "Engraving",
     "abbr": "",
     "meaning": "雕刻",
@@ -2172,7 +3452,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-086",
+    "id": "me-119",
     "word": "Non-metal Material",
     "abbr": "",
     "meaning": "非金属材料",
@@ -2182,7 +3462,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-087",
+    "id": "me-120",
     "word": "Computer Numerical Control",
     "abbr": "CNC",
     "meaning": "计算机数控",
@@ -2192,7 +3472,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-088",
+    "id": "me-121",
     "word": "Vector File",
     "abbr": "",
     "meaning": "矢量文件",
@@ -2202,7 +3482,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-089",
+    "id": "me-122",
     "word": "Kerf",
     "abbr": "",
     "meaning": "切缝",
@@ -2212,7 +3492,7 @@ window.VOCABULARY = [
     "sentence": "The effects of cutting geometries and cutting parameters on the surface roughness and kerf width were investigated."
   },
   {
-    "id": "me-090",
+    "id": "me-123",
     "word": "Stencil",
     "abbr": "",
     "meaning": "模板化 / 桥接",
@@ -2222,7 +3502,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-091",
+    "id": "me-124",
     "word": "Power / Speed",
     "abbr": "",
     "meaning": "功率 / 速度",
@@ -2232,7 +3512,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-092",
+    "id": "me-125",
     "word": "CorelDRAW",
     "abbr": "",
     "meaning": "CorelDRAW（排版软件）",
@@ -2242,7 +3522,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-093",
+    "id": "me-126",
     "word": "Measurement",
     "abbr": "",
     "meaning": "测量",
@@ -2252,7 +3532,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-094",
+    "id": "me-127",
     "word": "Vernier Caliper",
     "abbr": "",
     "meaning": "游标卡尺",
@@ -2262,7 +3542,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-095",
+    "id": "me-128",
     "word": "Micrometer",
     "abbr": "",
     "meaning": "千分尺",
@@ -2272,7 +3552,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-096",
+    "id": "me-129",
     "word": "Dimensional Tolerance",
     "abbr": "",
     "meaning": "尺寸公差",
@@ -2282,7 +3562,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-097",
+    "id": "me-130",
     "word": "Limits and Fits",
     "abbr": "",
     "meaning": "极限与配合",
@@ -2292,7 +3572,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-098",
+    "id": "me-131",
     "word": "Clearance Fit",
     "abbr": "",
     "meaning": "间隙配合",
@@ -2302,7 +3582,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-099",
+    "id": "me-132",
     "word": "Transition Fit",
     "abbr": "",
     "meaning": "过渡配合",
@@ -2312,7 +3592,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-100",
+    "id": "me-133",
     "word": "Interference Fit",
     "abbr": "",
     "meaning": "过盈配合",
@@ -2322,7 +3602,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-101",
+    "id": "me-134",
     "word": "Fastener",
     "abbr": "",
     "meaning": "紧固件",
@@ -2332,7 +3612,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-102",
+    "id": "me-135",
     "word": "Screw Thread",
     "abbr": "",
     "meaning": "螺纹",
@@ -2342,7 +3622,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-103",
+    "id": "me-136",
     "word": "Nut",
     "abbr": "",
     "meaning": "螺母",
@@ -2352,7 +3632,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-104",
+    "id": "me-137",
     "word": "Washer",
     "abbr": "",
     "meaning": "垫圈",
@@ -2362,7 +3642,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-105",
+    "id": "me-138",
     "word": "Drilling",
     "abbr": "",
     "meaning": "钻孔",
@@ -2372,7 +3652,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-106",
+    "id": "me-139",
     "word": "Tapping",
     "abbr": "",
     "meaning": "攻丝",
@@ -2382,7 +3662,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-107",
+    "id": "me-140",
     "word": "Clearance Hole",
     "abbr": "",
     "meaning": "通孔 / 间隙孔",
@@ -2392,7 +3672,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-108",
+    "id": "me-141",
     "word": "Torque",
     "abbr": "",
     "meaning": "扭矩",
@@ -2402,7 +3682,7 @@ window.VOCABULARY = [
     "sentence": "Torque tables aid design engineers with the proper tightening torques for a variety of fastener sizes and materials."
   },
   {
-    "id": "me-109",
+    "id": "me-142",
     "word": "Locking",
     "abbr": "",
     "meaning": "防松",
@@ -2412,7 +3692,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-110",
+    "id": "me-143",
     "word": "Torque Wrench",
     "abbr": "",
     "meaning": "扭矩扳手",
@@ -2422,7 +3702,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-111",
+    "id": "me-144",
     "word": "Bolt Grade / Class",
     "abbr": "",
     "meaning": "螺栓等级",
@@ -2432,7 +3712,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-112",
+    "id": "me-145",
     "word": "Thread Gauge",
     "abbr": "",
     "meaning": "螺纹规",
@@ -2442,7 +3722,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-113",
+    "id": "me-146",
     "word": "Pitch",
     "abbr": "",
     "meaning": "螺距",
@@ -2452,7 +3732,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-114",
+    "id": "me-147",
     "word": "Washer",
     "abbr": "",
     "meaning": "垫圈",
@@ -2462,7 +3742,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-115",
+    "id": "me-148",
     "word": "Spring Washer",
     "abbr": "",
     "meaning": "弹簧垫圈",
@@ -2472,7 +3752,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-116",
+    "id": "me-149",
     "word": "Belleville Washer",
     "abbr": "",
     "meaning": "碟形垫圈",
@@ -2482,7 +3762,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-117",
+    "id": "me-150",
     "word": "Protractor",
     "abbr": "",
     "meaning": "量角器",
@@ -2492,7 +3772,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-118",
+    "id": "me-151",
     "word": "Outside / Inside Jaws",
     "abbr": "",
     "meaning": "外量爪 / 内量爪",
@@ -2502,7 +3782,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-119",
+    "id": "me-152",
     "word": "Depth Probe",
     "abbr": "",
     "meaning": "深度尺",
@@ -2512,7 +3792,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-120",
+    "id": "me-153",
     "word": "Main Scale / Vernier Scale",
     "abbr": "",
     "meaning": "主尺 / 游标尺",
@@ -2522,7 +3802,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-121",
+    "id": "me-154",
     "word": "Parallax Error",
     "abbr": "",
     "meaning": "视差",
@@ -2532,7 +3812,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-122",
+    "id": "me-155",
     "word": "Taper Tap / Plug Tap / Bottoming Tap",
     "abbr": "",
     "meaning": "锥形丝锥 / 二锥 / 底孔丝锥",
@@ -2542,7 +3822,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-123",
+    "id": "me-156",
     "word": "Blind Hole",
     "abbr": "",
     "meaning": "盲孔",
@@ -2552,7 +3832,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-124",
+    "id": "me-157",
     "word": "Tap Drill Size",
     "abbr": "",
     "meaning": "底孔直径",
@@ -2562,7 +3842,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-125",
+    "id": "me-158",
     "word": "Bearing Surface",
     "abbr": "",
     "meaning": "支承面",
@@ -2572,7 +3852,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-126",
+    "id": "me-159",
     "word": "Limits & Fits",
     "abbr": "",
     "meaning": "极限与配合",
@@ -2582,7 +3862,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-127",
+    "id": "me-160",
     "word": "Fundamental Deviation",
     "abbr": "",
     "meaning": "基本偏差",
@@ -2592,7 +3872,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-128",
+    "id": "me-161",
     "word": "Tolerance Zone",
     "abbr": "",
     "meaning": "公差带",
@@ -2602,7 +3882,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-129",
+    "id": "me-162",
     "word": "Upper / Lower Deviation",
     "abbr": "",
     "meaning": "上偏差 / 下偏差",
@@ -2612,7 +3892,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-130",
+    "id": "me-163",
     "word": "Clearance / Interference / Transition Fit",
     "abbr": "",
     "meaning": "间隙 / 过盈 / 过渡配合",
@@ -2622,7 +3902,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-131",
+    "id": "me-164",
     "word": "Die",
     "abbr": "",
     "meaning": "板牙（攻外螺纹）",
@@ -2632,7 +3912,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-132",
+    "id": "me-165",
     "word": "Feeler Gauge",
     "abbr": "",
     "meaning": "塞尺",
@@ -2642,7 +3922,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-133",
+    "id": "me-166",
     "word": "Micrometer",
     "abbr": "",
     "meaning": "千分尺",
@@ -2652,7 +3932,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-134",
+    "id": "me-167",
     "word": "Dial Indicator",
     "abbr": "",
     "meaning": "百分表 / 千分表",
@@ -2662,7 +3942,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-135",
+    "id": "me-168",
     "word": "Steel Rule",
     "abbr": "",
     "meaning": "钢尺",
@@ -2672,7 +3952,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-136",
+    "id": "me-169",
     "word": "Square",
     "abbr": "",
     "meaning": "直角尺",
@@ -2682,7 +3962,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-137",
+    "id": "me-170",
     "word": "Spirit Level",
     "abbr": "",
     "meaning": "水平仪",
@@ -2692,7 +3972,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-138",
+    "id": "me-171",
     "word": "Least Count",
     "abbr": "",
     "meaning": "分度值",
@@ -2702,7 +3982,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-139",
+    "id": "me-172",
     "word": "Reading",
     "abbr": "",
     "meaning": "读数",
@@ -2712,7 +3992,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-140",
+    "id": "me-173",
     "word": "Zero Line",
     "abbr": "",
     "meaning": "零线",
@@ -2722,7 +4002,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-141",
+    "id": "me-174",
     "word": "Nominal Size",
     "abbr": "",
     "meaning": "公称尺寸",
@@ -2732,7 +4012,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-142",
+    "id": "me-175",
     "word": "Actual Size",
     "abbr": "",
     "meaning": "实际尺寸",
@@ -2742,7 +4022,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-143",
+    "id": "me-176",
     "word": "Preload",
     "abbr": "",
     "meaning": "预紧力",
@@ -2752,7 +4032,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-144",
+    "id": "me-177",
     "word": "Counterbore",
     "abbr": "",
     "meaning": "柱形沉孔",
@@ -2762,7 +4042,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-145",
+    "id": "me-178",
     "word": "Countersink",
     "abbr": "",
     "meaning": "锥形沉孔",
@@ -2772,7 +4052,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-146",
+    "id": "me-179",
     "word": "Major Diameter",
     "abbr": "",
     "meaning": "大径 / 外径",
@@ -2782,7 +4062,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-147",
+    "id": "me-180",
     "word": "Minor Diameter",
     "abbr": "",
     "meaning": "小径",
@@ -2792,7 +4072,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-148",
+    "id": "me-181",
     "word": "Chip",
     "abbr": "",
     "meaning": "切屑",
@@ -2802,7 +4082,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-149",
+    "id": "me-182",
     "word": "Cutting Fluid",
     "abbr": "",
     "meaning": "切削液",
@@ -2812,7 +4092,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-150",
+    "id": "me-183",
     "word": "Through Hole",
     "abbr": "",
     "meaning": "通孔",
@@ -2822,7 +4102,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-151",
+    "id": "me-184",
     "word": "Tap Wrench",
     "abbr": "",
     "meaning": "丝锥扳手",
@@ -2832,7 +4112,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-152",
+    "id": "me-185",
     "word": "Drill Press",
     "abbr": "",
     "meaning": "钻床",
@@ -2842,7 +4122,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-153",
+    "id": "me-186",
     "word": "Drill Vice",
     "abbr": "",
     "meaning": "钻床虎钳",
@@ -2852,7 +4132,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-154",
+    "id": "me-187",
     "word": "Twist Drill / Drill Bit",
     "abbr": "",
     "meaning": "麻花钻头",
@@ -2862,7 +4142,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-155",
+    "id": "me-188",
     "word": "Safety Guard",
     "abbr": "",
     "meaning": "安全护罩",
@@ -2872,7 +4152,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-156",
+    "id": "me-189",
     "word": "Belleville / Wave Washer",
     "abbr": "",
     "meaning": "碟形 / 波形垫圈",
@@ -2882,7 +4162,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-157",
+    "id": "me-190",
     "word": "Tighten / Loosen",
     "abbr": "",
     "meaning": "拧紧 / 松开",
@@ -2892,7 +4172,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-158",
+    "id": "me-191",
     "word": "Assemble / Disassemble",
     "abbr": "",
     "meaning": "装配 / 拆卸",
@@ -2902,7 +4182,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-159",
+    "id": "me-192",
     "word": "Machining Accuracy",
     "abbr": "",
     "meaning": "加工精度",
@@ -2912,7 +4192,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-160",
+    "id": "me-193",
     "word": "Vibration",
     "abbr": "",
     "meaning": "振动",
@@ -2922,7 +4202,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-161",
+    "id": "me-194",
     "word": "Screw",
     "abbr": "",
     "meaning": "螺钉",
@@ -2932,7 +4212,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-162",
+    "id": "me-195",
     "word": "Bolt",
     "abbr": "",
     "meaning": "螺栓",
@@ -2942,7 +4222,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-163",
+    "id": "me-196",
     "word": "Drill",
     "abbr": "",
     "meaning": "钻头；钻孔",
@@ -2952,7 +4232,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-164",
+    "id": "me-197",
     "word": "Depth",
     "abbr": "",
     "meaning": "深度",
@@ -2962,7 +4242,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-165",
+    "id": "me-198",
     "word": "Gauge",
     "abbr": "",
     "meaning": "规；表",
@@ -2972,7 +4252,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-166",
+    "id": "me-199",
     "word": "Hex / Hexagon",
     "abbr": "",
     "meaning": "六角",
@@ -2982,7 +4262,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-167",
+    "id": "me-200",
     "word": "Wood",
     "abbr": "",
     "meaning": "木（Wood Screw 木螺钉）",
@@ -2992,7 +4272,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-168",
+    "id": "me-201",
     "word": "Wrench",
     "abbr": "",
     "meaning": "扳手",
@@ -3002,7 +4282,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-169",
+    "id": "me-202",
     "word": "Spring",
     "abbr": "",
     "meaning": "弹簧（Spring Washer 弹簧垫圈）",
@@ -3012,7 +4292,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-170",
+    "id": "me-203",
     "word": "Thread",
     "abbr": "",
     "meaning": "螺纹",
@@ -3022,7 +4302,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-171",
+    "id": "me-204",
     "word": "Twist",
     "abbr": "",
     "meaning": "扭转（Twist Drill 麻花钻头）",
@@ -3032,7 +4312,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-172",
+    "id": "me-205",
     "word": "Vice / Vise",
     "abbr": "",
     "meaning": "虎钳",
@@ -3042,7 +4322,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-173",
+    "id": "me-206",
     "word": "Press",
     "abbr": "",
     "meaning": "压力机（Drill Press 钻床）",
@@ -3052,7 +4332,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-174",
+    "id": "me-207",
     "word": "Plug",
     "abbr": "",
     "meaning": "二锥（Plug Tap）",
@@ -3062,7 +4342,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-175",
+    "id": "me-208",
     "word": "Taper",
     "abbr": "",
     "meaning": "锥形（Taper Tap）",
@@ -3072,7 +4352,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-176",
+    "id": "me-209",
     "word": "Bilateral",
     "abbr": "",
     "meaning": "双边（公差）",
@@ -3082,7 +4362,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-177",
+    "id": "me-210",
     "word": "Dial",
     "abbr": "",
     "meaning": "表盘（Dial Indicating 表盘指示型）",
@@ -3092,7 +4372,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-178",
+    "id": "me-211",
     "word": "Imperial",
     "abbr": "",
     "meaning": "英制",
@@ -3102,7 +4382,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-179",
+    "id": "me-212",
     "word": "Metric",
     "abbr": "",
     "meaning": "公制",
@@ -3112,7 +4392,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-180",
+    "id": "me-213",
     "word": "SAE",
     "abbr": "",
     "meaning": "美国汽车工程师学会（英制螺栓等级）",
@@ -3122,7 +4402,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-181",
+    "id": "me-214",
     "word": "ASTM",
     "abbr": "",
     "meaning": "美国材料与试验协会（公制螺栓等级）",
@@ -3132,7 +4412,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-182",
+    "id": "me-215",
     "word": "Adaptor",
     "abbr": "",
     "meaning": "接杆 / 适配器",
@@ -3142,7 +4422,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-183",
+    "id": "me-216",
     "word": "Clamp",
     "abbr": "",
     "meaning": "夹紧；锁紧装置",
@@ -3152,7 +4432,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-184",
+    "id": "me-217",
     "word": "Clearance",
     "abbr": "",
     "meaning": "间隙（Clearance Hole 通孔）",
@@ -3162,7 +4442,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-185",
+    "id": "me-218",
     "word": "Deviation",
     "abbr": "",
     "meaning": "偏差（Upper / Lower Deviation）",
@@ -3172,7 +4452,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-186",
+    "id": "me-219",
     "word": "Extension",
     "abbr": "",
     "meaning": "加长（Extension Adaptor 加长接杆）",
@@ -3182,7 +4462,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-187",
+    "id": "me-220",
     "word": "Grade",
     "abbr": "",
     "meaning": "等级（Bolt Grade 螺栓等级）",
@@ -3192,7 +4472,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-188",
+    "id": "me-221",
     "word": "Guard",
     "abbr": "",
     "meaning": "护罩（Safety Guard）",
@@ -3202,7 +4482,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-189",
+    "id": "me-222",
     "word": "Handle",
     "abbr": "",
     "meaning": "手柄",
@@ -3212,7 +4492,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-190",
+    "id": "me-223",
     "word": "Head",
     "abbr": "",
     "meaning": "头部（Screw Head 螺钉头）",
@@ -3222,7 +4502,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-191",
+    "id": "me-224",
     "word": "Hole",
     "abbr": "",
     "meaning": "孔",
@@ -3232,7 +4512,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-192",
+    "id": "me-225",
     "word": "Internal / External",
     "abbr": "",
     "meaning": "内部 / 外部",
@@ -3242,7 +4522,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-193",
+    "id": "me-226",
     "word": "ISO",
     "abbr": "",
     "meaning": "国际标准化组织",
@@ -3252,7 +4532,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-194",
+    "id": "me-227",
     "word": "Length",
     "abbr": "",
     "meaning": "长度",
@@ -3262,7 +4542,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-195",
+    "id": "me-228",
     "word": "Limit",
     "abbr": "",
     "meaning": "极限（尺寸）",
@@ -3272,7 +4552,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-196",
+    "id": "me-229",
     "word": "Scale",
     "abbr": "",
     "meaning": "刻度 / 标尺",
@@ -3282,7 +4562,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-197",
+    "id": "me-230",
     "word": "Materials",
     "abbr": "",
     "meaning": "材料",
@@ -3292,7 +4572,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-198",
+    "id": "me-231",
     "word": "Probe",
     "abbr": "",
     "meaning": "探针 / 深度尺",
@@ -3302,7 +4582,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-199",
+    "id": "me-232",
     "word": "Project",
     "abbr": "",
     "meaning": "项目",
@@ -3312,7 +4592,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-200",
+    "id": "me-233",
     "word": "Quiz",
     "abbr": "",
     "meaning": "测验",
@@ -3322,7 +4602,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-201",
+    "id": "me-234",
     "word": "Safety",
     "abbr": "",
     "meaning": "安全",
@@ -3332,7 +4612,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-202",
+    "id": "me-235",
     "word": "Socket",
     "abbr": "",
     "meaning": "内六角（Hex Socket）",
@@ -3342,7 +4622,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-203",
+    "id": "me-236",
     "word": "Secure",
     "abbr": "",
     "meaning": "紧固 / 固定",
@@ -3352,7 +4632,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-204",
+    "id": "me-237",
     "word": "Testing",
     "abbr": "",
     "meaning": "测试",
@@ -3362,7 +4642,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-205",
+    "id": "me-238",
     "word": "Transition",
     "abbr": "",
     "meaning": "过渡（配合）",
@@ -3372,7 +4652,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-206",
+    "id": "me-239",
     "word": "Turn",
     "abbr": "",
     "meaning": "旋转",
@@ -3382,7 +4662,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-207",
+    "id": "me-240",
     "word": "Zone",
     "abbr": "",
     "meaning": "带（Tolerance Zone 公差带）",
@@ -3392,7 +4672,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-208",
+    "id": "me-241",
     "word": "Assembly",
     "abbr": "",
     "meaning": "装配",
@@ -3402,7 +4682,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-209",
+    "id": "me-242",
     "word": "Interference",
     "abbr": "",
     "meaning": "干涉",
@@ -3412,7 +4692,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-210",
+    "id": "me-243",
     "word": "Design for Manufacturing and Assembly",
     "abbr": "DFMA",
     "meaning": "面向制造与装配的设计",
@@ -3422,7 +4702,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-211",
+    "id": "me-244",
     "word": "Alignment",
     "abbr": "",
     "meaning": "对齐",
@@ -3432,7 +4712,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-212",
+    "id": "me-245",
     "word": "Review",
     "abbr": "",
     "meaning": "复盘",

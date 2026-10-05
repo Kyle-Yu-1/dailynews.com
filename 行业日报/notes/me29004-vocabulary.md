@@ -64,6 +64,39 @@
 - Wiring — 接线
 - Sensor — 传感器
 - Limit Switch — 限位开关
+- Open Circuit — 开路
+- Closed Circuit — 闭路 / 通路
+- Short Circuit — 短路
+- Component — 元件
+- Connection — 连接
+- Printed Circuit Board (PCB) — 印刷电路板
+- Digital Signal — 数字信号
+- Analog Signal — 模拟信号
+- Pulse — 脉冲
+- Bus — 总线
+- Tachometer — 转速表
+- Variable Resistor — 可变电阻
+- Voltage Regulator Module — 调压 / 稳压模块
+- Two-side Switch — 双掷开关
+- Li-Ion Battery — 锂离子电池
+- Dupont Wire — 杜邦线
+- Jumper Wire — 跳线
+- Pulse Width — 脉宽
+- Sensor Shield — 传感器扩展板
+- NEMA-17 — NEMA 17 步进电机规格（1.7in 安装面）
+- Step Angle — 步距角
+- Steps per Revolution — 每转步数
+- Driver Module — 驱动模块
+- A4988 — A4988 步进电机驱动芯片
+- Step / Direction — 步进 / 方向（控制引脚）
+- Library — 库（Arduino 软件库）
+- AccelStepper — AccelStepper 步进电机库
+- analogWrite — analogWrite（PWM 输出函数）
+- Pin Assignment — 引脚分配
+- Power Supply — 电源
+- Rotation Direction — 旋转方向
+- Forward / Reverse — 正转 / 反转
+- Reflection Paper — 反光纸
 
 ## 胶接
 - Adhesive Joint — 胶接接头
