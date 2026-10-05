@@ -1,5 +1,19 @@
 [
   {
+    "id": "eie1005-test1-question-bank",
+    "title": "Test 1 刷题全集（三套模拟卷+专项）",
+    "desc": "5+15+2 三套全真卷、Python 读图/找错、L1 Readings、简答、考点速记卡，全部含答案",
+    "file": "eie1005-test1-question-bank.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
+    "id": "eie1005-test1-mock",
+    "title": "Test 1 全真模拟卷（5+15+2）",
+    "desc": "按今日最新结构出题：NVIDIA 5 MCQ + W1/伦理/W2/Workshop 15 MCQ + 2 道简答，含答案与解析",
+    "file": "eie1005-test1-mock.md",
+    "course": "EIE1005 · 人工智能与数据分析"
+  },
+  {
     "id": "eie1005-guest-nvidia",
     "title": "Guest Lecture · NVIDIA（Part A 十题考点）",
     "desc": "Agent=Harness+Models、Observe-Reason-Act、NVIDIA 模型矩阵、Cosmos 3、GR00T/Omniverse/Jetson Thor、预测题",
