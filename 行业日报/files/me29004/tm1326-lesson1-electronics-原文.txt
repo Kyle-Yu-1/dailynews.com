@@ -1,0 +1,118 @@
+# TM1326 Lesson 1 · Electronic Prototyping（电子原型）逐页原文
+# 来源：Canvas courses/3503 files/177171（TM1326 Lesson 1_270826.pdf，46 页，2026-08-27）
+# 讲师：Dr. Kevin Wong / Dr. Bony Chen / Eric Tong / Ir West Wo / David Lam / Nelson Lai / Leo Chak（联系方式见课件封面，不在此重复公开）
+
+### 第 1 页
+Electronic Prototyping · TM1326 · Fundamental Engineering Project
+
+### 第 2–6 页（讲师联系页，略联系方式）
+Dr. Kevin Wong · Dr. Bony Chen · Eric Tong · Ir West Wo · David Lam · Nelson Lai · Leo Chak
+
+### 第 7 页 · Basic Electronic Circuit — What is Circuit?
+- Component（元件）
+- Connection（连接）
+- Breadboard / PCB（面包板 / 印刷电路板）
+
+### 第 8 页 · Connection — Status of Connection
+1. Open Circuit（开路） 2. Closed Circuit（闭路/通路） 3. Short Circuit（短路）
+
+### 第 9 页 · Open Circuit / Closed Circuit（示意）
+
+### 第 10 页 · What are the signals?
+- Digital Signals：I/O: 1 (High), 0 (Low), Pulse；Bus (IO groups)
+- Analog Signals：Voltage (e.g. 0–5V)；Current (e.g. 0–20mA)
+
+### 第 11 页 · Type of Electric Motor
+A motor is a device that converts electrical energy into mechanical energy. This conversion is achieved through the principles of electromagnetic induction.
+1. Direct Current (DC) Motors: convert direct current electrical energy into mechanical energy. Used in toys, electric vehicles, home appliances.
+2. Servo Motors: can be controlled with great precision. Used in robotics and CNC machinery.
+3. Stepper Motors: move in discrete steps, allowing precise positioning. Used in printers, scanners, CNC machines.
+
+### 第 12 页 · Basic DC Motor Controlling — Analog Method
+A1. Controlling DC Motor Speed and Direction of rotation by Analog Voltage
+A-Lab1：Connect 2× 3.7V Li-Ion rechargeable batteries, DC Voltage Regulator Module, and DC Fan；Speed control by variable resistor（0→5V）；Swap output terminal to change direction. Remember to disconnect power before wiring.
+
+### 第 13 页 · Safety precautions
+Disconnect power before working on circuits · Keep workstations tidy · No Food or Drink on the desk
+
+### 第 14 页 · A1 Connection for A-Lab1（接线图）
+
+### 第 15 页 · A2. Directional control by Two sides Switch
+A-Lab2：Connect two-side switch between DC Voltage Module and DC Fan；select pole to change rotation direction.
+
+### 第 16 页 · A2 Connection（接线图）
+
+### 第 17 页 · A3. Measure speed of rotation by tachometer (Direct contact / contactless)
+A-Lab3：Post reflection paper to fan blade and use digital tachometer to test rotational speed.
+
+### 第 18 页 · A3：电压与转速关系
+What is the relationship between Voltage and speed of motor? Change voltage 0→5V step by 0.5V, record speed, plot graph from Excel.
+
+### 第 19 页 · Prepare for Arduino
+www.arduino.cc · Arduino Uno board (RS) · USB Cable · Breadboard Jumper Wires / Dupont Wires（公母/母母/公公）· IDE
+
+### 第 20 页 · Arduino USB Connection
+Connect Arduino UNO to computer USB；MacBook Type-C 需 USB Adapter。
+
+### 第 21 页 · Arduino Uno R3 Board
+Main Controlling Unit / Controller Board；可依程序控制 Input/Output 设备。
+
+### 第 22 页 · B1. Use Arduino control Motor speed and direction
+B-Lab1：Arduino Uno PWM PIN 控制电机；改程序上传控制速度与方向。
+L298 真值表（IA1 IA2 → 电机）：L L→Stop；H L→CW（正转）；L H→CCW（反转）；H H→Break（制动）
+
+### 第 23 页 · B1 Connection（接线图）
+
+### 第 24 页 · Digital Controlling Method — PWM (Pulse Width Modulation)
+（视频：youtube.com/watch?v=B_Ysdv1xRbA）
+
+### 第 25 页 · D4. Use Arduino control Motor speed and direction
+D-Lab4：Arduino analogWrite（deepbluembedded.com/arduino-analogwrite/）
+
+### 第 26 页 · Typical Servo Motor
+Specialized motor designed for precise control of rotational motion.
+三线：Signal（橙，输入控制信号）· VDD（红，正极）· Ground（棕，接地）
+
+### 第 27 页 · Servo Motor — 角度与脉宽
+The angle is directly proportional to the pulse width：1ms → 0°，2ms → 180°。
+
+### 第 28 页 · Sensor Shield Board
+扩展板：简化连接、扩展多路 Power/Ground 引脚。
+
+### 第 29 页 · 单伺服接线：Arduino Uno D9 → Servo Signal；5V→VDD；GND→GND
+
+### 第 30 页 · Demo Code：Arduino IDE → File → Examples → Servo → Sweep
+
+### 第 31 页 · 双伺服接线：D9、D10 两个信号引脚
+
+### 第 32 页 · 主连接（接线图）
+
+### 第 33 页 · NEMA-17 Bipolar Hybrid Stepper Motor
+- 安装面 1.7×1.7 inch 见方
+- 步距角 1.8° / 0.9°
+- 200 / 400 steps per revolution（取决于步距角）
+
+### 第 34 页 · Stepper Motor Driver Module（A4988）
+只需 Step 和 Direction 引脚控制旋转；Micro step Switch；Motor Control Pin。
+
+### 第 35 页 · 单步进接线：Arduino Uno（EN D2、D3；B2 A2 B1 A1；STEP D7；DIR D6）→ A4988 → Stepper Motor X
+
+### 第 36 页 · 主连接（接线图）
+
+### 第 37 页 · Power Supply
+Main On/Off Switch；Power Supply 220V AC → 12V DC（给驱动板供电）
+
+### 第 38 页 · Power Supply Assembly：Adaptor + Power Cord + Motor Drive Module
+
+### 第 39 页 · Installation Library
+Install AccelStepper：Tools → Manage Libraries → Search "AccelStepper" → INSTALL
+
+### 第 40 页 · What is library?（库是什么）
+
+### 第 41 页 · Pin Assignment · Library · Initial Setup for Stepper motor · Move motor for certain Steps at constant speed · Steps to MM · Key Parameters · Single_Stepper.ino
+
+### 第 42 页 · Wiring Connection Debug：Is it connected correctly all wires from Arduino to Motor Driver Module? Any Problem Find?
+
+### 第 43 页 · 版权声明（PolyU 学习材料仅供个人学习，不得复制/分发/传播）
+
+覆盖页清单：第 1..46 页（DocViewer 计 46 页；讲师联系页为隐私/联系信息，仅记姓名；纯接线图页以文字说明标注），缺页：无。
