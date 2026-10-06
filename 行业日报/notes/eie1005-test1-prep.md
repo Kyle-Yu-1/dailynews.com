@@ -17,8 +17,13 @@
 
 ---
 
-## 一、考试形式（源自 Canvas Past Paper 页 + 课程总纲）
-- 闭卷、纸质、70 分钟；Part A 10 道 MCQ（Week 5 NVIDIA 讲座）+ Part B 20 道 MCQ/简答（W1+W2 讲义与阅读/case、W3-4 Workshop、Mini-project 准备）。
+> 📝 配套[《Test 1 全真模拟卷》](eie1005-test1-mock.md)：按最新结构 5+15+2 出题，含答案与解析，先做后对答案。
+
+## 一、考试形式（2026-10-05 最新更新）
+- 闭卷、纸质、70 分钟（正常上课时间 16:30–18:20）；**全班分两间课室**——考前到 Canvas Modules → Test 1 Information 查自己的考场（两间教室相距很远，迟到不给额外时间）。
+- **Part 1：5 道 MCQ**——Week 5 NVIDIA 讲座。
+- **Part 2：15 道 MCQ + Part 3：2 道简答**——W1（含讲义中红色 Readings）+ AI 伦理 Reading/Case + W2 + W3/4 Workshop + Mini-Project 准备材料。
+- Python：不要求手写代码，但要**读懂语句并预测输出图**。
 - 教师原话：**"Test 1 - very similar short questions as the past paper Q1 and Q2."**
 - Python 不考手写代码，但要读懂语句并预测输出图（见 Workshop1 笔记）。
 
