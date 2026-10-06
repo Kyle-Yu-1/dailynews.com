@@ -121,12 +121,25 @@
 - Surface Finishing — 表面处理
 - Sanding — 砂纸打磨
 - Grit — 目数
+- Sand Blasting — 喷砂
+- Aluminium Oxide — 氧化铝（喷砂磨料）
+- Glass Beads — 玻璃珠（喷砂磨料）
+- Steel Grit — 钢砂（喷砂磨料）
+- Wet Sanding — 湿磨
 - Vapour Polishing — 蒸气抛光
+- Acetone — 丙酮（ABS 蒸气抛光溶剂）
+- Tetrahydrofuran (THF) — 四氢呋喃（PLA 蒸气抛光溶剂）
 - Spray Coating — 喷涂
 - Primer — 底漆
+- Base Coat — 色漆（喷涂中间涂层）
+- Clear Coat — 清漆（喷涂表面透明涂层）
+- Flash-off — 闪干（喷涂两层之间让溶剂挥发）
 - Friction Test — 摩擦测试
 - Roughness Test — 粗糙度测试
 - Roughness (Ra) — 表面粗糙度
+- Profilometer — 表面粗糙度仪
+- Friction Coefficient (μ) — 摩擦系数
+- Laser Polishing — 激光抛光
 
 ## 激光加工
 - Laser Cutting — 激光切割
