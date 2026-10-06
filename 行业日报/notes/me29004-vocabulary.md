@@ -141,6 +141,19 @@
 - Friction Coefficient (μ) — 摩擦系数
 - Laser Polishing — 激光抛光
 
+- Rz / Rq — 最大峰谷高度 / 均方根粗糙度
+- Static / Kinetic Friction — 静摩擦 / 动摩擦
+- Inclined Plane — 斜面（测摩擦系数）
+- Abrasive Media — 磨料（喷砂介质）
+- Satin Finish — 缎面 / 哑光表面
+- Orange Peel — 橘皮（喷漆缺陷）
+- Runs / Sags — 流挂（喷漆缺陷）
+- Dry Spray — 干喷（喷漆缺陷）
+- Surface Energy — 表面能
+- Corona Treatment — 电晕处理
+- Plasma Treatment — 等离子处理
+- Cross-cut Test — 划格法附着力测试
+
 ## 激光加工
 - Laser Cutting — 激光切割
 - Engraving — 雕刻
