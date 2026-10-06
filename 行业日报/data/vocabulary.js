@@ -3683,6 +3683,176 @@ window.VOCABULARY = [
   },
   {
     "id": "me-142",
+    "word": "Glass Transition Temperature",
+    "abbr": "Tg",
+    "meaning": "玻璃化转变温度",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-143",
+    "word": "Amorphous",
+    "abbr": "",
+    "meaning": "无定形（非晶态）",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-144",
+    "word": "Semicrystalline",
+    "abbr": "",
+    "meaning": "半结晶",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-145",
+    "word": "Solubility Parameter",
+    "abbr": "",
+    "meaning": "溶解度参数",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-146",
+    "word": "Swelling",
+    "abbr": "",
+    "meaning": "溶胀",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-147",
+    "word": "Sampling Length / Cut-off",
+    "abbr": "",
+    "meaning": "取样长度 / 截止波长",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-148",
+    "word": "Coulomb Friction",
+    "abbr": "",
+    "meaning": "库仑摩擦",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-149",
+    "word": "Adhesive Wear",
+    "abbr": "",
+    "meaning": "粘着磨损",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-150",
+    "word": "Abrasive Wear",
+    "abbr": "",
+    "meaning": "磨粒磨损",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-151",
+    "word": "Fatigue Wear",
+    "abbr": "",
+    "meaning": "疲劳磨损",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-152",
+    "word": "Corrosive Wear",
+    "abbr": "",
+    "meaning": "腐蚀磨损",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-153",
+    "word": "Adhesion Failure / Cohesion Failure",
+    "abbr": "",
+    "meaning": "附着力失效 / 内聚力失效",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-154",
+    "word": "Flash Point",
+    "abbr": "",
+    "meaning": "闪点",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-155",
+    "word": "Lower Explosive Limit",
+    "abbr": "LEL",
+    "meaning": "爆炸下限",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-156",
+    "word": "Vapour Density",
+    "abbr": "",
+    "meaning": "蒸气密度",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-157",
+    "word": "Masking",
+    "abbr": "",
+    "meaning": "遮蔽（保护不需处理的表面）",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-158",
+    "word": "Safety Data Sheet",
+    "abbr": "SDS",
+    "meaning": "安全数据表",
+    "phonetic": "",
+    "course": "ME29004/IC2117",
+    "context": "表面处理",
+    "sentence": ""
+  },
+  {
+    "id": "me-159",
     "word": "Laser Cutting",
     "abbr": "",
     "meaning": "激光切割",
@@ -3692,7 +3862,7 @@ window.VOCABULARY = [
     "sentence": "Effect of process parameters on the kerf width during the laser cutting process."
   },
   {
-    "id": "me-143",
+    "id": "me-160",
     "word": "Engraving",
     "abbr": "",
     "meaning": "雕刻",
@@ -3702,7 +3872,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-144",
+    "id": "me-161",
     "word": "Non-metal Material",
     "abbr": "",
     "meaning": "非金属材料",
@@ -3712,7 +3882,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-145",
+    "id": "me-162",
     "word": "Computer Numerical Control",
     "abbr": "CNC",
     "meaning": "计算机数控",
@@ -3722,7 +3892,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-146",
+    "id": "me-163",
     "word": "Vector File",
     "abbr": "",
     "meaning": "矢量文件",
@@ -3732,7 +3902,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-147",
+    "id": "me-164",
     "word": "Kerf",
     "abbr": "",
     "meaning": "切缝",
@@ -3742,7 +3912,7 @@ window.VOCABULARY = [
     "sentence": "The effects of cutting geometries and cutting parameters on the surface roughness and kerf width were investigated."
   },
   {
-    "id": "me-148",
+    "id": "me-165",
     "word": "Stencil",
     "abbr": "",
     "meaning": "模板化 / 桥接",
@@ -3752,7 +3922,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-149",
+    "id": "me-166",
     "word": "Power / Speed",
     "abbr": "",
     "meaning": "功率 / 速度",
@@ -3762,7 +3932,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-150",
+    "id": "me-167",
     "word": "CorelDRAW",
     "abbr": "",
     "meaning": "CorelDRAW（排版软件）",
@@ -3772,7 +3942,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-151",
+    "id": "me-168",
     "word": "Measurement",
     "abbr": "",
     "meaning": "测量",
@@ -3782,7 +3952,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-152",
+    "id": "me-169",
     "word": "Vernier Caliper",
     "abbr": "",
     "meaning": "游标卡尺",
@@ -3792,7 +3962,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-153",
+    "id": "me-170",
     "word": "Micrometer",
     "abbr": "",
     "meaning": "千分尺",
@@ -3802,7 +3972,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-154",
+    "id": "me-171",
     "word": "Dimensional Tolerance",
     "abbr": "",
     "meaning": "尺寸公差",
@@ -3812,7 +3982,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-155",
+    "id": "me-172",
     "word": "Limits and Fits",
     "abbr": "",
     "meaning": "极限与配合",
@@ -3822,7 +3992,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-156",
+    "id": "me-173",
     "word": "Clearance Fit",
     "abbr": "",
     "meaning": "间隙配合",
@@ -3832,7 +4002,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-157",
+    "id": "me-174",
     "word": "Transition Fit",
     "abbr": "",
     "meaning": "过渡配合",
@@ -3842,7 +4012,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-158",
+    "id": "me-175",
     "word": "Interference Fit",
     "abbr": "",
     "meaning": "过盈配合",
@@ -3852,7 +4022,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-159",
+    "id": "me-176",
     "word": "Fastener",
     "abbr": "",
     "meaning": "紧固件",
@@ -3862,7 +4032,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-160",
+    "id": "me-177",
     "word": "Screw Thread",
     "abbr": "",
     "meaning": "螺纹",
@@ -3872,7 +4042,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-161",
+    "id": "me-178",
     "word": "Nut",
     "abbr": "",
     "meaning": "螺母",
@@ -3882,7 +4052,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-162",
+    "id": "me-179",
     "word": "Washer",
     "abbr": "",
     "meaning": "垫圈",
@@ -3892,7 +4062,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-163",
+    "id": "me-180",
     "word": "Drilling",
     "abbr": "",
     "meaning": "钻孔",
@@ -3902,7 +4072,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-164",
+    "id": "me-181",
     "word": "Tapping",
     "abbr": "",
     "meaning": "攻丝",
@@ -3912,7 +4082,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-165",
+    "id": "me-182",
     "word": "Clearance Hole",
     "abbr": "",
     "meaning": "通孔 / 间隙孔",
@@ -3922,7 +4092,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-166",
+    "id": "me-183",
     "word": "Torque",
     "abbr": "",
     "meaning": "扭矩",
@@ -3932,7 +4102,7 @@ window.VOCABULARY = [
     "sentence": "Torque tables aid design engineers with the proper tightening torques for a variety of fastener sizes and materials."
   },
   {
-    "id": "me-167",
+    "id": "me-184",
     "word": "Locking",
     "abbr": "",
     "meaning": "防松",
@@ -3942,7 +4112,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-168",
+    "id": "me-185",
     "word": "Torque Wrench",
     "abbr": "",
     "meaning": "扭矩扳手",
@@ -3952,7 +4122,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-169",
+    "id": "me-186",
     "word": "Bolt Grade / Class",
     "abbr": "",
     "meaning": "螺栓等级",
@@ -3962,7 +4132,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-170",
+    "id": "me-187",
     "word": "Thread Gauge",
     "abbr": "",
     "meaning": "螺纹规",
@@ -3972,7 +4142,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-171",
+    "id": "me-188",
     "word": "Pitch",
     "abbr": "",
     "meaning": "螺距",
@@ -3982,7 +4152,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-172",
+    "id": "me-189",
     "word": "Washer",
     "abbr": "",
     "meaning": "垫圈",
@@ -3992,7 +4162,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-173",
+    "id": "me-190",
     "word": "Spring Washer",
     "abbr": "",
     "meaning": "弹簧垫圈",
@@ -4002,7 +4172,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-174",
+    "id": "me-191",
     "word": "Belleville Washer",
     "abbr": "",
     "meaning": "碟形垫圈",
@@ -4012,7 +4182,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-175",
+    "id": "me-192",
     "word": "Protractor",
     "abbr": "",
     "meaning": "量角器",
@@ -4022,7 +4192,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-176",
+    "id": "me-193",
     "word": "Outside / Inside Jaws",
     "abbr": "",
     "meaning": "外量爪 / 内量爪",
@@ -4032,7 +4202,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-177",
+    "id": "me-194",
     "word": "Depth Probe",
     "abbr": "",
     "meaning": "深度尺",
@@ -4042,7 +4212,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-178",
+    "id": "me-195",
     "word": "Main Scale / Vernier Scale",
     "abbr": "",
     "meaning": "主尺 / 游标尺",
@@ -4052,7 +4222,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-179",
+    "id": "me-196",
     "word": "Parallax Error",
     "abbr": "",
     "meaning": "视差",
@@ -4062,7 +4232,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-180",
+    "id": "me-197",
     "word": "Taper Tap / Plug Tap / Bottoming Tap",
     "abbr": "",
     "meaning": "锥形丝锥 / 二锥 / 底孔丝锥",
@@ -4072,7 +4242,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-181",
+    "id": "me-198",
     "word": "Blind Hole",
     "abbr": "",
     "meaning": "盲孔",
@@ -4082,7 +4252,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-182",
+    "id": "me-199",
     "word": "Tap Drill Size",
     "abbr": "",
     "meaning": "底孔直径",
@@ -4092,7 +4262,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-183",
+    "id": "me-200",
     "word": "Bearing Surface",
     "abbr": "",
     "meaning": "支承面",
@@ -4102,7 +4272,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-184",
+    "id": "me-201",
     "word": "Limits & Fits",
     "abbr": "",
     "meaning": "极限与配合",
@@ -4112,7 +4282,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-185",
+    "id": "me-202",
     "word": "Fundamental Deviation",
     "abbr": "",
     "meaning": "基本偏差",
@@ -4122,7 +4292,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-186",
+    "id": "me-203",
     "word": "Tolerance Zone",
     "abbr": "",
     "meaning": "公差带",
@@ -4132,7 +4302,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-187",
+    "id": "me-204",
     "word": "Upper / Lower Deviation",
     "abbr": "",
     "meaning": "上偏差 / 下偏差",
@@ -4142,7 +4312,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-188",
+    "id": "me-205",
     "word": "Clearance / Interference / Transition Fit",
     "abbr": "",
     "meaning": "间隙 / 过盈 / 过渡配合",
@@ -4152,7 +4322,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-189",
+    "id": "me-206",
     "word": "Die",
     "abbr": "",
     "meaning": "板牙（攻外螺纹）",
@@ -4162,7 +4332,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-190",
+    "id": "me-207",
     "word": "Feeler Gauge",
     "abbr": "",
     "meaning": "塞尺",
@@ -4172,7 +4342,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-191",
+    "id": "me-208",
     "word": "Micrometer",
     "abbr": "",
     "meaning": "千分尺",
@@ -4182,7 +4352,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-192",
+    "id": "me-209",
     "word": "Dial Indicator",
     "abbr": "",
     "meaning": "百分表 / 千分表",
@@ -4192,7 +4362,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-193",
+    "id": "me-210",
     "word": "Steel Rule",
     "abbr": "",
     "meaning": "钢尺",
@@ -4202,7 +4372,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-194",
+    "id": "me-211",
     "word": "Square",
     "abbr": "",
     "meaning": "直角尺",
@@ -4212,7 +4382,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-195",
+    "id": "me-212",
     "word": "Spirit Level",
     "abbr": "",
     "meaning": "水平仪",
@@ -4222,7 +4392,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-196",
+    "id": "me-213",
     "word": "Least Count",
     "abbr": "",
     "meaning": "分度值",
@@ -4232,7 +4402,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-197",
+    "id": "me-214",
     "word": "Reading",
     "abbr": "",
     "meaning": "读数",
@@ -4242,7 +4412,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-198",
+    "id": "me-215",
     "word": "Zero Line",
     "abbr": "",
     "meaning": "零线",
@@ -4252,7 +4422,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-199",
+    "id": "me-216",
     "word": "Nominal Size",
     "abbr": "",
     "meaning": "公称尺寸",
@@ -4262,7 +4432,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-200",
+    "id": "me-217",
     "word": "Actual Size",
     "abbr": "",
     "meaning": "实际尺寸",
@@ -4272,7 +4442,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-201",
+    "id": "me-218",
     "word": "Preload",
     "abbr": "",
     "meaning": "预紧力",
@@ -4282,7 +4452,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-202",
+    "id": "me-219",
     "word": "Counterbore",
     "abbr": "",
     "meaning": "柱形沉孔",
@@ -4292,7 +4462,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-203",
+    "id": "me-220",
     "word": "Countersink",
     "abbr": "",
     "meaning": "锥形沉孔",
@@ -4302,7 +4472,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-204",
+    "id": "me-221",
     "word": "Major Diameter",
     "abbr": "",
     "meaning": "大径 / 外径",
@@ -4312,7 +4482,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-205",
+    "id": "me-222",
     "word": "Minor Diameter",
     "abbr": "",
     "meaning": "小径",
@@ -4322,7 +4492,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-206",
+    "id": "me-223",
     "word": "Chip",
     "abbr": "",
     "meaning": "切屑",
@@ -4332,7 +4502,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-207",
+    "id": "me-224",
     "word": "Cutting Fluid",
     "abbr": "",
     "meaning": "切削液",
@@ -4342,7 +4512,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-208",
+    "id": "me-225",
     "word": "Through Hole",
     "abbr": "",
     "meaning": "通孔",
@@ -4352,7 +4522,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-209",
+    "id": "me-226",
     "word": "Tap Wrench",
     "abbr": "",
     "meaning": "丝锥扳手",
@@ -4362,7 +4532,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-210",
+    "id": "me-227",
     "word": "Drill Press",
     "abbr": "",
     "meaning": "钻床",
@@ -4372,7 +4542,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-211",
+    "id": "me-228",
     "word": "Drill Vice",
     "abbr": "",
     "meaning": "钻床虎钳",
@@ -4382,7 +4552,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-212",
+    "id": "me-229",
     "word": "Twist Drill / Drill Bit",
     "abbr": "",
     "meaning": "麻花钻头",
@@ -4392,7 +4562,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-213",
+    "id": "me-230",
     "word": "Safety Guard",
     "abbr": "",
     "meaning": "安全护罩",
@@ -4402,7 +4572,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-214",
+    "id": "me-231",
     "word": "Belleville / Wave Washer",
     "abbr": "",
     "meaning": "碟形 / 波形垫圈",
@@ -4412,7 +4582,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-215",
+    "id": "me-232",
     "word": "Tighten / Loosen",
     "abbr": "",
     "meaning": "拧紧 / 松开",
@@ -4422,7 +4592,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-216",
+    "id": "me-233",
     "word": "Assemble / Disassemble",
     "abbr": "",
     "meaning": "装配 / 拆卸",
@@ -4432,7 +4602,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-217",
+    "id": "me-234",
     "word": "Machining Accuracy",
     "abbr": "",
     "meaning": "加工精度",
@@ -4442,7 +4612,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-218",
+    "id": "me-235",
     "word": "Vibration",
     "abbr": "",
     "meaning": "振动",
@@ -4452,7 +4622,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-219",
+    "id": "me-236",
     "word": "Screw",
     "abbr": "",
     "meaning": "螺钉",
@@ -4462,7 +4632,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-220",
+    "id": "me-237",
     "word": "Bolt",
     "abbr": "",
     "meaning": "螺栓",
@@ -4472,7 +4642,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-221",
+    "id": "me-238",
     "word": "Drill",
     "abbr": "",
     "meaning": "钻头；钻孔",
@@ -4482,7 +4652,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-222",
+    "id": "me-239",
     "word": "Depth",
     "abbr": "",
     "meaning": "深度",
@@ -4492,7 +4662,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-223",
+    "id": "me-240",
     "word": "Gauge",
     "abbr": "",
     "meaning": "规；表",
@@ -4502,7 +4672,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-224",
+    "id": "me-241",
     "word": "Hex / Hexagon",
     "abbr": "",
     "meaning": "六角",
@@ -4512,7 +4682,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-225",
+    "id": "me-242",
     "word": "Wood",
     "abbr": "",
     "meaning": "木（Wood Screw 木螺钉）",
@@ -4522,7 +4692,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-226",
+    "id": "me-243",
     "word": "Wrench",
     "abbr": "",
     "meaning": "扳手",
@@ -4532,7 +4702,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-227",
+    "id": "me-244",
     "word": "Spring",
     "abbr": "",
     "meaning": "弹簧（Spring Washer 弹簧垫圈）",
@@ -4542,7 +4712,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-228",
+    "id": "me-245",
     "word": "Thread",
     "abbr": "",
     "meaning": "螺纹",
@@ -4552,7 +4722,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-229",
+    "id": "me-246",
     "word": "Twist",
     "abbr": "",
     "meaning": "扭转（Twist Drill 麻花钻头）",
@@ -4562,7 +4732,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-230",
+    "id": "me-247",
     "word": "Vice / Vise",
     "abbr": "",
     "meaning": "虎钳",
@@ -4572,7 +4742,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-231",
+    "id": "me-248",
     "word": "Press",
     "abbr": "",
     "meaning": "压力机（Drill Press 钻床）",
@@ -4582,7 +4752,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-232",
+    "id": "me-249",
     "word": "Plug",
     "abbr": "",
     "meaning": "二锥（Plug Tap）",
@@ -4592,7 +4762,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-233",
+    "id": "me-250",
     "word": "Taper",
     "abbr": "",
     "meaning": "锥形（Taper Tap）",
@@ -4602,7 +4772,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-234",
+    "id": "me-251",
     "word": "Bilateral",
     "abbr": "",
     "meaning": "双边（公差）",
@@ -4612,7 +4782,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-235",
+    "id": "me-252",
     "word": "Dial",
     "abbr": "",
     "meaning": "表盘（Dial Indicating 表盘指示型）",
@@ -4622,7 +4792,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-236",
+    "id": "me-253",
     "word": "Imperial",
     "abbr": "",
     "meaning": "英制",
@@ -4632,7 +4802,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-237",
+    "id": "me-254",
     "word": "Metric",
     "abbr": "",
     "meaning": "公制",
@@ -4642,7 +4812,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-238",
+    "id": "me-255",
     "word": "SAE",
     "abbr": "",
     "meaning": "美国汽车工程师学会（英制螺栓等级）",
@@ -4652,7 +4822,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-239",
+    "id": "me-256",
     "word": "ASTM",
     "abbr": "",
     "meaning": "美国材料与试验协会（公制螺栓等级）",
@@ -4662,7 +4832,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-240",
+    "id": "me-257",
     "word": "Adaptor",
     "abbr": "",
     "meaning": "接杆 / 适配器",
@@ -4672,7 +4842,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-241",
+    "id": "me-258",
     "word": "Clamp",
     "abbr": "",
     "meaning": "夹紧；锁紧装置",
@@ -4682,7 +4852,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-242",
+    "id": "me-259",
     "word": "Clearance",
     "abbr": "",
     "meaning": "间隙（Clearance Hole 通孔）",
@@ -4692,7 +4862,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-243",
+    "id": "me-260",
     "word": "Deviation",
     "abbr": "",
     "meaning": "偏差（Upper / Lower Deviation）",
@@ -4702,7 +4872,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-244",
+    "id": "me-261",
     "word": "Extension",
     "abbr": "",
     "meaning": "加长（Extension Adaptor 加长接杆）",
@@ -4712,7 +4882,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-245",
+    "id": "me-262",
     "word": "Grade",
     "abbr": "",
     "meaning": "等级（Bolt Grade 螺栓等级）",
@@ -4722,7 +4892,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-246",
+    "id": "me-263",
     "word": "Guard",
     "abbr": "",
     "meaning": "护罩（Safety Guard）",
@@ -4732,7 +4902,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-247",
+    "id": "me-264",
     "word": "Handle",
     "abbr": "",
     "meaning": "手柄",
@@ -4742,7 +4912,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-248",
+    "id": "me-265",
     "word": "Head",
     "abbr": "",
     "meaning": "头部（Screw Head 螺钉头）",
@@ -4752,7 +4922,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-249",
+    "id": "me-266",
     "word": "Hole",
     "abbr": "",
     "meaning": "孔",
@@ -4762,7 +4932,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-250",
+    "id": "me-267",
     "word": "Internal / External",
     "abbr": "",
     "meaning": "内部 / 外部",
@@ -4772,7 +4942,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-251",
+    "id": "me-268",
     "word": "ISO",
     "abbr": "",
     "meaning": "国际标准化组织",
@@ -4782,7 +4952,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-252",
+    "id": "me-269",
     "word": "Length",
     "abbr": "",
     "meaning": "长度",
@@ -4792,7 +4962,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-253",
+    "id": "me-270",
     "word": "Limit",
     "abbr": "",
     "meaning": "极限（尺寸）",
@@ -4802,7 +4972,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-254",
+    "id": "me-271",
     "word": "Scale",
     "abbr": "",
     "meaning": "刻度 / 标尺",
@@ -4812,7 +4982,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-255",
+    "id": "me-272",
     "word": "Materials",
     "abbr": "",
     "meaning": "材料",
@@ -4822,7 +4992,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-256",
+    "id": "me-273",
     "word": "Probe",
     "abbr": "",
     "meaning": "探针 / 深度尺",
@@ -4832,7 +5002,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-257",
+    "id": "me-274",
     "word": "Project",
     "abbr": "",
     "meaning": "项目",
@@ -4842,7 +5012,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-258",
+    "id": "me-275",
     "word": "Quiz",
     "abbr": "",
     "meaning": "测验",
@@ -4852,7 +5022,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-259",
+    "id": "me-276",
     "word": "Safety",
     "abbr": "",
     "meaning": "安全",
@@ -4862,7 +5032,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-260",
+    "id": "me-277",
     "word": "Socket",
     "abbr": "",
     "meaning": "内六角（Hex Socket）",
@@ -4872,7 +5042,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-261",
+    "id": "me-278",
     "word": "Secure",
     "abbr": "",
     "meaning": "紧固 / 固定",
@@ -4882,7 +5052,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-262",
+    "id": "me-279",
     "word": "Testing",
     "abbr": "",
     "meaning": "测试",
@@ -4892,7 +5062,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-263",
+    "id": "me-280",
     "word": "Transition",
     "abbr": "",
     "meaning": "过渡（配合）",
@@ -4902,7 +5072,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-264",
+    "id": "me-281",
     "word": "Turn",
     "abbr": "",
     "meaning": "旋转",
@@ -4912,7 +5082,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-265",
+    "id": "me-282",
     "word": "Zone",
     "abbr": "",
     "meaning": "带（Tolerance Zone 公差带）",
@@ -4922,7 +5092,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-266",
+    "id": "me-283",
     "word": "Assembly",
     "abbr": "",
     "meaning": "装配",
@@ -4932,7 +5102,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-267",
+    "id": "me-284",
     "word": "Interference",
     "abbr": "",
     "meaning": "干涉",
@@ -4942,7 +5112,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-268",
+    "id": "me-285",
     "word": "Design for Manufacturing and Assembly",
     "abbr": "DFMA",
     "meaning": "面向制造与装配的设计",
@@ -4952,7 +5122,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-269",
+    "id": "me-286",
     "word": "Alignment",
     "abbr": "",
     "meaning": "对齐",
@@ -4962,7 +5132,7 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
-    "id": "me-270",
+    "id": "me-287",
     "word": "Review",
     "abbr": "",
     "meaning": "复盘",

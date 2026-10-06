@@ -154,6 +154,24 @@
 - Plasma Treatment — 等离子处理
 - Cross-cut Test — 划格法附着力测试
 
+- Glass Transition Temperature (Tg) — 玻璃化转变温度
+- Amorphous — 无定形（非晶态）
+- Semicrystalline — 半结晶
+- Solubility Parameter — 溶解度参数
+- Swelling — 溶胀
+- Sampling Length / Cut-off — 取样长度 / 截止波长
+- Coulomb Friction — 库仑摩擦
+- Adhesive Wear — 粘着磨损
+- Abrasive Wear — 磨粒磨损
+- Fatigue Wear — 疲劳磨损
+- Corrosive Wear — 腐蚀磨损
+- Adhesion Failure / Cohesion Failure — 附着力失效 / 内聚力失效
+- Flash Point — 闪点
+- Lower Explosive Limit (LEL) — 爆炸下限
+- Vapour Density — 蒸气密度
+- Masking — 遮蔽（保护不需处理的表面）
+- Safety Data Sheet (SDS) — 安全数据表
+
 ## 激光加工
 - Laser Cutting — 激光切割
 - Engraving — 雕刻
