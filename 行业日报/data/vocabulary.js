@@ -7000,5 +7000,915 @@ window.VOCABULARY = [
     "course": "IT 安全",
     "context": "未分类",
     "sentence": ""
+  },
+  {
+    "id": "iiqe-001",
+    "word": "Risk",
+    "abbr": "",
+    "meaning": "風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-002",
+    "word": "Pure Risk",
+    "abbr": "",
+    "meaning": "純粹風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-003",
+    "word": "Speculative Risk",
+    "abbr": "",
+    "meaning": "投機風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-004",
+    "word": "Particular Risk",
+    "abbr": "",
+    "meaning": "特定風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-005",
+    "word": "Fundamental Risk",
+    "abbr": "",
+    "meaning": "基本風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-006",
+    "word": "Risk Management",
+    "abbr": "",
+    "meaning": "風險管理",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-007",
+    "word": "Risk Avoidance",
+    "abbr": "",
+    "meaning": "風險避免",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-008",
+    "word": "Loss Prevention",
+    "abbr": "",
+    "meaning": "損失防範",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-009",
+    "word": "Loss Reduction",
+    "abbr": "",
+    "meaning": "損失降低",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-010",
+    "word": "Risk Transfer",
+    "abbr": "",
+    "meaning": "風險轉移",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-011",
+    "word": "Insurance",
+    "abbr": "",
+    "meaning": "保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-012",
+    "word": "Premium",
+    "abbr": "",
+    "meaning": "保費",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-013",
+    "word": "Peril",
+    "abbr": "",
+    "meaning": "危險（損失成因）",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-014",
+    "word": "Moral Hazard",
+    "abbr": "",
+    "meaning": "道德風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-015",
+    "word": "Policy",
+    "abbr": "",
+    "meaning": "保單",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "風險與保險",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-016",
+    "word": "Contract",
+    "abbr": "",
+    "meaning": "合約",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-017",
+    "word": "Offer / Acceptance",
+    "abbr": "",
+    "meaning": "要約 / 承約",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-018",
+    "word": "Consideration",
+    "abbr": "",
+    "meaning": "代價",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-019",
+    "word": "Capacity",
+    "abbr": "",
+    "meaning": "訂約行為能力",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-020",
+    "word": "Privity of Contract",
+    "abbr": "",
+    "meaning": "合約的相對性",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-021",
+    "word": "Agency",
+    "abbr": "",
+    "meaning": "代理",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-022",
+    "word": "Agent / Principal",
+    "abbr": "",
+    "meaning": "代理人 / 委託人",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-023",
+    "word": "Apparent Authority",
+    "abbr": "",
+    "meaning": "表見權限",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-024",
+    "word": "Ratification",
+    "abbr": "",
+    "meaning": "追認",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-025",
+    "word": "Negligence",
+    "abbr": "",
+    "meaning": "疏忽",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "法律原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-026",
+    "word": "Insurable Interest",
+    "abbr": "",
+    "meaning": "可保權益",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-027",
+    "word": "Utmost Good Faith",
+    "abbr": "",
+    "meaning": "最高誠信",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-028",
+    "word": "Material Fact",
+    "abbr": "",
+    "meaning": "重要事實",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-029",
+    "word": "Non-disclosure",
+    "abbr": "",
+    "meaning": "隱瞞（不披露）",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-030",
+    "word": "Misrepresentation",
+    "abbr": "",
+    "meaning": "失實陳述",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-031",
+    "word": "Proximate Cause",
+    "abbr": "",
+    "meaning": "近因",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-032",
+    "word": "Indemnity",
+    "abbr": "",
+    "meaning": "彌償",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-033",
+    "word": "Salvage",
+    "abbr": "",
+    "meaning": "損餘",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-034",
+    "word": "Abandonment",
+    "abbr": "",
+    "meaning": "委付",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-035",
+    "word": "Contribution",
+    "abbr": "",
+    "meaning": "分擔",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-036",
+    "word": "Subrogation",
+    "abbr": "",
+    "meaning": "代位",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-037",
+    "word": "Policy Limit",
+    "abbr": "",
+    "meaning": "保單限額",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-038",
+    "word": "Excess / Deductible",
+    "abbr": "",
+    "meaning": "自負額",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-039",
+    "word": "Co-insurance",
+    "abbr": "",
+    "meaning": "共同保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險原則",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-040",
+    "word": "Underwriting",
+    "abbr": "",
+    "meaning": "核保",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-041",
+    "word": "Claim",
+    "abbr": "",
+    "meaning": "索償 / 理賠",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-042",
+    "word": "Reinsurance",
+    "abbr": "",
+    "meaning": "再保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-043",
+    "word": "Actuarial",
+    "abbr": "",
+    "meaning": "精算",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-044",
+    "word": "Long Term Business",
+    "abbr": "",
+    "meaning": "長期業務",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-045",
+    "word": "General Business",
+    "abbr": "",
+    "meaning": "一般業務",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-046",
+    "word": "Tontine",
+    "abbr": "",
+    "meaning": "聯合養老保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-047",
+    "word": "Authorized Insurer",
+    "abbr": "",
+    "meaning": "獲授權保險人",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-048",
+    "word": "Insurance Agent",
+    "abbr": "",
+    "meaning": "保險代理人",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-049",
+    "word": "Insurance Broker",
+    "abbr": "",
+    "meaning": "保險經紀",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-050",
+    "word": "Professional Indemnity Insurance",
+    "abbr": "",
+    "meaning": "專業彌償保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保險公司與行業結構",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-051",
+    "word": "Insurance Ordinance",
+    "abbr": "",
+    "meaning": "《保險業條例》",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-052",
+    "word": "Insurance Authority",
+    "abbr": "IA",
+    "meaning": "保險業監管局（保監局）",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-053",
+    "word": "Powers of Intervention",
+    "abbr": "",
+    "meaning": "干預權力",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-054",
+    "word": "Licensing",
+    "abbr": "",
+    "meaning": "發牌",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-055",
+    "word": "Fit and Proper",
+    "abbr": "",
+    "meaning": "適當人選",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-056",
+    "word": "Continuing Professional Development",
+    "abbr": "CPD",
+    "meaning": "持續專業培訓",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-057",
+    "word": "Personal Data (Privacy) Ordinance",
+    "abbr": "",
+    "meaning": "《個人資料（私隱）條例》",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-058",
+    "word": "Equal Opportunities",
+    "abbr": "",
+    "meaning": "平等機會",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-059",
+    "word": "Insurance Complaints Bureau",
+    "abbr": "ICB",
+    "meaning": "保險投訴局",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-060",
+    "word": "Motor Insurers' Bureau",
+    "abbr": "MIB",
+    "meaning": "香港汽車保險局",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "監管與職業道德",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-061",
+    "word": "Life Insurance",
+    "abbr": "",
+    "meaning": "人壽保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-062",
+    "word": "Term Insurance",
+    "abbr": "",
+    "meaning": "定期壽險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-063",
+    "word": "Endowment Insurance",
+    "abbr": "",
+    "meaning": "儲蓄壽險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-064",
+    "word": "Whole Life Insurance",
+    "abbr": "",
+    "meaning": "終身壽險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-065",
+    "word": "Universal Life Insurance",
+    "abbr": "",
+    "meaning": "萬用壽險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-066",
+    "word": "Unit-linked Policy",
+    "abbr": "",
+    "meaning": "單位相連保單",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-067",
+    "word": "Annuity",
+    "abbr": "",
+    "meaning": "年金",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-068",
+    "word": "Group Insurance",
+    "abbr": "",
+    "meaning": "團體保險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-069",
+    "word": "Rider",
+    "abbr": "",
+    "meaning": "附約",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-070",
+    "word": "Waiver of Premium",
+    "abbr": "",
+    "meaning": "豁免保費",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-071",
+    "word": "Disability Income",
+    "abbr": "",
+    "meaning": "殘疾收入",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-072",
+    "word": "Accidental Death and Dismemberment (AD&D)",
+    "abbr": "",
+    "meaning": "意外死亡及喪失肢體",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-073",
+    "word": "Critical Illness",
+    "abbr": "",
+    "meaning": "危疾",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-074",
+    "word": "Long Term Care",
+    "abbr": "",
+    "meaning": "長期護理",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-075",
+    "word": "Voluntary Health Insurance Scheme",
+    "abbr": "VHIS",
+    "meaning": "自願醫保計劃",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-076",
+    "word": "Guaranteed Insurability",
+    "abbr": "",
+    "meaning": "保證可保選擇",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "長期保險產品",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-077",
+    "word": "Cooling-off Period",
+    "abbr": "",
+    "meaning": "冷靜期",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-078",
+    "word": "Grace Period",
+    "abbr": "",
+    "meaning": "寬限期",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-079",
+    "word": "Incontestability",
+    "abbr": "",
+    "meaning": "不可異議",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-080",
+    "word": "Beneficiary",
+    "abbr": "",
+    "meaning": "受益人",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-081",
+    "word": "Non-forfeiture",
+    "abbr": "",
+    "meaning": "不能作廢條款",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-082",
+    "word": "Policy Loan",
+    "abbr": "",
+    "meaning": "保單抵押貸款",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-083",
+    "word": "Reinstatement",
+    "abbr": "",
+    "meaning": "復效",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-084",
+    "word": "Suicide Exclusion",
+    "abbr": "",
+    "meaning": "自殺除外責任",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-085",
+    "word": "Surrender Value",
+    "abbr": "",
+    "meaning": "退保價值",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-086",
+    "word": "Cash Value",
+    "abbr": "",
+    "meaning": "現金價值",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-087",
+    "word": "Dividend / Bonus",
+    "abbr": "",
+    "meaning": "紅利",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-088",
+    "word": "Financial Needs Analysis",
+    "abbr": "FNA",
+    "meaning": "財務需要分析",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-089",
+    "word": "Standard / Sub-standard Risk",
+    "abbr": "",
+    "meaning": "標準 / 次標準風險",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-090",
+    "word": "Proposal Form",
+    "abbr": "",
+    "meaning": "投保書",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
+  },
+  {
+    "id": "iiqe-091",
+    "word": "Sum Assured",
+    "abbr": "",
+    "meaning": "保額",
+    "phonetic": "",
+    "course": "IIQE 保险",
+    "context": "保單條款與程序",
+    "sentence": ""
   }
 ];

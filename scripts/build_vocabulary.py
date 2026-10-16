@@ -24,6 +24,7 @@ FILES = [
     ("ap10005-vocabulary.md", "AP10005", "ap"),
     ("lei1101-vocabulary.md", "LEI1101", "lei"),
     ("itsec-vocabulary.md", "IT 安全", "it"),
+    ("iiqe-vocabulary.md", "IIQE 保险", "iiqe"),
 ]
 
 entries = []

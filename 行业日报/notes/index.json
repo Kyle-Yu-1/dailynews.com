@@ -327,5 +327,33 @@
     "desc": "60行脚本逐行讲解、7处易错修正、subplots_adjust/GridSpec间距/tight_layout专题",
     "file": "eie1005-ws01b-solution.md",
     "course": "EIE1005 · 人工智能与数据分析"
-  }
+  },
+  {
+  "id": "iiqe-overview",
+  "title": "IIQE 总纲 · 考试结构与报名",
+  "desc": "五卷结构、业务类别对照、70%合格线、笔考/电脑/遥距费用与规则",
+  "file": "iiqe-overview.md",
+  "course": "IIQE · 保险中介人资格考试"
+},
+  {
+  "id": "iiqe-01-paper1",
+  "title": "卷1 · 保险原理及实务（2024 手册）",
+  "desc": "风险分类、合约/代理法、六大保险原则、保险业结构、规管架构、职业道德+考点速记+自测",
+  "file": "iiqe-01-paper1.md",
+  "course": "IIQE · 保险中介人资格考试"
+},
+  {
+  "id": "iiqe-03-paper3",
+  "title": "卷3 · 长期保险（2022 手册）",
+  "desc": "寿险原理、产品种类、附约、12 保单条款、核保理赔程序+数字考点表+自测",
+  "file": "iiqe-03-paper3.md",
+  "course": "IIQE · 保险中介人资格考试"
+},
+  {
+  "id": "iiqe-vocabulary",
+  "title": "专业词汇 · 中英互译",
+  "desc": "卷1/卷3 全章核心术语 68 条",
+  "file": "iiqe-vocabulary.md",
+  "course": "IIQE · 保险中介人资格考试"
+}
 ]
