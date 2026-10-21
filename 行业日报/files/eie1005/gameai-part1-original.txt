@@ -1,0 +1,318 @@
+===== Page 1 =====
+EIE1005 Fundamental AI and Data Analytics  
+1
+AI and Data Analytics in the 
+Virtual World
+Richard Pang
+T el: 27664745    
+Email: richard.pang@polyu.edu.hk
+
+===== Page 2 =====
+Contents
+• Development of game AI
+• Reinforcement learning for game AI
+• Developing game AI with Unity ML-Agents
+• AI and data analytics in the Metaverse
+2
+
+===== Page 3 =====
+References
+• G.N. Yannakakis and J. Togelius, Artificial intelligence and games, 
+Springer, 2018
+• T. Simonini and O. Saneviero, An Introduction to Deep 
+Reinforcement Learning Class,
+https://github.com/huggingface/deep-rl-class 
+• A. Majumder, Deep Reinforcement Learning in Unity: With Unity ML 
+Toolkit. Berkeley, CA: Apress, 2020.
+• D. Buckley, “Unity ML-Agents Tutorials – Complete Guide,” 
+GameDev Academy, 2022 (online resource).
+• T. Simonini, “An Introduction to Unity ML-Agents,” Towards Data 
+Science, 2020 (online resource)
+3
+
+===== Page 4 =====
+Part I
+Development of game AI
+4
+
+===== Page 5 =====
+What is Game AI?
+• Imitate intelligence in the actions of non-player 
+characters (NPCs) and procedural content generation 
+(PCG)
+• Make the game “feel” real
+• Determine the paths of NPCs
+• Make decision for NPCs based on players’ choices
+• Determine the strategy of play
+• Sense the behavior of player
+• Communicate and interact with player
+5
+
+===== Page 6 =====
+Goal of Game AI
+• Be fun!
+• Be challenging but not overwhelming (unless the 
+hardest difficulty is selected)
+• Avoid unfair advantages unless explicitly part of the game 
+design; if used, disclose or balance them
+• Need to follow the rules of the game
+• Do not hog all the resources, such as CPU time
+6
+
+===== Page 7 =====
+The Start of Game AI
+• The video games developed in the 1960s and early 1970s, 
+like Spacewar!, Pong (1972), Gotcha, were strictly based 
+on the competition of two players, without AI
+• Games that features a single player modes with NPCs 
+started appearing in the 1970s such as the Taito game 
+Speed Race (racing video game) (1974)
+• It was during the golden 
+age of video arcade games 
+that the idea of AI 
+opponents was largely 
+popularized, due to the 
+success of Space Invaders 
+(1978)
+7
+
+===== Page 8 =====
+Finite State Machines (FSM)
+• Early game AI was implemented with a rule-based system called Finite State 
+Machine
+• Simplest and most basic AI model
+• Most common for Action games
+• Four components
+• States which define behavior
+• State transitions which are the 
+movement from one state to another
+• Conditions which must be met for 
+state transition
+• Events/actions which are internally or 
+externally generated which may lead 
+to state transition
+8
+
+===== Page 9 =====
+FSM example -
+Pac Man
+9
+https://jaredemitchell.com/ai-examples/
+
+===== Page 10 =====
+Finite State Machines (FSM)
+• Modern 
+FSM 
+example
+States can have an 
+FSM within them
+10
+
+===== Page 11 =====
+Finite State Machines (FSM)
+• FSM disadvantages:
+• Behavior of NPCs is relatively predictable
+• Suitable only to simple games. State diagram 
+becomes too complex to handle if there are many 
+states
+• Since there are such crisp rules between states, NPC 
+does not feel natural
+11
+
+===== Page 12 =====
+Machine Learning in Video Game 
+• Machine learning (ML) is a subfield of AI where computer algorithms try to 
+improve automatically through experience and using data
+• These algorithms build and train a model using statistical analysis on the 
+given dataset
+• Make predictions or decisions without being explicitly programmed to do 
+so
+• On contrary to FSM that the intelligence comes from the designer
+• ML is used in video games for the following purposes:
+• Design smarter NPCs
+• Enhance computer graphics
+• Dialog generation and realistic interaction
+• Story and world generation
+• Create immersive games
+12
+
+===== Page 13 =====
+Can a Game Agent Learn by Evolution?
+•Imagine creating many game agents with different “brains.”
+•Each agent plays the game and receives a score.
+•The better agents are selected to create the next generation.
+•Their “DNA” is a list of numbers that controls how the agent behaves.
+•By repeating this process, agents gradually learn to play better.
+Play game → Score agents → Keep the best → Create new agents
+•Evolutionary Robots (ANN-based): https://www.youtube.com/watch?v=VUddPhXdBnY
+•Flappy Bird with Neural Network & Genetic Algorithm: https://www.youtube.com/watch?v=aeWmdojEJf0
+•Super Mario Bros. with Neural Network & Genetic Algorithm: 
+https://www.youtube.com/watch?v=05rEefXlmhI
+13
+
+===== Page 14 =====
+Design Smarter NPCs
+• E.g., Chess (Go) engine - AlphaGo Zero
+• Google ‘s subsidiary DeepMind developed AlphaGo, which defeated Lee Sedol in 
+2016.
+• In 2017, DeepMind introduced AlphaGo Zero, which did not need human data to 
+learn but only played against itself based on reinforcement learning
+• AlphaGo Zero (trained 40 days) has a play record of 100:0 with AlphaGo Lee (the 
+one played with Lee Sedol) 
+• Many professional Go players imitate the moves of AlphaGo and its successors
+• Machine learning makes NPCs less 
+predictable and thus more realistic
+• Can even possess skills beyond human 
+14
+
+===== Page 15 =====
+Enhance Computer Graphics
+• Game players demand high fidelity graphics and smooth video
+• Traditional graphics enhancement methods are often too time 
+consuming or require extremely expensive hardware
+• Through training with huge dataset, modern AI techniques, such as deep 
+neural networks (DNN), can generate extremely realistic graphics 
+• Due to the massive parallel structure of DNN, they can be effectively 
+implemented by Graphics Processing Unit (GPU) and can operate very 
+fast    
+• The same graphic enhancement task solved by DNN on GPU can be thousand times 
+faster than using a traditional software program run on the computer’s central 
+processing unit (CPU)
+15
+
+===== Page 16 =====
+Enhance Computer Graphics
+• Example: Nvidia’s Deep Learning Super Sampling (DLSS)
+16
+• Traditional game engine often needs to reduce 
+the frame rate if it is required to render high 
+resolution graphics
+• Nvidia develops a post-processing technique 
+called DLSS to solve the problem
+• Allows the game engine to render lower 
+resolution graphics (so higher frame rate), then 
+up-sample the graphics to the required 
+resolution using DNN
+• Enabled by Nvidia RTX technology, extremely fast
+• Many games have the DLSS mode. DLSS 
+requires a compatible NVIDIA RTX GPU, a 
+supported game, and up-to-date drivers
+
+===== Page 17 =====
+Enhance Computer Graphics
+• Minecraft with 
+RTX 
+• With DLSS, more 
+than double 
+frames per second 
+(FPS) is achieved 
+at the same 
+resolution (4K) 
+without sacrificing 
+the graphics 
+quality
+17
+https://www.youtube.com/watch?v=xyJxRRc3Pa0
+
+===== Page 18 =====
+Dialog Generation and Realistic 
+Interaction
+• Besides actions, machine learning can also be used to improve the gaming 
+experience by formulating more accurate and realistic NPC responses
+• Role playing games (RPG) make use of the dialog mechanism, which are 
+significantly improved with the help of Natural Language Processing and 
+sentiment analysis techniques using ML algorithms
+18
+• Example: Façade – real-time interactive drama
+• AI-powered game that allows the player to interactive with 
+the NPCs in the game by natural language
+• Change the ending of the drama based on player’s interaction
+• Natural language processing to understand the player’s text 
+input
+• Behavior language system to tell the NPCs what to response
+
+===== Page 19 =====
+Dialog Generation and Realistic 
+Interaction
+19
+• Example: Façade 
+– real-time 
+interactive drama
+• In this example, a 
+guy called Sergio 
+(the player) visits 
+the NPCs - Trip and 
+Grace.
+• See the response 
+of the NPCs when 
+the player enters 
+the text input
+https://www.youtube.com/results?search_query=facade
+
+===== Page 20 =====
+Story and World Generation
+• In Façade, the drama ending is automatically generated by a drama 
+generator algorithmically based on player interaction
+• Can still trace the design of the programmers
+• Game story can also be generated using machine learning
+• Can thus be totally based on the input of the player 
+20
+• Example: AI Dungeon
+• AI Dungeon is a text-based adventure game that uses 
+artificial intelligence to generate unlimited content
+• Rather than using a complex decision tree to script a 
+large number of paths through the game, AI Dungeon 
+uses a large language model to generate story content 
+dynamically as a response to the players’ typed prompts 
+using natural language processing (NLP)
+
+===== Page 21 =====
+Story and World Generation
+• Not only stories, game worlds can also be created by machine learning
+• A number of popular games like Minecraft and the Grand Theft Auto 
+series make use of an open world gameplay scenario
+• Game world will be automatically generated while playing the game
+21
+• Example: Minecraft
+• Traditional games often include all their game world in 
+the program. That makes their program extremely big
+• Minecraft can generate an astronomically large number 
+of distinct worlds from world seeds, so only the 
+generation algorithm and seed need to be stored.
+• It is because they are generated on-the-fly
+• In the future, game generation can be done by machine 
+learning to make it adapt to the player’s interest
+
+===== Page 22 =====
+Creating Immersive Games
+• Video game developers are constantly trying to get games to be more immersive 
+and realistic
+• Modelling the real world is incredibly difficult 
+• A machine learning algorithm could help with predicting the downstream effects 
+of a player’s actions or even modelling things the player can’t control, like the tiny 
+motions of the players in a football match
+22
+• Example: FIFA 22 – the beginning of machine learning 
+taking over animation 
+• ML algorithm learns from more than 8.7 million frames of match 
+capture, then writes new animations in real-time across a variety of 
+interactions on the pitch 
+• New Tactical AI to let each individual NPC player to better 
+understand both attacking and defensive formations and movement
+
+===== Page 23 =====
+Creating Immersive Games
+23
+• Example: FIFA 22 – game 
+play realism
+• Previous AI often picks 2 to 3 
+players in a group to animate. 
+Some NPCs will thus make 
+weird animation not relevant to 
+the game play
+• FIFA 22 claims to achieve 11v11 
+animation through the 
+HyperMotion technology that 
+takes care of all the players in 
+the field
+https://www.youtube.com/watch?v=I9apQiMsJOU

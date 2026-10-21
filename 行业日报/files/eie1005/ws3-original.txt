@@ -1,0 +1,561 @@
+
+EIE1005 Fundamental AI and Data Analytics
+Workshop 3: Developing Game AI with OpenAI Gym
+
+Student Name:  _________________     Student ID:  _____________
+
+Purpose
+This workshop provides students the opportunity to train and test a game AI model based on reinforcement learning using OpenAI’s Gym library [1,2].
+
+Things to do
+Follow the instructions in the worksheet to install the required software modules.
+Run the programs provided to train and test the agent in the game FrozenLake, a game environment provided by OpenAI’s Gym library [1,2].
+Analyze the programs to understand the important parameters of reinforcement learning.
+Answer the questions in this worksheet and submit it to the Canvas (i.e. https://canvas.polyu.edu.hk).
+
+Equipment
+PC with the following software:
+Windows 10 or above
+Anaconda Navigator (version 2.0.3 or above)
+Spyder version 4.2.5 or above
+
+Introduction - FrozenLake
+
+
+FrozenLake is part of the Toy Text environment of Gym [1,2]. It involves crossing a frozen lake from Start(S) to Goal(G) without falling into any Holes(H) by walking over the Frozen(F) lake. The agent may not always move in the intended direction due to the slippery nature of the frozen lake. For each move, the agent can make one of the following four actions:
+
+0: LEFT
+1: DOWN
+2: RIGHT
+3: UP
+
+
+
+The state of the agent is represented by an integer of value from 0 to 15 calculated by the following equation:
+row  total number of columns + col (where both the row and col start at 0).
+For example, the Goal position in a 44 map can be calculated as follows: 3  4 + 3 = 15. The number of possible states is dependent on the size of the map. For example, a 44 map has 16 possible states. The number of all states of a 44 map is shown in the diagram below, where the corresponding built-in game environment is also shown.
+
+0 (S)
+1 (F)
+2 (F)
+3 (F)
+4 (F)
+5 (H)
+6 (F)
+7 (H)
+8 (F)
+9 (F)
+10 (F)
+11 (H)
+12 (H)
+13 (F)
+14 (F)
+15 (G)
+
+
+
+The agent can be trained by reinforcement learning using the standard application program interface (API) provided by Gym. The built-in reward scheme is as follows:
+
+Reach goal(G): +1
+Reach hole(H): 0
+Reach frozen(F): 0
+
+Refer to the course notes [3] on the meaning of action, state, and reward in reinforcement learning.
+
+Workshop
+Part I: Preparation
+
+Login to your computer.
+
+Note: For Mac users, use Terminal to start Anaconda Navigator. Type the following command in the Terminal: anaconda-navigatorNote: For Mac users, use Terminal to start Anaconda Navigator. Type the following command in the Terminal: anaconda-navigatorLaunch Anaconda Navigator by clicking search and typing Anaconda Navigator (Anaconda3). Then press Enter (see the figure below).
+Note: For Mac users, use Terminal to start Anaconda Navigator. Type the following command in the Terminal: anaconda-navigator
+
+Note: For Mac users, use Terminal to start Anaconda Navigator. Type the following command in the Terminal: anaconda-navigator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In the Anaconda Navigator window, launch Spyder by clicking the button Launch.
+
+
+
+
+Spyder is an integrated development environment (IDE), particularly for Python programming [4]. It includes advanced features for Python program editing, testing, and debugging. The Spyder IDE mainly contains three windows: Editor, Debugger, and Console. The Editor window is for editing Python program codes. The Debugger window provides detailed information on the program execution, including the values of the variables. The Console window allows the user to interact with the IDE. This workshop does not require you to do programming. You will mainly input your commands in the Console window and see the results.
+
+
+
+
+
+
+Console WindowConsole WindowEditor WindowEditor WindowDebugger WindowDebugger Window
+Console Window
+Console Window
+Editor Window
+Editor Window
+Debugger Window
+Debugger Window
+
+
+The OpenAI’s library Gym is used in this workshop. Gym includes a standard API focused on reinforcement learning. It contains a diverse collection of reference environments, each of which is presented in the form of a computer game. To install Gym, type the following command in the Console window and press Enter.
+
+pip install gymnasium
+
+Note: For Mac users, type the following command in the Terminal: pip install "gymnasium[toy-text]"Note: For Mac users, type the following command in the Terminal: pip install "gymnasium[toy-text]"Type the following command in the Console window and press Enter. Then, wait approximately 20 seconds:
+Note: For Mac users, type the following command in the Terminal: pip install "gymnasium[toy-text]"
+
+
+Note: For Mac users, type the following command in the Terminal: pip install "gymnasium[toy-text]"
+
+
+pip install gymnasium[toy-text]
+
+Restart the kernel by clicking Console -> Restart kernel in the top menu (see the figure below). Note that if your program hangs due to whatever reason, you can also restart the kernel to make the program run again.
+
+The system is now ready for program development.
+
+Part II: Play FrozenLake without training
+
+Copy and paste the following Python program codes to the Editor window. Avoid making any changes, such as adding spaces or tabs. (When copying source code from the lab manual, please download the file to your computer and open it in Microsoft Word. Do not copy the code directly from your web browser.)
+
+
+#####################################################
+#     EIE1005 – Workshop 3
+#Reinforcement Learning for Game AI
+#
+
+#####################################################
+#  Baseline Program
+#####################################################
+
+import gymnasium as gym
+
+# 1. Load Environment
+env = gym.make('FrozenLake-v1', render_mode='human', is_slippery=False)
+
+# 2. Parameters setting
+rev_list = [] # rewards per episode calculate
+
+# 3. Initialize the environment
+init_state = env.reset()  # Reset environment
+s = init_state[0]
+rAll = 0
+j = 0
+
+while j < 99:
+j+=1
+# Randomly generate action and get the reward
+state, reward, terminated, truncated, info = env.step(env.action_space.sample())
+env.render()
+print("Current state: ", state, end = "   ")
+print("Reward = ", reward)
+if state == 5 or state == 7 or state == 11 or state == 12:
+break
+input("Press Enter to continue:")
+print()
+rAll += reward
+s = state
+if terminated or truncated == True:
+break
+rev_list.append(rAll)
+env.render()
+
+In the above Python program, all statements that start with the # symbol are not program codes, but comments. The comments are usually used for explaining the program codes. Pay attention that all indentations in the program codes need to be followed exactly. The program cannot be executed if any indentation is modified.
+
+Save the program with the filename FrozenLake_baseline.py to your Desktop folder by pressing File in the top menu and then selecting Save as... A window will be opened to let you select the folder and enter the filename. Then run the program by pressing the Run button under the top menu. A game board will be generated. (If the game window does not appear, check your Windows taskbar and click its icon. You may also want to resize the Spyder window so you can place both windows side by side without overlapping.)
+
+Paste code herePaste code hereDrag the game window to the right of Spyder to view them side by side.Drag the game window to the right of Spyder to view them side by side.Run buttonsRun buttonsFile File Game board iconGame board icon
+Paste code here
+Paste code here
+Drag the game window to the right of Spyder to view them side by side.
+
+Drag the game window to the right of Spyder to view them side by side.
+
+Run buttons
+Run buttons
+File
+File
+Game board icon
+Game board icon
+
+Once the Run button is pressed, the game will run and the agent will make the first movement. The current state after the movement and the reward obtained for the movement will be shown in the Console window. It will also ask and wait for the user to press Enter to continue. Pressing Enter in the Console window will let the game continue and the agent will make another move. You will find that sometimes the agent does not move after you press Enter. It is because the system asks the agent to move out of the boundaries of the game. In this case, the agent will stay in the original state. (The program is not hanging; it completes quickly and then waits for your next input. Please consider moving the game board outside the main screen so you can observe the rapid movements.)
+
+
+Play the game until the agent reaches a Hole such as the following:
+
+
+Then capture the screen of Spyder at that time (you can first click the Spyder window and press the +Shift+S buttons together on your keyboard; Alternatively, type "Snipping" in
+
+the Windows search bar to open the software.). Select the region. Then, paste the screen capture by pressing ctrl-v in the box below. Your screen capture needs to show the current state and reward values in the Console window.
+
+
+
+
+
+
+
+Question: What are the current state and reward values as shown in the Console window? Compared with the game board screen, does it match the expected result? Comment on whether the current position of the agent matches.
+
+
+
+
+
+Part III: Training the agent
+
+You will find that the agent can never reach the goal no matter how many times you play since the agent has not been trained. Its movement is randomly generated by the program. We will start training the agent. Open a new file by clicking File in the top menu and then click New File. A new window will be opened in the Editor window. Copy and paste the following Python program codes into it. Avoid making any changes, such as adding spaces or tabs.
+
+#####################################################
+#     EIE1005 – Workshop 3
+#Reinforcement Learning for Game AI
+#
+
+#####################################################
+#  Training Program
+#####################################################
+
+import gymnasium as gym
+import numpy as np
+
+# 1. Load Environment
+env = gym.make('FrozenLake-v1', is_slippery=False)
+epis = int(input("Enter the number of games to play for training: "))
+if epis <= 10:
+env = gym.make('FrozenLake-v1', render_mode='human', is_slippery=False)
+else:
+env = gym.make('FrozenLake-v1', render_mode='rgb_array', is_slippery=False)
+
+
+# 2. Parameters of Q-learning
+# Construct the Q-table
+
+Q = np.zeros([env.observation_space.n,env.action_space.n])
+
+
+
+
+
+# observation.n and action_space.n give no. of states and actions
+eta = .628
+gma = .9
+rev_list = [] # rewards per episode calculate
+
+# 3. Q-learning Algorithm
+for i in range(epis):
+init_state = env.reset()  # Reset environment
+s = init_state[0]
+rAll = 0
+d = False
+j = 0
+#The Q-Table learning algorithm
+while j < 99:
+j+=1
+# Choose action from Q table
+a = np.argmax(Q[s,:] + np.random.randn(1,env.action_space.n)*(1./(i+1)))
+#Get new state & reward from environment
+state, reward, terminated, truncated, info = env.step(a)
+#Update Q-Table with new knowledge
+Q[s,a] = Q[s,a] + eta*(reward + gma*np.max(Q[state,:]) - Q[s,a])
+env.render()
+print("Current state: ", state, end = "   ")
+print("Reward = ", reward)
+#input("Press Enter to continue:")
+print()
+rAll += reward
+s = state
+if terminated or truncated == True:
+break
+rev_list.append(rAll)
+env.render()
+print("Training Episode = ", i+1)
+print("Reward Sum on all episodes " + str(sum(rev_list)/epis))
+print("Final Values Q-Table")
+print(Q)
+
+
+Save the program with the filename FrozenLake_training.py to your Desktop folder.
+
+
+
+
+
+In the program, the agent is trained using the Q-learning method discussed in class. For every move of the agent, the Q-table kept in the program is updated using the Bellman equation. In the program, the Q-table is implemented as a two-dimensional array that contains 16 rows and 4 columns. Each row represents a state and the row number represents the state number. Each column represents an action and the column number represents the action number. Recall that the agent at a state will act according to the action with the largest value in the Q-table in that state. So, for example, the following Q-table shows that if the agent is at state 0 (1st row), it will move right (action 2) since column 2 (column number starts from 0) has the largest value (0.59049) in that row. And if the agent is at state 2 (row 2), it will move down (action 1) since column 1 has the largest value (0.729) in that row.
+
+The action number is encoded as follows:
+0: LEFT
+1: DOWN
+2: RIGHT
+3: UP
+
+The values of a Q-table:
+[[0.      0.      0.59049 0.     ]
+[0.      0.      0.6561  0.     ]
+[0.      0.729   0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.81    0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.9     0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      0.      0.     ]
+[0.      0.      1.      0.     ]
+[0.      0.      0.      0.     ]]
+
+
+The training is now ready to proceed. Press the Run button under the top menu. A game board will be generated (if the game board is not popped up, click its icon on the taskbar of Windows). The program first asks in the Console window how many games you want to play for training the agent as follows:
+
+Enter the number of games to play for training:
+
+Let’s enter 10 to let the agent be trained by playing 10 games. In each game, the agent goes from the starting point to the Goal or a Hole. See how the agent moves on the game board. After the game finishes playing, copy the final values of the Q-table as shown in the Console window and paste them in the box below (you may find that they are all zeros):
+
+
+
+
+
+
+There is a good chance that the agent still cannot reach the goal during the whole training (that is why the Q-table does not have too many values). It is because we have not played enough games to train the agent sufficiently. Now, we change to play the game 500 times. This time, the graphics will not be shown to speed up the operation (actually, if you train by playing more than 10 games, the graphics will not be shown).
+
+Now, repeat step 4 and enter 500 when you are asked to enter the number of games to play. You will find that the training is completed almost immediately. Paste the resulting Q-table in the box below:
+
+
+
+
+
+
+
+
+
+Question: If the agent follows your Q-table to find the path, draw on the diagram below the path the agent will use to reach the goal (you may add some arrows in the diagram below to indicate the path). You may need to refer to your course notes to understand how the Q-table is read. (You may also refer to the Q-table example in step 3 to understand the meaning of the values.)
+
+
+
+
+Now we are going to evaluate the performance of the trained Q-table. First, save your program to another file FrozenLake_train_n_play.py in your Desktop folder.
+
+Then, append the following codes to the end of the training program (that is, paste the codes after the last statement of the original program).
+
+
+#####################################################
+#  Testing Program
+#####################################################
+
+env = gym.make('FrozenLake-v1', render_mode = 'human', is_slippery=False)
+epis = 10
+goal_step = 0
+goal = 0
+for i in range(epis):
+# Reset environment
+init_state = env.reset()
+s = init_state[0]
+j = 0
+print("\nPlaying game ", i+1)
+#Use the trained Q-Table to determine the action
+while j < 99:
+j+=1
+# Choose the action from the Q table
+a = np.argmax(Q[s,:])
+
+#Get new state & reward from environment
+state, reward, terminated, truncated, info = env.step(a)
+s = state
+if terminated or truncated == True:
+break
+env.render()
+if state == 15:
+goal += 1
+goal_step += j
+print("\nNumber of times reaching the goal: ", goal)
+if goal == 0:
+print("Average number of steps to reach the goal: infinity")
+else:
+print("Average number of steps to reach the goal: ", goal_step/goal)
+
+
+This program makes use of the Q-table trained in the first part of the program to inform the agent of the path to reach the Goal. By counting the number of times the agent can successfully reach the Goal, we understand how well the Q-table is trained.
+
+Run the program by pressing the Run button under the top menu. Also, enter 500 games to play for training the agent. The program will start to train the agent as in part (5). Then, the game board will be launched and show how the agent moves according to the trained Q-table. The game will be played ten times to test the performance of the trained Q-table. You will find that the agent can always reach the Goal each time. Copy and paste in the box below the resulting Q-table, the number of times the agent reaches the Goal, and the average number of steps the agent used to reach the Goal, as shown in the Console window.
+
+
+
+
+
+
+Part IV: To introduce randomness
+
+Since the game environment is always the same, the agent must be able to reach the Goal once the Q-table is well-trained. To have more fun, let us introduce some randomness to the game to increase its difficulty. First, download the program FrozenLake_random.py from the Canvas to your Desktop folder. Click File and Open… in Spyder to open the file. Run the program by pressing the Run button under the top menu. The program first asks in the Console window how many games you want to play for training the agent as follows:
+Enter the number of games to play for training:
+
+Let’s enter 500 to let the agent be trained by playing 500 games.
+
+Then, the program asks
+Enter the number of games to play for testing:
+
+
+
+Enter 10 to let the game be played 10 times for testing. Finally, the program asks if you want to play in random mode. Enter Y to introduce randomness to the game. The game will start to train the agent by playing for 500 games and test the Q-table by playing for 10 games.
+
+When random play is set to Y, the agent will not follow exactly the action given by the program during training and playing. It will slip in one of the three directions in equal probability (since the frozen lake is slippery). So there is only a 1/3 probability that the agent will move in the direction given by the action. Click the game board to see how difficult the agent gets to the Goal.
+
+After the game finishes (it will take some time), copy and paste in the box below the resulting Q-table, the number of times the agent reaches the Goal, and the average number of steps the agent used to reach the Goal, as shown in the Console window.
+
+
+
+
+
+
+
+In fact, the performance evaluation in (2) is not very accurate since the agent only plays 10 games in the testing program. The statistic is not reliable. The agent should play more games in the testing program. Run the program again. This time enter 500 games for training and 100 games for testing. The agent will then play 100 games in the testing phase. Note that the game board will not be shown if you play more than 10 games to speed up the testing process.
+
+Run the program 10 times (press the Run button under the top menu each time you run the program). Record down in the table below, for each time you run the program, the number of times (T) the agent reaches the Goal, and the average number of steps (S) the agent used to reach the Goal (round to integer), as shown in the Console window.
+
+
+n
+1
+2
+
+3
+4
+5
+6
+7
+8
+9
+10
+T
+
+
+
+
+
+
+
+
+
+
+
+S
+
+
+
+
+
+
+
+
+
+
+
+
+S should be rounded to the nearest integer. If T is 0 or S is infinite, skip this set of results and proceed to the next trial until you have recorded 10 valid sets of data. Because variation between runs can be significant, it is recommended to report the results as a mean and standard deviation.
+
+
+
+Question: What are the mean and standard deviation of T? (Hints: Use Excel’s STDEV.S function to find the standard deviation.)
+
+
+
+
+Part V: Fine-tuning the training parameters
+
+In AI programming, it is often required to fine-tune the parameters in the AI model to achieve the best performance. For the Frozenlake program, we can also fine-tune the training parameters to improve the success rate. Below is a list of parameters you can fine-tune:
+
+Number of games played during training – In Part III(5), we have seen that increasing the number of games played (from 10 to 500) during training can improve the success rate. We can try further increasing the number of games played during training. But is it really more is better?
+Learning rate (Eta) – In the course notes, the learning rate Eta in the Bellman equation controls how fast we want the Q-table to learn. It may affect the performance of the training. So you may adjust the value of Eta (e.g. between 0 to 1) in the training program.
+Discount parameter (Gamma) – In the course notes, the discount parameter Gamma controls the influence of the next state on the reward scheme. It may affect the performance of the training. So you may adjust the value of Gamma in the training program.
+Reward scheme – As mentioned in the Introduction, the game has a built-in reward scheme. If the agent reaches the Goal, a reward of +1 is given. For any other moves, the reward is 0. You may change the reward scheme to improve the success rate. For instance, we may impose a penalty if the agent goes to a Hole.
+
+First, download the program FrozenLake_finetune.py from the Canvas to your Desktop folder. Click File and Open… in Spyder to open the file. Run the program by pressing the Run button under the top menu.
+
+The program will ask you to enter your choices of games played during training, the learning rate Eta, the discount parameter Gamma, and the penalty when the agent goes to a Hole (note that the penalty should be a negative decimal number; e.g. between -0.99 to 0). The default values have been given by the program. You can just enter if you choose the default values or you can enter your choices of values. After making your choices, the program will automatically run 10 times, each time 100 games are played for testing. The program will pause at the end of each run for you to record the result. Press C to continue the next run or Q to quit.
+
+By adjusting one or more of the parameters mentioned above, improve the mean success rate by a few percentage points compared to the result in Part IV(4). For example, if your result in Part IV(4) is 30%, you need to achieve 33% in this part. Or if your result in Part IV(4) is 45%, you need to achieve 48% in this part. Record down in the table below the number of times (T) the agent reaches the Goal, and the average number of steps (S) the agent used to reach the Goal (round to integer) in each run, as shown in the Console window.
+
+
+(Note: This is an open-ended question. Take some time to experiment with different parameters. Initially, change only one parameter at a time and compare the outcomes. Typically, the optimal parameters are not drastically different from the default settings, so there's no need to test
+
+extremely varied values, which will help save time.)
+
+n
+1
+2
+
+3
+4
+5
+6
+7
+8
+9
+10
+T
+
+
+
+
+
+
+
+
+
+
+
+S
+
+
+
+
+
+
+
+
+
+
+
+
+S should be rounded to the nearest integer. If T is 0 or S is infinite, skip this set of results and proceed to the next trial until you have recorded 10 valid sets of data.
+
+
+Question: What are the mean and standard deviation of T? Explain the modification you have made to achieve this result.
+
+
+
+
+
+
+
+Question: Based on your observations, what are the pros and cons of adjusting the learning rate (Eta) and the discount parameter (Gamma)? Did you notice any trends?
+
+
+
+
+
+
+
+
+
+
+
+Please submit the completed worksheet before the due date; a 20% penalty will be applied for each day of late submission.
+
+References
+Gym Documentation, https://www.gymlibrary.dev/environments/toy_text/frozen_lake/.
+Gymnasium Documentation, https://gymnasium.farama.org/.
+“AI and Data Analytics in the Virtual World,” EIE1005 Course notes, the Hong Kong Polytechnic University.
+Spyder Documentation, https://docs.spyder-ide.org/current/index.html.
+The Python Tutorial, https://docs.python.org/3/tutorial/index.html.
+
+---END---

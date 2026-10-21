@@ -32,11 +32,12 @@
 - 10/26–30（Wk9 实验课）AIDA 闭卷测验
 - **9/24（四）23:59**：Workshop 1 (WS01 A) 提交（10 分，Canvas 作业 19620）
 - **10/2（五）23:59**：Workshop 1 (WS01 B) 提交（10 分，命名 EIE1005_StudentID_Workshop_01_B.py）
+- **11/1（日）Workshop 3（Lab 3）FrozenLake 工作表提交**：Canvas Lab 3 Submission · 逾期每天扣 20%
 - 11/28 Mini-project 报告 + 演示视频
 - 11/23（Wk13 周一 16:30 Z209）**Test 2**
 
 ## 🗓 时间轴
-W1 L1 → W2 L2 + 项目准备 → W3–4 Workshop1 → 9/30 组队 → W5 NVIDIA 讲座(点名) → W6 Test1 → W7 L3 → W8 AIDA 完成 → W9 AIDA 测验 + Workshop2 → W10 L4 → W11–12 Workshop3 → W13 Test2 → 11/28 项目提交
+W1 L1 → W2 L2 + 项目准备 → W3–4 Workshop1 → 9/30 组队 → W5 NVIDIA 讲座(点名) → W6 Test1 → W7 L3（Game AI Part I/II）→ W8 AIDA 完成 → W8–9 Workshop3（FrozenLake，11/1 截止）→ W9 AIDA 测验 → W10 L4 → W13 Test2（L3+L4+WS2&3）→ 11/28 项目提交
 
 ## 📚 每课笔记索引
 - **Guest Lecture（NVIDIA）**：eie1005-guest-nvidia.md（Part A 十题考点：Agent/模型矩阵/Physical AI）
@@ -45,4 +46,4 @@ W1 L1 → W2 L2 + 项目准备 → W3–4 Workshop1 → 9/30 组队 → W5 NVIDI
 - Workshop 1（数据可视化 Python 逐行讲解）：ie1005-w1-dataviz-python.md
 - 三次 Workshop 汇总：ie1005-workshops.md · 词汇表：ie1005-vocabulary.md · Mini-project：project.md · AI 伦理：thics.md
 
-更新记录：最后更新 2026-10-03 · 新增「Test 1 考前冲刺」与「Guest Lecture（NVIDIA）」两份笔记（Part A 十题考点已整理）；Test1 简答题与往年卷 Q1/Q2 非常相似 · 数据来源（Canvas courses/4018 Past Paper 页 file 264805、Guest Lecture file 264264）
+更新记录：最后更新 2026-10-21 · L3 依据 Game AI Part I/II 课件全量重写；Workshop 3（FrozenLake 全流程 + 11/1 截止）补齐；原始课件与逐页原文已入 files/eie1005/（Canvas file 267949/305342/305340）。此前 2026-10-03 · 新增「Test 1 考前冲刺」与「Guest Lecture（NVIDIA）」两份笔记（Part A 十题考点已整理）；Test1 简答题与往年卷 Q1/Q2 非常相似 · 数据来源（Canvas courses/4018 Past Paper 页 file 264805、Guest Lecture file 264264）

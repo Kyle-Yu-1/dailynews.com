@@ -281,7 +281,7 @@
 | rcParams | 全局参数 | 阿尔西·帕拉姆斯 |
 
 
-覆盖率：本表共收录 223 条术语（读音提示表覆盖可视化高频 20 条；其余按需补充音标/谐音）。
+覆盖率：本表原收录 223 条术语；2026-10-21 新增强化学习/Game AI 共 17 条（读音提示表覆盖可视化高频 20 条；其余按需补充音标/谐音）。
 
 ### 进阶 · 极坐标（Workshop 1 v10.1 新增，2026-09-25）
 - Nightingale rose chart — 南丁格尔玫瑰图（极坐标柱状图）
@@ -290,3 +290,21 @@
 - theta — 角度（弧度制）
 - set_theta_zero_location — 设定 0° 方向（N=正北）
 
+## 🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）
+- reinforcement learning (RL) — 强化学习：智能体通过与环境的试错交互、以奖励为反馈进行学习
+- agent — 智能体：执行动作的 AI（如 NPC、移动物体）
+- environment — 环境：游戏世界本身
+- state (S_t) — 状态：智能体在 t 时刻所处的状态
+- action (A_t) — 动作：智能体在 t 时刻做出的动作
+- reward (R_t) — 奖励：环境因该动作给出的反馈（可正可负）
+- episode — 回合：一轮从开始到结束（到达 Goal 或掉进 Hole）
+- Q-learning — Q 学习：给定当前状态寻找下一步最优动作的强化学习方法
+- Q-table — Q 表：记录每个状态×每个动作的 Q 值（质量）的表
+- Bellman equation — 贝尔曼方程：Q ← Q + η[R + γ·max Q(next) − Q]
+- exploration / exploitation — 探索 / 利用：随机试错获取信息 vs 按已知最优行动
+- epsilon (ε) — 探索概率：0≤ε≤1，训练初期大、后期小
+- learning rate (eta, η) — 学习率：Q 表学习快慢
+- discount factor (gamma, γ) — 折扣因子：下一状态价值对当前的影响权重（<1）
+- FrozenLake — 冰湖：Gymnasium 的 Toy Text 环境（4×4 冰面，掉洞失败）
+- FSM (Finite State Machine) — 有限状态机：状态、转移、条件、事件四要素
+- DQN (Deep Q-Network) — 深度 Q 网络：用神经网络近似 Q 值，处理大状态空间

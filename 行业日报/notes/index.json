@@ -50,8 +50,8 @@
   },
   {
     "id": "eie1005-l3",
-    "title": "L3 · 虚拟世界中的 AI 与数据分析",
-    "desc": "数字孪生、仿真、Game AI、行为数据",
+    "title": "L3 · 虚拟世界中的 AI 与数据分析（Game AI 与强化学习）",
+    "desc": "游戏AI发展史与FSM、ML在游戏的应用、RL框架、Q-learning与Bellman方程、Deep Q、FrozenLake衔接",
     "file": "eie1005-l3.md",
     "course": "EIE1005 · 人工智能与数据分析"
   },
@@ -65,7 +65,7 @@
   {
     "id": "eie1005-workshops",
     "title": "三次 Workshop 笔记",
-    "desc": "数据可视化、Game AI、对话式 AI 与报告高分清单",
+    "desc": "WS1 数据可视化 + WS3 Game AI（OpenAI Gym FrozenLake 五部分全流程、Q表读法、调参、11/1截止）",
     "file": "eie1005-workshops.md",
     "course": "EIE1005 · 人工智能与数据分析"
   },
