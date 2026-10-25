@@ -1,0 +1,657 @@
+[Music]
+chances are you've already experimented
+with generative Ai and you've probably
+gotten some results that have been
+helpful and maybe some that fell short
+throughout this course AI experts at
+Google will teach you the difference
+between a good prompt and a great prompt
+so you can work faster and smarter with
+Gen at your side and we'll share
+practical examples of where you can use
+gen at work hi I'm Amina I work on
+generative AI at Google in this course
+my colleagues and I are going to teach
+you how you can get the most out of gen
+you'll learn when to use gen and how by
+designing better prompts to get the best
+results you'll apply what you've learned
+with Hands-On activities and quizzes to
+level up your prompting skills after
+you've completed this course you'll have
+lots of practice applying gen in ways
+that matter to you and your job as
+recognition of your work you'll earn a
+certificate from Google to share with
+your network and potential employers we
+have a lot of exciting stuff in store so
+let's get to
+[Music]
+it hi I'm Timothy a director of
+developer relations at Google for the
+last 14 years I've been helping
+developers and Google work better
+together I've recently been working a
+lot more with Gen to do things like
+technical writing and generating code
+I've also been helping more developers
+integrate gen into their apps prompting
+is a new skill that a lot of us are
+learning and trying to get better at
+myself included now my first experience
+using geni that was transformative was
+for a pretty simple task I needed to
+quickly collect everyone's availability
+for an important team meeting I asked
+over chat and everyone responded in a
+different format as people are likely to
+do and it was a lot to track but with
+the help of gen AI I was able to
+organize everyone's availability into a
+table and then transposed it so the
+table was sorted by date not by chat
+message a task that would have taken
+forever manually only took me a few
+minutes with Genai and that was my
+breakthrough moment using Genai in my
+everyday tasks to turn things that used
+to be a headache into something simple
+and easy and that's what this course is
+about using gen to help you get your job
+done so what is prompting anyway put
+simply prompting is the process of
+providing Specific Instructions to a gen
+tool to receive new information or to
+achieve a desired outcome on a task
+those instructions are called prompts
+when we write a prompt for a gen tool
+we're giving it a series of inputs and
+telling it what we would like it to
+generate some gen tools can generate
+text or images While others generate
+video audio or even code a prompting is
+both an art and a science to get the
+best results we need to be precise in
+defining what we need now this is
+similar to the way you would help your
+teammate get started on a new project
+providing context and setting parameters
+will get you the best output from gen
+the first thing you'll learn is the
+prompting framework it's a formula for
+writing great prompts you'll use this
+framework throughout the course and
+after that it's all about putting
+prompts to use on specific tasks that
+can save you time in your job you'll use
+gen to brainstorm ideas develop plans
+and draft emails for different audiences
+we'll teach you how to summarize meeting
+notes assign action items and more we'll
+also teach you how to analyze data and
+spreadsheets with geni you'll write
+prompts that can help you find insights
+buried in data you'll then use gen to
+turn those insights into visuals and
+eventually turn it all into a slide Deck
+with talking points for presentation
+next you'll learn Advanced prompting
+techniques to help you untangle complex
+tasks for example you'll learn how to
+create prompts that can help make
+long-term complicated projects easier to
+plan and execute you'll also learn how
+to design a prompt to create your own
+personalized AI agent to do things like
+practice before an interview or prepare
+for difficult work
+conversations and finally you'll learn
+how to use geni responsibly including
+guidelines for using it in your job and
+on your team this is crucial gen tools
+help you with the work that you do but
+they don't do it for you anyone using
+gen should always be a valuating and
+factchecking outputs there are a lot of
+gen tools out there and in this course
+we're going to demonstrate how to prompt
+using Gemini and other Google AI tools
+like Gemini for Google workspace and
+Google AI Studio but all of the
+techniques and best practices you'll
+learn in this course can be applied to
+other geni tools like chat GPT co-pilot
+or CLA last thing we designed this
+course to give you skills that you can
+use at work right away so all of these
+lessons and techniques you're going to
+learn are rooted in real world scenarios
+you should experiment and play around to
+figure out what works best for you and
+as you go through this course feel free
+to pause the video and test what you
+just learned with something you're
+working on right now
+now let's get started with our first
+[Music]
+prompts in this lesson you're going to
+learn how to create effective prompts a
+good prompt follows a simple framework
+task context
+references evaluate and iterate if you
+ever forget a step just remember
+thoughtfully create really excellent
+inputs first is Task you need to
+describe the task you want the
+generative AI tool to help you with now
+this should include a Persona and a
+format preference so that the task is
+specific Persona refers to what
+expertise you want the Gen tool to draw
+from you can ask the tool to take on a
+Persona like a professional speech
+writer or or a marketing executive with
+15 years of experience or you can ask it
+to create output for a specific audience
+a customer or even your manager you can
+be as detailed as you'd like when adding
+a Persona to your task format refers to
+how you want the output to appear
+whether that's a bulleted list short
+sentences or a table so there you have
+it task next you'll include context or
+the necessary details to help the Gen
+tool understand what you need from it
+this is the difference between writing
+give me some ideas for a birthday
+present under
+$30 and give me five ideas for a
+birthday present my budget is $30 the
+gift is for a 29-year-old who loves
+winter sports and has recently switched
+from snowboarding to
+skiing sometimes you'll add references
+for the Gen tool to use while creating
+its output you just asked a gen tool to
+give you ideas for birthday present
+right well if you add examples of
+birthday presents you've given in the
+past as references the Gen tool can give
+you a more useful output there aren't
+always going to be clear references of
+what you need especially if you're
+working on something more abstract or
+searching for ideas and inspiration once
+you have your output it's time to
+evaluate ask yourself if the input you
+provided gave you the output you needed
+this leads us to the final part of the
+framework iterate if you evaluate your
+output and determine that you're not
+getting what you need you can try again
+by adding more information or tweaking
+your prompt and this is a key part of
+prompting effectively and we'll explore
+it in depth later on in the course one
+more note on the framework there are
+plenty of ways to construct an effective
+prompt the order of how you construct a
+prompt is less important than the
+substance of the prompt itself as long
+as you're thoughtfully creating really
+excellent inputs you're outputs should
+be
+[Music]
+great let's put the framework into
+action first we'll log into Gemini and
+then use the tool to help us brainstorm
+ideas for a new high performance sneaker
+line first let's add the
+task generate five ideas for a new high
+performance sneaker line okay we've
+asked Gemini to complete a task but
+we're not really applying the prompting
+framework yet remember thoughtfully
+create really excellent inputs this
+prompt is all task and nothing else
+which might give us an output that's too
+broad and not very useful still Gemini
+generated five ideas with unique names
+and descriptions this isn't a bad start
+but we can do better let's add some more
+details like our desired format and a
+more specific task for the tool to
+complete list the
+concepts and materials for each sneaker
+in an
+outline that's much better now we have a
+set of unique ideas for a sneaker line
+that includes the materials for each
+shoe and it came in our preferred format
+I think we can do even better don't you
+let's add some
+context the sneakers should be made for
+athletes doing cross trining
+activities with the new information
+Gemini created Five new sneaker ideas
+that are more suited to our specific
+goals remember getting tailored outputs
+means we need to provide a Genai tool
+with more details and context in order
+to generate more useful results success
+is all about the details so let's give
+references a
+try references give gen tools examples
+to work from and that can mean asking a
+gen tool to learn from the tone style or
+length of a given reference providing
+multiple references is also known as few
+shot prompting shots are just references
+or examples and the term is used a lot
+there's also singleshot prompting which
+means we're giving it one reference and
+zero shot prompting which means we don't
+give the AI tool any references now most
+of the time between two and five
+references is the sweet spot for a geni
+tool too few references and we don't
+give enough context too many we could
+skew the results and limit creativity to
+practice few shot prompting with our new
+sneaker line let's include descriptions
+of shoes that already exist one of them
+is from a budget line of shoes and the
+other one has a new adaptive soul
+we can input those descriptions like
+this keep the five ideas generated but
+refine them using these two examples as
+references here as we paste in the
+references ah there's a lot of choices
+here and they all seem like good options
+for the task and this is cool a shoe
+that regulates temperature
+evaluating the output and iterating
+might be the last parts of our prompting
+framework but they're also where we get
+to experiment and get creative each new
+output is an opportunity to further
+refine your prompt until you get the
+response you want in fact we've been
+evaluating and iterating this whole time
+we evaluated the sneaker ideas from our
+first prompt and we iterated by adding
+context we evaluated the output again
+and we iterated by adding references and
+remember we can always add details or
+tweak phrasing in order to change our
+outputs we like to say ABI or always be
+iterating give the prompting framework a
+try yourself remember it's always better
+to start simple and then slowly add
+complexity iterating as you go if your
+outputs start to lose quality you might
+need to go back and make your prompts
+simpler and that's okay learning what
+works and what doesn't is all part of
+the journey if you ever get stuck just
+remember to thoughtfully create really
+excellent inputs and you'll get back on
+[Music]
+track there are going to be times when
+your prompt simply isn't giving you what
+you want but instead of scrapping all
+your work and starting again from zero
+think about how you can always be
+iterating or Abi to try and mold the
+outputs into something more useful by
+the end of this video you'll learn four
+helpful iteration methods the first
+method is to revisit the prompting
+framework and make sure you're providing
+enough specificity in your task context
+and references for example if you wrote
+give me five blog post ideas a
+generative AI tool might respond better
+if you adjusted your prompt to include
+the Persona and format for example you
+are an expert on Sports Nutrition
+provide five blog post headlines that
+summarize the biggest Trends happening
+in the industry for an audience of
+physical therapists working with
+professional basketball players the
+second method is to separate your prompt
+into shorter sentences start by taking a
+long input and breaking it down into
+smaller tasks this is the long input
+summarize the key data points and
+information in this report then create
+visual graphs from the data and shorten
+the key information into bullets you can
+break this up into shorter sentences and
+input them as separate prompts you'll
+input each prompt receive an output and
+then follow up with a new prompt until
+all of your tasks have been submitted
+first summarize the key data points and
+information in this report then follow
+that up with create visual graphs with
+the data you summarized and finally
+shorten the key information you
+summarized into bullets sometimes
+shorter sentences can yield more precise
+results because the Gen tool can parse
+one small task at a time instead of
+identifying the relationships between
+all of them at once you can also try
+using different phrasing or switching to
+an analogous task which is a task that
+is very similar to the one you're trying
+to complete but different enough to
+trigger a new response for example if
+you're asking a gen tool to help write a
+marketing plan plan for a product or
+service you could instead ask it to
+write a story about how this product
+fits into the lives of our Target
+customer demographic by moving from
+write a marketing plan to write a story
+you're asking the Gen tool to approach
+the task differently which might lead
+you closer to a useful output finally
+introducing constraints might also help
+focus a gen tools outputs maybe you want
+to make a playlist for an upcoming road
+trip and you're trying to figure out
+what artists you want to include you've
+added some context about your favorite
+genre but the results are kind of boring
+you've heard all these songs a million
+times before to get better output and
+something more unexpected you could
+start adding constraints like specifying
+you only want artists from a certain
+region or artists that have released
+music in The Last 5 Years adding
+constraints to your prompt will help the
+Gen tool narrow down its outputs and
+give you something more helpful or
+unique the better you can evaluate and
+iterate the better your output will
+[Music]
+be images and visuals can be as
+important as words when you want to
+communicate ideas in this lesson I'm
+going to teach you how to use generative
+AI tools to create visuals
+so far we've asked gen tools to produce
+responses in what's called a text based
+modality modalities are the different
+formats in which gen tools receive or
+produce information whether that's text
+images video audio or code different gen
+tools are better at working in certain
+modalities be sure to check the Gen tool
+you're using to find out which
+modalities it's capable of using or
+producing let's start with image
+generation some gen AI tools can create
+images a sunrise a bouquet of flowers or
+even a crab right into a dolphin but
+those same tools can also make images
+for a business or a professional
+presentation maybe you're a musician
+playing a gig in New Orleans and you
+want to promote your concert so you use
+a gen tool to help you create a poster
+to advertise the show let's prompt
+Gemini to to create both text and images
+so we can discuss the subtle differences
+between prompting for each modality
+we'll start with the text first remember
+to keep the thoughtfully create really
+excellent inputs framework in mind text
+based prompts work best when we specify
+our task and add some clear context so
+we could prompt generate headlines for a
+poster promoting a rock concert in New
+Orleans
+and to add a little more context about
+the task we could write the concert is
+one night only and the headlines should
+encourage the audience not to miss
+out by specifying our task and adding
+context we're guiding the Gen tool to
+the text based output we
+want and just like that Gemini came up
+with a few catchy headlines for the
+poster
+and this is a good one right here Nola
+this is it Unforgettable Rock one night
+only it's catchy and it gets to the
+point now in order to prompt the Gen
+tool for an image we'll need to tweak
+our language we'll still use the
+prompting framework but we'll need to
+provide more vivid descriptions that
+help the Gen tool determine the type of
+image it needs to create this means
+specifying the size color and position
+of things in the image and the overall
+aesthetic we want so first we'll specify
+our task and
+format generate an image of an electric
+guitar for a poster it should be a
+photographic
+style and how about some vivid
+descriptions the guitar should be
+glittery or sparkly and create a sense
+of excitement
+the guitar should be in the
+foreground and give a sense that it's
+floating in the
+sky great Gemini created four different
+images that you can use on your
+poster so how can we make these images
+even better let's break down how to
+iterate and refine a prompt for images
+we're still going to use the prompting
+framework but with a few little tweaks
+for the concert poster maybe you liked
+the appearance of the guitar but you
+want to make it even more exciting by
+adding a storm with lightning striking
+the guitar we could refine it by
+writing now make the sky
+Stormy with lightning hitting the
+guitar there we go you could keep this
+image or keep evaluating and iterating
+again and again adding relevant details
+from each new output until you get one
+that works
+[Music]
+okay we just used text to create an
+image but we can also use an image as
+part of our prompt to create a different
+type of output let me introduce you to
+multimodal prompting the essence of
+multimodal prompting is using different
+types of media to prompt a gener ative
+AI tool like inputting image and text or
+audio and text this can be especially
+useful in the workplace you can take a
+picture of a chart and ask a gen tool to
+explain the data in plain language you
+could upload different logo options for
+your company's Rebrand as a set of
+references and then prompt the Gen tool
+to give you more choices based on each
+direction or you could capture audio of
+another language and ask for a transcrip
+destion in the language you understand
+here's an example where we'll prompt
+with both image and text to receive a
+text based output from Gemini let's
+imagine you're an entrepreneur who needs
+help creating social media captions for
+a new design of nail art you're selling
+you can take a picture of your nail art
+and ask for help writing a caption
+here's a photo of the nail art and we'll
+input this into Gemini and prompt write
+a social media post featuring this this
+image the post should be fun short and
+focus on the fact it's a collection of
+new designs I'm selling note that in
+addition to including a reference photo
+of the nail art we still used the other
+elements of our prompting framework we
+specified our task added some context
+and included the format besides the
+image itself we didn't provide other
+reference ref es but if we have a
+specific tone or voice we want the Gen
+tool to match we could always input a
+few captions from previous posts to
+reference this is great Gemini analyzed
+the image and created a fun caption you
+can use to market the nail art notice
+how it uses emojis to break up the text
+and how it engages followers by asking a
+question about their favorite design the
+cool thing about multimodal prompting is
+that it reflects the way you experience
+the world you don't just discuss the
+words or images in a work presentation
+you build connections between them to
+get a fuller understanding of the topic
+in question a mix of text images and
+other modalities can open up new ways of
+solving problems or saving time you
+could use a gen tool to turn a picture
+of a city map into a list of notable
+landmarks find key insights within an
+audio file or quickly extract a list of
+room names from an office floor plan
+here's another example you go to a
+conference and receive a schedule of
+events and you want your team to focus
+on a few of the events in particular I
+want to send a reminder to my colleagues
+about certain events from a conference
+schedule extract the times of the
+keynote speaker and two panel
+discussions from this schedule into a
+table again we specified our task
+provided helpful context and included
+the format before inputting the picture
+of the schedule let's check it
+out great the table makes it really easy
+to see where your team needs to go and
+when you can even take it a step further
+and prompt Gemini to draft an email
+about these events we'll get into
+prompting for email drafts later in the
+course just remember to keep the
+prompting framework in mind no matter
+what modality you are prompting in to
+achieve the best results how might you
+leverage different modalities in your
+prompts to help you at
+[Music]
+work generative AI tools are powerful
+but like any tool it's important you use
+them responsibly especially at work
+first consider the problem you're using
+gen to help you solve does it align with
+your goals and your obligations to your
+clients and co-workers what about your
+organization's policies and local laws
+about using gen to perform this type of
+task if it doesn't align then you should
+rethink your process and whether or not
+a gen tool is right for the job second
+consult your company's rules or policies
+before entering confidential or
+sensitive data into gen tools you can
+also check if your company has an
+Enterprise version of a gen tool that is
+okay for other types of use and remember
+if you're using geni tools for personal
+use avoid entering personal or
+confidential information about yourself
+into publicly available tools and always
+check how the data you enter might be
+used finally being a responsible gen
+user means evaluating outputs for
+potential bias and errors and disclosing
+any use of gen when sharing content with
+others while it's okay to enlist the
+help of geni you'll still need to
+evaluate the outputs for accuracy the
+way you would for any output the same
+goes for hallucinations which is when a
+gen tool provides outputs that are
+inconsistent incorrect or even
+nonsensical hallucinations most often
+happen when someone gives a gen tool
+vague or unclear instructions or when a
+tool guesses at an answer to something
+it didn't quite understand
+hallucinations can be hard to recognize
+that's why it's so crucial to fact check
+and cross reference outputs to confirm
+if a fact or statement in an output is
+true remember gen tools aren't thinking
+critically the way humans can it's
+important to keep what we call a human
+in the loop approach meaning a human
+should verify gen outputs before using
+them I recently generated an image for a
+presentation
+I wanted to have a bunch of cats on a
+rocket going to the moon now instead the
+output was a little bit off the cats
+were on top of the rocket rather than
+inside it and that's not exactly safe
+for cats is it while I did write in my
+prompt that cats needed to be on a
+rocket I didn't mean that literally but
+the tool didn't know that so I iterated
+and specified that the cats should
+appear safe and sound inside the rocket
+instead of on top of it some gen tools
+such as Gemini have a built-in fact
+Checker that allows you to cross
+reference the outputs using Google
+search comparing outputs side by side
+makes it easier to determine how
+accurate your initial output is and to
+find any discrepancies so how can you
+avoid these issues before they become a
+problem try to recognize biases and
+outputs and the negative consequences
+they can have they may appear as
+stereotypes or unfair represent
+presentations of a group of people
+avoiding biased to negative outputs
+starts with inputting specific detailed
+prompts and iterating as needed another
+key part of this is using language that
+includes people of all backgrounds
+genders and ethnicities and avoid
+stereotypes and generalizations in your
+inputs for example if you were using a
+gen tool to help you write the
+description for a job posting you should
+avoid the gendered terms like serviceman
+or Workman instead use service person or
+worker so the tool doesn't write a
+description that only speaks to someone
+who identifies as male remember gen
+tools are only tools they don't think
+critically and can't understand Nuance
+the way humans can it's your job to
+bring that human perspective every time
+you use a gen tool
+[Music]

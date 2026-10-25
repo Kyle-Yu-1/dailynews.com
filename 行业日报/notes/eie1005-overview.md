@@ -46,4 +46,4 @@ W1 L1 → W2 L2 + 项目准备 → W3–4 Workshop1 → 9/30 组队 → W5 NVIDI
 - Workshop 1（数据可视化 Python 逐行讲解）：ie1005-w1-dataviz-python.md
 - 三次 Workshop 汇总：ie1005-workshops.md · 词汇表：ie1005-vocabulary.md · Mini-project：project.md · AI 伦理：thics.md
 
-更新记录：最后更新 2026-10-21 · L3 依据 Game AI Part I/II 课件全量重写；Workshop 3（FrozenLake 全流程 + 11/1 截止）补齐；原始课件与逐页原文已入 files/eie1005/（Canvas file 267949/305342/305340）。此前 2026-10-03 · 新增「Test 1 考前冲刺」与「Guest Lecture（NVIDIA）」两份笔记（Part A 十题考点已整理）；Test1 简答题与往年卷 Q1/Q2 非常相似 · 数据来源（Canvas courses/4018 Past Paper 页 file 264805、Guest Lecture file 264264）
+更新记录：最后更新 2026-10-25 · AIDA 满分冲刺包上线（8 模块笔记 + 考点卡 + 2 套预测卷 + 15 条视频字幕稿归档；10/26–30 Wk9 实验课闭卷测验）。此前 2026-10-21 · L3 依据 Game AI Part I/II 课件全量重写；Workshop 3（FrozenLake 全流程 + 11/1 截止）补齐；原始课件与逐页原文已入 files/eie1005/（Canvas file 267949/305342/305340）。此前 2026-10-03 · 新增「Test 1 考前冲刺」与「Guest Lecture（NVIDIA）」两份笔记（Part A 十题考点已整理）；Test1 简答题与往年卷 Q1/Q2 非常相似 · 数据来源（Canvas courses/4018 Past Paper 页 file 264805、Guest Lecture file 264264）

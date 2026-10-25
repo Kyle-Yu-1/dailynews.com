@@ -1,0 +1,175 @@
+Hi, today we are going to introduce
+common functions in Excel.
+Excel functions can help us with data
+management and analysis, making them
+essential features in Excel.
+First, let's talk about the IF function.
+The IF function is a conditional
+function that evaluates a predefined
+condition.
+It has three main variables.
+The first is the condition to be tested,
+the second is a result when the
+condition is true, and the third is the
+result when the condition is false.
+For example, if we want to set grade
+levels for students where scores above
+85 are excellent and the scores below 85
+are good, we can use the IF function.
+In the cell, enter the IF function with
+the condition that the score is greater
+than or equal to 85.
+The result if true is excellent and the
+result if false is good.
+After pressing enter, we will see the
+result.
+For instance, if any score is 78, her
+grade will be good.
+The second function we want to introduce
+is the MID function.
+The MID function extracts a substring
+from a text string.
+Suppose we need to extract a
+five-character substring starting from
+the fifth letter of a text.
+We can use the MID function.
+In an empty cell, we can use the MID
+function and select the original string
+cell as the first parameter.
+Set the starting position as two and the
+length as five.
+After the function is applied, we will
+see the result of the substring.
+The LEFT function similar to the MID
+function extracting a substring from the
+left side of a string.
+For example, if we want to extract the
+first four characters from a string, we
+can use the left function.
+In a cell, we enter the left function
+with the original string cell as the
+first parameter and the number of
+characters to extract as the second
+parameter.
+The right function extracts a substring
+from the right side of a string.
+If we need to extract the last four
+characters from a string, we can use the
+right function.
+We enter the right function in a cell
+with the original string cell as the
+first parameter and the number of
+characters to extract as the second
+parameter.
+The text function converts text to a
+specified numeric format.
+For example, we can convert a date to a
+specific year using the text function as
+shown in the example.
+The VLOOKUP function is used for data
+lookup based on matching.
+In a scenario where we need to find the
+number of emails sent corresponding to a
+date, we can use this function.
+We select the date in the current table
+as the first parameter.
+The matching range in the original table
+is used as the second parameter.
+The column number of the matching values
+in the original table is used as the
+third parameter.
+And we choose between exact or
+approximate matching as the fourth
+parameter. After pressing enter, we will
+get the number of emails sent on the
+corresponding date.
+The count function calculates the number
+of numerical values in a selected range.
+It counts only numerical data types.
+Compared to the count function, the
+countif function calculates the number
+of cells in a range that meets specified
+conditions.
+For example, if we want to count the
+number of cells containing the text
+more, we can use the countif function
+and set the condition to more.
+The sum function returns the total sum
+of numerical values in a selected range.
+It includes different data types, but
+only numerical values are summed.
+For instance, if we want to calculate
+the total number of emails sent, we can
+use the sum function.
+Compared to sum, the sumif function
+calculates the total sum of numerical
+values in a range based on specified
+conditions.
+For example, if we want to calculate the
+total sales volume of a product with
+daily values greater than or equal to
+500, we can use the sumif function.
+The max function returns the maximum
+numerical value in a selected range.
+It quickly helps us find the maximum
+value in a large set of data.
+The min function returns the minimum
+numerical value in a selected range.
+It can help us find the minimum value in
+a large set of data.
+The standard deviation function
+calculates the average standard
+deviation of the data points.
+For example,
+if we want to accurately calculate the
+standard deviation of these culture code
+data sets,
+we can easily use this helpful function.
+The average function calculates the
+average numerical value in a selected
+range.
+It quickly helps us find the mean value
+in a large set of data.
+For instance, if we want to calculate
+the average number of emails sent, we
+can use the average function.
+The rank function sorts data and assigns
+a rank.
+If we want to rank students based on
+their scores, we can use the rank
+function.
+We enter the func the function in Excel,
+set the score as the first parameter,
+the range as the second parameter.
+We use the absolute reference to keep
+the range constant, and we choose
+ascending or descending order as the
+third parameter.
+We press enter, and the function will
+rank the scores.
+Excel has further divided the rank
+function into rank average and rank EQ.
+The difference between rank average and
+rank is that when dealing with identical
+values, rank average takes the average
+of the ranks of these values.
+For example, if Anne and Bob both scored
+70, they would assigned a rank of 5.5,
+the average of five and six.
+The difference between rank EQ and rank
+is that when dealing with identical
+values, rank EQ takes the highest rank
+of these values.
+For example, if Anne and Bob both scored
+70, they would be assigned a rank of
+five.
+The frequency function calculates the
+frequency of values in a range.
+If we want to analyze the distribution
+of student grades, we can use the
+frequency function.
+We set the scores to be analyzed as the
+first parameter and the score intervals
+as the second parameter.
+After pressing enter, the function will
+display the frequency distribution.

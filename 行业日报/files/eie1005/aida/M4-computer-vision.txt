@@ -1,0 +1,686 @@
+Hello. Uh this is professor Chang Wen
+Chen from the department of computing.
+Today I'm going to uh give the
+introduction to computer vision and
+pattern recognition. Uh this is for aid
+e-learning presentations. Okay. So this
+is this uh subject uh entitled computer
+vision and pattern recognition. Okay.
+Let me uh first uh uh give you a brief
+idea of what about the visual signal
+processing in the human brain.
+In fact uh we are actually taking a lot
+of the data uh in the visual form. Okay.
+So in this uh study they find out about
+90% of the information sent to the brain
+is visual.
+And in fact uh uh in terms of the
+communication between humans 93% of
+those uh human uh uh communication is
+actually through visual forms. Okay. So
+as you can see that the visual datas are
+heavily involved with the all human
+daily life and other more advanced the
+uh form of the uh study and uh working.
+Okay. So what what is this computer
+vision? So we know uh uh a little bit
+about just introduced this human vision.
+But what is computer vision? Then there
+are many different type of the
+definitions for computer vision. Okay.
+Uh I list quite a few here. I'll just
+highlight the the a few of them. Okay.
+So one of definition is automatically
+identify object in images or videos.
+Okay. And this is actually earlier days
+of computer vision we are trying to do
+this. In fact probably current computer
+vision go much more beyond that not just
+identifying they will probably wanted to
+tell more about this identifying object.
+Okay. Or other things like you know from
+the last line here the study of the
+understanding the the world through
+visual perception. So it sounds like uh
+we are all related to human visions
+whether we are trying to mimic human
+vision or we are trying to uh uh kind of
+enhanced human vision but they are
+related human vision. Uh okay so
+that means that the computer vision in
+many people's view will be probably a
+simulation of eyes or human eyes. Okay.
+So human eyes are actually doing a lot
+of work here or converting this whatever
+we see through the eyes to
+understandable things uh you know like
+distance edges directions in the brain.
+Okay. All computers uh if we are
+mimicking or simulating the eyes
+computers getting information out of the
+images and videos and so on. Okay. There
+there are multipleh such very similar
+definitions is uh uh by the computers
+doing simulation of the eyes. Okay. So
+that's uh the computer vision in other
+ordinary people's eye. Okay. In fact,
+the uh computer vision has a a long
+history but uh eventually if I say long
+compared to whatever the human history
+and other uh civilizations
+is actually very short but still yeah I
+started probably even before the 1970s.
+Okay, that was uh we count from now that
+was in more than 50 years ago and
+they're going through different stages.
+I highlight a few things here will
+probably be known uh in the uh
+university setting or in the study of
+the uh computer vision. For example, um
+some time ago probably more than 50
+years ago we are start with digital
+image processing. Okay. And uh uh uh and
+then of course if you see here the
+number four here in in the left here is
+the pattern recognition. This is one of
+the topics for this uh subject here is
+computer vision and pattern recognition.
+Okay, since we are uh as we know we have
+heavily uh um you know bias towards
+visual data anyway. So I will talk more
+about computer vision at the end I'll
+tell you uh what is the pattern
+recognition and some of pattern
+recognition is under computer vision
+paradigm some of the beyond computer
+vision or is analyzing other data other
+than the visual data okay then of course
+quite a few other highlight the
+technologies I'm talking about and if
+you look at more recently towards 2020
+or plus or beyond we have deep learning
+And we have the integration of vision
+and the languages. Okay. So they are
+become more sophisticated compared to
+what we have been able to do in the 50
+or you know 40 or 30 years ago. Okay. So
+that's give you a snapshot about the
+brief history of computer vision. Okay.
+So in fact if we are talking about
+visual data images is most common ones
+we run into. Okay. So in this case here
+I'll tell you that every picture tell a
+story. Okay. So in in the sense that uh
+the the eventual or ultimate goal of
+computer vision is essentially to write
+computer programs that can interpret
+images and tell a story. Okay. This
+stories could be uh what is this about?
+What are the picture? What are in the
+picture? Where are they and what are the
+relationships?
+What are the spatial dependency? What
+are the relationship between object and
+the scene and many more. Okay, those
+things we try to and uh in this in the
+case of computer vision we usually start
+with some classifications
+and then maybe recognitions and so on.
+Okay. So I'll talk about that in a bit.
+But uh in the meantime I'll tell you
+that what is this? What do computers
+see? Okay. So what computer see is
+essentially if we present a picture here
+in this case this is a very low
+resolution of picture here. But in fact
+what computer really see is the numbers
+representing those the uh intensity of
+those in this image here. If I uh uh
+click next one, you're going to see that
+that all kind of numbers here. And this
+actually usually will refer to this a
+bit intensity imager here. In that case
+here if a bit then the highest the
+number or most cases here it will be
+255. Okay. By being binary numbers here
+is 255
+for a bit. Okay. If all bit are one then
+it's 255. And we have different ones of
+course the different ones is could be
+the darker ones. Okay. Or the brighter
+ones with the higher value. Okay. So for
+example if you down here in the bottom
+uh row here we have 255 two pixels with
+255 and 255. So if you going back to
+previously this this actually white
+pixels the wider ones the higher the
+value of the intensity here. Okay. So
+back to the picture I have. Okay. Just
+show you. So can computers actually
+doing a lot of things but uh can they do
+this better than human? Okay. Uh yes but
+most of time actually they are not as
+good as human because uh we really have
+a very nice brain. The brain actually is
+probably uh more uh powerful than any of
+the computer personal computer we have.
+And uh of course we we if we are doing
+much more computers get together then uh
+you have this deep learning we have this
+uh you know Google and things then they
+can do a lot but humans are actually
+much better at hard things. What do we
+what do I mean by hard things? part
+things is is we can tell probably uh if
+you say okay oh I can tell behind the
+pictures okay but computers cannot do
+that okay because for them is only
+whatever present the intensity level to
+to the computer okay but computer can do
+a much faster because if they have a
+good processing power here so sometime
+we tell them computer can do better at
+the easy things easy mean you compare
+the intensity and do follow this those
+other classification recognitions it's
+it is probably easier to do but anyway
+so with that uh I tell you that uh for
+us humans the human perception through
+visual data actually have shortcomings
+okay so if you see this picture here
+okay uh if you understand this two
+gentlemen in the 1990s they are actually
+the president and the vice president of
+the United States. Okay. And you can
+obviously recognize this is Bill Clinton
+and our goal and one is president, the
+other one is vice president. But if you
+look carefully, if you look carefully,
+if you're taking off other reference,
+for example, the beans hair or our go
+hair, then you see that this actually
+the same same face. So I think that as
+you can see here that so if we if for
+human we actually from the same face we
+can make a reference to either Bill
+Clinton or Galgo and those other things
+meaning that uh we are don't we don't
+just rely on the face we rely on other
+reference to recognize uh the something
+in the picture here I'll give you
+another example about visual illusion
+here and if you stay in this screen
+here. Okay, you see that it looks like
+the pattern is moving, rotating. Okay,
+and this is one of the very interesting
+things here. But in fact, they are not.
+They are not. It's just the perception
+or illusion, visual illusion we have.
+Okay. And this being used as example for
+study human vision for many many years.
+Okay. You can get all different type of
+patterns like this. and is to show you
+that we actually human we are fooled by
+this visual illusions. Okay. So that's a
+kind of introduction between the
+computers v computer vision and also
+human vision and uh I'm not going to
+tell you a lot about this specific
+technology beyond what I just list in
+the history of computer vision. I'll
+just to bring you some of the current uh
+applications of the computer vision and
+of course uh uh those are some of them
+are still going on it's going well and
+some of them is probably further
+developing into a new uh technology
+here. So the first one I'm going to show
+you is this 3D maps. Okay, you probably
+if you are uh uh you know the travel and
+you use this maps tools often as you can
+see here this one is actually is really
+3D if you see it moving just the a
+moment ago. Okay, I I'll show you one
+more time. Okay. So, as you can see
+here, this is actually has a this is
+actually in the building in the center
+here is Empire State Building in New
+York. And you can see it this real 3D.
+This real 3D if you just just rotation
+of the uh this as you can see here. So
+this is a 3D map and 3D map is very
+helpful especially you want to recognize
+the the features of those buildings
+because in a 2D here you only give a
+location for example this is from Apple
+maps and for example I give you another
+Google maps and I I don't have a
+preference preference for the Apple over
+Google whatever but I think I just show
+you that the tools available in the
+Apple maps they have 3D but Google maps
+very often we only use 2D and as you can
+see here in this case here you have a
+broader uh view of the area but you
+don't have the local features okay so
+you are in a neighborhood here if you
+don't know which building and if you
+already have picture of the building for
+example the empire building here then
+you recognize you are in front of
+building otherwise if you going just
+purely from the 2D app here you may have
+problem. So those technologies actually
+used and this navigation is uh a good
+amount of them is based on computer
+vision. Okay. So that's two uh maps
+related applications. The other one is
+uh uh the computational photography.
+Okay. So so I think that uh there are a
+lot of people here. Everybody has this
+uh uh this uh the smartphones at hand.
+Okay. So you take pictures especially
+for those advanced picture taking tools.
+You can actually specify what you are
+doing here. For example in this case
+here is where we will tell the the the
+the smartphone here we are taking
+portrait of somebody. So they will
+switch to that and then they will try to
+find the face. they try to find the
+human body the the the silhouette and so
+on. Okay. So what they do here is
+actually with this understanding that uh
+we are taking a portrait there must be
+human there. Okay. So they are operating
+at a wider aperture with wider aperture
+means that you can recognize both near
+things and something far away. Okay. and
+and and that means you have wider
+aperture here is is good for many
+applications because you not you don't
+just wanted to look at the if you don't
+use this wider uh aperture option here
+then the background will probably pretty
+much uh blur. Okay. So if you want
+really to look far away you can actually
+have a computer simulating the aperture
+of the photographer or the camera here.
+So for example in this case you probably
+this a few years a couple years ago was
+this is essentially is a image
+reconstructed from the image of the
+black hole we construct from the imaging
+devices and not really camera. So that
+means that the computer based algorithms
+in fact generating this picture using
+the idea of a wider actor so that we can
+see things very very far away. Okay. So
+that's the computational visions we used
+in generating this uh visual images
+here. Okay. Then we have other things.
+This is also related to photography
+here. But in this case here we are
+actually at uh getting the depth
+information or 3D information from the
+pictures. Okay. In this case here you
+can see that the the the object or the
+area closer to you. Okay. So you can
+mark as brighter uh the uh the data here
+and so on. Okay. So this is actually the
+example coming from Facebook. Okay. So
+as you can see here I'm actually
+referencing a lot of this top companies
+and they are actually doing computer
+vision for all kind of different
+applications here. Okay with that uh I
+think I will uh continue on with the
+face recognition here. This is actually
+the the girls picture here uh for the
+National uh geographic okay back in
+1985.
+Okay. Of course this is talking about
+the girl has suffer you know life okay
+the suffering he her uh the uh the
+earlier uh young age life because the
+girl was continue to grow and then then
+the many years later. Okay this actually
+is about probably at uh 10 15 years
+later. Okay. And on the on the top row
+here, the same picture here from the
+previous page, but on the to to to this
+to the right of this picture here is not
+a woman.
+Okay. So, uh people say these are two
+the same person. How do we know? Okay.
+So, this is coming from the vision
+computer vision based biometrics
+detection here. Okay. biometrics is
+actually in this case here is her iris.
+Okay. So her iris pattern in fact is
+unique for every person. Okay. So we can
+understand that if we can detect this
+iris from this both eyes of the two
+pictures if they are consistently
+the same then we see this is the same
+person. So computer vision has been used
+of course for biometrics from face to
+this iris and to other things. Okay. For
+example also we are have many system
+here using fingerprint. That's also a
+very uh stable biometrics and
+fingerprint detection is also using
+computer vision technologies. Okay. Then
+of course the uh I mentioned earlier
+this is the object recognition. Okay. So
+if say you are walking and you see some
+flowers but you don't know what is it.
+Okay. So the contemporary this
+smartphone will just take picture and
+they go into internet to find out using
+a picture to find out what is this
+specific flower here and you have all
+kind of information you can get and this
+certainly will be using computer vision
+technology here to do the matchings
+between the pictures the object in the
+picture you taken and the object
+appearance of those specific take
+flowers uh in the internet. Okay, so
+those are the object recognition. Then
+and on the next level here, we don't
+just do this image based matching. We
+can actually create some of these
+threedimensional
+profile of a person. And on to the left
+here, this is actually uh uh from the
+moving uh matrix. Okay. And of course we
+only have a two-dimensional information
+by different uh the uh you know we the
+movies are playing different uh time and
+then from different frames. Okay. We can
+construct the three-dimensional the face
+profile. Okay. So it's it's relative
+easily because with the 3D uh with the
+additional temporal dimensional here the
+person can be looked at from different
+perspective and then the 3D file profile
+can be constructed. Those are also the
+uh uh the the u uh computer vision
+technologies. Okay. The next one uh I'm
+not sure this next one is probably not
+familiar in the oriental culture here
+because this is actually American
+football. Okay, most other place they
+play really soccer instead of this
+American football. So for American
+football here uh just give you a snap
+what is here. So, American football here
+every uh you know the game here you and
+you needed you needed to uh move about
+10 yards. Okay. and uh 10 yards in order
+to continue and you have three
+opportunities to move the 10 yard but uh
+uh you know in the in the uh in the
+field you can mark those 10 yard regular
+10 yards but since the ball can be any
+position so people really wanted to see
+where is the ball position is and
+without actually you know really marking
+on the on the field okay so this is
+actually computer vision technology to
+generate this this yellow line here
+which actually virtual mark of the 10
+yard and uh you can see here actually
+that that yellow line here did not on
+top of those person so I think there are
+technology we can do using computer
+technology to detect those west person
+where we mark this yellow which is ver
+virtual line not on the field but on the
+TV's You are seeing
+of course the more contemporary
+application computer vision for example
+we can use in the games to detect or to
+follow whatever the generated action is.
+Okay. And this is particular one is uh
+coming from the Microsoft Xbox connect.
+Okay. In the connect that case here you
+actually there are two cameras. Okay.
+are looking at you and they will judge
+your threedimensional posture or action
+whether or not they you are actually
+doing as good as the the uh the the
+person in the screen in the TV here.
+Okay. And of course more contemporary
+ones more in recent years we have many
+of the virtual reality application here.
+Okay. And uh uh this actually is not
+really uh captured not really human is
+actually is on in the virtual world. Of
+course, we also have this mixed reality
+or augmented reality here is a mixture
+of what we have for example in the
+middle model here we have the human is
+for real but in the m in the in in in in
+the more the the things in the in the
+middle here it's not really appearing in
+front of you is actually through the
+hono lens okay the person wearing you
+appear to be holding this photos and uh
+this holo lens actually have many
+different type of sensors and several of
+them is actually visual sensors and let
+me show you what is hono lens two
+sensors they have they have 8 megapixel
+RGB camera they have four hat tracking
+camera tracking where you are looking at
+okay so there some of is called stereo
+that means two cameras plus peripheral
+and so on and IMU Okay, they also have
+at the one meixels depth camera, meaning
+that they can tell how far you from the
+camera from the holo lens and near and
+far and also they have uh in infrared
+eye cameras. Okay. And in addition to
+the visual sense, they have also five
+microphone microphone arrays. Okay. And
+then then of course uh with this augment
+reality here as you can see here the
+person holding this actually not really
+holding but through the hollow lens you
+have the idea of what is 3D is okay and
+there are many other application augment
+reality I'm not going to uh tell you in
+more detail okay so
+of course uh uh we can actually do much
+more than just our daily life this is
+actually the one robotics that with a
+visual uh sensors. Okay. And this is
+actually a NASA's Mars rover, Curiosity
+River Rover. And this is the robotics
+with visual sense. You can use the
+visual cameras uh the camera to uh take
+a visual data and then based on the
+visual data you are actually can
+reconstruct your threedimensional
+environment and give you uh how where to
+go next for the navigation. Okay, so
+those are the advanced robotics and of
+course the more in recent years there
+are many of new cars in fact have the
+visual cameras uh to take in visual data
+to help with that navigation or driving
+or to help with uh seeing the
+environment. Okay, so many of them has
+multiple cameras. So for example in this
+case here we actually have four of them.
+One is rear looking, the other one is a
+front looking and then we have two side
+looking ones. Okay. And probably some of
+them may have or internal looking ones
+too. Okay. Those are actually connecting
+visual data to help the navigation. If
+we put this under this auto autonomous
+driving here then those visual
+information is used to steer the cars
+and uh to operate the cars to invol to
+avoid this collision with other vehicles
+and the collision with the road and
+other things. Okay. So those are the
+useful very useful for smart cars. Okay.
+So one of the things here is uh the
+currently drones. Okay, so this uh Mang
+vehicles or flying vehicles actually can
+be very useful with the cameras too.
+Okay, this is actually happens a few
+years ago is 200 2018
+when the uh this is the person is in
+Hong Kong was in the area of the Kong
+Pik Hong Kong and he got lost. Okay. So
+we send the rescuers but if we doing the
+manual search by the rescuers is
+probably very tough very difficult the
+unknown areas. So we sent the I think
+was the drones were sent to look from
+this uh from the top and then you find
+out all this ah you find out a person.
+Okay. So this is actually a real things
+in operation that means that the drones
+equipped with visual cameras can really
+helpful in those
+rescue uh cases here. Okay. So uh I have
+talked a lot about this different
+exciting applications and I promise you
+that I'll come back the end to tell you
+this computer vision versus the pattern
+recognition. Okay. So if we go this side
+by side here on the left hand side here
+we have uh the descriptions about the
+computer vision. Okay. So let me read
+some of you and you of course you can
+also read yourself. For example, in the
+first row here, the comparison between
+the computer vision and the pattern
+recognition is the following. Okay. So,
+the computer vision, it is the study of
+how machines can be trained to extract
+meaningful information from images.
+Okay. And of course uh on the
+corresponding on left hand side here it
+is used to identify patterns and the
+regularities
+in data for classification purpose. So
+uh you see this difference here is for
+computer vision we actually getting this
+from images for pattern recognition can
+be any type of data as long as they have
+some patterns can be identified or
+classified. Okay. on the second row
+here. Okay. So, computer vision it works
+on the visual data such as digital
+images and videos. Okay. While on the
+other hand, the pattern recognition the
+data input can be images, text, videos
+or audio files or even more than that.
+Okay. So, as you can see here, they
+extend in the par recognition here
+extend this input data to much more than
+just images and videos. And the third
+row here get computer vision. The
+purpose is to train a computer or
+machine. Okay. To understand
+recognizable features in an image. Okay.
+So again is limited images and videos.
+And for pattern recognition is is used
+to extract useful information from given
+samples such as speech, images, text and
+other data. Okay. In fact uh there is no
+limitation on the type of data uh if we
+are talking about pattern recognition as
+long as the data contains certain
+patterns that can be recognized. Okay.
+The final ones is about application. So
+applications of computer vision include
+automated
+uh driverless car testing, medical
+diagnostics,
+club or livestock monitoring
+and defect detection and many many more.
+Okay.
+Application for the pattern recognition
+will include computer added diagnosis,
+bioinformatics,
+not necessarily the information is
+coming from the visual data or data
+compression, image analysis, signal
+processing and so on. So it's a broader
+range than the what computer vision is.
+Okay. So uh uh with that uh so you
+probably be a already have some idea
+about computer vision and par
+recognition. So let me show you what is
+the uh the take-h home message you
+should have after the listen uh uh to me
+for the past few uh uh you know maybe 20
+minutes or so. So, so what the take-h
+home message you should have first of
+all the computer vision and par
+regulation is a active area that
+generated tremendous impact in almost
+every aspect of personal life or and
+social life. Okay. So uh if talking
+about the taking a subject I believe
+this is a great subject for almost all
+majors at polyu and if you have
+different major different background uh
+a different application in mind uh I
+think many of them still have the images
+and videos as input data okay so you
+have you can create your own
+applications in your area if you say for
+example you if you're from the uh the
+urban uh uh you know the study here then
+it's probably good for smart city. If
+you are doing say other things like
+hotel management you're probably doing
+some surveillance or monitoring things.
+There are many other many applications
+here uh in the different uh uh the
+faculties and schools and at you may
+wanted to also take this one. That's the
+first point I want you to take home. The
+second point I want you to take home is
+you just saw uh some examples of the
+current computer vision and pattern
+recognition system. Actually many of
+this are actually quite new is less than
+five years old. Okay. Of course the
+field is rapidly changing. So the third
+point I want to make here. So that's why
+at the end we're going to you should
+study and you're going to see more
+impact okay of the uh this computer
+vision or paration technology to the
+society at uh various scales is could be
+a personal scale or community scale city
+scale or nation scale. So many new
+applications are expect to be in the
+next five to 10 years and many of those
+major companies they are actually
+allocating a good amount of their
+personnel or researchers scientists to
+study this the example I was giving have
+included apples Google's Facebook and
+and and many more okay so with that I
+think I like to conclude this
+introduction to computer vision uh the
+uh subject introduction here. Okay. Uh
+I'd like to stop here and thank you very
+much and uh you you can get a more
+information uh from some of the several
+courses or subject we are offering from
+computer uh science uh uh department
+here and I or several of my colleague
+here working in this area. So what we'll
+be happy to

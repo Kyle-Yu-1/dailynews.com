@@ -1,0 +1,163 @@
+Slides are a commonly used auxiliary
+tool in our studies and work.
+The wide range of functions in
+PowerPoint makes it somewhat difficult
+to master the skills needed to use it
+effectively.
+To better help everyone improve their
+PowerPoint proficiency and boost
+productivity, we're sharing 10 specific
+slide tips.
+The first tip is to remove the default
+slide layout.
+Newly created slides always come with
+default layouts such as the click to add
+title and click to add text boxes, which
+can limit your creativity.
+To remove the default layout, select the
+slide, click on layout, and choose blank
+to remove it.
+The second tip is to set default text
+boxes.
+Setting default text boxes means
+configuring the font, size, effects, and
+so on for text boxes to create a
+template style.
+This saves time on repetitive tasks and
+increases efficiency.
+After setting the text box effects,
+right-click and set it as the default
+text box.
+Let's look at the specific steps. First,
+insert a text box into a slide.
+Select the text box and click on format
+settings.
+We can easily set up the and adjust the
+text box as needed.
+After setting up the text box,
+right-click it and choose set as default
+text box.
+Then, when we insert a new text box, it
+will have the default format we set.
+The third tip is to add a logo to each
+slide.
+In presentations, often necessary to
+batch add a logo to every slide.
+This is both to protect the company's
+intellectual property and as a form of
+corporate promotion.
+Manually adding a logo to each slide can
+be very time-consuming.
+We can use the slide master to add logos
+to all slides with just one click.
+The specific steps are as follows.
+Select the view menu, choose slide
+master, then place the logo in the
+desired position, and set the slide
+master.
+After closing the settings page, you'll
+see the logo in a fixed position on
+every slide.
+The first tip is to give your slides a
+cool color scheme.
+Slides often use a single background
+color, which can sometimes make the
+presentation look very plain.
+If we want to make the slides look
+cooler in their appearance, we can
+change the theme color of the slides.
+The specific steps are as follows.
+Go ahead and select the file menu.
+Then carefully choose the option new
+from template.
+And select and pick out a suitable theme
+for your project.
+The fifth tip is to increase the number
+of undo steps in a slide.
+The reason for increasing the undo steps
+is that the default number of undo steps
+in slides is only 20, which is clearly
+not enough.
+The maximum number of undo steps in
+slides is 150.
+Of course, we don't need that many, but
+setting a higher number makes undoing
+actions more convenient.
+The specific operation is as follows.
+Click on the PowerPoint menu.
+Choose preferences.
+Select the edit menu and then change the
+number in the undo option.
+The sixth tip is slide hiding.
+After creating many slides, some may not
+be needed during a presentation.
+Deleting these slides only to recreate
+them later is a waste of time.
+Therefore, to improve efficiency, we can
+use slide hiding.
+Just select the slide, right click, and
+choose hide slide from the menu.
+A strike through will appear on the
+sequence number and the hidden slide
+will not be displayed during the
+presentation.
+The seventh tip is to export slides as
+images.
+When we need to use the content on a
+slide as images, we need to convert each
+slide in the file into an image.
+Taking screenshots one by one can be
+very cumbersome.
+In slide, we can click the file menu.
+We select the export button.
+Choose the content we need to export and
+select the image format as needed.
+The eighth tip is about uh two magical
+painters, the format painter and the
+animation painter.
+The format painter allows us to copy the
+formatting and uh effects from one
+object to another, while the animation
+painter lets us copy animation effects
+from one object to another.
+Clicking these painters once allows for
+a single use, but uh double-clicking
+them enables multiple uses.
+The ninth tip is to disable animations
+with one click.
+Sometimes we set cool animations for
+slides, but due to time constraints
+during the presentation, we often have
+to cancel the animation effects.
+Deleting animations one by one is very
+troublesome, so we need a one-click
+solution.
+This can be done by these steps.
+We click on the slideshow menu.
+We choose the set up slideshow submenu.
+Then we select show without animation
+and then click okay.
+The tenth tip is to remember to
+frequently use shortcuts, which can
+greatly save time when creating slides.
+If we want to save the file or the
+slide, we can simply use
+Ctrl + S.
+If you need to undo a specific step
+you've taken,
+you can simply use the Ctrl + Z shortcut
+to revert it.
+If we want to select all, we can use
+Ctrl + A.
+If we want to group items, we can use
+Ctrl + G.
+If we want to copy content from the
+slide, we can use Ctrl + C.
+If we want to paste the content, we can
+use Ctrl + V.
+If we want to left align, we can use
+Ctrl + L.
+Similarly, for right alignment, we can
+use Ctrl + R.
+If we want to center align, we can use
+Ctrl + E.

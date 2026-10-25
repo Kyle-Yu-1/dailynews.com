@@ -1,0 +1,160 @@
+Now we will show you how to use the ADA
+interactive playground to train a deep
+learning model. In machine learning, the
+process typically involves several key
+steps. First, you gather and prepare
+your data. Then you build a model after
+which you train that model using your
+prepared data. And finally, you evaluate
+its performance to see how well it
+learned. Before we start using the ADA
+interactive playground, we need to
+register first. On the first page, press
+the register button. Then enter your
+email. Fill in your name. Choose your
+user type and press the okay button.
+After that, you will get an email with
+your user ID and password. Next, use
+your user ID and password to log to the
+website. Once you log in successfully,
+you can start exploring the different
+features of the ADA interactive
+playground. First, we need to download a
+set of data that the computer will use
+to learn. You can look at the
+information about the data by clicking
+on the data set menu and choosing the
+data set you want. On the data set page,
+you can see various data sets available
+for different tasks. For instance, the
+MNEST data set, which we'll be using,
+contains handwritten digits, perfect for
+teaching computers to recognize numbers.
+There's also the IMDb reviews data set,
+consisting of movie reviews that can
+train models for sentiment
+classification, determining if a review
+is positive or negative. Similarly, the
+Twitter sentiment data set is for
+analyzing sentiment in Twitter posts.
+And the fashion emnest data set includes
+images of different clothing items used
+for classifying apparel. In this
+example, we will teach the computer to
+recognize pictures. And so, we will
+download the MNEST data set. The MNEST
+data set is a famous collection of
+pictures of handwritten numbers from 0
+to 9. The computer will learn to
+recognize these numbers by looking at
+these pictures. First, select the MNEST
+data set and click download. Downloading
+will take a few minutes, so please be
+patient. Next, we will set up a model.
+Think of a model as a recipe or plan
+that tells the computer how to learn
+from the data. This recipe consists of
+different layers, each with a specific
+job in processing the image information.
+Open the model menu and click on model
+editor. Here you can change the model to
+fit what you want. In this example, our
+model will have four parts or layers,
+each playing a vital role in helping the
+computer learn. First, the input layer
+is exactly what it sounds like. This is
+where the raw image of a handwritten
+digit enters our model. Next comes the
+flatten layer. Imagine an image as a
+grid of tiny squares. This layer takes
+that grid and rearranges it into a
+single long line of information so that
+the subsequent layers can easily process
+it. Finally, we have two dense layers.
+These are like the decision-making parts
+of our model. They take all the
+organized information and learn to find
+connections and patterns within it. They
+work together step by step to understand
+the different features in the image,
+ultimately deciding what number the
+handwritten digit represents. Drag the
+layers you want into the box. Then set
+the details for each layer. For example,
+in the dense layer, you need to choose
+an activation function. This is like a
+switch that helps the model learn more
+complicated things by deciding when and
+how strongly a neuron signal should be
+passed on. This allows the model to pick
+up on subtle details and relationships
+in the data. You also set the units
+which is simply the number of individual
+processing elements or neurons in that
+layer. More units can allow for more
+complex learning. You can also give your
+model a name and click save. After
+saving, you can see your model in the my
+model menu. You can also edit or delete
+your saved models here. After setting up
+the model, we can start training it with
+the data. Training means the computer
+will now learn from the data set you
+provided, adjusting its internal
+settings based on the examples. Click on
+the training menu. Choose the data set
+you downloaded, which is MNEST. Select
+the model you created, which is named
+new in this example. Now adjust some
+learning settings. For example, the
+learning rate controls how fast the
+model learns. A higher rate means faster
+but potentially less precise learning,
+while a lower rate is slower but can be
+more accurate. The batch size is how
+many pictures the model looks at at once
+before updating its understanding, like
+processing data in small groups. And the
+epics is how many times the model will
+repeat learning from the entire data
+set. Meaning it goes through all the
+training examples multiple times to
+improve its accuracy. After setting
+these, click the train model button to
+start. During the training process,
+you'll see two important graphs, loss
+and accuracy.
+The loss graph shows how much error the
+model is making with each step of
+training. You want this value to
+steadily decrease over time, indicating
+the model is learning effectively and
+reducing its mistakes. The accuracy
+graph, on the other hand, shows how well
+the model is performing with higher
+values meaning it's correctly
+recognizing more digits as it learns.
+Training time depends on your settings
+and the complexity of the model. So,
+please be patient. When training is
+done, you can press the evaluate model
+button to see how well the model
+learned. This evaluation will show you
+important results such as the per class
+accuracy and a confusion matrix. The per
+class accuracy tells you precisely how
+accurately your model identified each
+individual number from 0 to 9. For
+instance, it might show that it achieved
+98% accuracy for recognizing zeros and
+96% for ones. The confusion matrix is a
+helpful table that visually summarizes
+the overall performance of your model,
+which helps you pinpoint specific areas
+where the model might be struggling or
+excelling. Based on these results, you
+can then go back and improve your model
+by adjusting the layers or training
+settings to make it even better. Now go
+ahead and use the ADA interactive
+playground to train your deep learning

@@ -1,0 +1,78 @@
+Welcome to the ADA interactive
+playground. This platform developed by
+the Hong Kong Polytenic University
+simplifies the process of training deep
+learning models. It covers the entire
+workflow including data processing,
+model creation, training, and result
+evaluation. Whether you are new to deep
+learning or an experienced developer,
+this tool helps you explore and
+understand deep learning more deeply. If
+you are a beginner, you can use
+preconfigured model templates without
+any programming knowledge and customized
+training parameters easily online. For
+programmers, there is no need to invest
+in expensive hardware since you can
+train models directly through the online
+platform. You can also tailor models to
+meet your specific needs. The platform
+offers a variety of built-in data sets
+for experiments, research, and practice.
+This saves you time by eliminating the
+need to organize and clean data
+manually. It provides powerful and
+user-friendly deep learning functions.
+You can customize model templates and
+training parameters based on your goals
+and different training scenarios.
+Traditionally, training deep learning
+models required high-end hardware and
+strict environments. Now, you can train
+models online conveniently without these
+constraints. The cloud-based system
+includes security measures to protect
+your data sets. Visual evaluation tools
+help you understand and communicate
+complex results easily. The interface is
+designed to be intuitive, allowing users
+to quickly learn and navigate the
+functions. To support the deep learning
+process, the platform organizes features
+into five main menus: introduction, data
+set, model, training, and evaluation.
+The introduction menu gives a brief
+overview of each main menu to help you
+understand their functions quickly. The
+data set menu shows various built-in
+data sets. You can click on each to see
+its source and detailed information.
+Choose the data set that best fits your
+training needs. The model menu has two
+parts. The first is the model editing
+submen where you can create and
+customize training model templates. The
+second is the my model submen where you
+can review, edit, or delete your saved
+templates. The training menu lets you
+set training parameters and start the
+model training process. You can select
+different data sets and model templates,
+then adjust parameters to suit your
+requirements. Training means teaching
+the model to learn patterns from data so
+it can make predictions or decisions.
+The evaluation menu displays detailed
+results from your training sessions.
+This helps you understand how well your
+model performs and make improvements
+accordingly. In the future, we plan to
+add more data sets, develop specialized
+learning models, and support various
+training scenarios. To assist users, we
+provide AI customer service and feedback
+channels where you can ask questions or
+report issues. Our support team will
+respond promptly to ensure a smooth
+experience.

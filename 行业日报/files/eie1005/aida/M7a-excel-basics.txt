@@ -1,0 +1,210 @@
+Hi. Today, we will introduce the basics
+of Excel.
+First, let's briefly introduce what
+Excel is.
+Excel is a spreadsheet software that
+allows us to perform calculations and
+helps us process a large amount of data,
+greatly improving our work efficiency.
+It can not only record and save
+information, but also manage and analyze
+it.
+In the main interface of Excel, we can
+see the quick access toolbar, the
+ribbon, and the function areas.
+When it comes to Excel, we often think
+of data processing, so we need to
+understand the data types in Excel.
+There are generally three types commonly
+used. The first type is numeric, such as
+numbers.
+The second type is text, such as
+strings.
+The third type is logical, such as true
+and false.
+Numeric data is generally right-aligned
+by default.
+Text data is left-aligned, and logical
+data is centered.
+When using Excel, the most common
+operation is to enter information,
+such as entering numbers or strings.
+First, we open the Excel spreadsheet,
+select a cell, enter the information
+content, and then we can use enter or
+tab to switch cells.
+When you are processing various types of
+text, so,
+we often encounter specific situations
+where the actual text content within a
+single cell is far too long,
+and therefore needs to be wrapped for
+better visibility.
+Generally, there are two ways to wrap
+text.
+The first way is to select the wrap text
+option in the home tab to quickly wrap
+the text.
+The second way is to right click and
+then select the format cells menu.
+Then we can choose alignment. For the
+next step, we will select the wrap text
+feature and then click the OK button to
+confirm.
+The text content of cells in Excel can
+be set to different cell types as
+needed.
+There are two ways to set this format.
+The first way is to select the cell that
+needs to be formatted.
+Then we can right click and select the
+format cells menu.
+And we can see the dialog box.
+Then we can select the number tab and
+choose the type we need.
+Another way is that we can directly use
+the options in the window to set it.
+In Excel, we often create tables and set
+different border colors for tables
+according to different requirements.
+So, setting borders is also a frequently
+used operation.
+We have two ways to set the borders.
+The very first method you can use is to
+navigate to the border menu located
+directly on the top toolbar to quickly
+and easily set all of your borders.
+We can click the border menu on the
+toolbar and then we can see different
+settings. We can adjust the details
+according to our requirements.
+Alternatively,
+the second method is
+if we want to define a particular format
+for the border of your element, we can
+do that as well.
+Right click and then select the format
+from the menu. Cells menu and we can
+choose the
+border tab, then we can set the details
+according to our needs.
+Another commonly used basic operation in
+Excel is setting rows and columns.
+Generally, there are three ways to do
+this.
+The first is the drag method.
+We can move the mouse to the
+intersection of the row or column
+header.
+When the double-headed arrow appears, we
+can hold down the arrow and drag to
+adjust the row height and column width.
+The second is the double-click method.
+We can move the mouse to the
+intersection of the row or column
+header.
+Then we can double-click the mouse
+button to quickly adjust the row height
+and column width. The third is the
+setting method.
+First, we need to select the rows
+or all the columns that we want to set.
+Then we can right click and choose
+either row height or column width to set
+the details.
+We can enter an appropriate value and
+then click okay to return.
+In some cases, we need to keep the text
+context fixed.
+Then we can use the freeze panes menu to
+set this.
+If we want to freeze the first row, we
+first need to click the view menu.
+Then we can select the freeze first row
+button.
+Now we can see that the first row is
+frozen.
+If we want to cancel, we can choose
+unfreeze panes.
+If we need to freeze the very first
+columns of our spreadsheet, then we can
+simply choose the freeze first columns
+button in the menu.
+Sometimes in Excel, we want to hide rows
+or columns.
+So, we can do it like this.
+First, we select the rows or columns
+that we want to hide.
+Then, we can right-click and choose the
+hide menu.
+If we want to unhide the hidden rows or
+columns,
+we can also alternatively select the
+specific range of those rows or columns
+and unhide them.
+Then, we can simply right-click on the
+selection
+and choose the unhide option from the
+context menu to make them visible again.
+Sometimes, we find that we need to
+locate and swap out specific content
+within Excel in a file.
+To do this efficiently, so
+we can use the shortcut key Ctrl + F
+to quickly open up the Find and Replace
+dialog box.
+In Excel, both text and numbers can be
+replaced and some patterns or formulas
+can also be replaced.
+If we want to protect and encrypt an
+Excel file,
+we can follow these specific steps and
+procedures after completing the final
+version of your report in Excel.
+If we don't want others to view or
+modify it, we can encrypt it.
+First, we can go to the top left and
+click on the File tab and then locate
+the option for setting a password.
+Shall.
+Once you have done that, we can type in
+the desired password according to our
+requirements.
+In Excel, if we want to print files, we
+can do it like this.
+First, we need to
+select the content that we want to
+layout menu.
+Then, we can click the Print Area
+button.
+We can select the option to set a print
+area.
+Another way is to select file in the
+menu bar.
+Then we can select the print area
+submenu.
+After this, we can click the print
+button to print.
+Also, we can use the shortcut key
+command plus P.
+In the spreadsheet, sometimes we need to
+set the same format.
+We can select the themes menu in the
+page layout tab.
+The theme in Excel is of unified design
+elements and a unified color scheme
+including theme colors, titles, text,
+and so on.
+So, we can choose the theme that suits
+us according to our requirements.
+When we need to highlight important
+information in Excel, we can use the
+conditional formatting menu to set it.
+First, we can select the cell in which
+we want to highlight the information.
+Then we can click the home menu in the
+menu bar.
+Then we can click the conditional
+formatting option.
+We can set the conditions to highlight
+the data according to our needs.

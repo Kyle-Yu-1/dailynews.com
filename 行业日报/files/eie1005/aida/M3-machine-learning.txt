@@ -1,0 +1,470 @@
+Hello everyone, welcome to the online le
+lecture series of artificial
+intelligence and the data analytics
+e-learning module. This is the
+introduction to machine learning. I'm
+your course instructor Dr. Buang at the
+department of computing of the Hong Kong
+Poly Techch University.
+Right here is the our first question.
+Why do we study machine learning? Bill
+Gates says that a breakthrough in
+machine learning would be worth 10
+microsofts.
+The former president of Stanford says
+that machine learning is the hot new
+thing. Well, it seems that machine
+learning is something new and very
+valuable.
+Well, believe it or not, machine
+learning is something that has been
+changing the world.
+Okay, in today's lecture we are going to
+briefly introduce machine learning in
+the following four aspects.
+First, what is machine learning? Right
+here we we better first look at what is
+learning from Moro Webster. We can see
+that learning is defined as the activity
+or process of gaining knowledge or skill
+by studying, practicing, being taught or
+experiencing something.
+Actually for for human beings from the
+the time when we grow up from kid to
+teenagers to adult is actually the
+learning process.
+Okay.
+Then what is machine learning? From the
+computer scientist Tom Michelle,
+a computer program is say to learn from
+experience E with respect to some class
+of tasks T and performance measured P.
+If its performance at tasks T as
+measured by P improves with experience
+E.
+Well, it seems very convoluted and uh
+very abstract to understand, but you
+don't need to understand. You don't need
+to memorize this definition at all. To
+be to be simple, machine learning is
+something or is a piece of program that
+can learn from experience then to solve
+some tasks.
+That's the very simple way to understand
+what is machine learning.
+Okay, now let's look at the the history
+of machine learning.
+Actually, machine learning is not
+something new. It it is a old thing.
+It was invented in
+50 years ago. Actually, in the 1950s,
+the first perception algorithm was
+invented and implemented as a circuit.
+develop the circuit not computer yet.
+Then after years of progress then
+different types of programs were
+invented in the 1980s. Some fundamental
+ideas like back propagation are were
+invented
+which actually those those ideas are the
+fundamentals of the now the of machine
+learning techniques.
+Well, then in the 1980s actually machine
+learning and AI faced a winter time.
+It's not always a good time, right?
+Because at that time the computer games,
+computer programs was not able to solve
+difficult problems as human expected.
+Then not so many people believed it
+anymore. But after 10 or 20 years in the
+late in the recent 20 sorry 20 and 10 10
+years especially in the in back to the
+five years ago five six years ago 2016
+the alpha go invented by deep mind
+defeated the human goal championship.
+This was broadcast as I remember
+broadcast globally. So nobody believed
+that this program this piece of program
+can defeat and can solve so much complex
+task but it was successful. So now we
+are in the era of
+the big wave of machine learning. Okay.
+Machine learning was not new and was
+invented developed for many years almost
+half a decade sorry half a century
+[snorts] why because it's not simple
+machine learning involves many many
+different disciplines for example the
+mathematics including probability
+statistics optimization and also some
+biology psych psychology and some
+neuroscience
+Well, the good news news is you don't
+have to be a an expert in all these
+areas and then start to learn machine
+learning. It's not necessary. So you can
+you have the ability to learn machine
+learning right now.
+Okay. Now let's talk about some types of
+basic types of machine learning. So
+generally there are three types of
+machine learning
+supervised learning, unsupervised
+learning and reinforcement learning.
+They first surface learning. This
+models, this algorithms are generally
+trained with targets
+or labels, human labels to solve some
+classification task or regression tasks.
+For unsupervised learning, basically
+those models are usually trained without
+targets. they just train them with wild
+images or wild data without any
+annotations.
+Then these models can solve some tasks
+for example like clustering or dimension
+reduction.
+The last category of machine learning
+models is reinforcement learning.
+Usually the reinforcement learning
+models are trained with mistakes.
+For example, like the algorithm are
+designed to play computer games. So
+there's no correct
+or no correct answers or wrong answers.
+There are mistakes. If you win something
+and then you give rewards and then then
+your model will be better and better. So
+that is a uh the strategy of training
+with mistakes.
+Okay. Here is a very simple example for
+supervised learning particularly for
+image classification task. So we can say
+that here we have many images. Well here
+I just show four images but to in
+practice we have many many images
+together with labels. These labels or
+targets are allotated by human beings.
+Okay. Like for example, we have this
+picture this okay we load it's cat we
+give it a label and then we give it a
+label of bird to this image
+we actually we take many many images and
+then we annotate those images right with
+a categorical label.
+So the supervis learning is like we
+define some models and then we feed we
+feed this images together with this
+labels to train the model. Okay to train
+to teach the model
+to learn some important features. For
+example car, okay, there are some whales
+or like this cat they have some eyes or
+ears something. We hope that this model
+can learn this features. So after we
+train this model, right, it's like we
+have successfully
+taught someone, right? And then we give
+the model a new image. We call it a test
+image. Then this model okay take this
+test image into the algorithm and then
+the algorithm can predict the category
+of this image. For example, in this
+case, okay, the model will compare. We
+think about that. Okay. The appearance
+or the the geometry is similar to this
+this image. Okay. Now this image test
+image belongs to car. Okay. It seems
+that this model can learn from this
+experiences right this experiences the
+data and then they can predict that's
+it.
+Similarly, there's another example for
+supervised learning particularly for
+regression tasks. So here we again we
+have training labels there there are
+several guys like with different genders
+and the body height and the age and so
+on. So we have the label of their body
+weight
+right the body weight and then we train
+the model right train the model after
+which optimize this model and then we
+give a new guy the information of new
+guy okay a male 1.7 or 42
+years old and then this model is able to
+predict okay this guy is likely around
+the 60 some kilograms something like
+that it's like we have they learned this
+knowledge from the data and labels then
+they are able the model is able to
+predict something here the difference
+between this regression task with the
+previous slide is that here we use
+continuous label like the numbers they
+are continuous but the previous one is
+categorical label it's discrete
+Great.
+So here is a another
+uh example for unsurprised learning.
+So again we have lots of images but this
+time there's no label associated with
+any image. We only have lots of images.
+And probably now you know that there
+it's it's it's it's very easy to get
+many millions and millions of images
+from online right. So
+what is unsupervised learning? So
+basically the we define some model right
+we ner features from this images and
+then we can cluster
+the similar images into one group. For
+example, okay, the first one there, this
+one, there's two dogs, they look similar
+from the eyes or lows, ear something
+like that, right? And the other guy,
+this panda, they these two pandas, they
+look similar, right? the model, the
+unsupervised learning models or the
+algorithm
+they are able to automatically
+group the similar images into the same
+cluster.
+Okay,
+they can also
+reduce the dimension of the data point.
+For example, we know okay this guy this
+um this cat sorry this stock image right
+the background it's it's it's not
+informative
+right the key features are the lows or
+eyes and the other features right so we
+can learn a more discriminative
+vector or representation
+for this image
+in that case instead of storing storing
+ing this high resolution image in the
+computer. We can just store a very
+compact representation and transfer
+online. Right? Still the information is
+not lost. The key information is still
+there. All right? Of course there are
+many other tasks like density estimation
+and so on. The answerress learning they
+can all solve this tasks. Okay. But by
+by the way we don't need any labels
+here. There's no label at all. We don't
+load this two images belonging to uh the
+same category. The model will learn to
+put them together. Okay.
+Right. So here is another example of or
+actually illustration of reinforcement
+learning. So reinforcement learning it's
+it's like this. So we have a actor or
+agent or just a piece of a program or
+piece of algorithm. Okay. This actor is
+able to sense
+the state of the environment. For
+example, when we play computer games,
+right? It loses okay the uh the status.
+For example, we can visually take images
+of the environment.
+Okay,
+given this state information, this actor
+will take some actions by itself.
+Like for example, you go left or go
+right or go up or go down to shoot some
+uh enemies or something like that,
+right? That you the actor will make some
+actions
+to change the environment and then the
+environment will give some reward back.
+For example, you give you you shoot many
+stars and then you will get higher
+scores back something like that. Right?
+Okay. In that way, the state you can get
+an updated state simultaneously.
+So the actor will um try to get more
+reward by doing some more sensible
+actions.
+So in this way the actor
+is trained with reward. This is the
+mistakes. Of course reward is that if it
+is positive we call it reward. If it's
+negative that's a penalty or mistakes.
+Okay. Um and then according to the
+reward the actor will try to adjust its
+own strategies its own actions so that
+the reward can be maximized.
+Okay. In this way the way the actor
+evolves and learn by itself from the
+environment and interact with the
+environment. This kind of algorithms we
+call them a reinforcement learning
+algorithm.
+Okay.
+So now we have introduced three types of
+algorithms.
+Uh supervised learning for
+classification and regression tasks. on
+learning for class learning or something
+some other tasks and the reinforcement
+learning for some like computer games
+play computer games. Now let's look at
+some real applications. Okay.
+So here we can see that
+given a video this is a video okay clip
+of a video. So we designed some
+algorithm supervised algorithm.
+That algorithm is able to precisely
+detect all the objects like including
+the cars, pedestrians and all the other
+guys here like so many
+crowd here right the people here all of
+them can be detected and even tracked.
+So in the to in autonomous driving
+applications this is a very very
+important the essential part otherwise
+the car will hit people or will go to
+the wrong directions. But once the car
+well with this machine learning
+algorithms embedded
+those cars can make right decisions,
+make quick decisions and to avoid any
+traffic or any dangers. Okay.
+So here is another example for
+unsupervised learning. We can see that
+on the on our left hand side. This is a
+video clip of a horse, right?
+So, we change the appearance of this
+horse to a zebra.
+So we can see that the texture or the
+appearance of the horse
+is almost
+very perfectly changed such that the
+right hand side
+this kind of a video looks very very uh
+realistic but in fact it's fake. It's a
+fake video.
+In fact, if if you have a zebra video,
+you can convert it back to a horse video
+as well.
+So,
+the point here is that we have the horse
+video, but actually we don't know we
+don't know how it looks like if this guy
+is a zebra. We don't know. We have no
+idea, right? But the algorithm
+can generate such a realistic and very
+visually appearing
+opinion videos. So without any label the
+algorithm can generate a very realistic
+videos that is amazing.
+Okay. So here is another example of
+reinforcement learning. Actually this
+work this guy this guy in the video was
+my previous colleagues. Um so
+at the
+left hand side we have the camera
+mounted on this robot. So this video
+this color video and this depth video is
+the
+the observation or the states of the
+environment. Here the environment is
+this room. Okay we have the sequence of
+images. Okay, there are boxes or some
+other things. But then the V the
+in the robot we have a reinforcement
+learning algorithm embedded.
+So this robot itself can sense in the
+environment and make decisions to
+navigate itself to avoid the obstacles.
+For example, here you can see that even
+the environment changes, it is able to
+make the right decisions to avoid adding
+collisions. We can see that, right? It's
+not just a repeat. It's not programmed.
+It's not hard programmed. This agent,
+this robot has to be able to understand
+the environment by itself.
+Okay, that is because of the the smart
+rece algorithm embedded.
+Okay, so this is the uh three demos for
+the three types of machine learning
+algorithms. Hope this could be inspiring
+for you guys. And of course there are
+many many amazing applications and demos
+online. If you search or if you follow
+some newspapers, tech newspapers this
+now machine learning can do many many
+things can solve many many real world
+problems.
+Okay.
+So here is the um a summary of our brief
+introduction to machine learning. Right.
+The first three points
+machine learning aims to solve tasks
+from experience and improve its
+performance. We can see that we have
+different types of algorithms like to to
+detect the cars pedestrians to navigate
+or to generate some new videos from
+experience experience. These are
+collected from the data. For example,
+the uh we have alloted many data and
+then this algorithm can learn from our
+annotations for the reinforcement
+learning. We can teach the robot to go
+around. Okay, if the robot hit the wall
+and then we will get give it a penalty
+and then the robot memorize that okay
+figure out that okay in the next time I
+will not hit the wall I will go right
+hand to go to the correct way otherwise
+I will
+crash.
+So that is the solve the task from the
+experience and then improve the per
+performance. Performance means okay okay
+it can correct detect something it can
+generate more visual opinion or they can
+survive longer and different in the diff
+complex environment like for navigation
+and so on. So that is the machine
+learning the very general concept of
+machine learning. It's not some it's not
+something
+very difficult. Okay, the second point
+is machine learn generally has three
+types of model. Superass learning,
+unsupervised learning and reinforcement
+learning. Well, of course there are many
+different um varants of this algorith
+algorithm or learning paradigms. But
+anyway, this three are the general um
+categories.
+Okay, last point is machine learning has
+a wide range of real world applications
+including computer vision, natural
+language processing, robotics etc.
+Of course there are many many
+applications even in including the like
+the chemistry or biologic or biological
+study or some [clears throat] many many
+areas nowadays machine learning is
+widely widely used in different areas.
+Okay.
+Right. So these are the three points to
+summarize our today's lecture right okay
+the closing mark is
+why do we study machine learning
+yes
+it is changing the world and I hope you
+catch this and from now on you have this
+opportunity to study machine learning
+and you will have the opportunity to
+change the
+All right, thank you for attending this
+course and I hope you have a good
+journey to study machine learning. Thank
+you. Bye-bye.

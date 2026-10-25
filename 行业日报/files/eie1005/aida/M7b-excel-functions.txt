@@ -1,0 +1,219 @@
+Hi, today we will introduce Excel common
+functions.
+These are essential Excel functions for
+data validation, sorting, filtering, and
+referencing.
+To ensure the accuracy and completeness
+of the data, Excel provides a feature
+called data validation, which restricts
+the range and format of data that users
+can enter.
+This helps prevent data confusion and
+errors caused by arbitrary data input.
+If we want to use this function, we can
+do it like this.
+First, we can apply data validation to a
+specific cell or range of cells.
+We can select the cell or range of cells
+where we want to set data validation.
+Second, we can go to the data tab on the
+Excel menu bar
+and click on data validation. In the
+data validation dialog box that appears,
+we can choose either allow values or
+allow list.
+Depending on our requirements, we can
+select the range and format for data
+input, such as numbers, dates, times,
+text, and so on. Once the settings are
+configured, we can click the OK button
+to save our settings.
+Now, let's look at a data validation
+example.
+Assume we have a list of students and
+need to enter their gender and phone
+numbers.
+For phone numbers, our requirement is 8
+to 9 digits.
+We can use data validation by selecting
+the phone number column.
+We can click on the data menu.
+We can choose data validation and set
+allow to text length and data to
+between.
+Set the minimum value to 8 and the
+maximum value to 9.
+We can click OK to save the settings.
+If a phone number is less than eight
+digits, a warning will appear.
+We can see this on the screen.
+We can modify the number to meet the
+requirements.
+At this stage, we need to enter the
+gender information.
+Using data validation.
+We can click on the data menu and then
+select the option for data validation.
+From here, we can see that the allow
+menu offers several different options
+for us to use.
+Considering all possible gender values,
+we set allow to list and input the
+gender values.
+Now, in the gender column, HCL shows
+three options that we can choose based
+on the student's gender.
+This ensures that the gender data is
+within valid range values.
+Maintaining data validity.
+The second common operation is sorting.
+Sorting can be applied to rows or
+columns, and Excel can automatically
+sort data.
+If there are merged cells, sorting may
+not work.
+To sort a specific range in the
+worksheet, we select the range of cells
+we want to sort.
+Then we can click on data.
+Then we click on sort.
+We can choose the sorting criteria in
+the sort dialog box and then click the
+okay button.
+Now, let's look at a detailed sorting
+example.
+Suppose we have a grade sheet for a
+group of students
+and we want to rank them based on their
+grades.
+First, we select the grade column.
+We click on the data menu, and then we
+click the sort submenu.
+We will see two options.
+Now, we choose the second option.
+Continue with the current selection.
+We click on the sort button, and we sort
+the grades from smallest to largest.
+Then, we click the OK button.
+We will notice that the grades are now
+sorted, but the students' names are not
+aligned accordingly.
+This does not meet our expectations.
+So, we need to resort.
+We select the grade column, click on the
+data menu, and then go to the sort
+submenu.
+We choose the first option, expand the
+selection, and then click the sort menu.
+We choose to sort the grades from
+largest to smallest, and then click the
+OK button.
+This is because expanding your current
+selection ensures that all other
+corresponding information related to
+these specific grades
+will be automatically sorted at the
+exact same time.
+Now, we can see that the grades are
+sorted from largest to smallest,
+and the corresponding student names are
+then automatically
+and accurately matched up.
+Filtering is another operation we
+frequently use.
+Filtering provides a quick way to find
+and manipulate subsets of data within a
+range.
+Now, if we decide that we want to
+implement a filtering process,
+we can simply do it like this.
+First, we select any cell in the
+worksheet where we want to store the
+filter results.
+Then, we click on that.
+We choose the filter submenu to create a
+drop-down list button next to each
+field.
+And then, we click on the drop-down list
+button next to the filter name for which
+we want to set filter conditions.
+And we choose filter conditions in the
+dialog box.
+And we click okay to apply.
+Relative referencing is also a common
+option in Excel.
+Relative referencing is used when
+entering formulas.
+It refers to the cell data address.
+If a formula with relative reference is
+copied, the previous cell address will
+be updated to correspond to other cells
+relative to the current formula's
+address.
+Now, let's look at an example of
+relative referencing in a
+Select the cells cell A1, cell B1, cell
+B2, cell C1, and cell C2. We already
+have corresponding values.
+In cell A3, we use a simple formula to
+add the values of cells A1 and A2.
+We can copy this formula to cells B3 and
+C3.
+Now, we can observe that the value in B3
+is equal to the sum of B1 and B2.
+And the value in C3 is equal to the sum
+of C1 and C2.
+This is an example of relative
+reference.
+From the example, we can see that the
+parameters change according to the
+position values.
+Absolute referencing, unlike relative
+referencing,
+it does not change the formula content
+when copied.
+Now, let's look at an example of
+absolute reference.
+In cells B1 and D5, we already have the
+corresponding values.
+In cell A1, we use a simple formula to
+add the values of cells B1 and D5.
+When referencing D5 and B1,
+we use the dollar symbol for absolute
+referencing. For example, if we need to
+go ahead and change cell B1
+so that it becomes dollar B1.
+Now, we can see that the value in F1 is
+40.
+We copy this formula to any other cell.
+The values don't change.
+This is an example of absolute
+referencing.
+The parameters remain constant
+regardless of the position.
+In a variety of different scenarios,
+we might choose to utilize
+both relative and absolute referencing,
+which is known as mixed referencing.
+Now, let's look at an example of mixed
+referencing.
+In cells A1 to A5, we input values from
+10 to 14. And in cells B1 to B5, we
+input values from 100 to 104.
+Because this is just an example, we are
+using simple data.
+In real-life situations, we can adjust
+the values based on our requirements.
+In cell A6, we use absolute referencing
+for the values in A1 and A2, and
+relative referencing for the values in
+A3, A4, and A5.
+Let's see. The result is 60.
+When we copy this formula to B6, we can
+observe that the value in B6 is 330.
+We click on B6, and we will see that the
+values in A1 and A2 remain unchanged due
+to the absolute referencing, while the
+values in A3, A4, and A5 automatically
+update to the values of B3, B4, and B5
+because of the relative referencing.

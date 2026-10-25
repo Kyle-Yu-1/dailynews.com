@@ -355,5 +355,75 @@
   "desc": "卷1/卷3 全章核心术语 68 条",
   "file": "iiqe-vocabulary.md",
   "course": "IIQE · 保险中介人资格考试"
+},
+  {
+  "id": "eie1005-aida-overview",
+  "title": "AIDA e-Module 总纲 · 8 模块地图与 3 天冲刺",
+  "desc": "模块-视频-笔记对照、测验细则、3 天计划",
+  "file": "eie1005-aida-overview.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m1",
+  "title": "AIDA 模块 1 · AI 与数据分析导论",
+  "desc": "数据定义、4V、三大应用、总结三要点",
+  "file": "eie1005-aida-m1.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m2",
+  "title": "AIDA 模块 2 · 生成式 AI 与提示词工程",
+  "desc": "prompt 框架、幻觉与偏见、负责任使用",
+  "file": "eie1005-aida-m2.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m3",
+  "title": "AIDA 模块 3 · 机器学习导论",
+  "desc": "Mitchell 定义、三类型、历史与 AI 寒冬",
+  "file": "eie1005-aida-m3.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m4",
+  "title": "AIDA 模块 4 · 计算机视觉与模式识别",
+  "desc": "CV vs PR 对比、90%/93%、历史阶段",
+  "file": "eie1005-aida-m4.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m5",
+  "title": "AIDA 模块 5 · 神经网络与深度学习",
+  "desc": "前向/反向传播、784、AI⊃ML⊃DL、三大局限",
+  "file": "eie1005-aida-m5.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m6",
+  "title": "AIDA 模块 6 · 大数据计算导论",
+  "desc": "4V、MapReduce、分而治之、四大案例",
+  "file": "eie1005-aida-m6.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m7",
+  "title": "AIDA 模块 7 · Excel 入门",
+  "desc": "数据类型对齐、冻结窗格、函数速查表",
+  "file": "eie1005-aida-m7.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-m8",
+  "title": "AIDA 模块 8 · Slide 入门",
+  "desc": "16:9、字体配色、布尔运算、动画克制",
+  "file": "eie1005-aida-m8.md",
+  "course": "EIE1005 · 人工智能与数据分析"
+},
+  {
+  "id": "eie1005-aida-sprint",
+  "title": "AIDA 满分冲刺包 · 2 套预测卷 + 考点卡 + 1 页纸",
+  "desc": "16×2 预测 MC（含答案解析）、考前 1 页纸",
+  "file": "eie1005-aida-sprint.md",
+  "course": "EIE1005 · 人工智能与数据分析"
 }
 ]

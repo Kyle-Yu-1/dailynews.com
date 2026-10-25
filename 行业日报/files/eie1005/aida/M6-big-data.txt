@@ -1,0 +1,394 @@
+Hello everyone,
+welcome to the online seminar
+series on artificial intelligence and
+data analytics e-learning module. Um
+today I'm going to talk about the
+introduction to big data computing. I'm
+professor Sunungul from department of
+computing. Um in the past few years I've
+been teaching the big data computing. So
+today I give a very short um discussion
+on what is the big data and what is the
+big data analytics
+and give you idea of overall big data
+system the challenges technologies
+behind and eventually uh just give you
+examples to see uh what big data can do.
+So here is the agenda for today's talk.
+Before we give a formal definition of uh
+big data, we just uh share with you some
+information of where big data come from.
+And this photo actually uh give us uh uh
+uh one minute per time the data has been
+generated uh in uh social media uh
+software locks um microphone sensing
+data GPS transactions traffic and so on.
+you will see uh from the photo um that
+uh a a huge amount of data has been
+generated each minute.
+So have that in mind then uh we may have
+a very basic um question how do you give
+a definition of big data? I just pick up
+uh several definitions. I think the
+definition from Wikipedia
+um give the concept of big data from the
+um perspective perspective of what is
+the difference of big data uh from the
+traditional data. So I highlight uh in
+uh the sentence big data is a field that
+treats ways to analyze systematically
+extract information from or deal with
+data sets that are too large or too
+complex to be dealt with by traditional
+data processing application software. So
+the keywords is not
+amount about the uh the amount of data.
+Uh they just give a very um distinctive
+um definition
+in terms of the traditional way cannot
+handle it. Okay, that is the uh key
+difference and and also the definition
+includes a live life live um cycle of
+data analytics including capturing data
+storage data analysis, search, sharing,
+transfer, visualization, querying,
+updating um information privacy and data
+source and so on. So this is uh all
+about big data. The second definition um
+gives
+um the key characteristics of big data
+and this definition
+um is proposed by the uh Garner is a
+data analytics and u um prediction uh
+industry. The definition shows three
+keywords volume, velocity and variety.
+And later on this becomes a very famous
+definition of five or four V's of big
+data. So here big data is a high volume
+uh high velocity and a high variety
+information assets that demand cost
+effective innovative forms of
+information processing or enhanced
+insight and decision making. So four
+wheels here is the volume, velocity,
+variety and the veracity. I will explain
+one by one. So volume is a scale of
+data. So you will see the data generated
+uh every day and the speed of generation
+is also increasing uh exponentially. Uh
+you will see examples here. Five billion
+people have mobile phones. Uh a car has
+hundreds sensors. So they will generate
+data every second and also the large
+hydron colliders generates 15 terabytes
+per year and all this data has to been
+uh processed.
+Second V is the velocity. Velocity means
+the generation of data is so fast. For
+example, every six 16 uh seconds there
+are 11 million instant messages has been
+created on the uh mobile devices. On the
+other hand, the speed also means the
+processing also needs to be done
+quickly. So for example, um some
+decisions must be made immediately,
+right? So if the decision um is made
+prediction is made after the the desired
+period of time then the decision will be
+useless. So the velocity means
+generation of data and also processing
+of the data are fast.
+Variety shows the data in variance of
+forms like the text, signals, images,
+graphs. They are stored in different
+format structured, unstructured or
+semistructured.
+I just give you example uh the variety
+of data formats can exist in a single um
+document.
+Right? For example, the email address uh
+the email the email we have uh the
+address the subject the uh sender
+receiver dates and so on. All this
+information is structured right that can
+called a relational data can be stored
+in a traditional database system in
+tables right. It has text uh for example
+in the email body is a documents. It
+could be considered as text data, right?
+It has images as attachment is
+unstructured data. uh it has uh for
+example web page could be uh written in
+XML as semistructured data or um has
+lots of hyperlinks inside con
+constituting a graph and that will be
+graph data and so on. So um for for
+content um includes um different types
+of uh data and um that is the this the
+third V. Last V is the variety. Variety
+means uncertainty of data. Um the data
+includes arrows. The data the arrow
+could be a measurement incurred or human
+being incurred. Right? And also um the
+the the arrow could be uh from a niches
+users. U the example shows here that uh
+some comments uh from the from the
+reviewers um are are wrong. They are are
+fake fake reviews. So all these data are
+genuine data and the fake data they are
+mixed together and make the data
+analytics a very challenging uh task.
+All right. So this is the first uh
+problem. What is the big data? Now the
+second issue is to understand the big
+data analytics. Uh historically uh for
+example 1990s uh we using we were using
+Excel to store data. At that moment we
+can uh answer questions like what
+happened in the past based on the
+information we have. In uh 2000 we have
+business business uh intelligence. We
+support tools like a dashboards using uh
+statistical tools. Uh we can deal with
+some data um so we can answer questions
+that what happening. All right. And
+after 2015 we have powerful uh big data
+source, big data algorithms and big data
+platform. We can answer questions like
+what will happen using advanced machine
+learning and data mining algorithms. So
+uh we can have insights. In addition, we
+can have actionable uh decisions. So
+overall the process of big data
+analytics includes data generation, data
+storage. uh uh this is more about big
+data and uh uh downstream jobs like data
+analytics and predictions and that will
+be more uh artificial intelligence
+related.
+So uh from the life cycle of data
+analytics uh we will have the following
+big datadriven uh approach uh we call
+approach means problem solving. uh we
+use uh we use not rely on data we rely
+on rules algorithms right and in here we
+are not have any idea about rules we
+just based on the data we want to find
+out the solution find out the patterns
+the hidden rules from the data itself so
+the the process uh is upon the big data
+processing platform a very famous one
+like Hadoop
+um other noncycle
+database system like uh Cassandra
+highbase
+on top of that uh we have data raw data
+processing u uh maintaining and after
+that uh you will see uh data analytics
+uh you will have a a specific uh topic
+on data analytics uh you will see data
+analytics as two phases discovery and
+verification
+Discovery is about training a model.
+Verification is about uh inference on
+the model trained uh using the uh
+experiences we have. So on the training
+part um normally we have uh two
+different types of um jobs. One is
+called prediction, the other is called
+descriptive description. So p uh
+prediction is more about uh supervised
+learning. uh we can have we have um we
+have known labels and then we can train
+the model eventually they can predict uh
+the role data without the label that is
+called classification for uh descriptive
+learning um normally is unsupervised
+learning like a class training we we
+don't care about the uh labels we just
+learn um the coherent um uh features
+about the training set data data set and
+find out the similarity like we can find
+out uh samples belonging to uh a same
+group.
+So um next topic is a big data uh
+system. So big data system is a very
+comprehensive
+um uh tools because they they they deal
+with the whole life cycle of data right
+so data collection analytics on clusters
+of machines. Uh we have huge amount of
+data needs to be analyzed. So um the
+platform is uh hundreds of thousand
+machines organized properly uh we call
+clusters. Okay. Uh on the clusters we
+introduce new technologies a new
+programming paradigm uh high performance
+computing to support the analysis can be
+done very efficiently using advanced
+parallel computing high performance
+computing. Compared to the traditional
+data database management system data
+processing in big data system is more
+about throughput. We'd like to try to
+analyze a large amount of data quickly
+and give the solution in a predefined
+deadline. Right? We're not too concerned
+about the traditional matrix like uh
+transactions. We are not uh uh deal with
+the transactions in in in database
+system.
+Um eventually uh we will um build
+analytics platform like a Hadoop and
+Spark uh over uh the machines over the
+clusters of machines. So that is the
+whole picture. um involves many many
+different techniques as I mentioned you
+have a large number of machines right
+you have to organize them together just
+like the um the um advanced um data
+center right we have many machines so it
+involves massive parallelism machines
+running u par computing algorithms and
+and machines needs to store data so
+involves huge data volume storage data
+Data distribution because machine could
+be fail right we have to make a
+redundant copies distribute it in
+different machines. So data distribution
+highspeed internet highspeed network
+machines connected to each other they
+exchange information. So um the
+communication speed uh should be very
+fast. High performance computing task
+and threats management data mining and
+an analytics and data retrieval. machine
+learning and data visualization. So um
+in the following I will highlight a
+couple of techniques behind on um
+cluster technologies and
+uh basically parallel um programming
+paradigm and the data visualization and
+more details about data uh mining and
+the machine learning uh could be uh
+elaborated uh further in other uh
+serious talks.
+So platform uh you will see uh each you
+will see um is a is a is a rack. Rack
+you can consider in the data center is a
+uh a lots of uh machines put together in
+a box in the rack right from the top to
+the bottom could includes u tens of um
+machines and they are connected through
+the switches uh through the cable. uh
+they can uh communicate with each other,
+exchange information and and and this
+platform
+the basic idea is that uh a single job
+the single job can be uh split into
+multiple machines and and each machine
+just use a portion of the data. So
+eventually a large number machine can
+handle a huge amount of data of a single
+job simultaneously. is a kind of um
+partition and conquer. Um a big job will
+be partitioned into many small jobs and
+each small jobs uh can running without
+relying on other workers. They can do uh
+individually and in a parallel manner
+and eventually they can do um a good job
+together in a very fast time. Right? And
+so this is the uh platform.
+So what is the um detailed uh par uh
+programming paradigm and uh in big data
+a famous uh paradigm is called map
+reduce. So map reduce uh is a framework
+of a new kind of programming
+um methods. So whatever have a
+complicated job. So what we do is to try
+to um use only two very simple pieces of
+uh programs to run the whole uh big data
+program. So two pieces one is called map
+the other is called reduce. So map will
+working on a chunk of big data. You will
+see a small amount of data. Um so if
+what if I invest a lot of uh map uh
+programs they can do all big data right
+and they can run uh independently
+without interacting with each other and
+they will generate some intermediate
+results okay not the final solution but
+the partial solution not the final one.
+So the second piece program is called
+reduce. So the reduce will collect will
+collect all intermediate results from
+math map programs. They will merge them
+together and do some uh calculation we
+called uh reduce. Okay. And the reduce
+program will find out the final
+solution. In between the information
+will be changed between machines. And
+this process is called shuffle. So in
+this figure
+uh you will see I have many machines
+right. Some of the machine running on
+the top mapping process and the lower
+part machines running the reducing
+process and and the intermediate results
+will be shuffled from mapping machine to
+reduce machine and reduce machine will
+generate the final solution and
+eventually a a large number of machine
+working together and they can handle a
+very complicated job uh that cannot be
+done previously. So this is the basic
+idea.
+Lastly is about data visualization. The
+purpose is to help people understand
+what's what is the situation, what will
+happen. Uh let this pe let people u make
+easy decisions. Okay. So we will um you
+will learn some advanced tools uh to
+visualize um the data and the the
+predicted uh results.
+So the last part the last part is about
+uh big data applications. Big data
+applications I think one of the most uh
+famous example is the alpha go right.
+Why is called big data? The alpha go
+learns from 30 million moves of 160,000
+games played by expert. Okay. And this
+is actually um old edition. uh uh all
+this uh information is is huge and and
+we're using advanced um uh machine
+learning algorithm on the big data to
+train uh a a deep reinforcement learning
+model that can compete with um the human
+master.
+Other examples like uh prediction the
+Google flu trends can just rely on um
+the social media data or the the
+keywords uh data from users. They can do
+a very accurate prediction. Uh big data
+application also widely used on the uh
+computer vision like the uh deep mind
+developed uh the uh algorithm for uh for
+eyesight uh eye diseases treatment and
+accuracy can even higher than the
+expert.
+And also in in mainland China we have
+big data platform in Hanzo uh city
+brain. Uh they they are using um cameras
+uh transportation sensors and so on.
+They can do a real time monitoring uh
+and provide warning prediction uh and
+then smart decisions to support a smart
+city uh uh project.
+Okay. So uh that's we learned uh four
+topics. So in summary, what is big data?
+What is the big data analytics and what
+is the big data system and eventually
+what big data can help us in real life.
+All right, I will uh stop here and thank
+you uh for joining me. Uh I will uh meet
+you in other classes.

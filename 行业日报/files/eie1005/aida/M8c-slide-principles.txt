@@ -1,0 +1,226 @@
+Hi, in this video we will talk about how
+to create professional level PowerPoint
+layouts. There are four major principles
+in PowerPoint layout design. If we
+adhere to these four principles, we can
+significantly improve the quality of our
+slide presentations.
+The first principle of layout design in
+PowerPoint is alignment.
+Layout design in PowerPoint can be a
+daunting task because sometimes no
+matter how we arrange things, they don't
+look appealing.
+Layout design is a profound field of
+study. In the field of graphic design,
+many professional graphic designers face
+challenges with layout design.
+My own thoughts about PowerPoint. Since
+most PowerPoint creators are
+non-professionals with little knowledge
+of layout design, there's often
+haphazard arrangement.
+Many people aspire to achieve the
+pleasing layout seen in exams, but they
+aren't sure how to do it.
+Often, they just place elements wherever
+they see fit, resulting in layout
+issues.
+Now, let's look at a negative case. The
+color scheme and overall feel of this
+PowerPoint are very odd.
+The color scheme is overly vibrant and
+there is too much redundant text causing
+excessive visual interference for the
+audience.
+Before we dive into formal learning, we
+need to understand the theory behind
+layout design and apply it to solve
+problems.
+Layout design theory consists of three
+stages.
+Cognition theory, utilization theory,
+and breakthrough theory.
+Breakthrough theory doesn't mean
+disregarding other theories, but rather
+using and applying them flexibly.
+This can be achieved through more
+practice.
+We often hear the phrase solving
+alignment solves 90% of the problem.
+If the content is presented uniformly
+and neatly, it conveys a highly
+professional feel.
+In PowerPoint, regardless of the layout,
+there's always an invisible line, our
+alignment line.
+Can you spot the alignment line in this
+example?
+It's actually the left edge of the page
+aligned with the top and bottom of each
+row of numbers.
+Because of the alignment, these elements
+form a line.
+As we can see on this slide, alignment
+makes the layout appear neat and
+uniform.
+This invisible line isn't just vertical
+or horizontal. It can also be diagonal
+or curved.
+But how do we achieve neatness?
+Let's start with text alignment.
+There are many ways to align text. a
+total of five.
+These include left alignment, right
+alignment, center alignment, justified
+alignment, and distribute alignment.
+We believe most people usually use the
+first three types.
+However, the latter two alignment
+methods are also very effective.
+But is there a rule for alignment?
+Actually, there isn't a strict rule.
+However, we still recommend focusing on
+one primary alignment and then using a
+reasonable alignment method based on the
+specific layout.
+Therefore, we see that the main purpose
+of alignment is to make the page more
+unified and organized.
+Alignment is to avoid confusion in page
+alignment methods.
+The second principle of PowerPoint
+layout design is repetition.
+What exactly is repetition?
+Certain aspects of design need to be
+repeated throughout the entire work.
+We can also understand it as
+unification.
+It's about unifying the style of the
+entire PowerPoint such as colors, size,
+and so on.
+When we see some PowerPoint
+presentations, we might wonder where did
+they piece the slide together from?
+This is because the style is
+inconsistent throughout the PowerPoint.
+For example, the first half might adopt
+a business style. Then suddenly there's
+an education style which makes the
+PowerPoint inconsistent.
+In this specific example, we can clearly
+see that the font styles and graphic
+shapes are being consistently repeated
+throughout. The overall visual effect is
+very clean, professional, and incredibly
+refreshing to look at.
+So, what are the principles of
+repetition? The first is color. The
+overall color scheme of the PowerPoint
+should be relatively consistent without
+being overly flashy.
+Second is the font size.
+Font size should generally be
+consistent.
+The size of all titles and content
+should be fixed.
+Additionally, font color should be
+consistent.
+Fourth is position.
+Position should also be consistent.
+This way the entire picture will appear
+as a whole.
+Finally, line spacing should be
+consistent overall.
+In fact, from another perspective,
+uniformity means efficiency.
+If something can be accomplished with
+the same format, using something else
+will take more time to design.
+When we say uniformity, this doesn't
+mean that all elements are unchangeable,
+but rather while maintaining the general
+direction, some details can be adjusted
+and changed.
+The purpose of repetition is to enhance
+overall unity.
+However, we should also avoid excessive
+repetition of a single element.
+The third principle of PowerPoint layout
+design is contrast. Contrast includes
+many aspects such as size, color, shape,
+position, and so on.
+We need to pay special attention to
+contrast such as before and after and
+solid versus void.
+For instance, size contrast between
+text.
+Strong contrast often creates impactful
+effects.
+For example, when we need to distinguish
+between text levels, we are actually
+using contrast.
+Enlarge the main text and shrink the
+secondary text.
+Even if the information is significantly
+smaller in size, it can still be
+effectively presented on the screen. As
+long as the contrast remains distinct
+and sharp, the overall layout will look
+exceptionally organized and easy to
+read.
+Even with so much information, others
+won't feel overwhelmed. It reduces the
+oppressive feeling that information can
+bring.
+Similarly, color contrast can also be
+applied. This is what we call solid and
+void contrast.
+blurring part of it creates a sense of
+dynamism.
+In fact, these two are related.
+By processing the background, the
+contrast between foreground and
+background becomes very apparent.
+This makes the layout appear very
+special.
+Maybe you are feeling very confused at
+this point. Let's look at a contrast
+example. In this example PowerPoint
+slide, font size contrast is used. Let's
+take a look at this slide. We can
+clearly see the primary and secondary
+relationships.
+The image in the slide has been
+processed. This gives the entire slide a
+sense of design. Color contrast also
+makes the slide more vibrant.
+The main purpose of contrast is to
+clarify the main subject of the slide
+and enhance the page's effect.
+At the same time, it is to avoid the
+problem of unclear sizing.
+The first principle of PowerPoint layout
+design is proximity. In fact, we should
+have known this principle very early on.
+Well, then the principle states that
+closely related elements should be
+placed closer together while elements
+that are less related should be placed
+farther apart.
+This is actually a holistic way of
+thinking. For example, in this case, we
+can clearly see the classification of
+various parts of the text. Whether it's
+their position or color, everything is
+very clear. and the related texts
+elements are placed closer together.
+Elements at the same level are placed
+farther apart. This classification is
+very clear.
+The purpose of the proximity principle
+is to achieve organization.
+At the same time, it is to avoid equal
+spacing between different elements.
+That's all for this video. Thank you for
+listening. See you next time.

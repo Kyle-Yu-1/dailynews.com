@@ -2272,6 +2272,366 @@ window.VOCABULARY = [
     "sentence": ""
   },
   {
+    "id": "eie-228",
+    "word": "reinforcement learning",
+    "abbr": "RL",
+    "meaning": "强化学习：智能体通过与环境的试错交互、以奖励为反馈进行学习",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-229",
+    "word": "agent",
+    "abbr": "",
+    "meaning": "智能体：执行动作的 AI（如 NPC、移动物体）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-230",
+    "word": "environment",
+    "abbr": "",
+    "meaning": "环境：游戏世界本身",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-231",
+    "word": "state (S_t)",
+    "abbr": "",
+    "meaning": "状态：智能体在 t 时刻所处的状态",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-232",
+    "word": "action (A_t)",
+    "abbr": "",
+    "meaning": "动作：智能体在 t 时刻做出的动作",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-233",
+    "word": "reward (R_t)",
+    "abbr": "",
+    "meaning": "奖励：环境因该动作给出的反馈（可正可负）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-234",
+    "word": "episode",
+    "abbr": "",
+    "meaning": "回合：一轮从开始到结束（到达 Goal 或掉进 Hole）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-235",
+    "word": "Q-learning",
+    "abbr": "",
+    "meaning": "Q 学习：给定当前状态寻找下一步最优动作的强化学习方法",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-236",
+    "word": "Q-table",
+    "abbr": "",
+    "meaning": "Q 表：记录每个状态×每个动作的 Q 值（质量）的表",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-237",
+    "word": "Bellman equation",
+    "abbr": "",
+    "meaning": "贝尔曼方程：Q ← Q + η[R + γ·max Q(next) − Q]",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-238",
+    "word": "exploration / exploitation",
+    "abbr": "",
+    "meaning": "探索 / 利用：随机试错获取信息 vs 按已知最优行动",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-239",
+    "word": "epsilon (ε)",
+    "abbr": "",
+    "meaning": "探索概率：0≤ε≤1，训练初期大、后期小",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-240",
+    "word": "learning rate (eta, η)",
+    "abbr": "",
+    "meaning": "学习率：Q 表学习快慢",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-241",
+    "word": "discount factor (gamma, γ)",
+    "abbr": "",
+    "meaning": "折扣因子：下一状态价值对当前的影响权重（<1）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-242",
+    "word": "FrozenLake",
+    "abbr": "",
+    "meaning": "冰湖：Gymnasium 的 Toy Text 环境（4×4 冰面，掉洞失败）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-243",
+    "word": "FSM",
+    "abbr": "Finite State Machine",
+    "meaning": "有限状态机：状态、转移、条件、事件四要素",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-244",
+    "word": "DQN",
+    "abbr": "Deep Q-Network",
+    "meaning": "深度 Q 网络：用神经网络近似 Q 值，处理大状态空间",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "🎮 强化学习与 Game AI（L3 / Workshop 3 新增，2026-10-21）",
+    "sentence": ""
+  },
+  {
+    "id": "eie-245",
+    "word": "Spreadsheet",
+    "abbr": "",
+    "meaning": "电子表格",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-246",
+    "word": "Wrap Text",
+    "abbr": "",
+    "meaning": "自动换行",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-247",
+    "word": "Freeze Panes",
+    "abbr": "",
+    "meaning": "冻结窗格",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-248",
+    "word": "VLOOKUP",
+    "abbr": "",
+    "meaning": "按匹配查找函数",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-249",
+    "word": "MapReduce",
+    "abbr": "",
+    "meaning": "大数据并行编程范式",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-250",
+    "word": "Shuffle",
+    "abbr": "",
+    "meaning": "中间结果交换传输",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-251",
+    "word": "Volume / Velocity / Variety / Veracity",
+    "abbr": "",
+    "meaning": "大数据的量 / 速 / 多样 / 真实性（4V）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-252",
+    "word": "Confusion Matrix",
+    "abbr": "",
+    "meaning": "混淆矩阵",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-253",
+    "word": "Per-class Accuracy",
+    "abbr": "",
+    "meaning": "每类准确率",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-254",
+    "word": "Epoch",
+    "abbr": "",
+    "meaning": "轮数（完整过一遍训练集）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-255",
+    "word": "Batch Size",
+    "abbr": "",
+    "meaning": "批次大小",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-256",
+    "word": "Learning Rate",
+    "abbr": "",
+    "meaning": "学习率",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-257",
+    "word": "Activation Function",
+    "abbr": "",
+    "meaning": "激活函数",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-258",
+    "word": "Prompt Engineering",
+    "abbr": "",
+    "meaning": "提示词工程",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-259",
+    "word": "Hallucination",
+    "abbr": "",
+    "meaning": "幻觉",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-260",
+    "word": "Human-in-the-loop",
+    "abbr": "",
+    "meaning": "人在回路（人工校验）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-261",
+    "word": "Boolean Operation",
+    "abbr": "",
+    "meaning": "布尔运算",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-262",
+    "word": "Mind Map",
+    "abbr": "",
+    "meaning": "思维导图",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
+    "id": "eie-263",
+    "word": "Sans-serif",
+    "abbr": "",
+    "meaning": "无衬线（字体）",
+    "phonetic": "",
+    "course": "EIE1005",
+    "context": "AIDA e-Module",
+    "sentence": ""
+  },
+  {
     "id": "me-001",
     "word": "Engineering Design Process",
     "abbr": "EDP",

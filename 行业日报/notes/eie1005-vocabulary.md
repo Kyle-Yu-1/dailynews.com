@@ -308,3 +308,24 @@
 - FrozenLake — 冰湖：Gymnasium 的 Toy Text 环境（4×4 冰面，掉洞失败）
 - FSM (Finite State Machine) — 有限状态机：状态、转移、条件、事件四要素
 - DQN (Deep Q-Network) — 深度 Q 网络：用神经网络近似 Q 值，处理大状态空间
+
+## AIDA e-Module
+- Spreadsheet — 电子表格
+- Wrap Text — 自动换行
+- Freeze Panes — 冻结窗格
+- VLOOKUP — 按匹配查找函数
+- MapReduce — 大数据并行编程范式
+- Shuffle — 中间结果交换传输
+- Volume / Velocity / Variety / Veracity — 大数据的量 / 速 / 多样 / 真实性（4V）
+- Confusion Matrix — 混淆矩阵
+- Per-class Accuracy — 每类准确率
+- Epoch — 轮数（完整过一遍训练集）
+- Batch Size — 批次大小
+- Learning Rate — 学习率
+- Activation Function — 激活函数
+- Prompt Engineering — 提示词工程
+- Hallucination — 幻觉
+- Human-in-the-loop — 人在回路（人工校验）
+- Boolean Operation — 布尔运算
+- Mind Map — 思维导图
+- Sans-serif — 无衬线（字体）

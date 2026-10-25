@@ -1,0 +1,530 @@
+Hello everyone, welcome to the online
+lecture series of the e-learning module
+of artificial intelligence and data
+analytics. This is the short lecture for
+introduction to data analytics and I'm
+your cross instructor Dr. Jini and I an
+assistant professor from department of
+comput and Hong Kong poly techchn
+university. So at the very beginning
+let's first figure out the motivation
+for learning this course. Um whether or
+not you are from the computer science
+background, you may have already heard
+of these big names for the cool
+technology they provided and the highest
+salary they offer to their employees. As
+can be seen here on the first row, uh we
+show Google and by do both of them are
+super famous for their cool search
+engines. Um particularly for Google, it
+has become a verb now, right? When
+someone asks you something that you have
+no idea of how to answer it, you may
+say, "Well, let me Google it." So you
+see how search engines have
+revolutionized the way we find
+information and for both Google and BU
+they help gather big data on the web and
+allow the discovery of information
+needed by individuals with easy search.
+On the second row we show Facebook,
+Tencent Bance and uh all of them are
+famous for their social networks. I
+believe everyone here has a social
+network account, right? And it allows us
+to stay in touch with our friends and
+share information with them. Their
+mission is to build an online community
+where everyone has a virtual reflection
+on the web so that they'll be able to
+connect the word. So that's the reason
+why Facebook is renamed as Meta right
+and Alibaba and Amazon the third row are
+both famous for their e-commerce
+systems. Their success are both built
+upon the powerful recommener systems
+which provide users with something they
+are likely to buy based on what they
+purchased before. Sometimes I even feel
+that Alibaba and Amazon know me better
+than myself. So if not why they always
+recommend something that I want to buy.
+Right? So through the introduction of
+this short lecture, you may capture a
+very high level idea of why they are so
+successful and probably gather interest
+to learn some in-depth data analytics
+knowledge in the later on courses. I
+hope that you'll be able to become part
+of these big names one day in the
+future. Here's the road map of this
+course. Um can be seen there are four
+parts to be discussed here. We will
+first talk about you know the concepts
+of the data followed by the concepts of
+data analytics. Then I will guide you to
+go through the history of data analytics
+so that you'll be able to understand why
+it comes so trendy recently. At last
+we'll talk about some applications
+around that based on data analytics. Um
+so you'll see the technology of data
+analytics is not far away. They [snorts]
+are just around us. So let's first start
+the journey with the answer. What is
+data? Basically um according to the
+definition from Wikipedia, data refers
+to individual units of information. So
+simply speaking, it is an information
+piece and it is a single quantity or
+quality of some object or phenomena. And
+in the analytical processes, data is
+usually represented by variables because
+we want to compute the data, right? The
+goal for data analytics is to explore
+the salient patterns and discover the
+crucial knowledge needed for decision-
+making. So we need to somehow compute
+the data and if we are able to represent
+the data by variables then we are able
+to um use mathematical models to compute
+the data. So as can be seen here the
+basis for data analytics are mathematics
+and computer science and uh the role for
+math is to provide solutions for
+computing the data patterns while
+computer offers an efficient way to
+solve math problems by programming and
+in various forms of data uh human
+activities we can see the crucial roles
+played by the data. For example, it is
+the basis for the modern scientific
+research. You'll see scientists in
+diverse streams need to work with the
+data. Take the COVID 19 research as an
+example. If you read related papers,
+you'll see that all the conclusions
+drawn should be based on the analytical
+results of the data. And data is also
+important for business management.
+Imagine that you are the boss, right?
+For a big company. I believe one of the
+most important jobs you should conduct
+every day is to read the data reported
+by your employees such as the sales
+data, revenue data, profits, stock price
+and so so on so forth. Likewise, the
+running of the government is based on
+data analytics where the results like
+crime rates, unemployment rates,
+literacy rates should be employed to
+make policies and decisions to benefit
+the people. So as we discussed before
+data is almost everywhere on a daily
+basis large volume of data is being
+collected at warehouse for analytical
+processes
+uh such as the web data for search um
+e-commerce data to learn user interest
+and purchases at grocery stores to
+manage the products as storage bank or
+credit card transactions data to manage
+customers bank accounts. In addition, uh
+we have the social media data to gather
+the user generated content for
+information sharing and ID exchanging.
+Moreover, do you know that data is super
+important to protect us from COVID 19?
+Well, it helps us find the potential
+COVID 19 patients. You know, people
+taking the roles to do this job. will
+explore people's everyday routines like
+where they go, who they made so forth
+and then they will find all the possible
+close contacts for and then invite these
+guys to do a coid9 test. Another example
+um comes to the co 19 vaccine. We all
+know that the vaccine plays a crucial
+role in fighting against covid-19 right.
+However, many people are concerned about
+possible side effects. Therefore, we may
+need to gather the data to analyze the
+effects of the vaccine um either in a
+positive way or negative way so that we
+are able to have a comprehensive
+understanding of whether or not an
+individual should take the co 19 vaccine
+or not. Uh condition on diverse health
+conditions of different people. All
+right, we've examined the concepts of
+data. Then let us have a look at the
+concepts of data analytics. So as can be
+seen here sometimes data analytics and
+data analysis are used equivalently.
+Okay. So these two terms are equivalent
+to each other and according to the
+definition of Wikipedia. The process of
+data analysis or analytics is the
+process of in inspecting, cleaning,
+transforming and modeling of data. And
+the goal of data analytics is to
+discover useful information informing
+conclusions and to support decision
+making. And um in short it is to find
+something useful from the data via a
+series of steps. And the figure on the
+right hand side shows the general
+process to handle the data where data
+analytics is usually the last step.
+Beforehand we should collect the raw
+data from some sources like um the
+internet and the social media and then
+we will store them somewhere like
+database or data warehouse or just some
+files for later use. Then we should
+adopt data retrieval to retrieve the
+data pieces from large scale of
+candidates to narrow down the scope for
+analytics. Otherwise, if you handle so
+much data, you will find you you will
+find it super crazy. At the end, we
+should adopt the data analytics methods
+to examine the retrieve data and find
+knowledge we need. Here comes three
+characteristics of data analytics
+concerning the input, methods and
+output. For the input, we say that data
+analytics is definitely datadriven,
+right? It's quite actually quite obvious
+because [snorts] the input of data
+analytics is certainly the data and uh
+here we should note that data an for
+data analytics um you know we should
+make sure that we have we are handling
+large scale data right that is because
+the anal analytical results from small
+scale data is not very reliable right
+because some bias results will be drawn
+then let's look at the second
+characteristic concerning the methods
+for data analytics which usually involve
+tools from multiple disciplinaries. The
+basis is computer science and
+mathematics. As discussed before,
+mathematics provide us tools to compute
+the data where computer science allow
+the handling of math problems
+efficiently by programming. It is
+because we usually need to play with
+large scale data, right? Otherwise, we
+may have some bias results. So facing
+large scale data if we handle everything
+by hand it will be super time consuming
+and labor intensive. So we need to
+resort to computers for help right to
+talk with them in computer language set
+orders to them for help right and you
+know that computer is good at handling
+math problems in an efficient way so
+they they can help us. In addition to
+math and computer science sometimes we
+may need knowledge from other
+disciplinaries. For example, if you want
+to analyze data in CO 19 and domain
+knowledge in medical science might be
+very helpful, right? So in short, um the
+methods to do data analytics is
+interdisciplinary. And the third
+characteristic is about expected output
+for data analytics where our goal is to
+discover useful knowledge or information
+from the data and then we later on use
+it for decision making. Right? So far we
+have talked about the concepts of data
+and data analytics. Then let's further
+have a look at the history from which
+you will be able to capture the basic
+idea of why data analytics becomes so
+popular these days. The early story
+might be dated back to a mid 19th
+century color study. In those days the
+germ theory of disease was still
+unproven and the most popular idea was
+that disease spread through um bad air
+which is quite ridiculous right
+nevertheless if you put your shoes in
+the context of mid 19th century then you
+can better understand this and at that
+time a terrible Colorado outbreak hit
+London and at that time a doctor named
+Jon Snow was convinced that Colorado was
+spreading by a very more microbes in the
+water supply. So, how could he prove
+that? Right? So, this Jon Snow did a
+research, right? Like most other
+researchers, he turned to data
+visualization to help. Um, he made a map
+of London marking the Colorado deaths as
+they added up and there was a clear
+concentration here, right? So in this
+red circle and nevertheless the pattern
+was imperfect. Some households were hit
+terribly while other nearby institutions
+like a factory or a prison was nearly
+untouched. It was the appearance of a
+mysterious outlier that cracked the case
+wide open. A woman living far away from
+the center of the epidemic also died of
+cholera. what connected her case to all
+the others. Um, basically Jon Snow
+learned that she used to live in the
+epidemic drug neighborhoods here though
+she lived away and she loved the taste
+of water so much from her original um
+neighborhoods named Bro Street. So she
+loved the taste of water so much and she
+got the water delivered to her new house
+after she moved away and she died died
+from the cholera. So with the convincing
+data point in hand, Jones now persuaded
+to the authorities that the air is not
+the problem. The water is right. So then
+they broke the handle off the broad
+street pump stopping the flow of the
+water from the contaminated pump and
+ended the [snorts] epidemic to save a
+lot of people's lives. And then the
+story goes to another big data
+challenge. uh in 1880s
+census uh it happened in United States
+and the government at the time wanted to
+collect some basic information from
+people from 50 million and the
+information may involve like age, gender
+um occupation, education levels on so
+forth and uh because of the poor
+technology at that time people had had
+to handle everything by hand. Do you
+know how long it took to get everything
+done? Seven years. It took over seven
+years to manually tabulate and report on
+the data. And then it came to um the
+census 10 years later. They had the
+revolutionized technology. A new system
+named as holler tabulating right uh was
+invented and uh it was made up of
+punched cards which allow the
+calculation of 80 variables. So you can
+you can consider it as the very early
+computers and [snorts] then do you know
+how long it took for handling the 1890s
+census
+only six week. There you see the
+analysis took only six weeks instead of
+seven years. So it tells us what it
+tells us good data analytics technology
+will allow more efficient analysis of
+the data and the next joint leap for
+data analytics came with the Manhattan
+pro project. You may have already heard
+of it, right? During the project, the US
+developed the atomic bomb during the
+World War II and two billion US dollar
+was allocated to that project. Okay. And
+the Manhattan project not only
+introduced the concept of data analytics
+with computers, it was also the catalyst
+for big science. Cool. The next stage
+was driven by space program, right? So
+you see that there was a space race
+between the Soviet Union and the United
+States and uh there were a lot of
+treatments here like the launch of the
+first man-made objective to orbit the
+earth or the USSR's boot neck one on 4
+October 195
+1957
+or the first moon landing by American
+Apollo 11 crafted on 20th July 1969
+right so because of you know the
+requirements to develop the space
+program uh we need to handle a lot of
+data so the technology for analyzing
+data also developed tremendously at that
+time great right now what we we talked
+about today's area right we see that it
+is the area of big data we have data
+analytics applications everywhere around
+us do you why we enter the big data area
+now. Basically, the reasons are
+three-folds. The first one is that we
+have better models. Right now, we have,
+you know, very powerful models with a
+lot of variables to fit the data. In the
+previous years, we we can only use rub
+based models, right? Which is actually
+quite silly. And later on, uh in
+statistical models are proposed, so they
+are able to handle data in larger scale.
+And right now we have deep learning
+models right quite trendy. And based on
+deep learning we also develop artificial
+intelligence right with the machines
+conducting some tasks even better than
+humans like the face recognition. And
+the second reason is because that we
+have better computer sources. If we we
+want to handle the data analytics with
+complicated models right we need to have
+powerful machines to do that. And now
+luckily you know the development of
+hardware allow us to do so. We have a
+lot of powerful RAM, CPUs, GPUs and also
+TPUs right for today. So that's the um
+the machines are able to handle the
+calculation of complicated models. And
+the third one is also important. We have
+more data available. Right now we are
+entering the big data every um area and
+now we have the internet the social
+media right so huge volume of data is
+available to do analytics and then
+because we have large scale of data
+right so we can you know we can discover
+valuable information from it all these
+three reasons are very important for us
+to enter the big data area and this is
+also a very uh popular interpretations
+for big data like the four V for big
+data right the first V is about the
+volume right so the first characteristic
+of big data is about the volume right
+now we have huge volume of data on the
+internet or on the social media so right
+now from the data scale is from
+terabytes to xabytes to zabytes of
+existing data to process And the second
+characteristic of big data is the
+velocity. Right? Now we have you know
+streaming data right. So it is very
+important for us to adapt models to the
+um you know to the stream of the data to
+adapt to the dynamic change over time.
+Right? So velocity is another thing that
+we need to concern for big data
+analytics. The third one is about the
+variety. Right? Right now we have data
+in diverse styles. We have structured
+semi-supervised unstructured data or we
+have uh you know data in multiple
+modalities like text pictures so on so
+forth right and the last one is about
+veracity because social media and
+internet allows everyone to create
+anything right so we we cannot do
+addition or checking for this data so
+there there there would be uncertainty
+involved right due to data inconsistency
+or incompleteness
+and there should be some data with
+ambiguity, deception data and or like
+you know misinformation is also you know
+tremendously distributed on social
+media. So it's very important to have
+models that is able to tell us which
+data we are able to trust right. So in
+short volume, velocity, variety,
+veracity are four important
+characteristics of big data. Right? So
+then let us further talk about
+applications of data analytics. Right?
+Then the first one we want to discuss is
+about product recommendation. as we
+discussed that you know um the secret
+weapon for Alibaba and Amazon is you
+know the the ability to analyze users
+interests from their purchase history.
+So the idea for a product recommendation
+is to um know to predict what products a
+user would be interested in buying via
+analyzing the previous products they
+purchased before. And the second
+application comes to the ranking of web
+pages. It is the secret weapon of
+Google. Right? When a user inputs a
+query, there will be millions of pages
+relevant to ads. Then how to compute the
+importance of pages so that we can rank
+the pages based on their importance.
+And the idea is that the search engine
+will [clears throat] explore the page
+linking graphs. you know that's the
+pages linked with each other and so we
+we can they can form a graph for the
+search engine to analyze and then they
+can identify the pages with a lot of
+other pages linking to it. These pages
+are considered to be more trustworthy
+and would be ranked higher. So for
+example when you input Hong Kong
+political university into Google and
+then you will find our homepage to be
+ranked the first uh followed by the
+Wikipedia page. Why? because there are a
+lot of other pages linked to these two
+pages. Okay. And the third application
+is about artificial intelligence. I
+believe that you have heard of it uh you
+know frequently every day, right? The
+mission of AI is to allow computers to
+own human intelligence and we have seen
+big progress made through the past 70
+years, right? So uh in the past like
+from 1950s to 1990s um the at that time
+looks a little bit silly where right now
+we have super collaborator theory um to
+talk with right just like our human
+assistants and we also um you know
+experience the big news of AI wins the
+go game comp uh with the human champions
+right so that is actually quite um goal
+because gold game is very complicated
+and what will AI become in the future? I
+leave the questions to you, right? Then
+I believe that you guys will be able to
+find out the answers. Okay, so here
+comes a slide to take away. Basically we
+talk about the concepts of data. The
+concepts of data analytics and the
+history of data analytics together with
+uh applications and uh data is uh
+individual units of information and in
+the analytical process is usually
+represented by variables so that we are
+able to compute the data and the uh data
+analytic has three characteristics.
+First is that it is driven by the data
+right and generally the data should be
+large scale otherwise we will have
+biased conclusions and then the second
+characteristic is that data analytics
+usually involve interdisciplinary
+methods and the basis should be math and
+computer science [snorts] and the last
+one is that our the goal for data
+analytics is to find some useful
+information from the data so that we can
+further use them for decision- making
+and uh data analytics becomes trendy
+these days But it has a long history and
+we can go back to the mid 19th century
+to find you know some good stories with
+data analytics and it becomes trendy
+these days because of you know the
+availability of effective models rich
+computing resources and large scale of
+data for these reasons we see data
+analytics become so trendy all right so
+I think that's pretty much for this
+short course and thanks for listening
